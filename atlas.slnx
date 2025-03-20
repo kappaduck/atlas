@@ -1,0 +1,43 @@
+<Solution>
+  <Folder Name="/configurations/" Id="02ea681e-c7d8-13c7-8484-4ac65e1b71e8">
+    <File Path=".config/stylecop.json" />
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="directory.build.props" />
+    <File Path="directory.packages.props" />
+    <File Path="nuget.config" />
+  </Folder>
+  <Folder Name="/docs/" Id="057f21b3-2701-416c-a120-e1440980b4ea">
+    <File Path="changelog.md" />
+    <File Path="license" />
+    <File Path="readme.md" />
+  </Folder>
+  <Folder Name="/docs/issues/" Id="6b6d017d-edb9-47bd-b8d4-fadd2dfad6c1">
+    <File Path=".github/ISSUE_TEMPLATE/bug.yml" />
+    <File Path=".github/ISSUE_TEMPLATE/config.yml" />
+    <File Path=".github/ISSUE_TEMPLATE/enhancement.yml" />
+  </Folder>
+  <Folder Name="/rules/" Id="01436934-a622-423b-b9b3-3578264babd0">
+    <File Path="rules/code.style.editorconfig" />
+    <File Path="rules/disabled.editorconfig" />
+    <File Path="rules/meziantou.editorconfig" />
+    <File Path="rules/roslynator.editorconfig" />
+    <File Path="rules/sonar.editorconfig" />
+    <File Path="rules/stylecop.editorconfig" />
+    <File Path="rules/underscore.editorconfig" />
+    <File Path="rules/vsthrd.editorconfig" />
+  </Folder>
+  <Folder Name="/src/" Id="5f53ebb2-f9c7-410a-9050-0b588a3a07a0">
+    <File Path="src/directory.build.props" />
+    <File Path="src/directory.packages.props" />
+  </Folder>
+  <Folder Name="/tests/" Id="2bb7be51-eb87-4b9b-a3d3-b2cb40320a07">
+    <File Path="tests/.editorconfig" />
+    <File Path="tests/directory.build.props" />
+    <File Path="tests/directory.packages.props" />
+    <Project Path="tests/Integration.Tests/Integration.Tests.csproj" Id="2dd6b552-4566-4e5f-ab79-86a997d5e9b1" />
+    <Project Path="tests/Unit.Tests/Unit.Tests.csproj" Id="7e0d11a4-46e7-4a40-b7b4-b133264dfd2a" />
+  </Folder>
+  <Project Path="src/Web.App/Web.App.csproj" Id="61624cca-7b15-4788-99bd-18e8f8bdfc3a" />
+</Solution>
