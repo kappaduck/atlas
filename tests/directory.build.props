@@ -10,6 +10,10 @@
     <AssemblyAttribute Include="System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\*\*.csproj" />
+  </ItemGroup>
+
   <ItemGroup Label="Global usings">
     <Using Include="NSubstitute" />
     <Using Include="TUnit" />
