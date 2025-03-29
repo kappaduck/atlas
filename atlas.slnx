@@ -21,6 +21,10 @@
     <File Path=".github/ISSUE_TEMPLATE/config.yml" />
     <File Path=".github/ISSUE_TEMPLATE/enhancement.yml" />
   </Folder>
+  <Folder Name="/infrastructure/" Id="1d13310f-c33d-4175-8836-b93d84c0630e">
+    <Project Path="src/Infrastructure.Json/Infrastructure.Json.csproj" Id="eeb99321-5879-44fa-b7e4-d5d38e05d33a" />
+    <Project Path="src/Infrastructure.Persistence/Infrastructure.Persistence.csproj" Id="58d34164-a90b-48c3-83b5-e1f4986c00b7" />
+  </Folder>
   <Folder Name="/rules/" Id="01436934-a622-423b-b9b3-3578264babd0">
     <File Path="rules/code.style.editorconfig" />
     <File Path="rules/disabled.editorconfig" />
