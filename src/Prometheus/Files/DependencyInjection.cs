@@ -13,7 +13,8 @@ internal static class DependencyInjection
     internal static void AddFiles(this IHostApplicationBuilder builder)
     {
         builder.Services.AddTransient<IDirectory, Directory>()
-                        .AddTransient<IDataDirectory, DataDirectory>();
+                        .AddTransient<IDataDirectory, DataDirectory>()
+                        .AddTransient<IJsonFileWriter, JsonFileWriter>();
 
         builder.Services.Configure<DataPathOptions>(builder.Configuration.GetSection(DataPathOptions.Section))
                         .AddSingleton<IValidateOptions<DataPathOptions>, DataPathOptions.Validator>()

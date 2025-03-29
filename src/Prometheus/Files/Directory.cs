@@ -1,8 +1,11 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
+using System.Diagnostics.CodeAnalysis;
+
 namespace Prometheus.Files;
 
+[ExcludeFromCodeCoverage]
 internal sealed class Directory : IDirectory
 {
     public string Create(string path) => System.IO.Directory.CreateDirectory(path).FullName;
