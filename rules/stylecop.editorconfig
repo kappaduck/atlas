@@ -70,6 +70,16 @@ dotnet_diagnostic.SA1413.severity = none
 # https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1503.md
 dotnet_diagnostic.SA1503.severity = none
 
+# SA0001-SA1600-1602: Elements should be documented
+# Disabled as there is no need to document an internal project
+# https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1600.md
+# https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1601.md
+# https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1602.md
+dotnet_diagnostic.SA0001.severity = none
+dotnet_diagnostic.SA1600.severity = none
+dotnet_diagnostic.SA1601.severity = none
+dotnet_diagnostic.SA1602.severity = none
+
 # SA1606: Element documentation should have summary text
 # Is a duplicate of RCS1138: https://josefpihrt.github.io/docs/roslynator/analyzers/RCS1138
 # https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1606.md

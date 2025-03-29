@@ -2,12 +2,16 @@
   <Import Project="$([MSBuild]::GetPathOfFileAbove('directory.build.props', '$(MSBuildThisFileDirectory)../'))" />
 
   <PropertyGroup Label="Configure .csproj">
-    <IsPackable>false</IsPackable>
-    <IsTestProject>true</IsTestProject>
+    <OutputType>Exe</OutputType>
+    <PublishAot>true</PublishAot>
   </PropertyGroup>
 
   <ItemGroup Label="Exclude tests project from code coverage">
     <AssemblyAttribute Include="System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\*\*.csproj" />
   </ItemGroup>
 
   <ItemGroup Label="Global usings">

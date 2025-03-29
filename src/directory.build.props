@@ -2,7 +2,8 @@
   <Import Project="$([MSBuild]::GetPathOfFileAbove('directory.build.props', '$(MSBuildThisFileDirectory)../'))" />
 
   <ItemGroup Label="Make internals visible to test project">
-    <InternalsVisibleTo Include="Atlas.Tests" />
+    <InternalsVisibleTo Include="Unit.Tests" />
+    <InternalsVisibleTo Include="Integration.Tests" />
     <InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
   </ItemGroup>
 

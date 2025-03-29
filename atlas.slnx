@@ -8,6 +8,9 @@
     <File Path="directory.packages.props" />
     <File Path="nuget.config" />
   </Folder>
+  <Folder Name="/core/" Id="b99b2809-b02d-42f8-8e8a-df49d01044c1">
+    <Project Path="src/Atlas.Domain/Atlas.Domain.csproj" Id="2097107e-e245-46c6-b8cf-e74f8b704e1c" />
+  </Folder>
   <Folder Name="/docs/" Id="057f21b3-2701-416c-a120-e1440980b4ea">
     <File Path="changelog.md" />
     <File Path="license" />
