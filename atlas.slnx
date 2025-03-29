@@ -46,5 +46,9 @@
     <Project Path="tests/Integration.Tests/Integration.Tests.csproj" Id="2dd6b552-4566-4e5f-ab79-86a997d5e9b1" />
     <Project Path="tests/Unit.Tests/Unit.Tests.csproj" Id="7e0d11a4-46e7-4a40-b7b4-b133264dfd2a" />
   </Folder>
+  <Folder Name="/workflows/" Id="8aee00e9-d721-4171-9743-c324321ea2d9">
+    <File Path=".github/workflows/build.yml" />
+    <File Path=".github/workflows/codeql.yml" />
+  </Folder>
   <Project Path="src/Web.App/Web.App.csproj" Id="61624cca-7b15-4788-99bd-18e8f8bdfc3a" />
 </Solution>
