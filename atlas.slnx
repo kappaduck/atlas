@@ -19,7 +19,7 @@
   <Folder Name="/docs/issues/" Id="6b6d017d-edb9-47bd-b8d4-fadd2dfad6c1">
     <File Path=".github/ISSUE_TEMPLATE/bug.yml" />
     <File Path=".github/ISSUE_TEMPLATE/config.yml" />
-    <File Path=".github/ISSUE_TEMPLATE/enhancement.yml" />
+    <File Path=".github/ISSUE_TEMPLATE/feature.yml" />
   </Folder>
   <Folder Name="/infrastructure/" Id="1d13310f-c33d-4175-8836-b93d84c0630e">
     <Project Path="src/Infrastructure.Json/Infrastructure.Json.csproj" Id="eeb99321-5879-44fa-b7e4-d5d38e05d33a" />

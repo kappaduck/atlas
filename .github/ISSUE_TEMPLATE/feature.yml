@@ -1,21 +1,21 @@
-name: Enhancement
-description: Suggest an enhancement for Atlas.
+name: Feature
+description: Suggest a feature for Atlas.
 labels: ["triage"]
-type: Enhancement
+type: Feature
 assignees:
   - beauchama
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to suggest an enhancement. Please fill in the information below to help us understand your suggestion.
+        Thank you for taking the time to suggest an feature. Please fill in the information below to help us understand your suggestion.
         Please search to see if the request has already been suggested ([atlas/issues](https://github.com/kappaduck/atlas/issues))
   - type: textarea
     id: feature-description
     attributes:
       label: >-
-        Is your enhancement request related to improving an existing feature? Please the enhancement you would like to see.
-      description: A clear and concise description of what the enhancement is.
+        Is your request related to improving an existing feature?
+      description: A clear and concise description of what the feature is.
       placeholder: I would like to have a game mode where I need to guess the province's flag in Canada.
     validations:
       required: false
