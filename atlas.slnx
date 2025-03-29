@@ -50,5 +50,6 @@
     <File Path=".github/workflows/build.yml" />
     <File Path=".github/workflows/codeql.yml" />
   </Folder>
+  <Project Path="src/Prometheus/Prometheus.csproj" Id="4c912596-41a3-4ce7-a9c2-067f18ce714c" />
   <Project Path="src/Web.App/Web.App.csproj" Id="61624cca-7b15-4788-99bd-18e8f8bdfc3a" />
 </Solution>
