@@ -27,10 +27,10 @@ jobs:
           dotnet-quality: preview
 
       - name: Restore dependencies
-        run: dotnet restore $prometheus
+        run: dotnet restore ${{ env.prometheus }}
 
       - name: Publish
-        run: dotnet publish $prometheus --output .
+        run: dotnet publish ${{ env.prometheus }} --output .
 
       - name: Run Prometheus
         run: ./Prometheus.exe
@@ -38,13 +38,16 @@ jobs:
       - name: Detect changes
         run: |
           git config --global core.autocrlf false
-          if git diff --quiet; then
+          if (git diff --quiet)
+          {
             echo "No changes detected."
             echo "changed=false" >> $env:GITHUB_ENV
+          }
           else
+          {
             echo "Changes detected."
             echo "changed=true" >> $env:GITHUB_ENV
-          fi
+          }
 
       - name: Commit changes
         if: ${{ env.changed }} == 'true'
