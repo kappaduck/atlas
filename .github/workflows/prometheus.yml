@@ -47,6 +47,7 @@ jobs:
           {
             echo "Changes detected."
             echo "changed=true" >> $env:GITHUB_ENV
+            exit 0
           }
 
       - name: Commit changes
