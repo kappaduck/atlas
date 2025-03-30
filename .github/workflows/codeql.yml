@@ -1,4 +1,4 @@
-name: CodeQL Analysis
+name: CodeQL
 
 on:
   push:
@@ -8,33 +8,47 @@ on:
 
 jobs:
   analyze:
-    name: Analyze
+    name: Analyze (${{ matrix.language }})
     runs-on: windows-latest
 
     permissions:
       security-events: write
 
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - language: actions
+          build-mode: none
+        - language: csharp
+          build-mode: manual
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
+
       - name: Setup .NET
+        if: matrix.language == 'csharp'
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 10.0.x
           dotnet-quality: preview
 
       - name: Restore dependencies
+        if: matrix.language == 'csharp'
         run: dotnet restore
 
       - name: Build
+        if: matrix.language == 'csharp'
         run: dotnet build --configuration release --no-restore
-
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v3
-        with:
-          languages: csharp, yaml
-          build-mode: manual
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{matrix.language}}"
