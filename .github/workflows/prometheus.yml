@@ -55,7 +55,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          branch="update-countries-json"
+          $branch="update-countries-json"
           git checkout -b $branch
           git add .
           git commit -m "Update countries.json"
