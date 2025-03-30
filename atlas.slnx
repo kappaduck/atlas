@@ -8,6 +8,14 @@
     <File Path="directory.packages.props" />
     <File Path="nuget.config" />
   </Folder>
+  <Folder Name="/configurations/src/" Id="5f53ebb2-f9c7-410a-9050-0b588a3a07a0">
+    <File Path="src/directory.build.props" />
+    <File Path="src/directory.packages.props" />
+  </Folder>
+  <Folder Name="/configurations/workflows/" Id="8aee00e9-d721-4171-9743-c324321ea2d9">
+    <File Path=".github/workflows/build.yml" />
+    <File Path=".github/workflows/codeql.yml" />
+  </Folder>
   <Folder Name="/core/" Id="b99b2809-b02d-42f8-8e8a-df49d01044c1">
     <Project Path="src/Atlas.Domain/Atlas.Domain.csproj" Id="2097107e-e245-46c6-b8cf-e74f8b704e1c" />
   </Folder>
@@ -25,30 +33,12 @@
     <Project Path="src/Infrastructure.Json/Infrastructure.Json.csproj" Id="eeb99321-5879-44fa-b7e4-d5d38e05d33a" />
     <Project Path="src/Infrastructure.Persistence/Infrastructure.Persistence.csproj" Id="58d34164-a90b-48c3-83b5-e1f4986c00b7" />
   </Folder>
-  <Folder Name="/rules/" Id="01436934-a622-423b-b9b3-3578264babd0">
-    <File Path="rules/code.style.editorconfig" />
-    <File Path="rules/disabled.editorconfig" />
-    <File Path="rules/meziantou.editorconfig" />
-    <File Path="rules/roslynator.editorconfig" />
-    <File Path="rules/sonar.editorconfig" />
-    <File Path="rules/stylecop.editorconfig" />
-    <File Path="rules/underscore.editorconfig" />
-    <File Path="rules/vsthrd.editorconfig" />
-  </Folder>
-  <Folder Name="/src/" Id="5f53ebb2-f9c7-410a-9050-0b588a3a07a0">
-    <File Path="src/directory.build.props" />
-    <File Path="src/directory.packages.props" />
-  </Folder>
   <Folder Name="/tests/" Id="2bb7be51-eb87-4b9b-a3d3-b2cb40320a07">
     <File Path="tests/.editorconfig" />
     <File Path="tests/directory.build.props" />
     <File Path="tests/directory.packages.props" />
     <Project Path="tests/Integration.Tests/Integration.Tests.csproj" Id="2dd6b552-4566-4e5f-ab79-86a997d5e9b1" />
     <Project Path="tests/Unit.Tests/Unit.Tests.csproj" Id="7e0d11a4-46e7-4a40-b7b4-b133264dfd2a" />
-  </Folder>
-  <Folder Name="/workflows/" Id="8aee00e9-d721-4171-9743-c324321ea2d9">
-    <File Path=".github/workflows/build.yml" />
-    <File Path=".github/workflows/codeql.yml" />
   </Folder>
   <Project Path="src/Prometheus/Prometheus.csproj" Id="4c912596-41a3-4ce7-a9c2-067f18ce714c" />
   <Project Path="src/Web.App/Web.App.csproj" Id="61624cca-7b15-4788-99bd-18e8f8bdfc3a" />
