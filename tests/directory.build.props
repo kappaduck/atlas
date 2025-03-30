@@ -3,7 +3,6 @@
 
   <PropertyGroup Label="Configure .csproj">
     <OutputType>Exe</OutputType>
-    <PublishAot>true</PublishAot>
   </PropertyGroup>
 
   <ItemGroup Label="Exclude tests project from code coverage">

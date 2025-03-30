@@ -15,6 +15,11 @@ dotnet_diagnostic.MA0002.severity = none
 # https://github.com/meziantou/Meziantou.Analyzer/blob/main/docs/Rules/MA0005.md
 dotnet_diagnostic.MA0005.severity = none
 
+# MA0006: Use String.Equals instead of equality operator
+# Doesn't need for every string comparison
+# https://github.com/meziantou/Meziantou.Analyzer/blob/main/docs/Rules/MA0006.md
+dotnet_diagnostic.MA0006.severity = none
+
 # MA0007: The last statement in a multi-line C# initializer or list is missing a trailing comma.
 # Is a duplicate of SA1413: https://github.com/DotNetAnalyzers/StyleCopAnalyzers/blob/master/documentation/SA1413.md
 # https://github.com/meziantou/Meziantou.Analyzer/blob/main/docs/Rules/MA0007.md
