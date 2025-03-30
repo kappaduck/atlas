@@ -2,6 +2,7 @@
 // The source code is licensed under MIT License.
 
 using Atlas.Domain.Countries;
+using Infrastructure.Json;
 using Infrastructure.Json.Converters;
 using System.Text;
 using System.Text.Json;
@@ -10,7 +11,7 @@ namespace Unit.Tests.Infrastructure.Json.Converters;
 
 internal sealed class Cca2JsonConverterTests
 {
-    private readonly JsonSerializerOptions _options = new();
+    private readonly JsonSerializerOptions _options = CountryJsonContext.Default.Options;
     private readonly Cca2JsonConverter _converter = new();
 
     [Test]
