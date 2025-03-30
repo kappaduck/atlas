@@ -30,45 +30,17 @@ jobs:
         run: dotnet restore ${{ env.prometheus }}
 
       - name: Publish
-        run: dotnet publish ${{ env.prometheus }} --output .
+        run: dotnet publish ${{ env.prometheus }} --output ./artifacts
 
       - name: Run Prometheus
-        run: ./Prometheus.exe
-
-      - name: Detect changes
-        run: |
-          git config --global core.autocrlf false
-          if (git diff --quiet)
-          {
-            echo "No changes detected."
-            echo "changed=false" >> $env:GITHUB_ENV
-          }
-          else
-          {
-            echo "Changes detected."
-            echo "changed=true" >> $env:GITHUB_ENV
-            exit 0
-          }
-
-      - name: Commit changes
-        if: ${{ env.changed }} == 'true'
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          $branch="update-countries-json"
-          git checkout -b $branch
-          git add .
-          git commit -m "Update countries.json"
-          git push -u origin $branch
-          echo "branch=$branch" >> $env:GITHUB_ENV
+        run: ./artifacts/Prometheus.exe
 
       - name: Create pull request
-        if: ${{ env.changed }} == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           title: "Update countries.json"
           base: main
-          branch: ${{ env.branch }}
+          branch: update-countries-json
           commit-message: "Update countries.json"
           body: This PR updates the countries json files with the latest data.
           labels: dependencies, prometheus
