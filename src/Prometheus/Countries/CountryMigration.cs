@@ -48,6 +48,6 @@ internal sealed partial class CountryMigration(
     [LoggerMessage(LogLevel.Information, "Migrating {length} country to {jsonFile}")]
     private partial void MigratingCountries(int length, string jsonFile);
 
-    [LoggerMessage(LogLevel.Information, "Migrating {length} countries for search to {jsonFile}")]
+    [LoggerMessage(LogLevel.Information, "Migrating {length} country for search to {jsonFile}")]
     private partial void MigratingCountriesForSearch(int length, string jsonFile);
 }

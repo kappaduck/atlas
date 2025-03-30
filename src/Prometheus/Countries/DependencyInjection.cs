@@ -22,7 +22,13 @@ internal static class DependencyInjection
                         .AddSingleton(sp => sp.GetRequiredService<IOptions<CountryEndpointOptions>>().Value)
                         .AddOptionsWithValidateOnStart<CountryEndpointOptions>();
 
+        builder.Services.Configure<CountryFilterOptions>(builder.Configuration.GetSection(CountryFilterOptions.Section))
+                        .AddSingleton<IValidateOptions<CountryFilterOptions>, CountryFilterOptions.Validator>()
+                        .AddSingleton(sp => sp.GetRequiredService<IOptions<CountryFilterOptions>>().Value)
+                        .AddOptionsWithValidateOnStart<CountryFilterOptions>();
+
         builder.Services.AddHttpClient<ICountryProvider, CountryEndpoint>();
         builder.Services.AddTransient<IPatch<Span<CountryDto>>, CountryPatch>();
+        builder.Services.AddTransient<IMigration, CountryMigration>();
     }
 }
