@@ -6,10 +6,12 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Logging.Console;
+using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices;
 
 namespace Prometheus.Configurations;
 
+[ExcludeFromCodeCoverage]
 internal static class LoggingConfigurations
 {
     internal static void ConfigureLoggings(this IHostApplicationBuilder builder)
@@ -23,6 +25,7 @@ internal static class LoggingConfigurations
     }
 }
 
+[ExcludeFromCodeCoverage]
 file sealed class PrometheusConsoleFormatter : ConsoleFormatter
 {
     private const string DefaultForegroundColor = "\e[39m\e[22m";

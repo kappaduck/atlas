@@ -15,9 +15,9 @@ public static class Direction
         double deltaLatitude = CalculateDeltaLatitude(from.Latitude, to.Latitude);
         double deltaLongitude = CalculateDeltaLongitude(from.Longitude, to.Longitude);
 
-        double bearing = Math.Floor(Math.Atan2(deltaLongitude, deltaLatitude).ToDegrees());
+        double bearing = Math.Floor(Math.ToDegrees(Math.Atan2(deltaLongitude, deltaLatitude)));
 
-        return bearing.Normalize();
+        return Math.Normalize(bearing);
     }
 
     /// <summary>
@@ -32,8 +32,8 @@ public static class Direction
     {
         const double auxiliaryLatitude = Math.PI / 4;
 
-        double fromTangent = Math.Tan(auxiliaryLatitude + (fromLatitude.ToRadians() / 2));
-        double toTangent = Math.Tan(auxiliaryLatitude + (toLatitude.ToRadians() / 2));
+        double fromTangent = Math.Tan(auxiliaryLatitude + (Math.ToRadians(fromLatitude) / 2));
+        double toTangent = Math.Tan(auxiliaryLatitude + (Math.ToRadians(toLatitude) / 2));
 
         return Math.Log(toTangent / fromTangent);
     }
@@ -47,7 +47,7 @@ public static class Direction
     /// <returns>the calculated Δ longitude.</returns>
     private static double CalculateDeltaLongitude(double fromLongitude, double toLongitude)
     {
-        double deltaLongitude = (toLongitude - fromLongitude).ToRadians();
+        double deltaLongitude = Math.ToRadians(toLongitude - fromLongitude);
 
         return Math.Abs(deltaLongitude) > Math.PI
             ? GetShorterRhumbLine(deltaLongitude)

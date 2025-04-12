@@ -5,9 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Prometheus.Files.Options;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Prometheus.Files;
 
+[ExcludeFromCodeCoverage]
 internal static class DependencyInjection
 {
     internal static void AddFiles(this IHostApplicationBuilder builder)

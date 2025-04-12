@@ -12,7 +12,7 @@ internal sealed class MathExtensionsTests
     {
         const double degree = 180.0;
 
-        double actual = degree.ToRadians();
+        double actual = MathExtensions.ToRadians(degree);
 
         await Assert.That(actual).IsEqualTo(Math.PI);
     }
@@ -22,7 +22,7 @@ internal sealed class MathExtensionsTests
     {
         const double radian = Math.PI;
 
-        double actual = radian.ToDegrees();
+        double actual = MathExtensions.ToDegrees(radian);
 
         await Assert.That(actual).IsEqualTo(180.0);
     }
@@ -37,7 +37,7 @@ internal sealed class MathExtensionsTests
     [Arguments(360.0, 0.0)]
     public async Task NormalizeShouldAdaptTheAngleIn360Degrees(double angle, double normalizedAngle)
     {
-        double actual = angle.Normalize();
+        double actual = MathExtensions.Normalize(angle);
 
         await Assert.That(actual).IsEqualTo(normalizedAngle);
     }

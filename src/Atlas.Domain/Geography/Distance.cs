@@ -25,10 +25,10 @@ public sealed class Distance
         if (from == to)
             return new(0.0, 0.0);
 
-        double deltaLatitude = (to.Latitude - from.Latitude).ToRadians();
-        double deltaLongitude = (to.Longitude - from.Longitude).ToRadians();
-        double fromLatitude = from.Latitude.ToRadians();
-        double toLatitude = to.Latitude.ToRadians();
+        double deltaLatitude = Math.ToRadians(to.Latitude - from.Latitude);
+        double deltaLongitude = Math.ToRadians(to.Longitude - from.Longitude);
+        double fromLatitude = Math.ToRadians(from.Latitude);
+        double toLatitude = Math.ToRadians(to.Latitude);
 
         double sinLatitude = Math.Sin(deltaLatitude / 2);
         double sinLongitude = Math.Sin(deltaLongitude / 2);
