@@ -1,4 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+  <PropertyGroup>
+    <WriteImportMapToHtml>true</WriteImportMapToHtml>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="DartSassBuilder" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" />
