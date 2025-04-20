@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
   <PropertyGroup>
+    <EnableConfigurationBindingGenerator>true</EnableConfigurationBindingGenerator>
     <WriteImportMapToHtml>true</WriteImportMapToHtml>
   </PropertyGroup>
   <ItemGroup>

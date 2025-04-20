@@ -11,6 +11,7 @@ builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
 builder.ConfigureLoggings();
+builder.AddOptions();
 builder.AddServices();
 
 await builder.Build().RunAsync().ConfigureAwait(false);
