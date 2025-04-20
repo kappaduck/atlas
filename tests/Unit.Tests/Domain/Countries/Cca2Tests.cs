@@ -18,6 +18,27 @@ internal sealed class Cca2Tests
     public async Task Cca2ShouldBeEqualEvenThereIsDifferentCase(string cca2, bool result)
     {
         bool isEqual = _cca2 == new Cca2(cca2);
+
         await Assert.That(isEqual).IsEqualTo(result);
+    }
+
+    [Test]
+    public async Task ToStringShouldReturnCca2Value()
+    {
+        string cca2 = _cca2.ToString();
+
+        await Assert.That(cca2).IsEqualTo("CA");
+    }
+
+    [Test]
+    [Arguments("CA")]
+    [Arguments("ca")]
+    [Arguments("cA")]
+    [Arguments("Ca")]
+    public async Task GetHashCodeShouldReturnCca2HashCode(string cca2)
+    {
+        int hashCode = _cca2.GetHashCode();
+
+        await Assert.That(hashCode).IsEqualTo(new Cca2(cca2).GetHashCode());
     }
 }

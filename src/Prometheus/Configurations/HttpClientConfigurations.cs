@@ -10,11 +10,14 @@ namespace Prometheus.Configurations;
 [ExcludeFromCodeCoverage]
 internal static class HttpClientConfigurations
 {
-    internal static void ConfigureHttpClients(this IHostApplicationBuilder builder)
+    extension(IHostApplicationBuilder builder)
     {
-        if (builder.Environment.IsDevelopment())
-            return;
+        internal void ConfigureHttpClients()
+        {
+            if (builder.Environment.IsDevelopment())
+                return;
 
-        builder.Services.ConfigureHttpClientDefaults(b => b.RemoveAllLoggers());
+            builder.Services.ConfigureHttpClientDefaults(b => b.RemoveAllLoggers());
+        }
     }
 }
