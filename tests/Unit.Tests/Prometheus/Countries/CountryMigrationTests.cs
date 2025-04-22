@@ -10,7 +10,6 @@ using Prometheus.Countries.Dto;
 using Prometheus.Countries.Options;
 using Prometheus.Countries.Providers;
 using Prometheus.Files;
-using Prometheus.Patch;
 using System.Text.Json.Serialization.Metadata;
 
 namespace Unit.Tests.Prometheus.Countries;
@@ -29,7 +28,6 @@ internal sealed class CountryMigrationTests
 
     private readonly ICountryProvider _provider = Substitute.For<ICountryProvider>();
     private readonly IJsonFileWriter _writer = Substitute.For<IJsonFileWriter>();
-    private readonly IPatch<Span<CountryDto>> _patch = new CountryPatch();
 
     private readonly CountryMigration _migration;
 
@@ -39,7 +37,7 @@ internal sealed class CountryMigrationTests
 
         ILogger<CountryMigration> logger = Substitute.For<ILogger<CountryMigration>>();
 
-        _migration = new CountryMigration(_provider, _writer, _patch, logger, _options);
+        _migration = new CountryMigration(_provider, _writer, logger, _options);
     }
 
     [Test]
