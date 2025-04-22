@@ -12,7 +12,7 @@ internal sealed class JsonFileWriter : IJsonFileWriter
 {
     public async Task WriteToAsync<T>(string path, T value, JsonTypeInfo<T> metadata, CancellationToken cancellationToken)
     {
-        Stream stream = File.OpenWrite(path);
+        Stream stream = File.Open(path, FileMode.Create);
 
         await using (stream.ConfigureAwait(false))
         {

@@ -4,10 +4,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
-using Prometheus.Countries.Dto;
 using Prometheus.Countries.Options;
 using Prometheus.Countries.Providers;
-using Prometheus.Patch;
 using System.Diagnostics.CodeAnalysis;
 
 namespace Prometheus.Countries;
@@ -28,7 +26,6 @@ internal static class DependencyInjection
                         .AddOptionsWithValidateOnStart<CountryFilterOptions>();
 
         builder.Services.AddHttpClient<ICountryProvider, CountryEndpoint>();
-        builder.Services.AddTransient<IPatch<Span<CountryDto>>, CountryPatch>();
         builder.Services.AddTransient<IMigration, CountryMigration>();
     }
 }
