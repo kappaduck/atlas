@@ -14,14 +14,17 @@ namespace Prometheus.Configurations;
 [ExcludeFromCodeCoverage]
 internal static class LoggingConfigurations
 {
-    internal static void ConfigureLoggings(this IHostApplicationBuilder builder)
+    extension(IHostApplicationBuilder builder)
     {
-        builder.Services.Configure<ConsoleLifetimeOptions>(options => options.SuppressStatusMessages = true);
+        internal void ConfigureLoggings()
+        {
+            builder.Services.Configure<ConsoleLifetimeOptions>(options => options.SuppressStatusMessages = true);
 
-        builder.Logging.ClearProviders();
-        builder.Logging.AddConsole(options => options.FormatterName = PrometheusConsoleFormatter.FormatterName);
+            builder.Logging.ClearProviders();
+            builder.Logging.AddConsole(options => options.FormatterName = PrometheusConsoleFormatter.FormatterName);
 
-        builder.Services.AddSingleton<ConsoleFormatter, PrometheusConsoleFormatter>();
+            builder.Services.AddSingleton<ConsoleFormatter, PrometheusConsoleFormatter>();
+        }
     }
 }
 

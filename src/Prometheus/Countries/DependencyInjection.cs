@@ -13,19 +13,22 @@ namespace Prometheus.Countries;
 [ExcludeFromCodeCoverage]
 internal static class DependencyInjection
 {
-    internal static void AddCountries(this IHostApplicationBuilder builder)
+    extension(IHostApplicationBuilder builder)
     {
-        builder.Services.Configure<CountryEndpointOptions>(builder.Configuration.GetSection(CountryEndpointOptions.Section))
-                        .AddSingleton<IValidateOptions<CountryEndpointOptions>, CountryEndpointOptions.Validator>()
-                        .AddSingleton(sp => sp.GetRequiredService<IOptions<CountryEndpointOptions>>().Value)
-                        .AddOptionsWithValidateOnStart<CountryEndpointOptions>();
+        internal void AddCountries()
+        {
+            builder.Services.Configure<CountryEndpointOptions>(builder.Configuration.GetSection(CountryEndpointOptions.Section))
+                            .AddSingleton<IValidateOptions<CountryEndpointOptions>, CountryEndpointOptions.Validator>()
+                            .AddSingleton(sp => sp.GetRequiredService<IOptions<CountryEndpointOptions>>().Value)
+                            .AddOptionsWithValidateOnStart<CountryEndpointOptions>();
 
-        builder.Services.Configure<CountryFilterOptions>(builder.Configuration.GetSection(CountryFilterOptions.Section))
-                        .AddSingleton<IValidateOptions<CountryFilterOptions>, CountryFilterOptions.Validator>()
-                        .AddSingleton(sp => sp.GetRequiredService<IOptions<CountryFilterOptions>>().Value)
-                        .AddOptionsWithValidateOnStart<CountryFilterOptions>();
+            builder.Services.Configure<CountryFilterOptions>(builder.Configuration.GetSection(CountryFilterOptions.Section))
+                            .AddSingleton<IValidateOptions<CountryFilterOptions>, CountryFilterOptions.Validator>()
+                            .AddSingleton(sp => sp.GetRequiredService<IOptions<CountryFilterOptions>>().Value)
+                            .AddOptionsWithValidateOnStart<CountryFilterOptions>();
 
-        builder.Services.AddHttpClient<ICountryProvider, CountryEndpoint>();
-        builder.Services.AddTransient<IMigration, CountryMigration>();
+            builder.Services.AddHttpClient<ICountryProvider, CountryEndpoint>();
+            builder.Services.AddTransient<IMigration, CountryMigration>();
+        }
     }
 }

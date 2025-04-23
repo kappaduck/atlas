@@ -12,15 +12,18 @@ namespace Prometheus.Files;
 [ExcludeFromCodeCoverage]
 internal static class DependencyInjection
 {
-    internal static void AddFiles(this IHostApplicationBuilder builder)
+    extension(IHostApplicationBuilder builder)
     {
-        builder.Services.AddTransient<IDirectory, Directory>()
-                        .AddTransient<IDataDirectory, DataDirectory>()
-                        .AddTransient<IJsonFileWriter, JsonFileWriter>();
+        internal void AddFiles()
+        {
+            builder.Services.AddTransient<IDirectory, Directory>()
+                            .AddTransient<IDataDirectory, DataDirectory>()
+                            .AddTransient<IJsonFileWriter, JsonFileWriter>();
 
-        builder.Services.Configure<DataPathOptions>(builder.Configuration.GetSection(DataPathOptions.Section))
-                        .AddSingleton<IValidateOptions<DataPathOptions>, DataPathOptions.Validator>()
-                        .AddSingleton(sp => sp.GetRequiredService<IOptions<DataPathOptions>>().Value)
-                        .AddOptionsWithValidateOnStart<DataPathOptions>();
+            builder.Services.Configure<DataPathOptions>(builder.Configuration.GetSection(DataPathOptions.Section))
+                            .AddSingleton<IValidateOptions<DataPathOptions>, DataPathOptions.Validator>()
+                            .AddSingleton(sp => sp.GetRequiredService<IOptions<DataPathOptions>>().Value)
+                            .AddOptionsWithValidateOnStart<DataPathOptions>();
+        }
     }
 }

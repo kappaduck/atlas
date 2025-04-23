@@ -1,0 +1,123 @@
+@layer layout, components, utilities;
+
+:root {
+  --color-primary: light-dark(hsl(176, 96%, 23%), hsl(176, 96%, 69%));
+  --color-secondary: light-dark(hsl(213, 24%, 84%), hsl(213, 24%, 16%));
+  --color-secondary-accent: light-dark(hsl(213, 24%, 16%), hsl(213, 24%, 84%));
+  --color-accent: hsl(43, 86%, 50%);
+  --color-text: light-dark(hsl(210, 2%, 22%), hsl(210, 2%, 78%));
+  --color-background: light-dark(hsl(228, 20%, 95%), hsl(228, 20%, 8%));
+  --color-background-accent: light-dark(hsl(218, 22%, 91%), hsl(218, 22%, 14%));
+  --color-danger: light-dark(hsl(0, 100%, 50%), hsl(0, 100%, 27%));
+  --color-success: light-dark(hsl(120, 100%, 27%), hsl(120, 100%, 40%));
+
+  --color-dialog-primary: light-dark(hsl(176, 96%, 31%), hsl(43, 86%, 50%));
+  --color-dialog-background: light-dark(hsl(228, 20%, 95%), hsl(213, 24%, 16%));
+  --color-dialog-backdrop: light-dark(hsl(210, 2%, 22%), hsl(228, 20%, 8%));
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --default-line-height: 1.5;
+
+  --screen-sm: 576px;
+  --screen-md: 768px;
+  --screen-lg: 992px;
+  --screen-xl: 1200px;
+
+  &:has([data-theme="dark" i]) {
+    color-scheme: dark;
+  }
+
+  &:has([data-theme="light" i]) {
+    color-scheme: light;
+  }
+}
+
+#app[data-theme] {
+  transition: all 750ms ease-in-out;
+  background: var(--color-background);
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  font-family: 'Montserrat', system-ui;
+  font-size: var(--font-size-md);
+  line-height: var(--default-line-height);
+  background-color: var(--color-background);
+  color: var(--color-primary);
+}
+
+@layer layout {
+  #app {
+    display: grid;
+    min-height: 100svh;
+    grid-template-columns: auto minmax(auto, 512px) auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      ". header ."
+      ". main ."
+      ". footer .";
+
+    & > header {
+      grid-area: header;
+    }
+
+    & > main {
+      grid-area: main;
+    }
+
+    & > footer {
+      grid-area: footer;
+      place-self: center;
+    }
+
+    @media only screen and (max-width: 768px) {
+      grid-template-areas:
+        "header header header"
+        ". main ."
+        ". footer .";
+    }
+  }
+}
+
+@layer components {
+  .link {
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: var(--color-primary);
+
+    i + span {
+      margin-inline-start: 4px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: currentColor;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 250ms ease-in;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  :is(a, .link):focus-visible {
+    outline: 1px solid var(--color-accent);
+    outline-offset: 0.25rem;
+  }
+}

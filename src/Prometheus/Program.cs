@@ -7,6 +7,7 @@ using Prometheus;
 using Prometheus.Configurations;
 using Prometheus.Countries;
 using Prometheus.Files;
+using System.Diagnostics.CodeAnalysis;
 
 HostApplicationBuilder builder = Host.CreateApplicationBuilder();
 
@@ -19,3 +20,6 @@ builder.AddCountries();
 builder.Services.AddHostedService<Application>();
 
 await builder.Build().RunAsync().ConfigureAwait(false);
+
+[ExcludeFromCodeCoverage]
+file static partial class Program;
