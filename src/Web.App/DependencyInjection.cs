@@ -29,6 +29,7 @@ internal static class DependencyInjection
         internal void AddServices()
         {
             builder.Services.AddSingleton(sp => (IJSInProcessRuntime)sp.GetRequiredService<IJSRuntime>());
+            builder.Services.AddLocalization();
 
             builder.Services.AddTransient<ITimeService, TimeService>();
         }
