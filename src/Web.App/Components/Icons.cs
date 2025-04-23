@@ -5,5 +5,7 @@ namespace Web.App.Components;
 
 internal static class Icons
 {
+    public const string ArrowLeftCircle = "bi bi-arrow-left-circle";
+
     public const string Company = "bi bi-building";
 }
