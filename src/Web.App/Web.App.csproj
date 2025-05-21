@@ -2,7 +2,7 @@
   <PropertyGroup>
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
     <EnableConfigurationBindingGenerator>true</EnableConfigurationBindingGenerator>
-    <WriteImportMapToHtml>true</WriteImportMapToHtml>
+    <OverrideHtmlAssetPlaceholders>true</OverrideHtmlAssetPlaceholders>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" />

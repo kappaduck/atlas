@@ -32,7 +32,7 @@ jobs:
         run: dotnet build --configuration release --no-restore
 
       - name: Test
-        run: dotnet test --configuration release --no-build -- --report-trx
+        run: dotnet test --configuration release --no-build --report-trx
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
