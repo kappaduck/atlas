@@ -1,13 +1,12 @@
 ﻿@using Web.App.Options
 @using Web.App.Services
 
-@inject ITimeService timeService
 @inject ProjectOptions project
 @inject CompanyOptions company
 
 <footer>
     <ul role="list">
-        <li>&copy; @GetCopyrightYear()</li>
+        <li>&copy; 2024</li>
         <li>
             <a class="link" target="_blank" href="@company.Url">
                 <i class="@Icons.Company"></i>
@@ -24,15 +23,4 @@
 
 @code {
     protected override bool ShouldRender() => false;
-
-    private string GetCopyrightYear()
-    {
-        const int startYear = 2024;
-
-        int currentYear = timeService.Today.Year;
-
-        return currentYear == startYear
-            ? startYear.ToString()
-            : $"{startYear} - {currentYear}";
-    }
 }

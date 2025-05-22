@@ -128,4 +128,13 @@
   <data name="NotFound" xml:space="preserve">
     <value>Page non trouvée</value>
   </data>
+  <data name="Atlas" xml:space="preserve">
+    <value>Atlas</value>
+  </data>
+  <data name="AtlasLogo" xml:space="preserve">
+    <value>Logo de Atlas</value>
+  </data>
+  <data name="Navigation" xml:space="preserve">
+    <value>Navigation</value>
+  </data>
 </root>
