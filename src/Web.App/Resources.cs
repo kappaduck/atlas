@@ -12,9 +12,17 @@ internal sealed class Resources
     {
     }
 
+    internal const string Atlas = nameof(Atlas);
+
+    internal const string AtlasLogo = nameof(AtlasLogo);
+
     internal const string GoBack = nameof(GoBack);
+
+    internal const string Navigation = nameof(Navigation);
 
     internal const string NotFound = nameof(NotFound);
 
     internal const string NotFoundMessage = nameof(NotFoundMessage);
+
+    internal const string Project = nameof(Project);
 }

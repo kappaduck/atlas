@@ -126,4 +126,16 @@
   <data name="NotFound" xml:space="preserve">
     <value>Not found</value>
   </data>
+  <data name="Atlas" xml:space="preserve">
+    <value>Atlas</value>
+  </data>
+  <data name="AtlasLogo" xml:space="preserve">
+    <value>Atlas logo</value>
+  </data>
+  <data name="Navigation" xml:space="preserve">
+    <value>Navigation</value>
+  </data>
+  <data name="Project" xml:space="preserve">
+    <value>Project</value>
+  </data>
 </root>
