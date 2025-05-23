@@ -7,6 +7,7 @@ using Microsoft.JSInterop;
 using System.Diagnostics.CodeAnalysis;
 using Web.App.Options;
 using Web.App.Services;
+using Web.App.Storage;
 
 namespace Web.App;
 
@@ -32,6 +33,7 @@ internal static class DependencyInjection
             builder.Services.AddLocalization();
 
             builder.Services.AddTransient<ITimeService, TimeService>();
+            builder.Services.AddSingleton<ILocalStorage, LocalStorage>();
         }
 
         internal void ConfigureLoggings()
