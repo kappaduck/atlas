@@ -23,7 +23,10 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
             if (_data.Theme == value)
                 return;
 
-            ChangeTheme(value);
+            _data = _data with { Theme = value };
+            storage.SetItem(LocalStorageKeys.Settings, _data);
+
+            ChangeTheme(value.ToString());
         }
     }
 
@@ -52,14 +55,6 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
             _data = storage.GetItem<Data>(LocalStorageKeys.Settings) ?? _data;
             ChangeTheme(_data.Theme.ToString());
         }
-    }
-
-    private void ChangeTheme(Theme theme)
-    {
-        _data = _data with { Theme = theme };
-        storage.SetItem(LocalStorageKeys.Settings, _data);
-
-        ChangeTheme(theme.ToString());
     }
 
     [JSImport("changeTheme", "settings")]
