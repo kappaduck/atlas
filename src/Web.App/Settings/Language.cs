@@ -3,7 +3,7 @@
 
 namespace Web.App.Settings;
 
-internal enum Language
+public enum Language
 {
     English = 0,
     French = 1

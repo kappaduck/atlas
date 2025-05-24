@@ -3,7 +3,7 @@
 
 namespace Web.App.Settings;
 
-internal enum Theme
+public enum Theme
 {
     System = 0,
     Dark = 1,
