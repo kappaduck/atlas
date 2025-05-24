@@ -1,0 +1,30 @@
+﻿@using Web.App.Settings.Components
+
+@inherits ModalBase
+@inject IStringLocalizer<Resources> localizer
+
+<CascadingValue Value="this" IsFixed="true">
+    <dialog @ref="_dialog" class="modal">
+        <div class="settings">
+            <div class="header">
+                <h1>@localizer[Resources.Settings]</h1>
+                <i class="@Icons.Times close" @onclick="() => Close(_dialog)"></i>
+            </div>
+            <div class="body">
+                <ul class="tabs" role="list">
+                    @foreach ((TabItem tab, string name) in GetTabs())
+                    {
+                        <li class="tab @IsActive(tab)" @onclick="() => SelectTab(tab)">@localizer[name]</li>
+                    }
+                </ul>
+                <div class="content @GetTabCss()">
+                    @if (_selectedTab == TabItem.General)
+                    {
+                        <GeneralSettings />
+                    }
+                </div>
+            </div>
+        </div>
+    </dialog>
+    @ChildContent
+</CascadingValue>
