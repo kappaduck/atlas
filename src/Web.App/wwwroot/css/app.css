@@ -121,4 +121,67 @@ body {
     outline: 1px solid var(--color-accent);
     outline-offset: 0.25rem;
   }
+
+  select {
+    color: var(--color-text);
+    padding: 0.5em 0.75em;
+
+    &:focus-visible {
+      outline: 2px solid var(--color-accent);
+    }
+  }
+
+  dialog.modal {
+    --width: 950px;
+    --animation-speed: 700ms;
+    width: var(--width);
+    height: calc((var(--width) * 9) / 16);
+    border: 1px solid var(--color-dialog-primary);
+    border-radius: 8px;
+    margin-block-start: 6em;
+    padding: 12px 16px;
+    z-index: 2;
+    outline: none;
+    opacity: 0;
+    translate: 0 25vh;
+    transition: all var(--animation-speed) allow-discrete;
+
+    .close {
+      display: flex;
+      font-size: 1.75rem;
+      cursor: pointer;
+
+      &:focus-visible {
+        outline: 1px solid var(--color-dialog-primary);
+      }
+
+      &:hover {
+        color: var(--color-dialog-primary);
+      }
+    }
+
+    &::backdrop {
+      opacity: 0;
+      background: var(--color-dialog-backdrop);
+      transition: all var(--animation-speed) allow-discrete;
+    }
+
+    &[open] {
+      opacity: 1;
+      translate: 0 0;
+
+      &::backdrop {
+        opacity: .75;
+      }
+
+      @starting-style {
+        opacity: 0;
+        translate: 0 -25vh;
+
+        &::backdrop {
+          opacity: 0;
+        }
+      }
+    }
+  }
 }

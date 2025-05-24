@@ -1,13 +1,20 @@
+@using Web.App.Components.Modals
+@using Web.App.Settings
+
 @inject IStringLocalizer<Resources> localizer
 
-<Router AppAssembly="@typeof(App).Assembly">
-    <Found Context="route">
-        <RouteView RouteData="route" DefaultLayout="typeof(MainLayout)" />
-    </Found>
-    <NotFound>
-        <PageTitle>@localizer[Resources.NotFound]</PageTitle>
-        <LayoutView Layout="typeof(MainLayout)">
-            <NotFound />
-        </LayoutView>
-    </NotFound>
-</Router>
+<AppSettings>
+    <SettingsModal>
+        <Router AppAssembly="@typeof(App).Assembly">
+            <Found Context="route">
+                <RouteView RouteData="route" DefaultLayout="typeof(MainLayout)" />
+            </Found>
+            <NotFound>
+                <PageTitle>@localizer[Resources.NotFound]</PageTitle>
+                <LayoutView Layout="typeof(MainLayout)">
+                    <NotFound />
+                </LayoutView>
+            </NotFound>
+        </Router>
+    </SettingsModal>
+</AppSettings>

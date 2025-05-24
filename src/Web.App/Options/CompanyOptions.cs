@@ -8,9 +8,9 @@ using System.Diagnostics.CodeAnalysis;
 namespace Web.App.Options;
 
 [ExcludeFromCodeCoverage]
-public sealed partial class CompanyOptions
+internal sealed partial class CompanyOptions
 {
-    public const string Section = "project:company";
+    internal const string Section = "project:company";
 
     [Required]
     public required string Name { get; set; }

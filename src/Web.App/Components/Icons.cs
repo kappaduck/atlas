@@ -9,5 +9,11 @@ internal static class Icons
 
     public const string Company = "bi bi-building";
 
+    public const string InfoCircle = "bi bi-info-circle";
+
     public const string Github = "bi bi-github";
+
+    public const string Sliders = "bi bi-sliders2";
+
+    public const string Times = "bi bi-x";
 }

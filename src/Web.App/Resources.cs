@@ -16,7 +16,13 @@ internal sealed class Resources
 
     internal const string AtlasLogo = nameof(AtlasLogo);
 
+    internal const string ChangingLanguageWarning = nameof(ChangingLanguageWarning);
+
+    internal const string Display = nameof(Display);
+
     internal const string GoBack = nameof(GoBack);
+
+    internal const string Language = nameof(Language);
 
     internal const string Navigation = nameof(Navigation);
 
@@ -25,4 +31,8 @@ internal sealed class Resources
     internal const string NotFoundMessage = nameof(NotFoundMessage);
 
     internal const string Project = nameof(Project);
+
+    internal const string Settings = nameof(Settings);
+
+    internal const string Theme = nameof(Theme);
 }
