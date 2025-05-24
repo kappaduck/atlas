@@ -168,4 +168,7 @@
   <data name="English" xml:space="preserve">
     <value>English</value>
   </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+  </data>
 </root>

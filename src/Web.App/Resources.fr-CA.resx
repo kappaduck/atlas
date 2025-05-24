@@ -172,4 +172,7 @@
   <data name="English" xml:space="preserve">
     <value>Anglais</value>
   </data>
+  <data name="General" xml:space="preserve">
+    <value>Général</value>
+  </data>
 </root>
