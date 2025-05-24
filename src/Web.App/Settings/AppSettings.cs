@@ -3,7 +3,7 @@
 
 namespace Web.App.Settings;
 
-public sealed record AppSettings
+internal sealed record AppSettings
 {
     public Theme Theme { get; init; }
 
