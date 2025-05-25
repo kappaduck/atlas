@@ -1,3 +1,5 @@
+name: Build and Deploy
+
 on:
   workflow_call:
     inputs:
@@ -15,7 +17,7 @@ jobs:
   build:
     runs-on: windows-latest
 
-    name: Build Atlas
+    name: Build
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,20 +28,8 @@ jobs:
           dotnet-version: 10.0.x
           dotnet-quality: preview
 
-      - name: Restore dependencies
-        run: dotnet restore
-
-      - name: Build
-        run: dotnet build --configuration release --no-restore
-
-      - name: Publish Prometheus
-        run: dotnet publish ./src/Prometheus/Prometheus.csproj --no-restore --output .
-
-      - name: Run Prometheus
-        run: ./Prometheus.exe
-
       - name: Publish web app
-        run: dotnet publish ./src/Web.App/Web.App.csproj -p:WasmApplicationEnvironmentName=${{ inputs.environment }} --no-restore --output ./artifacts
+        run: dotnet publish ./src/Web.App/Web.App.csproj -p:WasmApplicationEnvironmentName=${{ inputs.environment }} --output ./artifacts
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
@@ -48,7 +38,7 @@ jobs:
           path: ./artifacts/wwwroot
 
   deploy:
-    name: Deploy web app
+    name: Deploy
     needs: build
     runs-on: ubuntu-latest
     permissions:
