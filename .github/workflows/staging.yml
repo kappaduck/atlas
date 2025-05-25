@@ -13,7 +13,7 @@ jobs:
       contents: read
       deployments: write
 
-    uses: kappaduck/atlas/.github/workflows/build.yml@feature/deploy-staging
+    uses: kappaduck/atlas/.github/workflows/build.yml@main
     with:
       environment: staging
     secrets: inherit
