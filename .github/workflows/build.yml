@@ -1,0 +1,71 @@
+on:
+  workflow_call:
+    inputs:
+      environment:
+        description: 'The environment to deploy'
+        required: true
+        type: string
+    secrets:
+      CLOUDFLARE_API_TOKEN:
+        required: true
+      CLOUDFLARE_ACCOUNT_ID:
+        required: true
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    name: Build Atlas
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+          dotnet-quality: preview
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration release --no-restore
+
+      - name: Publish Prometheus
+        run: dotnet publish ./src/Prometheus/Prometheus.csproj --no-restore --output .
+
+      - name: Run Prometheus
+        run: ./Prometheus.exe
+
+      - name: Publish web app
+        run: dotnet publish ./src/Web.App/Web.App.csproj -p:WasmApplicationEnvironmentName=${{ inputs.environment }} --no-restore --output ./artifacts
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: web-app
+          path: ./artifacts/wwwroot
+
+  deploy:
+    name: Deploy web app
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: web-app
+          path: wwwroot
+
+      - name: Deploy to Cloudflare
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          command: pages deploy wwwroot --project-name atlas --branch ${{ inputs.environment }}
