@@ -2,6 +2,7 @@
 // The source code is licensed under MIT License.
 
 using Infrastructure.Persistence.Caching;
+using Infrastructure.Persistence.Changelog;
 using Infrastructure.Persistence.Countries;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +19,7 @@ public static class DependencyInjection
         {
             services.AddCaching(configuration);
             services.AddCountries(configure);
+            services.AddChangelog(configuration);
         }
     }
 }
