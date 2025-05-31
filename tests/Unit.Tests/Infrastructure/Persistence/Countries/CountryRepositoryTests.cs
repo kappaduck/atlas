@@ -111,7 +111,7 @@ internal sealed class CountryRepositoryTests
     }
 
     [Test]
-    public async Task GetAsyncShouldNotRetrieveFromDataSourceIsCountryCached()
+    public async Task GetAsyncShouldNotRetrieveFromDataSourceWhenCountryIsCached()
     {
         Cca2 cca2 = new("CA");
         string expectedKey = $"{ExpectedAllCountriesKey}:{cca2}";

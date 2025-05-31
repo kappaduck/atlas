@@ -9,7 +9,7 @@ using Infrastructure.Persistence.Countries.Sources;
 
 namespace Unit.Tests.Infrastructure.Persistence.Countries;
 
-public class CountryLookupRepositoryTests
+internal sealed class CountryLookupRepositoryTests
 {
     private const string ExpectedAllCountriesKey = "countries:lookup";
 
@@ -43,7 +43,7 @@ public class CountryLookupRepositoryTests
     }
 
     [Test]
-    public async Task LookupAsyncShouldNotRetrieveFromDataSourceIsAllCountriesAreCached()
+    public async Task LookupAsyncShouldNotRetrieveFromDataSourceWhenAllCountriesAreCached()
     {
         _cache.TryGet<CountryLookup[]>(ExpectedAllCountriesKey, out _).Returns(returnThis: true);
 

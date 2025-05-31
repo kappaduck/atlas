@@ -1,6 +1,7 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
+using Atlas.Application.Changelog.Repositories;
 using Infrastructure.Persistence.Changelog.Sources;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,6 +23,7 @@ internal static class DependencyInjection
                     .AddOptionsWithValidateOnStart<ChangelogOptions>();
 
             services.AddHttpClient<IChangelogClient, ChangelogClient>();
+            services.AddSingleton<IChangelogRepository, ChangelogRepository>();
         }
     }
 }
