@@ -22,6 +22,10 @@
                     {
                         <GeneralSettings />
                     }
+                    @if (_selectedTab == TabItem.Changelog)
+                    {
+                        <Changelog />
+                    }
                 </div>
             </div>
         </div>

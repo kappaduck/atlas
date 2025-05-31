@@ -17,13 +17,13 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
 
     public Theme Theme
     {
-        get => _data.Theme;
+        get => _data.General.Theme;
         set
         {
-            if (_data.Theme == value)
+            if (_data.General.Theme == value)
                 return;
 
-            _data = _data with { Theme = value };
+            _data = _data with { General = _data.General with { Theme = value } };
             storage.SetItem(LocalStorageKeys.Settings, _data);
 
             ChangeTheme(value.ToString());
@@ -32,13 +32,13 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
 
     public Language Language
     {
-        get => _data.Language;
+        get => _data.General.Language;
         set
         {
-            if (_data.Language == value)
+            if (_data.General.Language == value)
                 return;
 
-            _data = _data with { Language = value };
+            _data = _data with { General = _data.General with { Language = value } };
             storage.SetItem(LocalStorageKeys.Settings, _data);
 
             navigation.Refresh();
@@ -53,7 +53,7 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
             await JSHost.ImportAsync("settings", "/scripts/settings.js");
 
             _data = storage.GetItem<Data>(LocalStorageKeys.Settings) ?? _data;
-            ChangeTheme(_data.Theme.ToString());
+            ChangeTheme(_data.General.Theme.ToString());
         }
     }
 
@@ -62,8 +62,6 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
 
     internal sealed record Data
     {
-        public Theme Theme { get; init; }
-
-        public Language Language { get; init; }
+        public General General { get; init; } = new();
     }
 }

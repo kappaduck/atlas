@@ -16,6 +16,8 @@ internal sealed class Resources
 
     internal const string AtlasLogo = nameof(AtlasLogo);
 
+    internal const string Changelog = nameof(Changelog);
+
     internal const string ChangingLanguageWarning = nameof(ChangingLanguageWarning);
 
     internal const string Display = nameof(Display);

@@ -75,6 +75,17 @@
           border-color: hsl(from var(--color-secondary-accent) h s l / 0.2);
         }
       }
+
+      &.changelog {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &:has(> .spinner) {
+          align-items: center;
+          justify-content: center;
+        }
+      }
     }
   }
 }
