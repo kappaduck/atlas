@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using NSubstitute.ReturnsExtensions;
 using Prometheus;
 using Prometheus.Files;
+using App = Prometheus.Application;
 
 namespace Unit.Tests.Prometheus;
 
@@ -15,13 +16,13 @@ internal sealed class ApplicationTests
     private readonly IMigration _migration = Substitute.For<IMigration>();
     private readonly IHostApplicationLifetime _lifetime = Substitute.For<IHostApplicationLifetime>();
 
-    private readonly Application _application;
+    private readonly App _application;
 
     public ApplicationTests()
     {
-        ILogger<Application> logger = Substitute.For<ILogger<Application>>();
+        ILogger<App> logger = Substitute.For<ILogger<App>>();
 
-        _application = new Application(_dataDirectory, [_migration], _lifetime, logger);
+        _application = new App(_dataDirectory, [_migration], _lifetime, logger);
     }
 
     [Test]
