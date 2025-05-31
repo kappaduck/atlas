@@ -1,6 +1,8 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
+using Atlas.Application;
+using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using System.Diagnostics.CodeAnalysis;
@@ -16,6 +18,9 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.ConfigureLoggings();
 builder.AddOptions();
 builder.AddServices();
+
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration, c => c.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress));
 
 await builder.Build()
              .UseLocalization()
