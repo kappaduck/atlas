@@ -1,7 +1,6 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
-using Atlas.Application.Countries.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics.CodeAnalysis;
 
@@ -13,11 +12,6 @@ public static class DependencyInjection
     extension(IServiceCollection services)
     {
         public void AddApplication()
-        {
-            services.AddMediator(options => options.GenerateTypesAsInternal = true);
-
-            services.AddTransient<IDateHash, DateHash>();
-            services.AddTransient<ITimeService, TimeService>();
-        }
+            => services.AddMediator(options => options.GenerateTypesAsInternal = true);
     }
 }

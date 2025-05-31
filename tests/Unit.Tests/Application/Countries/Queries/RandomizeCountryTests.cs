@@ -11,20 +11,20 @@ using Atlas.Domain.Resources;
 
 namespace Unit.Tests.Application.Countries.Queries;
 
-internal sealed class GetDailyCountryTests
+internal sealed class RandomizeCountryTests
 {
     private readonly Country _country = CreateCanada();
 
     private readonly ICountryRepository _repository = Substitute.For<ICountryRepository>();
 
-    private readonly GetDailyCountry.Query _query = new();
-    private readonly GetDailyCountry.Handler _handler;
+    private readonly RandomizeCountry.Query _query = new();
+    private readonly RandomizeCountry.Handler _handler;
 
-    public GetDailyCountryTests()
+    public RandomizeCountryTests()
     {
         _repository.GetAllAsync(CancellationToken.None).Returns([_country]);
 
-        _handler = new GetDailyCountry.Handler(_repository);
+        _handler = new RandomizeCountry.Handler(_repository);
     }
 
     [Test]
@@ -33,6 +33,14 @@ internal sealed class GetDailyCountryTests
         await _handler.Handle(_query, CancellationToken.None);
 
         await _repository.Received(1).GetAllAsync(CancellationToken.None);
+    }
+
+    [Test]
+    public async Task HandleShouldReturnTheRandomizedCountry()
+    {
+        CountryResponse? country = await _handler.Handle(_query, CancellationToken.None);
+
+        await Assert.That(country!.Cca2).IsEqualTo(_country.Cca2);
     }
 
     [Test]
@@ -46,11 +54,11 @@ internal sealed class GetDailyCountryTests
     }
 
     [Test]
-    public async Task HandleShouldReturnTheCountryOfTheDay()
+    public async Task HandleShouldCacheTheRandomizedCountry()
     {
-        CountryResponse? country = await _handler.Handle(_query, CancellationToken.None);
+        await _handler.Handle(_query, CancellationToken.None);
 
-        await Assert.That(country!.Cca2).IsEqualTo(_country.Cca2);
+        _repository.Received(1).Save(Arg.Is<Country>(c => c.Cca2 == _country.Cca2));
     }
 
     private static Country CreateCanada() => new()
