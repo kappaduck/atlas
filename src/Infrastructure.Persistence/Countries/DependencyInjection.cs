@@ -20,6 +20,7 @@ internal static class DependencyInjection
             services.AddHttpClient<IDataSource<CountryLookup>, CountryLookupDataSource>(configure);
 
             services.AddSingleton<ICountryRepository, CountryRepository>();
+            services.AddSingleton<ICountryLookupRepository, CountryLookupRepository>();
         }
     }
 }
