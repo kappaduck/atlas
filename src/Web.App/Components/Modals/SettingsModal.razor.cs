@@ -43,11 +43,13 @@ public sealed partial class SettingsModal
     private string GetTabCss() => _selectedTab switch
     {
         TabItem.General => "general",
+        TabItem.Changelog => "changelog",
         _ => string.Empty
     };
 
     private enum TabItem
     {
-        General = 0
+        General = 0,
+        Changelog = 1
     }
 }

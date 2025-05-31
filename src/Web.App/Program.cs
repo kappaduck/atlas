@@ -40,7 +40,7 @@ file static partial class Program
             if (data is null)
                 return host;
 
-            CultureInfo culture = data.Language switch
+            CultureInfo culture = data.General.Language switch
             {
                 Language.English => new CultureInfo("en"),
                 Language.French => new CultureInfo("fr-CA"),
