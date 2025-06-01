@@ -15,6 +15,8 @@ public sealed partial class SettingsModal
 
     public void ShowGeneral() => Show(TabItem.General);
 
+    public void ShowChangelog() => Show(TabItem.Changelog);
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await base.OnAfterRenderAsync(firstRender);
