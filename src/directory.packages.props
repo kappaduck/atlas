@@ -2,23 +2,23 @@
   <Import Project="$([MSBuild]::GetPathOfFileAbove('directory.packages.props', '$(MSBuildThisFileDirectory)../'))" />
   <ItemGroup Label="Common packages">
     <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.2.25" />
-    <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.0-preview.4.25258.110" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.0-preview.5.25277.114" />
   </ItemGroup>
   <ItemGroup Label="Application packages">
     <PackageVersion Include="Mediator.Abstractions" Version="3.0.0-preview.65" />
     <PackageVersion Include="Mediator.SourceGenerator" Version="3.0.0-preview.65" />
   </ItemGroup>
   <ItemGroup Label="Infrastructure packages">
-    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="10.0.0-preview.4.25258.110" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="10.0.0-preview.5.25277.114" />
   </ItemGroup>
   <ItemGroup Label="ETL packages">
-    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.0-preview.4.25258.110" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.0-preview.5.25277.114" />
   </ItemGroup>
   <ItemGroup Label="Web packages">
-    <PackageVersion Include="Markdig" Version="0.41.1" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.0-preview.4.25258.110" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.0-preview.4.25258.110" />
-    <PackageVersion Include="Microsoft.Extensions.Localization" Version="10.0.0-preview.4.25258.110" />
+    <PackageVersion Include="Markdig" Version="0.41.2" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.0-preview.5.25277.114" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="10.0.0-preview.5.25277.114" />
+    <PackageVersion Include="Microsoft.Extensions.Localization" Version="10.0.0-preview.5.25277.114" />
     <PackageVersion Include="Microsoft.TypeScript.MSBuild" Version="5.8.3" />
   </ItemGroup>
 </Project>
