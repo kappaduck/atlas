@@ -1,0 +1,15 @@
+.country-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  gap: 12px;
+
+  .flag {
+    height: 100px;
+  }
+
+  .name {
+    text-align: center;
+  }
+}

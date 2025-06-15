@@ -15,6 +15,8 @@ public sealed partial class SettingsModal
 
     public void ShowGeneral() => Show(TabItem.General);
 
+    public void ShowChangelog() => Show(TabItem.Changelog);
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await base.OnAfterRenderAsync(firstRender);
@@ -44,12 +46,14 @@ public sealed partial class SettingsModal
     {
         TabItem.General => "general",
         TabItem.Changelog => "changelog",
+        TabItem.Countries => "countries",
         _ => string.Empty
     };
 
     private enum TabItem
     {
         General = 0,
-        Changelog = 1
+        Changelog = 1,
+        Countries = 2
     }
 }

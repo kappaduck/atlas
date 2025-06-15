@@ -1,0 +1,31 @@
+﻿@using Atlas.Application.Countries
+@using Atlas.Application.Countries.Queries
+@using Mediator
+
+@inject IStringLocalizer<Resources> localizer
+@inject IMediator mediator
+
+@if (_countries.Length > 0)
+{
+    @foreach (var country in _countries.OrderBy(c => c.Name))
+    {
+        <div class="country-card">
+            <picture>
+                <source type="@country.Resource.Flag.MediaType" srcset="@country.Resource.Flag.Uri" />
+                <img src="@country.Resource.Flag.Uri" alt="@country.Name" class="flag" />
+            </picture>
+            <h3 class="name">@country.Name</h3>
+        </div>
+    }
+}
+else
+{
+    <p>@localizer[Resources.NoCountriesAvailable]</p>
+}
+
+@code {
+    private CountryResponse[] _countries = [];
+
+    protected override async Task OnInitializedAsync()
+        => _countries = await mediator.Send(new GetAllCountries.Query());
+}
