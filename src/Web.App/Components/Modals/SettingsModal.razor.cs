@@ -46,12 +46,14 @@ public sealed partial class SettingsModal
     {
         TabItem.General => "general",
         TabItem.Changelog => "changelog",
+        TabItem.Countries => "countries",
         _ => string.Empty
     };
 
     private enum TabItem
     {
         General = 0,
-        Changelog = 1
+        Changelog = 1,
+        Countries = 2
     }
 }

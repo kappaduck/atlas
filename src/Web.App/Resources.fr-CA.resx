@@ -193,4 +193,12 @@
     <value>Changelog</value>
     <comment/>
   </data>
+  <data name="NoCountriesAvailable" xml:space="preserve">
+    <value>Aucun pays disponible</value>
+    <comment/>
+  </data>
+  <data name="Countries" xml:space="preserve">
+    <value>Pays</value>
+    <comment/>
+  </data>
 </root>
