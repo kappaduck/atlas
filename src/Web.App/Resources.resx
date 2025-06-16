@@ -209,4 +209,12 @@
     <value>Lookup a country</value>
     <comment/>
   </data>
+  <data name="FailedDisplayFlag" xml:space="preserve">
+    <value>Failed to display the flag</value>
+    <comment/>
+  </data>
+  <data name="GiveUp" xml:space="preserve">
+    <value>Give up</value>
+    <comment/>
+  </data>
 </root>

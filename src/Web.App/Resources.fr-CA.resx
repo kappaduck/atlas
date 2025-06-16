@@ -209,4 +209,12 @@
     <value>Canada, Italie...</value>
     <comment/>
   </data>
+  <data name="FailedDisplayFlag" xml:space="preserve">
+    <value>Impossible d'afficher le drapeau</value>
+    <comment/>
+  </data>
+  <data name="GiveUp" xml:space="preserve">
+    <value>Abandonner</value>
+    <comment/>
+  </data>
 </root>
