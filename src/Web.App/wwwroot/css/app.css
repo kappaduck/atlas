@@ -37,7 +37,7 @@
 }
 
 #app[data-theme] {
-  transition: all 750ms ease-in-out;
+  transition: background 750ms ease-in-out;
   background: var(--color-background);
 }
 
@@ -164,6 +164,26 @@ body {
     }
   }
 
+  input, button {
+    color: var(--color-text);
+    background: var(--color-secondary);
+    padding: 0.5em 0.75em;
+    border: none;
+    border-radius: 8px;
+  }
+
+  button {
+    cursor: pointer;
+    border: 1px solid var(--color-text);
+    transition: background 250ms;
+    outline: none;
+
+    &:hover, &:focus-visible {
+      background: var(--color-secondary-accent);
+      color: var(--color-secondary);
+    }
+  }
+
   .spinner {
     display: inline-block;
     width: 48px;
@@ -247,5 +267,63 @@ body {
     gap: 4px;
     margin-block: 0.5em;
     padding-inline-start: 1.5em;
+  }
+}
+
+@layer game {
+  .game {
+    --max-width: 320px;
+
+    display: grid;
+    gap: 2em;
+    padding-block: 1.5rem;
+    min-width: var(--max-width);
+    justify-content: center;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "picture" "content" "actions";
+
+    & > :is(picture, .placeholder) {
+      grid-area: picture;
+      width: var(--max-width);
+      aspect-ratio: 2 / 1;
+
+      img {
+        border: 1px solid var(--color-text);
+      }
+    }
+
+    & > .placeholder {
+      background: var(--color-secondary-accent);
+      cursor: wait;
+      animation: placeholder-glow 2.5s ease-in-out infinite;
+    }
+
+    & > .content {
+      grid-area: content;
+      display: flex;
+      justify-content: center;
+    }
+
+    & > .actions {
+      grid-area: actions;
+      display: flex;
+      width: var(--max-width);
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+@keyframes placeholder-glow {
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0.5;
   }
 }

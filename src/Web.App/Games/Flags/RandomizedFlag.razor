@@ -1,0 +1,27 @@
+﻿@page "/flags/random"
+
+@inject IStringLocalizer<Resources> localizer
+
+<div class="game">
+    @if (_country is null)
+    {
+        <div class="placeholder" aria-hidden="true">
+        </div>
+    }
+    else
+    {
+        <picture>
+            <source srcset="@_country.Resource.Flag.Uri" type="@_country.Resource.Flag.MediaType" />
+            <img src="@_country.Resource.Flag.Uri" alt="@localizer[Resources.FailedDisplayFlag]" />
+        </picture>
+    }
+    <div class="content">
+    </div>
+    <div class="actions">
+        <a href="/" class="link">
+            <i class="@Icons.ArrowLeftCircle"></i>
+            <span>@localizer[Resources.GoBack]</span>
+        </a>
+        <button class="btn-give-up">@localizer[Resources.GiveUp]</button>
+    </div>
+</div>
