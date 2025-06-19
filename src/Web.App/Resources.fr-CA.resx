@@ -201,4 +201,12 @@
     <value>Pays</value>
     <comment/>
   </data>
+  <data name="LookupCountry" xml:space="preserve">
+    <value>Chercher un pays</value>
+    <comment/>
+  </data>
+  <data name="LookupPlaceholder" xml:space="preserve">
+    <value>Canada, Italie...</value>
+    <comment/>
+  </data>
 </root>

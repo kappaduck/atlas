@@ -1,0 +1,15 @@
+﻿@inject IStringLocalizer<Resources> localizer
+
+<div class="container">
+    <input type="text" aria-label="@localizer[Resources.LookupCountry]" placeholder="@localizer[Resources.LookupPlaceholder]"
+           @bind="_input"
+           @oninput="Lookup"
+           @onfocus="Focus"
+           @onkeydown="HandleKeyboardAsync" />
+    <ul class="items" role="list">
+        @foreach ((string code, string name) in _filteredCountries.OrderBy(c => c.Name))
+        {
+            <li class="item" @onclick="async () => await SelectCountryAsync(code)">@name</li>
+        }
+    </ul>
+</div>
