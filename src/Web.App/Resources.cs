@@ -28,6 +28,10 @@ internal sealed class Resources
 
     internal const string Language = nameof(Language);
 
+    internal const string LookupCountry = nameof(LookupCountry);
+
+    internal const string LookupPlaceholder = nameof(LookupPlaceholder);
+
     internal const string Navigation = nameof(Navigation);
 
     internal const string NoCountriesAvailable = nameof(NoCountriesAvailable);

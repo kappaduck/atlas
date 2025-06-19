@@ -122,6 +122,39 @@ body {
     outline-offset: 0.25rem;
   }
 
+  input, button {
+    color: var(--color-text);
+    background: var(--color-secondary);
+    padding: 0.5em 0.75em;
+    border: none;
+    border-radius: 8px;
+  }
+
+  input {
+    font-weight: bold;
+
+    &:focus-visible {
+      outline: 2px solid var(--color-accent);
+    }
+
+    &::placeholder {
+      font-style: italic;
+      font-weight: normal;
+      color: var(--color-secondary-accent);
+    }
+  }
+
+  button {
+    cursor: pointer;
+    transition: background 250ms;
+    outline: none;
+
+    &:hover, &:focus-visible {
+      background: var(--color-secondary-accent);
+      color: var(--color-secondary)
+    }
+  }
+
   select {
     color: var(--color-text);
     padding: 0.5em 0.75em;
