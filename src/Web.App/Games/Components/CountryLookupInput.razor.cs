@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
-using System.Runtime.Versioning;
 using System.Text;
 
 namespace Web.App.Games.Components;
@@ -54,9 +53,9 @@ public sealed partial class CountryLookupInput(IMediator mediator, IJSInProcessR
         _reference = null;
     }
 
-    protected override async Task OnInitializedAsync() => _countries = await mediator.Send(new LookupCountries.Query());
+    protected override async Task OnInitializedAsync()
+        => _countries = await mediator.Send(new LookupCountries.Query());
 
-    [SupportedOSPlatform("browser")]
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (!firstRender)

@@ -5,23 +5,20 @@ type DotNet = {
 let eventCallback: (this: Document, ev: MouseEvent) => any;
 
 export function scrollToLookup() {
-  const element = document.querySelector('.lookup-container');
+  const element = document.querySelector('.container');
 
   if (!element) {
     return;
   }
 
   setTimeout(() => {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-    });
+    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }, 300);
 }
 
 export function init(dotnet: DotNet) {
   eventCallback = (event: MouseEvent) => {
-    const lookup = document.querySelector('.lookup-container');
+    const lookup = document.querySelector('.container');
 
     if (!event || !event.target || !(event.target instanceof Element)) {
       return;
