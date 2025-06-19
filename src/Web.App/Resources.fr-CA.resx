@@ -217,4 +217,16 @@
     <value>Abandonner</value>
     <comment/>
   </data>
+  <data name="PlayAgain" xml:space="preserve">
+    <value>Recommencer</value>
+    <comment/>
+  </data>
+  <data name="SeeOnMap" xml:space="preserve">
+    <value>Voir sur la carte</value>
+    <comment/>
+  </data>
+  <data name="Congratulations" xml:space="preserve">
+    <value>Félicitations!</value>
+    <comment/>
+  </data>
 </root>

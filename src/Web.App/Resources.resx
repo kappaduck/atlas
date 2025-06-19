@@ -217,4 +217,16 @@
     <value>Give up</value>
     <comment/>
   </data>
+  <data name="Congratulations" xml:space="preserve">
+    <value>Congratulations!</value>
+    <comment/>
+  </data>
+  <data name="PlayAgain" xml:space="preserve">
+    <value>Play again</value>
+    <comment/>
+  </data>
+  <data name="SeeOnMap" xml:space="preserve">
+    <value>See on map</value>
+    <comment/>
+  </data>
 </root>

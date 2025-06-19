@@ -1,0 +1,36 @@
+﻿@inject IStringLocalizer<Resources> localizer
+
+<div class="game-over">
+    @if (!string.IsNullOrEmpty(Country))
+    {
+        <a class="link" target="_blank" href="@Map">
+            <i class="@Icons.GeoAlt"></i>
+            <span class="answer">@Country</span>
+        </a>
+    }
+    else
+    {
+        <div class="congratulations">
+            <span>@localizer[Resources.Congratulations]</span>
+            <a class="link" target="_blank" href="@Map">
+                <i class="@Icons.GeoAlt"></i>
+                <span class="answer">@localizer[Resources.SeeOnMap]</span>
+            </a>
+        </div>
+    }
+    @if (OnPlayAgain.HasDelegate)
+    {
+        <button type="button" @onclick="OnPlayAgain">@localizer[Resources.PlayAgain]</button>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string? Country { get; init; }
+
+    [Parameter, EditorRequired]
+    public required Uri Map { get; init; }
+
+    [Parameter]
+    public EventCallback OnPlayAgain { get; init; }
+}

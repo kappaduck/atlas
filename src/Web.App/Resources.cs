@@ -20,6 +20,8 @@ internal sealed class Resources
 
     internal const string ChangingLanguageWarning = nameof(ChangingLanguageWarning);
 
+    internal const string Congratulations = nameof(Congratulations);
+
     internal const string CountryList = nameof(CountryList);
 
     internal const string Display = nameof(Display);
@@ -44,7 +46,11 @@ internal sealed class Resources
 
     internal const string NotFoundMessage = nameof(NotFoundMessage);
 
+    internal const string PlayAgain = nameof(PlayAgain);
+
     internal const string Project = nameof(Project);
+
+    internal const string SeeOnMap = nameof(SeeOnMap);
 
     internal const string Settings = nameof(Settings);
 
