@@ -122,7 +122,7 @@ body {
     outline-offset: 0.25rem;
   }
 
-  input, button {
+  input, button, .btn-link {
     color: var(--color-text);
     background: var(--color-secondary);
     padding: 0.5em 0.75em;
@@ -144,11 +144,12 @@ body {
     }
   }
 
-  button {
+  button, .btn-link {
     cursor: pointer;
     border: 1px solid var(--color-text);
     transition: background 250ms;
     outline: none;
+    text-decoration: none;
 
     &:disabled {
       opacity: 0.5;

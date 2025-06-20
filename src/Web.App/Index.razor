@@ -1,1 +1,12 @@
 @page "/"
+
+@inject IStringLocalizer<Resources> localizer
+
+<div class="container">
+    <div class="game-list">
+        <h2><i class="@Icons.Flag"></i><span>@localizer[Resources.Flags]</span></h2>
+        <div class="games">
+            <a class="btn-link" href="/flags/random">Random</a>
+        </div>
+    </div>
+</div>

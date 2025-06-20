@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  padding: 16px 12px;
+
+  .game-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h2 {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      &:not(:first-child) {
+        margin-block-start: 1em;
+      }
+    }
+  }
+}
+
+.games {
+  display: flex;
+  padding: 8px 12px;
+  padding-inline-start: 0;
+  gap: 16px;
+}

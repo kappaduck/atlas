@@ -237,4 +237,8 @@
     <value>Direction</value>
     <comment/>
   </data>
+  <data name="Flags" xml:space="preserve">
+    <value>Flags</value>
+    <comment/>
+  </data>
 </root>

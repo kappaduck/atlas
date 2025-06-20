@@ -32,6 +32,8 @@ internal sealed class Resources
 
     internal const string FailedDisplayFlag = nameof(FailedDisplayFlag);
 
+    internal const string Flags = nameof(Flags);
+
     internal const string GiveUp = nameof(GiveUp);
 
     internal const string GoBack = nameof(GoBack);
