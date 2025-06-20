@@ -5,15 +5,23 @@ namespace Web.App.Components;
 
 internal static class Icons
 {
-    public const string ArrowLeftCircle = "bi bi-arrow-left-circle";
+    internal const string ArrowLeftCircle = "bi bi-arrow-left-circle";
 
-    public const string Company = "bi bi-building";
+    internal const string ArrowUp = "bi bi-arrow-up";
 
-    public const string InfoCircle = "bi bi-info-circle";
+    internal const string Check = "bi bi-check";
 
-    public const string Github = "bi bi-github";
+    internal const string Company = "bi bi-building";
 
-    public const string Sliders = "bi bi-sliders2";
+    internal const string Flag = "bi bi-flag";
 
-    public const string Times = "bi bi-x";
+    internal const string InfoCircle = "bi bi-info-circle";
+
+    internal const string GeoAlt = "bi bi-geo-alt";
+
+    internal const string Github = "bi bi-github";
+
+    internal const string Sliders = "bi bi-sliders2";
+
+    internal const string Times = "bi bi-x";
 }

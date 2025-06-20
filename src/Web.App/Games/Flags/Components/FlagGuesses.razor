@@ -1,0 +1,37 @@
+﻿@using Atlas.Application.Countries
+
+@inject IStringLocalizer<Resources> localizer
+
+<ul class="container" role="list">
+    @foreach (GuessedCountryResponse guess in GameState.Guesses)
+    {
+        <li class="guess @FoundCountryCss(guess.Success)">
+            <img src="@guess.Flag.Uri" alt="@guess.Name" width="48" />
+            <div class="information">
+                <div class="content">
+                    <span title="@guess.Name" class="country-name">@guess.Name</span>
+                    <div class="continent">
+                        <span>@localizer[Resources.Continent]</span>
+                        <i class="same-continent @IsSameContinentCss(guess.IsSameContinent)"></i>
+                    </div>
+                </div>
+                <div class="vr"></div>
+                <div class="content">
+                    <span>@guess.Kilometers.ToString("N0", _numberFormat) Km</span>
+                    <div class="direction">
+                        <span>@localizer[Resources.Direction]</span>
+                        <span>
+                            <i style="transform: rotate(@(guess.Direction)deg);" class="arrow @DirectionCss(guess.Success)"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </li>
+    }
+    @for (int attempts = GameState.Guesses.Count; attempts < GameState.MaxAttempts; attempts++)
+    {
+        <li class="guess empty @HasWonGameCss">
+            <span>@(attempts + 1) / @GameState.MaxAttempts</span>
+        </li>
+    }
+</ul>

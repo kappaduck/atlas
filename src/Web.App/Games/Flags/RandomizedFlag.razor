@@ -1,0 +1,47 @@
+﻿@using Web.App.Components.Modals
+@using Web.App.Games.Components
+@using Web.App.Games.Flags.Components
+
+@page "/flags/random"
+
+@inject IStringLocalizer<Resources> localizer
+
+<div class="game">
+    @if (_gameState.Country is null)
+    {
+        <div class="placeholder" aria-hidden="true">
+        </div>
+    }
+    else
+    {
+        <picture @onclick="() => _zoomModal.Show()">
+            <source srcset="@_gameState.Country.Resource.Flag.Uri" type="@_gameState.Country.Resource.Flag.MediaType" />
+            <img src="@_gameState.Country.Resource.Flag.Uri" alt="@localizer[Resources.FailedDisplayFlag]" />
+        </picture>
+    }
+    <div class="content">
+        <CascadingValue Value="_gameState" IsFixed="false">
+            @if (!_gameState.GameFinished)
+            {
+                <CountryLookupInput @ref="_input" Guess="GuessAsync" />
+            }
+            else
+            {
+                <GameOver OnPlayAgain="PlayAgainAsync" />
+            }
+            <FlagGuesses />
+        </CascadingValue>
+    </div>
+    <div class="actions">
+        <a href="/" class="link">
+            <i class="@Icons.ArrowLeftCircle"></i>
+            <span>@localizer[Resources.GoBack]</span>
+        </a>
+        <button class="btn-give-up" disabled="@_gameState.GameFinished" @onclick="GiveUp">@localizer[Resources.GiveUp]</button>
+    </div>
+</div>
+
+@if (_gameState.Country is not null)
+{
+    <ZoomModal @ref="_zoomModal" Image="_gameState.Country.Resource.Flag" />
+}

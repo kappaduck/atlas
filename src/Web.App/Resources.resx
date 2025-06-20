@@ -209,4 +209,36 @@
     <value>Lookup a country</value>
     <comment/>
   </data>
+  <data name="FailedDisplayFlag" xml:space="preserve">
+    <value>Failed to display the flag</value>
+    <comment/>
+  </data>
+  <data name="GiveUp" xml:space="preserve">
+    <value>Give up</value>
+    <comment/>
+  </data>
+  <data name="Congratulations" xml:space="preserve">
+    <value>Congratulations!</value>
+    <comment/>
+  </data>
+  <data name="PlayAgain" xml:space="preserve">
+    <value>Play again</value>
+    <comment/>
+  </data>
+  <data name="SeeOnMap" xml:space="preserve">
+    <value>See on map</value>
+    <comment/>
+  </data>
+  <data name="Continent" xml:space="preserve">
+    <value>Continent</value>
+    <comment/>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Direction</value>
+    <comment/>
+  </data>
+  <data name="Flags" xml:space="preserve">
+    <value>Flags</value>
+    <comment/>
+  </data>
 </root>

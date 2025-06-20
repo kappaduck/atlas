@@ -9,7 +9,6 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
-using System.Runtime.Versioning;
 using System.Text;
 
 namespace Web.App.Games.Components;
@@ -27,8 +26,8 @@ public sealed partial class CountryLookupInput(IMediator mediator, IJSInProcessR
     [Parameter, EditorRequired]
     public EventCallback<string> Guess { get; init; }
 
-    [Parameter]
-    public IEnumerable<string> GuessedCountries { get; init; } = [];
+    [CascadingParameter]
+    public required GameState GameState { get; init; }
 
     public void Reset()
     {
@@ -54,9 +53,9 @@ public sealed partial class CountryLookupInput(IMediator mediator, IJSInProcessR
         _reference = null;
     }
 
-    protected override async Task OnInitializedAsync() => _countries = await mediator.Send(new LookupCountries.Query());
+    protected override async Task OnInitializedAsync()
+        => _countries = await mediator.Send(new LookupCountries.Query());
 
-    [SupportedOSPlatform("browser")]
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (!firstRender)
@@ -142,7 +141,7 @@ public sealed partial class CountryLookupInput(IMediator mediator, IJSInProcessR
     private CountryLookupResponse[] LookupCountries()
     {
         string input = RemoveDiacritics(_input.Trim());
-        CountryLookupResponse[] availableCountries = [.. _countries.ExceptBy(GuessedCountries, c => c.Cca2)];
+        CountryLookupResponse[] availableCountries = [.. _countries.ExceptBy(GameState.Guesses.Select(g => g.Cca2), c => c.Cca2)];
 
         return Array.FindAll(availableCountries, c => Lookup(c.Name, input));
 

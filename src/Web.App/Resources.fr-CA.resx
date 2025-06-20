@@ -209,4 +209,36 @@
     <value>Canada, Italie...</value>
     <comment/>
   </data>
+  <data name="FailedDisplayFlag" xml:space="preserve">
+    <value>Impossible d'afficher le drapeau</value>
+    <comment/>
+  </data>
+  <data name="GiveUp" xml:space="preserve">
+    <value>Abandonner</value>
+    <comment/>
+  </data>
+  <data name="PlayAgain" xml:space="preserve">
+    <value>Recommencer</value>
+    <comment/>
+  </data>
+  <data name="SeeOnMap" xml:space="preserve">
+    <value>Voir sur la carte</value>
+    <comment/>
+  </data>
+  <data name="Congratulations" xml:space="preserve">
+    <value>Félicitations!</value>
+    <comment/>
+  </data>
+  <data name="Continent" xml:space="preserve">
+    <value>Continent</value>
+    <comment/>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Direction</value>
+    <comment/>
+  </data>
+  <data name="Flags" xml:space="preserve">
+    <value>Drapeaux</value>
+    <comment/>
+  </data>
 </root>

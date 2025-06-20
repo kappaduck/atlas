@@ -1,8 +1,8 @@
-.lookup-container {
+.container {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  width: var(--max-width);
+  width: var(--max-game-width);
   position: absolute;
 }
 

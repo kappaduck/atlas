@@ -1,0 +1,33 @@
+﻿@inject IStringLocalizer<Resources> localizer
+
+<div class="game-over">
+    @if (!GameState.Guesses.Any(g => g.Success))
+    {
+        <a class="link" target="_blank" href="@GameState.Country?.Resource.Map">
+            <i class="@Icons.GeoAlt"></i>
+            <span class="answer">@GameState.Country?.Name</span>
+        </a>
+    }
+    else
+    {
+        <div class="congratulations">
+            <span>@localizer[Resources.Congratulations]</span>
+            <a class="link" target="_blank" href="@GameState.Country?.Resource.Map">
+                <i class="@Icons.GeoAlt"></i>
+                <span class="answer">@localizer[Resources.SeeOnMap]</span>
+            </a>
+        </div>
+    }
+    @if (OnPlayAgain.HasDelegate)
+    {
+        <button type="button" @onclick="OnPlayAgain">@localizer[Resources.PlayAgain]</button>
+    }
+</div>
+
+@code {
+    [CascadingParameter]
+    public required GameState GameState { get; init; }
+
+    [Parameter]
+    public EventCallback OnPlayAgain { get; init; }
+}
