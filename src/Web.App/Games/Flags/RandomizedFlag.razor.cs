@@ -5,6 +5,7 @@ using Atlas.Application.Countries;
 using Atlas.Application.Countries.Commands;
 using Atlas.Application.Countries.Queries;
 using Mediator;
+using Web.App.Components.Modals;
 using Web.App.Games.Components;
 
 namespace Web.App.Games.Flags;
@@ -14,6 +15,7 @@ public sealed partial class RandomizedFlag(IMediator mediator)
     private const int MaxAttempts = 6;
 
     private CountryLookupInput _input = default!;
+    private ZoomModal _zoomModal = default!;
 
     private GameState _gameState = default!;
 

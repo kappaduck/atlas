@@ -1,0 +1,17 @@
+.zoom {
+  --width: 600px;
+  max-width: var(--width);
+  min-width: 450px;
+  width: fit-content;
+  height: fit-content;
+  padding: unset;
+  border-color: var(--color-secondary-accent);
+  border-radius: unset;
+  cursor: zoom-out;
+}
+
+@media only screen and (max-width: 576px) {
+  .zoom {
+    min-width: 350px;
+  }
+}

@@ -1,4 +1,5 @@
-﻿@using Web.App.Games.Components
+﻿@using Web.App.Components.Modals
+@using Web.App.Games.Components
 @using Web.App.Games.Flags.Components
 
 @page "/flags/random"
@@ -13,7 +14,7 @@
     }
     else
     {
-        <picture>
+        <picture @onclick="() => _zoomModal.Show()">
             <source srcset="@_gameState.Country.Resource.Flag.Uri" type="@_gameState.Country.Resource.Flag.MediaType" />
             <img src="@_gameState.Country.Resource.Flag.Uri" alt="@localizer[Resources.FailedDisplayFlag]" />
         </picture>
@@ -39,3 +40,8 @@
         <button class="btn-give-up" disabled="@_gameState.GameFinished" @onclick="GiveUp">@localizer[Resources.GiveUp]</button>
     </div>
 </div>
+
+@if (_gameState.Country is not null)
+{
+    <ZoomModal @ref="_zoomModal" Image="_gameState.Country.Resource.Flag" />
+}

@@ -1,0 +1,22 @@
+﻿@using Atlas.Application.Countries
+
+@inherits ModalBase
+@inject IStringLocalizer<Resources> localizer
+
+<dialog @ref="_dialog" class="modal zoom" @onclick="Close">
+    <picture class="zoom">
+        <source srcset="@Image.Uri" type="@Image.MediaType" />
+        <img src="@Image.Uri" alt="@localizer[Resources.FailedDisplayFlag]" />
+    </picture>
+</dialog>
+
+@code {
+    private ElementReference _dialog;
+
+    [Parameter, EditorRequired]
+    public required ImageResponse Image { get; init; }
+
+    public void Show() => Show(_dialog);
+
+    public void Close() => Close(_dialog);
+}
