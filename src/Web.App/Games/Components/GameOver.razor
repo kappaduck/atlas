@@ -1,18 +1,18 @@
 ﻿@inject IStringLocalizer<Resources> localizer
 
 <div class="game-over">
-    @if (!string.IsNullOrEmpty(Country))
+    @if (!GameState.Guesses.Any(g => g.Success))
     {
-        <a class="link" target="_blank" href="@Map">
+        <a class="link" target="_blank" href="@GameState.Country?.Resource.Map">
             <i class="@Icons.GeoAlt"></i>
-            <span class="answer">@Country</span>
+            <span class="answer">@GameState.Country?.Name</span>
         </a>
     }
     else
     {
         <div class="congratulations">
             <span>@localizer[Resources.Congratulations]</span>
-            <a class="link" target="_blank" href="@Map">
+            <a class="link" target="_blank" href="@GameState.Country?.Resource.Map">
                 <i class="@Icons.GeoAlt"></i>
                 <span class="answer">@localizer[Resources.SeeOnMap]</span>
             </a>
@@ -25,11 +25,8 @@
 </div>
 
 @code {
-    [Parameter]
-    public string? Country { get; init; }
-
-    [Parameter, EditorRequired]
-    public required Uri Map { get; init; }
+    [CascadingParameter]
+    public required GameState GameState { get; init; }
 
     [Parameter]
     public EventCallback OnPlayAgain { get; init; }

@@ -22,7 +22,11 @@ internal sealed class Resources
 
     internal const string Congratulations = nameof(Congratulations);
 
+    internal const string Continent = nameof(Continent);
+
     internal const string CountryList = nameof(CountryList);
+
+    internal const string Direction = nameof(Direction);
 
     internal const string Display = nameof(Display);
 

@@ -1,9 +1,12 @@
-﻿@page "/flags/random"
+﻿@using Web.App.Games.Components
+@using Web.App.Games.Flags.Components
+
+@page "/flags/random"
 
 @inject IStringLocalizer<Resources> localizer
 
 <div class="game">
-    @if (_country is null)
+    @if (_gameState.Country is null)
     {
         <div class="placeholder" aria-hidden="true">
         </div>
@@ -11,17 +14,28 @@
     else
     {
         <picture>
-            <source srcset="@_country.Resource.Flag.Uri" type="@_country.Resource.Flag.MediaType" />
-            <img src="@_country.Resource.Flag.Uri" alt="@localizer[Resources.FailedDisplayFlag]" />
+            <source srcset="@_gameState.Country.Resource.Flag.Uri" type="@_gameState.Country.Resource.Flag.MediaType" />
+            <img src="@_gameState.Country.Resource.Flag.Uri" alt="@localizer[Resources.FailedDisplayFlag]" />
         </picture>
     }
     <div class="content">
+        <CascadingValue Value="_gameState" IsFixed="false">
+            @if (!_gameState.GameFinished)
+            {
+                <CountryLookupInput @ref="_input" Guess="GuessAsync" />
+            }
+            else
+            {
+                <GameOver OnPlayAgain="PlayAgainAsync" />
+            }
+            <FlagGuesses />
+        </CascadingValue>
     </div>
     <div class="actions">
         <a href="/" class="link">
             <i class="@Icons.ArrowLeftCircle"></i>
             <span>@localizer[Resources.GoBack]</span>
         </a>
-        <button class="btn-give-up">@localizer[Resources.GiveUp]</button>
+        <button class="btn-give-up" disabled="@_gameState.GameFinished" @onclick="GiveUp">@localizer[Resources.GiveUp]</button>
     </div>
 </div>

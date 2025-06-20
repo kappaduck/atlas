@@ -229,4 +229,12 @@
     <value>Félicitations!</value>
     <comment/>
   </data>
+  <data name="Continent" xml:space="preserve">
+    <value>Continent</value>
+    <comment/>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Direction</value>
+    <comment/>
+  </data>
 </root>

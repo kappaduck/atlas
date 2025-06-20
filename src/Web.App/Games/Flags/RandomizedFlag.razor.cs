@@ -2,15 +2,42 @@
 // The source code is licensed under MIT License.
 
 using Atlas.Application.Countries;
+using Atlas.Application.Countries.Commands;
 using Atlas.Application.Countries.Queries;
 using Mediator;
+using Web.App.Games.Components;
 
 namespace Web.App.Games.Flags;
 
 public sealed partial class RandomizedFlag(IMediator mediator)
 {
-    private CountryResponse? _country;
+    private const int MaxAttempts = 6;
+
+    private CountryLookupInput _input = default!;
+
+    private GameState _gameState = default!;
 
     protected override async Task OnInitializedAsync()
-        => _country = await mediator.Send(new RandomizeCountry.Query());
+    {
+        CountryResponse? country = await mediator.Send(new RandomizeCountry.Query());
+
+        _gameState = new(country, MaxAttempts);
+    }
+
+    private async Task GuessAsync(string cca2)
+    {
+        GuessedCountryResponse guessedCountry = await mediator.Send(new GuessCountry.Command(cca2, _gameState.Country!.Cca2));
+
+        _gameState.Guesses.Add(guessedCountry);
+    }
+
+    private async Task PlayAgainAsync()
+    {
+        _input.Reset();
+
+        CountryResponse? country = await mediator.Send(new RandomizeCountry.Query());
+        _gameState.Reset(country);
+    }
+
+    private void GiveUp() => _gameState.GiveUp();
 }

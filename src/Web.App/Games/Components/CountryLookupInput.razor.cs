@@ -26,8 +26,8 @@ public sealed partial class CountryLookupInput(IMediator mediator, IJSInProcessR
     [Parameter, EditorRequired]
     public EventCallback<string> Guess { get; init; }
 
-    [Parameter]
-    public IEnumerable<string> GuessedCountries { get; init; } = [];
+    [CascadingParameter]
+    public required GameState GameState { get; init; }
 
     public void Reset()
     {
@@ -141,7 +141,7 @@ public sealed partial class CountryLookupInput(IMediator mediator, IJSInProcessR
     private CountryLookupResponse[] LookupCountries()
     {
         string input = RemoveDiacritics(_input.Trim());
-        CountryLookupResponse[] availableCountries = [.. _countries.ExceptBy(GuessedCountries, c => c.Cca2)];
+        CountryLookupResponse[] availableCountries = [.. _countries.ExceptBy(GameState.Guesses.Select(g => g.Cca2), c => c.Cca2)];
 
         return Array.FindAll(availableCountries, c => Lookup(c.Name, input));
 

@@ -7,6 +7,10 @@ internal static class Icons
 {
     internal const string ArrowLeftCircle = "bi bi-arrow-left-circle";
 
+    internal const string ArrowUp = "bi bi-arrow-up";
+
+    internal const string Check = "bi bi-check";
+
     internal const string Company = "bi bi-building";
 
     internal const string InfoCircle = "bi bi-info-circle";
