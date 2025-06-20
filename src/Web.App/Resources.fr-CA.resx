@@ -241,4 +241,12 @@
     <value>Drapeaux</value>
     <comment/>
   </data>
+  <data name="Daily" xml:space="preserve">
+    <value>Quotidien</value>
+    <comment/>
+  </data>
+  <data name="Random" xml:space="preserve">
+    <value>Random</value>
+    <comment/>
+  </data>
 </root>

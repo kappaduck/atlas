@@ -26,6 +26,8 @@ internal sealed class Resources
 
     internal const string CountryList = nameof(CountryList);
 
+    internal const string Daily = nameof(Daily);
+
     internal const string Direction = nameof(Direction);
 
     internal const string Display = nameof(Display);
@@ -59,6 +61,8 @@ internal sealed class Resources
     internal const string SeeOnMap = nameof(SeeOnMap);
 
     internal const string Settings = nameof(Settings);
+
+    internal const string Random = nameof(Random);
 
     internal const string Theme = nameof(Theme);
 }

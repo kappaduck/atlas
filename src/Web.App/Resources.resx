@@ -241,4 +241,12 @@
     <value>Flags</value>
     <comment/>
   </data>
+  <data name="Daily" xml:space="preserve">
+    <value>Daily</value>
+    <comment/>
+  </data>
+  <data name="Random" xml:space="preserve">
+    <value>Random</value>
+    <comment/>
+  </data>
 </root>
