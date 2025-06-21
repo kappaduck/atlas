@@ -93,6 +93,19 @@
         gap: 24px;
         padding-inline-end: 16px;
       }
+
+      &.difficulty {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+      }
     }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .settings > .body > .tabs {
+    overflow-y: hidden;
+    overflow-x: auto;
   }
 }

@@ -12,9 +12,13 @@ internal sealed class Resources
     {
     }
 
+    internal const string All = nameof(All);
+
     internal const string Atlas = nameof(Atlas);
 
     internal const string AtlasLogo = nameof(AtlasLogo);
+
+    internal const string Blur = nameof(Blur);
 
     internal const string Changelog = nameof(Changelog);
 
@@ -28,6 +32,8 @@ internal sealed class Resources
 
     internal const string Daily = nameof(Daily);
 
+    internal const string Difficulty = nameof(Difficulty);
+
     internal const string Direction = nameof(Direction);
 
     internal const string Display = nameof(Display);
@@ -40,6 +46,10 @@ internal sealed class Resources
 
     internal const string GoBack = nameof(GoBack);
 
+    internal const string Grayscale = nameof(Grayscale);
+
+    internal const string Invert = nameof(Invert);
+
     internal const string Language = nameof(Language);
 
     internal const string LookupCountry = nameof(LookupCountry);
@@ -49,6 +59,8 @@ internal sealed class Resources
     internal const string Navigation = nameof(Navigation);
 
     internal const string NoCountriesAvailable = nameof(NoCountriesAvailable);
+
+    internal const string None = nameof(None);
 
     internal const string NotFound = nameof(NotFound);
 
@@ -61,6 +73,8 @@ internal sealed class Resources
     internal const string SeeOnMap = nameof(SeeOnMap);
 
     internal const string Settings = nameof(Settings);
+
+    internal const string Shift = nameof(Shift);
 
     internal const string Random = nameof(Random);
 

@@ -1,0 +1,17 @@
+﻿
+@inject IStringLocalizer<Resources> localizer
+
+<div class="container">
+    @foreach ((Difficulty difficulty, string name) in GetDifficulties())
+    {
+        <div class="radio">
+            <label for="@name">@localizer[name]</label>
+            <input id="@name"
+                   name="@Name"
+                   type="radio"
+                   disabled="@Disabled"
+                   checked="@(Value == difficulty)"
+                   @onchange="async () => await ValueChanged.InvokeAsync(difficulty)" />
+        </div>
+    }
+</div>

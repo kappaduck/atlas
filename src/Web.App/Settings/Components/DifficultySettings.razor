@@ -1,0 +1,17 @@
+﻿@inject IStringLocalizer<Resources> localizer
+
+<fieldset class="container">
+    <legend>@localizer[Resources.Flags]</legend>
+    <div class="settings">
+        <h4>@localizer[Resources.All]</h4>
+        <InputDifficulty Name="all" @bind-Value:get="Settings.Flag.All" @bind-Value:set="OnFlagAllDifficultyChange" />
+    </div>
+    <div class="settings @FlagAllEnabledCss">
+        <h4>@localizer[Resources.Daily]</h4>
+        <InputDifficulty Name="daily" @bind-Value:get="Settings.Flag.Daily" @bind-Value:set="OnFlagDailyDifficultyChange" Disabled="@FlagAllEnabled" />
+    </div>
+    <div class="settings @FlagAllEnabledCss">
+        <h4>@localizer[Resources.Random]</h4>
+        <InputDifficulty Name="random" @bind-Value:get="Settings.Flag.Random" @bind-Value:set="OnFlagRandomDifficultyChange" Disabled="@FlagAllEnabled" />
+    </div>
+</fieldset>

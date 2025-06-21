@@ -47,6 +47,7 @@ public sealed partial class SettingsModal
         TabItem.General => "general",
         TabItem.Changelog => "changelog",
         TabItem.Countries => "countries",
+        TabItem.Difficulty => "difficulty",
         _ => string.Empty
     };
 
@@ -54,6 +55,7 @@ public sealed partial class SettingsModal
     {
         General = 0,
         Changelog = 1,
-        Countries = 2
+        Countries = 2,
+        Difficulty = 3
     }
 }
