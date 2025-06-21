@@ -5,8 +5,10 @@ using Atlas.Application.Countries;
 using Atlas.Application.Countries.Commands;
 using Atlas.Application.Countries.Queries;
 using Mediator;
+using Microsoft.AspNetCore.Components;
 using Web.App.Components.Modals;
 using Web.App.Games.Components;
+using Web.App.Settings;
 
 namespace Web.App.Games.Flags;
 
@@ -18,6 +20,11 @@ public sealed partial class RandomizedFlag(IMediator mediator)
     private ZoomModal _zoomModal = default!;
 
     private GameState _gameState = default!;
+
+    [CascadingParameter]
+    public required AppSettings Settings { get; init; }
+
+    private string DifficultyCss => Settings.DifficultyCss(Settings.Flag.Random, _gameState.Guesses.Count);
 
     protected override async Task OnInitializedAsync()
     {

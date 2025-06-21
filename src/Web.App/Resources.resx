@@ -249,4 +249,32 @@
     <value>Random</value>
     <comment/>
   </data>
+  <data name="Difficulty" xml:space="preserve">
+    <value>Difficulty</value>
+    <comment/>
+  </data>
+  <data name="Shift" xml:space="preserve">
+    <value>Shift</value>
+    <comment/>
+  </data>
+  <data name="Invert" xml:space="preserve">
+    <value>Invert</value>
+    <comment/>
+  </data>
+  <data name="Blur" xml:space="preserve">
+    <value>Blur</value>
+    <comment/>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+    <comment/>
+  </data>
+  <data name="Grayscale" xml:space="preserve">
+    <value>Grayscale</value>
+    <comment/>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+    <comment/>
+  </data>
 </root>

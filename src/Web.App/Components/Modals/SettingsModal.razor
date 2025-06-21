@@ -26,6 +26,10 @@
                     {
                         <Changelog />
                     }
+                    @if (_selectedTab == TabItem.Difficulty)
+                    {
+                        <DifficultySettings />
+                    }
                     @if (_selectedTab == TabItem.Countries)
                     {
                         <CountryList />

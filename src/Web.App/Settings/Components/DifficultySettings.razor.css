@@ -1,0 +1,23 @@
+.difficulty-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  padding: 12px;
+  margin: 0;
+  border: 1px solid hsl(from var(--color-dialog-primary) h s l / 0.75);
+
+  legend {
+    font-weight: bold;
+    padding-inline: 1em;
+  }
+
+  .settings {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    &.disabled {
+      opacity: 0.5;
+    }
+  }
+}

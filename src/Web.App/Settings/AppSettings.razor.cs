@@ -45,6 +45,38 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
         }
     }
 
+    public FlagDifficulty Flag
+    {
+        get => _data.Flag;
+        set
+        {
+            if (_data.Flag == value)
+                return;
+
+            _data = _data with { Flag = value };
+            storage.SetItem(LocalStorageKeys.Settings, _data);
+
+            StateHasChanged();
+        }
+    }
+
+    public string DifficultyCss(Difficulty difficulty, int attempts)
+    {
+        if (Flag.All != Difficulty.None)
+            return GetDifficulty(Flag.All);
+
+        return GetDifficulty(difficulty);
+
+        string GetDifficulty(Difficulty difficulty) => difficulty switch
+        {
+            Difficulty.Blur => $"blur-{attempts}",
+            Difficulty.Invert => "invert",
+            Difficulty.Shift => "shift",
+            Difficulty.Grayscale => "grayscale",
+            Difficulty.None => string.Empty
+        };
+    }
+
     [SupportedOSPlatform("browser")]
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -63,5 +95,7 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
     internal sealed record Data
     {
         public General General { get; init; } = new();
+
+        public FlagDifficulty Flag { get; init; } = new();
     }
 }

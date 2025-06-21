@@ -4,7 +4,7 @@
 @inject IStringLocalizer<Resources> localizer
 
 <dialog @ref="_dialog" class="modal zoom" @onclick="Close">
-    <picture class="zoom">
+    <picture class="zoom @DifficultyCss">
         <source srcset="@Image.Uri" type="@Image.MediaType" />
         <img src="@Image.Uri" alt="@localizer[Resources.FailedDisplayFlag]" />
     </picture>
@@ -15,6 +15,9 @@
 
     [Parameter, EditorRequired]
     public required ImageResponse Image { get; init; }
+
+    [Parameter, EditorRequired]
+    public required string DifficultyCss { get; set; }
 
     public void Show() => Show(_dialog);
 
