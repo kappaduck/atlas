@@ -55,7 +55,26 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
 
             _data = _data with { Flag = value };
             storage.SetItem(LocalStorageKeys.Settings, _data);
+
+            StateHasChanged();
         }
+    }
+
+    public string DifficultyCss(Difficulty difficulty, int attempts)
+    {
+        if (Flag.All != Difficulty.None)
+            return GetDifficulty(Flag.All);
+
+        return GetDifficulty(difficulty);
+
+        string GetDifficulty(Difficulty difficulty) => difficulty switch
+        {
+            Difficulty.Blur => $"blur-{attempts}",
+            Difficulty.Invert => "invert",
+            Difficulty.Shift => "shift",
+            Difficulty.Grayscale => "grayscale",
+            Difficulty.None => string.Empty
+        };
     }
 
     [SupportedOSPlatform("browser")]
