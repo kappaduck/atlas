@@ -1,7 +1,7 @@
-.container {
+.radio-group {
   display: grid;
   row-gap: 1em;
-  grid-template-columns: repeat(3, 1fr)
+  grid-template-columns: repeat(5, 1fr)
 }
 
 .radio {
@@ -9,4 +9,10 @@
   gap: 8px;
   align-items: center;
   accent-color: var(--color-accent);
+}
+
+@media only screen and (max-width: 576px) {
+  .radio-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

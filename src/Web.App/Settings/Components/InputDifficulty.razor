@@ -1,13 +1,13 @@
 ﻿
 @inject IStringLocalizer<Resources> localizer
 
-<div class="container">
+<div class="radio-group">
     @foreach ((Difficulty difficulty, string name) in GetDifficulties())
     {
         <div class="radio">
-            <label for="@name">@localizer[name]</label>
-            <input id="@name"
-                   name="@Name"
+            <label for="@GetRadioId(name)">@localizer[name]</label>
+            <input id="@GetRadioId(name)"
+                   name="@GroupName"
                    type="radio"
                    disabled="@Disabled"
                    checked="@(Value == difficulty)"

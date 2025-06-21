@@ -302,6 +302,48 @@ body {
   }
 }
 
+@layer difficulties {
+  .blur-6 {
+    filter: blur(0);
+  }
+
+  .blur-5 {
+    filter: blur(5px);
+  }
+
+  .blur-4 {
+    filter: blur(10px);
+  }
+
+  .blur-3 {
+    filter: blur(15px);
+  }
+
+  .blur-2 {
+    filter: blur(20px);
+  }
+
+  .blur-1 {
+    filter: blur(25px);
+  }
+
+  .blur-0 {
+    filter: blur(30px);
+  }
+
+  .grayscale {
+    filter: grayscale(1);
+  }
+
+  .invert {
+    filter: invert(1);
+  }
+
+  .shift {
+    filter: hue-rotate(90deg);
+  }
+}
+
 @keyframes placeholder-glow {
   0% {
     opacity: 0.5;

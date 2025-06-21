@@ -8,5 +8,5 @@ namespace Web.App.Services;
 [ExcludeFromCodeCoverage]
 internal sealed class TimeService : ITimeService
 {
-    public DateOnly Today => DateOnly.FromDateTime(DateTime.UtcNow);
+    public DateOnly Today => DateOnly.FromDateTime(DateTime.Now);
 }

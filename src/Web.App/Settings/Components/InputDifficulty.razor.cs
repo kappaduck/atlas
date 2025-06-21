@@ -14,11 +14,14 @@ public sealed partial class InputDifficulty
     public EventCallback<Difficulty> ValueChanged { get; init; }
 
     [Parameter, EditorRequired]
-    public required string Name { get; init; }
+    public required string GroupName { get; init; }
 
     [Parameter]
     public bool Disabled { get; init; }
 
     private (Difficulty Difficulty, string Name)[] GetDifficulties()
         => [.. Enum.GetValues<Difficulty>().Select(d => (d, d.ToString()))];
+
+    private string GetRadioId(string difficultyName)
+        => $"{GroupName}-{difficultyName}";
 }
