@@ -28,6 +28,9 @@ jobs:
           dotnet-version: 10.0.x
           dotnet-quality: preview
 
+      - name: Install wasm-tools workload
+        run: dotnet workload install wasm-tools
+
       - name: Publish web app
         run: dotnet publish ./src/Web.App/Web.App.csproj -p:WasmApplicationEnvironmentName=${{ inputs.environment }} --output ./artifacts
 
@@ -41,6 +44,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
     permissions:
       contents: read
       deployments: write

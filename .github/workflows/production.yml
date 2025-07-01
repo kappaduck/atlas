@@ -1,0 +1,19 @@
+name: Production
+
+on:
+  workflow_dispatch:
+  release:
+    types: [ released ]
+
+jobs:
+  production:
+    name: Production environment
+
+    permissions:
+      contents: read
+      deployments: write
+
+    uses: kappaduck/atlas/.github/workflows/build.yml@main
+    with:
+      environment: production
+    secrets: inherit
