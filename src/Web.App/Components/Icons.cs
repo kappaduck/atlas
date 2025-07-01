@@ -9,6 +9,10 @@ internal static class Icons
 
     internal const string ArrowUp = "bi bi-arrow-up";
 
+    internal const string Bug = "bi bi-bug";
+
+    internal const string ChatDots = "bi bi-chat-dots";
+
     internal const string Check = "bi bi-check";
 
     internal const string Company = "bi bi-building";
@@ -20,6 +24,8 @@ internal static class Icons
     internal const string GeoAlt = "bi bi-geo-alt";
 
     internal const string Github = "bi bi-github";
+
+    internal const string Lightbulb = "bi bi-lightbulb";
 
     internal const string Sliders = "bi bi-sliders2";
 

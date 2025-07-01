@@ -28,6 +28,14 @@ header {
       .nav-link > span {
         display: unset;
       }
+
+      .btn-feedback {
+        display: none;
+
+        & ~ .feedback-item {
+          display: unset;
+        }
+      }
     }
   }
 }
@@ -56,6 +64,45 @@ header {
         color: var(--color-accent);
       }
     }
+  }
+}
+
+.btn-feedback {
+  border: none;
+  background: transparent;
+  padding: unset;
+  color: var(--color-primary);
+  anchor-name: --feedback-button;
+
+  &:hover, &:focus-visible {
+    background: unset;
+    color: var(--color-accent);
+  }
+
+  & ~ .feedback-item {
+    display: none;
+  }
+}
+
+.feedback-popover {
+  border: 1px solid var(--color-accent);
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--color-dialog-background);
+  position: absolute;
+  position-anchor: --feedback-button;
+  margin: 0;
+  inset: auto;
+  top: anchor(bottom);
+  right: anchor(right);
+  justify-self: anchor-center;
+  font-size: var(--font-size-lg);
+
+  &:popover-open {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
   }
 }
 

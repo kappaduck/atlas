@@ -15,6 +15,7 @@ internal sealed class FooterTests : BunitContext
         ProjectOptions project = new()
         {
             BugUrl = "https://bug.com",
+            FeatureUrl = "https://feature.com",
             Url = "https://atlas.com",
             Version = "1.0.0"
         };

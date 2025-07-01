@@ -70,6 +70,10 @@ internal sealed class Resources
 
     internal const string Project = nameof(Project);
 
+    internal const string ReportBug = nameof(ReportBug);
+
+    internal const string RequestFeature = nameof(RequestFeature);
+
     internal const string SeeOnMap = nameof(SeeOnMap);
 
     internal const string Settings = nameof(Settings);
