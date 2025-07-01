@@ -8,12 +8,13 @@ export function responsiveExpand(): void {
     }
 
     const elements = document.querySelectorAll('.expanded');
-
-    if (!elements || elements.length === 0) {
-      return;
-    }
+    const popover: HTMLElement | null = document.querySelector('#feedback');
 
     elements.forEach(toggleExpand);
+
+    if (popover) {
+      popover.hidePopover();
+    }
   });
 }
 

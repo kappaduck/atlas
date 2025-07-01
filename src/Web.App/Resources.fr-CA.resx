@@ -277,4 +277,12 @@
     <value>Décalage</value>
     <comment/>
   </data>
+  <data name="RequestFeature" xml:space="preserve">
+    <value>Demander une fonctionnalité</value>
+    <comment/>
+  </data>
+  <data name="ReportBug" xml:space="preserve">
+    <value>Signaler un bug</value>
+    <comment/>
+  </data>
 </root>

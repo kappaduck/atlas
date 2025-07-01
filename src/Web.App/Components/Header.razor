@@ -27,6 +27,19 @@
                     <span>@localizer[Resources.Project]</span>
                 </a>
             </li>
+            <button popovertarget="feedback" class="nav-item btn-feedback"><i class="@Icons.ChatDots"></i></button>
+            <li class="nav-item feedback-item">
+                <a class="nav-link" target="_blank" href="@project.BugUrl">
+                    <i class="@Icons.Bug"></i>
+                    <span>@localizer[Resources.ReportBug]</span>
+                </a>
+            </li>
+            <li class="nav-item feedback-item">
+                <a class="nav-link" target="_blank" href="@project.FeatureUrl">
+                    <i class="@Icons.Lightbulb"></i>
+                    <span>@localizer[Resources.RequestFeature]</span>
+                </a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" @onclick="SettingsModal.ShowGeneral">
                     <i class="@Icons.Sliders"></i>
@@ -36,3 +49,13 @@
         </ul>
     </nav>
 </header>
+<div id="feedback" class="feedback-popover" popover>
+    <a class="link" target="_blank" href="@project.BugUrl">
+        <i class="@Icons.Bug"></i>
+        <span>@localizer[Resources.ReportBug]</span>
+    </a>
+    <a class="link" target="_blank" href="@project.FeatureUrl">
+        <i class="@Icons.Lightbulb"></i>
+        <span>@localizer[Resources.RequestFeature]</span>
+    </a>
+</div>

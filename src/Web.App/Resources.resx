@@ -277,4 +277,12 @@
     <value>All</value>
     <comment/>
   </data>
+  <data name="ReportBug" xml:space="preserve">
+    <value>Report a bug</value>
+    <comment/>
+  </data>
+  <data name="RequestFeature" xml:space="preserve">
+    <value>Request a feature</value>
+    <comment/>
+  </data>
 </root>
