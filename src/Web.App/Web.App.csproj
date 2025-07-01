@@ -4,6 +4,8 @@
     <EnableConfigurationBindingGenerator>true</EnableConfigurationBindingGenerator>
     <OverrideHtmlAssetPlaceholders>true</OverrideHtmlAssetPlaceholders>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RunAOTCompilation>true</RunAOTCompilation>
+    <WasmStripILAfterAOT>true</WasmStripILAfterAOT>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Markdig" />
