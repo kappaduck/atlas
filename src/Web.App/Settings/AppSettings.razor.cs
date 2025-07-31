@@ -78,15 +78,12 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
     }
 
     [SupportedOSPlatform("browser")]
-    protected override async Task OnAfterRenderAsync(bool firstRender)
+    protected override async Task OnInitializedAsync()
     {
-        if (firstRender)
-        {
-            await JSHost.ImportAsync("settings", "/scripts/settings.js");
+        await JSHost.ImportAsync("settings", "/scripts/settings.js");
 
-            _data = storage.GetItem<Data>(LocalStorageKeys.Settings) ?? _data;
-            ChangeTheme(_data.General.Theme.ToString());
-        }
+        _data = storage.GetItem<Data>(LocalStorageKeys.Settings) ?? _data;
+        ChangeTheme(_data.General.Theme.ToString());
     }
 
     [JSImport("changeTheme", "settings")]
