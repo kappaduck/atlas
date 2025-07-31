@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - Fixed the settings which was not properly used in edge browser ([#102])
+
 <!-- 2025.07.31 -->
 [#102]: https://github.com/kappaduck/atlas/issues/102
 
