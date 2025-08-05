@@ -14,6 +14,8 @@
   </PropertyGroup>
 
   <ItemGroup Label="Configure analyzer rules">
+    <!-- Special case for single file-->
+    <GlobalAnalyzerConfigFiles Include="rules\*.editorconfig" />
     <GlobalAnalyzerConfigFiles Include="..\..\rules\*.editorconfig" />
   </ItemGroup>
 </Project>
