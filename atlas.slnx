@@ -22,7 +22,6 @@
   <Folder Name="/configurations/rules/">
     <File Path="rules/code.style.editorconfig" />
     <File Path="rules/disabled.editorconfig" />
-    <File Path="rules/meziantou.editorconfig" />
     <File Path="rules/roslynator.editorconfig" />
     <File Path="rules/sonar.editorconfig" />
     <File Path="rules/underscore.editorconfig" />

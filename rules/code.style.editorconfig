@@ -78,8 +78,12 @@ dotnet_diagnostic.CS8524.severity = none
 # https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0090
 csharp_style_implicit_object_creation_when_type_is_apparent = true:warning
 
-
 # IDE0160: Convert to block scoped namespace
 # Always use file scoped namespace
 # https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0160
 csharp_style_namespace_declarations = file_scoped
+
+# CA2007: Consider calling ConfigureAwait on the awaited task
+# Only for console applications and libraries
+# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca2007
+dotnet_code_quality.CA2007.output_kind = ConsoleApplication, DynamicallyLinkedLibrary

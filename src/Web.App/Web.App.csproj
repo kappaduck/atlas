@@ -6,6 +6,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <RunAOTCompilation>true</RunAOTCompilation>
     <WasmStripILAfterAOT>true</WasmStripILAfterAOT>
+    <NoWarn>CA2007</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Markdig" />
