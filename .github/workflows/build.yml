@@ -7,6 +7,11 @@ on:
         description: 'The environment to deploy'
         required: true
         type: string
+      bumpVersion:
+        description: 'Whether to bump the version for production deployment'
+        required: false
+        type: boolean
+        default: false
     secrets:
       CLOUDFLARE_API_TOKEN:
         required: true
@@ -30,6 +35,16 @@ jobs:
 
       - name: Install wasm-tools workload
         run: dotnet workload install wasm-tools
+
+      - name: Bump version
+        if: ${{ inputs.bumpVersion }}
+        run: dotnet .\bump.version.cs
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration release --no-restore
 
       - name: Publish web app
         run: dotnet publish ./src/Web.App/Web.App.csproj -p:WasmApplicationEnvironmentName=${{ inputs.environment }} --output ./artifacts
@@ -56,7 +71,7 @@ jobs:
           path: wwwroot
 
       - name: Deploy to Cloudflare
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v3.14.1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

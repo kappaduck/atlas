@@ -16,4 +16,5 @@ jobs:
     uses: kappaduck/atlas/.github/workflows/build.yml@main
     with:
       environment: production
+      bumpVersion: true
     secrets: inherit

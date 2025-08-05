@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [ main ]
+    paths: [ 'src/Web.App/**', .github/workflows/build.yml, .github/workflows/staging.yml ]
 
 jobs:
   staging:
@@ -16,4 +17,5 @@ jobs:
     uses: kappaduck/atlas/.github/workflows/build.yml@main
     with:
       environment: staging
+      bumpVersion: false
     secrets: inherit
