@@ -40,10 +40,6 @@ jobs:
           dotnet-version: 10.0.x
           dotnet-quality: preview
 
-      - name: Install wasm-tools workload
-        if: matrix.language == 'csharp'
-        run: dotnet workload install wasm-tools
-
       - name: Restore dependencies
         if: matrix.language == 'csharp'
         run: dotnet restore

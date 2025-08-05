@@ -51,7 +51,6 @@
     <File Path=".github/workflows/build.yml" />
     <File Path=".github/workflows/codeql.yml" />
     <File Path=".github/workflows/production.yml" />
-    <File Path=".github/workflows/prometheus.yml" />
     <File Path=".github/workflows/pull-request.yml" />
     <File Path=".github/workflows/staging.yml" />
   </Folder>
