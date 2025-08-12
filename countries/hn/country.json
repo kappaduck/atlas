@@ -1,0 +1,39 @@
+{
+  "cca2": "hn",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Honduras"
+    },
+    {
+      "language": "fr",
+      "name": "Honduras"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Tegucigalpa",
+      "coordinate": {
+        "latitude": 14.1,
+        "longitude": -87.22
+      }
+    }
+  ],
+  "borders": [
+    "gt",
+    "sv",
+    "ni"
+  ],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 15,
+    "longitude": -86.5
+  },
+  "area": 112492,
+  "population": 9904608,
+  "resources": {
+    "map": "https://goo.gl/maps/BbeJK8Sk2VkMHbdF8",
+    "flag": "https://flagcdn.com/hn.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/hn.svg"
+  }
+}

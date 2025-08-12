@@ -1,0 +1,35 @@
+{
+  "cca2": "tw",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Taiwan"
+    },
+    {
+      "language": "fr",
+      "name": "Ta\u00EFwan"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Taipei",
+      "coordinate": {
+        "latitude": 25.03,
+        "longitude": 121.52
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 23.5,
+    "longitude": 121
+  },
+  "area": 36193,
+  "population": 23503349,
+  "resources": {
+    "map": "https://goo.gl/maps/HgMKFQjNadF3Wa6B6",
+    "flag": "https://flagcdn.com/tw.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/tw.svg"
+  }
+}

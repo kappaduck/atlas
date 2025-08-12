@@ -1,0 +1,41 @@
+{
+  "cca2": "ug",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Uganda"
+    },
+    {
+      "language": "fr",
+      "name": "Ouganda"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Kampala",
+      "coordinate": {
+        "latitude": 0.32,
+        "longitude": 32.55
+      }
+    }
+  ],
+  "borders": [
+    "cd",
+    "ke",
+    "rw",
+    "ss",
+    "tz"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 1,
+    "longitude": 32
+  },
+  "area": 241550,
+  "population": 45741000,
+  "resources": {
+    "map": "https://goo.gl/maps/Y7812hFiGa8LD9N68",
+    "flag": "https://flagcdn.com/ug.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ug.svg"
+  }
+}

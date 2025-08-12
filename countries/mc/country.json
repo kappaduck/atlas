@@ -1,0 +1,37 @@
+{
+  "cca2": "mc",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Monaco"
+    },
+    {
+      "language": "fr",
+      "name": "Monaco"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Monaco",
+      "coordinate": {
+        "latitude": 43.73,
+        "longitude": 7.42
+      }
+    }
+  ],
+  "borders": [
+    "fr"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 43.73333333,
+    "longitude": 7.4
+  },
+  "area": 2.02,
+  "population": 39244,
+  "resources": {
+    "map": "https://goo.gl/maps/DGpndDot28bYdXYn7",
+    "flag": "https://flagcdn.com/mc.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/mc.svg"
+  }
+}

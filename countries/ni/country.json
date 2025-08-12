@@ -1,0 +1,38 @@
+{
+  "cca2": "ni",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Nicaragua"
+    },
+    {
+      "language": "fr",
+      "name": "Nicaragua"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Managua",
+      "coordinate": {
+        "latitude": 12.13,
+        "longitude": -86.25
+      }
+    }
+  ],
+  "borders": [
+    "cr",
+    "hn"
+  ],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 13,
+    "longitude": -85
+  },
+  "area": 130373,
+  "population": 6624554,
+  "resources": {
+    "map": "https://goo.gl/maps/P77LaEVkKJKXneRC6",
+    "flag": "https://flagcdn.com/ni.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ni.svg"
+  }
+}

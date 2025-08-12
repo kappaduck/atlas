@@ -1,0 +1,35 @@
+{
+  "cca2": "io",
+  "translations": [
+    {
+      "language": "en",
+      "name": "British Indian Ocean Territory"
+    },
+    {
+      "language": "fr",
+      "name": "Territoire britannique de l\u0027oc\u00E9an Indien"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Diego Garcia",
+      "coordinate": {
+        "latitude": -7.3,
+        "longitude": 72.4
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -6,
+    "longitude": 71.5
+  },
+  "area": 60,
+  "population": 3000,
+  "resources": {
+    "map": "https://goo.gl/maps/bheNucgekVEYozoi6",
+    "flag": "https://flagcdn.com/io.svg",
+    "coatOfArms": null
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "cca2": "cv",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Cape Verde"
+    },
+    {
+      "language": "fr",
+      "name": "\u00CEles du Cap-Vert"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Praia",
+      "coordinate": {
+        "latitude": 14.92,
+        "longitude": -23.52
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 16.5388,
+    "longitude": -23.0418
+  },
+  "area": 4033,
+  "population": 555988,
+  "resources": {
+    "map": "https://goo.gl/maps/Kc9vy5ChjuiAgMfXA",
+    "flag": "https://flagcdn.com/cv.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cv.svg"
+  }
+}

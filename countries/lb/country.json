@@ -1,0 +1,38 @@
+{
+  "cca2": "lb",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Lebanon"
+    },
+    {
+      "language": "fr",
+      "name": "Liban"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Beirut",
+      "coordinate": {
+        "latitude": 33.87,
+        "longitude": 35.5
+      }
+    }
+  ],
+  "borders": [
+    "il",
+    "sy"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 33.83333333,
+    "longitude": 35.83333333
+  },
+  "area": 10452,
+  "population": 6825442,
+  "resources": {
+    "map": "https://goo.gl/maps/Sz5VCU8UFBqMyTdc9",
+    "flag": "https://flagcdn.com/lb.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/lb.svg"
+  }
+}

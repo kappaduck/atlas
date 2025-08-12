@@ -1,0 +1,42 @@
+{
+  "cca2": "cf",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Central African Republic"
+    },
+    {
+      "language": "fr",
+      "name": "R\u00E9publique centrafricaine"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Bangui",
+      "coordinate": {
+        "latitude": 4.37,
+        "longitude": 18.58
+      }
+    }
+  ],
+  "borders": [
+    "cm",
+    "td",
+    "cd",
+    "cg",
+    "ss",
+    "sd"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 7,
+    "longitude": 21
+  },
+  "area": 622984,
+  "population": 4829764,
+  "resources": {
+    "map": "https://goo.gl/maps/51V8dsi2rGYC9n3c9",
+    "flag": "https://flagcdn.com/cf.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cf.svg"
+  }
+}

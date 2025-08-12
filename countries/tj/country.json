@@ -1,0 +1,40 @@
+{
+  "cca2": "tj",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Tajikistan"
+    },
+    {
+      "language": "fr",
+      "name": "Tadjikistan"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Dushanbe",
+      "coordinate": {
+        "latitude": 38.55,
+        "longitude": 68.77
+      }
+    }
+  ],
+  "borders": [
+    "af",
+    "cn",
+    "kg",
+    "uz"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 39,
+    "longitude": 71
+  },
+  "area": 143100,
+  "population": 9537642,
+  "resources": {
+    "map": "https://goo.gl/maps/8rQgW88jEXijhVb58",
+    "flag": "https://flagcdn.com/tj.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/tj.svg"
+  }
+}

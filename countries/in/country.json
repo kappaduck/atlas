@@ -1,0 +1,42 @@
+{
+  "cca2": "in",
+  "translations": [
+    {
+      "language": "en",
+      "name": "India"
+    },
+    {
+      "language": "fr",
+      "name": "Inde"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "New Delhi",
+      "coordinate": {
+        "latitude": 28.6,
+        "longitude": 77.2
+      }
+    }
+  ],
+  "borders": [
+    "bd",
+    "bt",
+    "mm",
+    "cn",
+    "np",
+    "pk"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 20,
+    "longitude": 77
+  },
+  "area": 3287590,
+  "population": 1380004385,
+  "resources": {
+    "map": "https://goo.gl/maps/WSk3fLwG4vtPQetp7",
+    "flag": "https://flagcdn.com/in.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/in.svg"
+  }
+}

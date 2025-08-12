@@ -1,0 +1,35 @@
+{
+  "cca2": "dm",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Dominica"
+    },
+    {
+      "language": "fr",
+      "name": "Dominique"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Roseau",
+      "coordinate": {
+        "latitude": 15.3,
+        "longitude": -61.4
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 15.41666666,
+    "longitude": -61.33333333
+  },
+  "area": 751,
+  "population": 71991,
+  "resources": {
+    "map": "https://goo.gl/maps/HSKdHYpFC8oHHuyV7",
+    "flag": "https://flagcdn.com/dm.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/dm.svg"
+  }
+}

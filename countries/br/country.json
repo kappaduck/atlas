@@ -1,0 +1,46 @@
+{
+  "cca2": "br",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Brazil"
+    },
+    {
+      "language": "fr",
+      "name": "Br\u00E9sil"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Bras\u00EDlia",
+      "coordinate": {
+        "latitude": -15.79,
+        "longitude": -47.88
+      }
+    }
+  ],
+  "borders": [
+    "ar",
+    "bo",
+    "co",
+    "gf",
+    "gy",
+    "py",
+    "pe",
+    "sr",
+    "uy",
+    "ve"
+  ],
+  "continent": "SouthAmerica",
+  "coordinate": {
+    "latitude": -10,
+    "longitude": -55
+  },
+  "area": 8515767,
+  "population": 212559409,
+  "resources": {
+    "map": "https://goo.gl/maps/waCKk21HeeqFzkNC9",
+    "flag": "https://flagcdn.com/br.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/br.svg"
+  }
+}

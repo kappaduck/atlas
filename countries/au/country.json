@@ -1,0 +1,35 @@
+{
+  "cca2": "au",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Australia"
+    },
+    {
+      "language": "fr",
+      "name": "Australie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Canberra",
+      "coordinate": {
+        "latitude": -35.27,
+        "longitude": 149.13
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -27,
+    "longitude": 133
+  },
+  "area": 7692024,
+  "population": 25687041,
+  "resources": {
+    "map": "https://goo.gl/maps/DcjaDa7UbhnZTndH6",
+    "flag": "https://flagcdn.com/au.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/au.svg"
+  }
+}

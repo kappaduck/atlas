@@ -1,0 +1,35 @@
+{
+  "cca2": "cy",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Cyprus"
+    },
+    {
+      "language": "fr",
+      "name": "Chypre"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Nicosia",
+      "coordinate": {
+        "latitude": 35.17,
+        "longitude": 33.37
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 35,
+    "longitude": 33
+  },
+  "area": 9251,
+  "population": 1207361,
+  "resources": {
+    "map": "https://goo.gl/maps/77hPBRdLid8yD5Bm7",
+    "flag": "https://flagcdn.com/cy.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cy.svg"
+  }
+}

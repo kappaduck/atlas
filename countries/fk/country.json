@@ -1,0 +1,35 @@
+{
+  "cca2": "fk",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Falkland Islands"
+    },
+    {
+      "language": "fr",
+      "name": "\u00CEles Malouines"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Stanley",
+      "coordinate": {
+        "latitude": -51.7,
+        "longitude": -57.85
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "SouthAmerica",
+  "coordinate": {
+    "latitude": -51.75,
+    "longitude": -59
+  },
+  "area": 12173,
+  "population": 2563,
+  "resources": {
+    "map": "https://goo.gl/maps/TZH1x7AGanQKifNk7",
+    "flag": "https://flagcdn.com/fk.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/fk.svg"
+  }
+}

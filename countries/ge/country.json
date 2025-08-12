@@ -1,0 +1,40 @@
+{
+  "cca2": "ge",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Georgia"
+    },
+    {
+      "language": "fr",
+      "name": "G\u00E9orgie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Tbilisi",
+      "coordinate": {
+        "latitude": 41.68,
+        "longitude": 44.83
+      }
+    }
+  ],
+  "borders": [
+    "am",
+    "az",
+    "ru",
+    "tr"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 42,
+    "longitude": 43.5
+  },
+  "area": 69700,
+  "population": 3714000,
+  "resources": {
+    "map": "https://goo.gl/maps/bvCaGBePR1ZEDK5cA",
+    "flag": "https://flagcdn.com/ge.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ge.svg"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "cca2": "pl",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Poland"
+    },
+    {
+      "language": "fr",
+      "name": "Pologne"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Warsaw",
+      "coordinate": {
+        "latitude": 52.25,
+        "longitude": 21
+      }
+    }
+  ],
+  "borders": [
+    "by",
+    "cz",
+    "de",
+    "lt",
+    "ru",
+    "sk",
+    "ua"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 52,
+    "longitude": 20
+  },
+  "area": 312679,
+  "population": 37950802,
+  "resources": {
+    "map": "https://goo.gl/maps/gY9Xw4Sf4415P4949",
+    "flag": "https://flagcdn.com/pl.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/pl.svg"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "cca2": "sh",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Saint Helena, Ascension and Tristan da Cunha"
+    },
+    {
+      "language": "fr",
+      "name": "Sainte-H\u00E9l\u00E8ne, Ascension et Tristan da Cunha"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Jamestown",
+      "coordinate": {
+        "latitude": -15.93,
+        "longitude": -5.72
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -15.95,
+    "longitude": -5.72
+  },
+  "area": 394,
+  "population": 53192,
+  "resources": {
+    "map": "https://goo.gl/maps/iv4VxnPzHkjLCJuc6",
+    "flag": "https://flagcdn.com/sh.svg",
+    "coatOfArms": null
+  }
+}

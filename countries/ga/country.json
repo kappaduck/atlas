@@ -1,0 +1,39 @@
+{
+  "cca2": "ga",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Gabon"
+    },
+    {
+      "language": "fr",
+      "name": "Gabon"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Libreville",
+      "coordinate": {
+        "latitude": 0.38,
+        "longitude": 9.45
+      }
+    }
+  ],
+  "borders": [
+    "cm",
+    "cg",
+    "gq"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -1,
+    "longitude": 11.75
+  },
+  "area": 267668,
+  "population": 2225728,
+  "resources": {
+    "map": "https://goo.gl/maps/vyRSkqw1H1fnq4ry6",
+    "flag": "https://flagcdn.com/ga.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ga.svg"
+  }
+}

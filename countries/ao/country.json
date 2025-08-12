@@ -1,0 +1,40 @@
+{
+  "cca2": "ao",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Angola"
+    },
+    {
+      "language": "fr",
+      "name": "Angola"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Luanda",
+      "coordinate": {
+        "latitude": -8.83,
+        "longitude": 13.22
+      }
+    }
+  ],
+  "borders": [
+    "cg",
+    "cd",
+    "zm",
+    "na"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -12.5,
+    "longitude": 18.5
+  },
+  "area": 1246700,
+  "population": 32866268,
+  "resources": {
+    "map": "https://goo.gl/maps/q42Qbf1BmQL3fuZg9",
+    "flag": "https://flagcdn.com/ao.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ao.svg"
+  }
+}

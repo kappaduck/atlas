@@ -1,0 +1,42 @@
+{
+  "cca2": "iq",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Iraq"
+    },
+    {
+      "language": "fr",
+      "name": "Irak"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Baghdad",
+      "coordinate": {
+        "latitude": 33.33,
+        "longitude": 44.4
+      }
+    }
+  ],
+  "borders": [
+    "ir",
+    "jo",
+    "kw",
+    "sa",
+    "sy",
+    "tr"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 33,
+    "longitude": 44
+  },
+  "area": 438317,
+  "population": 40222503,
+  "resources": {
+    "map": "https://goo.gl/maps/iL8Bmy1sUCW9fUk18",
+    "flag": "https://flagcdn.com/iq.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/iq.svg"
+  }
+}

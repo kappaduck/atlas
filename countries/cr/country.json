@@ -1,0 +1,38 @@
+{
+  "cca2": "cr",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Costa Rica"
+    },
+    {
+      "language": "fr",
+      "name": "Costa Rica"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "San Jos\u00E9",
+      "coordinate": {
+        "latitude": 9.93,
+        "longitude": -84.09
+      }
+    }
+  ],
+  "borders": [
+    "ni",
+    "pa"
+  ],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 10,
+    "longitude": -84
+  },
+  "area": 51100,
+  "population": 5094114,
+  "resources": {
+    "map": "https://goo.gl/maps/RFiwytjvNrpfKN7k6",
+    "flag": "https://flagcdn.com/cr.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cr.svg"
+  }
+}

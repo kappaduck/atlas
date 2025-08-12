@@ -1,0 +1,41 @@
+{
+  "cca2": "bo",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Bolivia"
+    },
+    {
+      "language": "fr",
+      "name": "Bolivie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Sucre",
+      "coordinate": {
+        "latitude": -19.02,
+        "longitude": -65.26
+      }
+    }
+  ],
+  "borders": [
+    "ar",
+    "br",
+    "cl",
+    "py",
+    "pe"
+  ],
+  "continent": "SouthAmerica",
+  "coordinate": {
+    "latitude": -17,
+    "longitude": -65
+  },
+  "area": 1098581,
+  "population": 11673029,
+  "resources": {
+    "map": "https://goo.gl/maps/9DfnyfbxNM2g5U9b9",
+    "flag": "https://flagcdn.com/bo.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/bo.svg"
+  }
+}

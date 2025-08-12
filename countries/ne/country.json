@@ -1,0 +1,43 @@
+{
+  "cca2": "ne",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Niger"
+    },
+    {
+      "language": "fr",
+      "name": "Niger"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Niamey",
+      "coordinate": {
+        "latitude": 13.52,
+        "longitude": 2.12
+      }
+    }
+  ],
+  "borders": [
+    "dz",
+    "bj",
+    "bf",
+    "td",
+    "ly",
+    "ml",
+    "ng"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 16,
+    "longitude": 8
+  },
+  "area": 1267000,
+  "population": 24206636,
+  "resources": {
+    "map": "https://goo.gl/maps/VKNU2TLsZcgxM49c8",
+    "flag": "https://flagcdn.com/ne.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ne.svg"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "cca2": "ci",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Ivory Coast"
+    },
+    {
+      "language": "fr",
+      "name": "C\u00F4te d\u0027Ivoire"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Yamoussoukro",
+      "coordinate": {
+        "latitude": 6.82,
+        "longitude": -5.27
+      }
+    }
+  ],
+  "borders": [
+    "bf",
+    "gh",
+    "gn",
+    "lr",
+    "ml"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 8,
+    "longitude": -5
+  },
+  "area": 322463,
+  "population": 26378275,
+  "resources": {
+    "map": "https://goo.gl/maps/wKsmN7f5qAeNtGjP6",
+    "flag": "https://flagcdn.com/ci.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ci.svg"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "cca2": "me",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Montenegro"
+    },
+    {
+      "language": "fr",
+      "name": "Mont\u00E9n\u00E9gro"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Podgorica",
+      "coordinate": {
+        "latitude": 42.43,
+        "longitude": 19.27
+      }
+    }
+  ],
+  "borders": [
+    "al",
+    "ba",
+    "hr",
+    "xk",
+    "rs"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 42.5,
+    "longitude": 19.3
+  },
+  "area": 13812,
+  "population": 621718,
+  "resources": {
+    "map": "https://goo.gl/maps/4THX1fM7WqANuPbB8",
+    "flag": "https://flagcdn.com/me.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/me.svg"
+  }
+}

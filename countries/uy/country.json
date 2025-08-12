@@ -1,0 +1,38 @@
+{
+  "cca2": "uy",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Uruguay"
+    },
+    {
+      "language": "fr",
+      "name": "Uruguay"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Montevideo",
+      "coordinate": {
+        "latitude": -34.85,
+        "longitude": -56.17
+      }
+    }
+  ],
+  "borders": [
+    "ar",
+    "br"
+  ],
+  "continent": "SouthAmerica",
+  "coordinate": {
+    "latitude": -33,
+    "longitude": -56
+  },
+  "area": 181034,
+  "population": 3473727,
+  "resources": {
+    "map": "https://goo.gl/maps/tiQ9Baekb1jQtDSD9",
+    "flag": "https://flagcdn.com/uy.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/uy.svg"
+  }
+}

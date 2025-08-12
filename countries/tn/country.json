@@ -1,0 +1,38 @@
+{
+  "cca2": "tn",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Tunisia"
+    },
+    {
+      "language": "fr",
+      "name": "Tunisie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Tunis",
+      "coordinate": {
+        "latitude": 36.8,
+        "longitude": 10.18
+      }
+    }
+  ],
+  "borders": [
+    "dz",
+    "ly"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 34,
+    "longitude": 9
+  },
+  "area": 163610,
+  "population": 11818618,
+  "resources": {
+    "map": "https://goo.gl/maps/KgUmpZdUuNRaougs8",
+    "flag": "https://flagcdn.com/tn.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/tn.svg"
+  }
+}

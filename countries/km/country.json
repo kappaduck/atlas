@@ -1,0 +1,35 @@
+{
+  "cca2": "km",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Comoros"
+    },
+    {
+      "language": "fr",
+      "name": "Comores"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Moroni",
+      "coordinate": {
+        "latitude": -11.7,
+        "longitude": 43.23
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -12.16666666,
+    "longitude": 44.25
+  },
+  "area": 1862,
+  "population": 869595,
+  "resources": {
+    "map": "https://goo.gl/maps/eas4GP28C1GyStnu6",
+    "flag": "https://flagcdn.com/km.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/km.svg"
+  }
+}

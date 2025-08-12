@@ -1,0 +1,35 @@
+{
+  "cca2": "vi",
+  "translations": [
+    {
+      "language": "en",
+      "name": "United States Virgin Islands"
+    },
+    {
+      "language": "fr",
+      "name": "\u00CEles Vierges des \u00C9tats-Unis"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Charlotte Amalie",
+      "coordinate": {
+        "latitude": 18.35,
+        "longitude": -64.93
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 18.35,
+    "longitude": -64.933333
+  },
+  "area": 347,
+  "population": 106290,
+  "resources": {
+    "map": "https://goo.gl/maps/mBfreywj8dor6q4m9",
+    "flag": "https://flagcdn.com/vi.svg",
+    "coatOfArms": null
+  }
+}

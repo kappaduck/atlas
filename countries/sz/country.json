@@ -1,0 +1,38 @@
+{
+  "cca2": "sz",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Eswatini"
+    },
+    {
+      "language": "fr",
+      "name": "Swaziland"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Mbabane",
+      "coordinate": {
+        "latitude": -26.32,
+        "longitude": 31.13
+      }
+    }
+  ],
+  "borders": [
+    "mz",
+    "za"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -26.5,
+    "longitude": 31.5
+  },
+  "area": 17364,
+  "population": 1160164,
+  "resources": {
+    "map": "https://goo.gl/maps/cUY79eqQihFSE8hV6",
+    "flag": "https://flagcdn.com/sz.svg",
+    "coatOfArms": null
+  }
+}

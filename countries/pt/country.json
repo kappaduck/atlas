@@ -1,0 +1,37 @@
+{
+  "cca2": "pt",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Portugal"
+    },
+    {
+      "language": "fr",
+      "name": "Portugal"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Lisbon",
+      "coordinate": {
+        "latitude": 38.72,
+        "longitude": -9.13
+      }
+    }
+  ],
+  "borders": [
+    "es"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 39.5,
+    "longitude": -8
+  },
+  "area": 92090,
+  "population": 10305564,
+  "resources": {
+    "map": "https://goo.gl/maps/BaTBSyc4GWMmbAKB8",
+    "flag": "https://flagcdn.com/pt.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/pt.svg"
+  }
+}

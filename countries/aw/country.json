@@ -1,0 +1,35 @@
+{
+  "cca2": "aw",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Aruba"
+    },
+    {
+      "language": "fr",
+      "name": "Aruba"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Oranjestad",
+      "coordinate": {
+        "latitude": 12.52,
+        "longitude": -70.03
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 12.5,
+    "longitude": -69.96666666
+  },
+  "area": 180,
+  "population": 106766,
+  "resources": {
+    "map": "https://goo.gl/maps/8hopbQqifHAgyZyg8",
+    "flag": "https://flagcdn.com/aw.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/aw.svg"
+  }
+}

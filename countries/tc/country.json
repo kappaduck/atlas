@@ -1,0 +1,35 @@
+{
+  "cca2": "tc",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Turks and Caicos Islands"
+    },
+    {
+      "language": "fr",
+      "name": "\u00CEles Turques-et-Ca\u00EFques"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Cockburn Town",
+      "coordinate": {
+        "latitude": 21.46,
+        "longitude": -71.14
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 21.75,
+    "longitude": -71.58333333
+  },
+  "area": 948,
+  "population": 38718,
+  "resources": {
+    "map": "https://goo.gl/maps/R8VUDQfwZiFtvmyn8",
+    "flag": "https://flagcdn.com/tc.svg",
+    "coatOfArms": null
+  }
+}

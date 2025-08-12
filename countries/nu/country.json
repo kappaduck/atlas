@@ -1,0 +1,35 @@
+{
+  "cca2": "nu",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Niue"
+    },
+    {
+      "language": "fr",
+      "name": "Niue"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Alofi",
+      "coordinate": {
+        "latitude": -19.02,
+        "longitude": -169.92
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -19.03333333,
+    "longitude": -169.86666666
+  },
+  "area": 260,
+  "population": 1470,
+  "resources": {
+    "map": "https://goo.gl/maps/xFgdzs3E55Rk1y8P9",
+    "flag": "https://flagcdn.com/nu.svg",
+    "coatOfArms": null
+  }
+}

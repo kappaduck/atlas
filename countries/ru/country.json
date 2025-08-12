@@ -1,0 +1,50 @@
+{
+  "cca2": "ru",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Russia"
+    },
+    {
+      "language": "fr",
+      "name": "Russie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Moscow",
+      "coordinate": {
+        "latitude": 55.75,
+        "longitude": 37.6
+      }
+    }
+  ],
+  "borders": [
+    "az",
+    "by",
+    "cn",
+    "ee",
+    "fi",
+    "ge",
+    "kz",
+    "kp",
+    "lv",
+    "lt",
+    "mn",
+    "no",
+    "pl",
+    "ua"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 60,
+    "longitude": 100
+  },
+  "area": 17098242,
+  "population": 144104080,
+  "resources": {
+    "map": "https://goo.gl/maps/4F4PpDhGJgVvLby57",
+    "flag": "https://flagcdn.com/ru.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ru.svg"
+  }
+}

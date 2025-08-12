@@ -1,0 +1,27 @@
+{
+  "cca2": "hm",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Heard Island and McDonald Islands"
+    },
+    {
+      "language": "fr",
+      "name": "\u00CEles Heard-et-MacDonald"
+    }
+  ],
+  "capitals": [],
+  "borders": [],
+  "continent": "Antarctica",
+  "coordinate": {
+    "latitude": -53.0818,
+    "longitude": 73.5042
+  },
+  "area": 412,
+  "population": 0,
+  "resources": {
+    "map": "https://goo.gl/maps/k5FBAiVaVyozuYeA7",
+    "flag": "https://flagcdn.com/hm.svg",
+    "coatOfArms": null
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "cca2": "li",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Liechtenstein"
+    },
+    {
+      "language": "fr",
+      "name": "Liechtenstein"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Vaduz",
+      "coordinate": {
+        "latitude": 47.13,
+        "longitude": 9.52
+      }
+    }
+  ],
+  "borders": [
+    "at",
+    "ch"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 47.26666666,
+    "longitude": 9.53333333
+  },
+  "area": 160,
+  "population": 38137,
+  "resources": {
+    "map": "https://goo.gl/maps/KNuHeiJzAPodwM7y6",
+    "flag": "https://flagcdn.com/li.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/li.svg"
+  }
+}

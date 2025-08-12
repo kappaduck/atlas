@@ -1,0 +1,40 @@
+{
+  "cca2": "eg",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Egypt"
+    },
+    {
+      "language": "fr",
+      "name": "\u00C9gypte"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Cairo",
+      "coordinate": {
+        "latitude": 30.05,
+        "longitude": 31.25
+      }
+    }
+  ],
+  "borders": [
+    "il",
+    "ly",
+    "ps",
+    "sd"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 27,
+    "longitude": 30
+  },
+  "area": 1002450,
+  "population": 102334403,
+  "resources": {
+    "map": "https://goo.gl/maps/uoDRhXbsqjG6L7VG7",
+    "flag": "https://flagcdn.com/eg.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/eg.svg"
+  }
+}

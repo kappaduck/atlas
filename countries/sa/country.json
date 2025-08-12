@@ -1,0 +1,43 @@
+{
+  "cca2": "sa",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Saudi Arabia"
+    },
+    {
+      "language": "fr",
+      "name": "Arabie Saoudite"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Riyadh",
+      "coordinate": {
+        "latitude": 24.65,
+        "longitude": 46.7
+      }
+    }
+  ],
+  "borders": [
+    "iq",
+    "jo",
+    "kw",
+    "om",
+    "qa",
+    "ae",
+    "ye"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 25,
+    "longitude": 45
+  },
+  "area": 2149690,
+  "population": 34813867,
+  "resources": {
+    "map": "https://goo.gl/maps/5PSjvdJ1AyaLFRrG9",
+    "flag": "https://flagcdn.com/sa.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/sa.svg"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "cca2": "pr",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Puerto Rico"
+    },
+    {
+      "language": "fr",
+      "name": "Porto Rico"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "San Juan",
+      "coordinate": {
+        "latitude": 18.47,
+        "longitude": -66.12
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 18.25,
+    "longitude": -66.5
+  },
+  "area": 8870,
+  "population": 3194034,
+  "resources": {
+    "map": "https://goo.gl/maps/sygfDbtwn389wu8x5",
+    "flag": "https://flagcdn.com/pr.svg",
+    "coatOfArms": null
+  }
+}

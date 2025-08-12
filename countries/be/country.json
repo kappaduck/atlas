@@ -1,0 +1,40 @@
+{
+  "cca2": "be",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Belgium"
+    },
+    {
+      "language": "fr",
+      "name": "Belgique"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Brussels",
+      "coordinate": {
+        "latitude": 50.83,
+        "longitude": 4.33
+      }
+    }
+  ],
+  "borders": [
+    "fr",
+    "de",
+    "lu",
+    "nl"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 50.83333333,
+    "longitude": 4
+  },
+  "area": 30528,
+  "population": 11555997,
+  "resources": {
+    "map": "https://goo.gl/maps/UQQzat85TCtPRXAL8",
+    "flag": "https://flagcdn.com/be.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/be.svg"
+  }
+}

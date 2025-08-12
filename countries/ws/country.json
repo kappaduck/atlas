@@ -1,0 +1,35 @@
+{
+  "cca2": "ws",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Samoa"
+    },
+    {
+      "language": "fr",
+      "name": "Samoa"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Apia",
+      "coordinate": {
+        "latitude": -13.82,
+        "longitude": -171.77
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -13.58333333,
+    "longitude": -172.33333333
+  },
+  "area": 2842,
+  "population": 198410,
+  "resources": {
+    "map": "https://goo.gl/maps/CFC9fEFP9cfkYUBF9",
+    "flag": "https://flagcdn.com/ws.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ws.svg"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "cca2": "gp",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Guadeloupe"
+    },
+    {
+      "language": "fr",
+      "name": "Guadeloupe"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Basse-Terre",
+      "coordinate": {
+        "latitude": 16.03,
+        "longitude": -61.73
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 16.25,
+    "longitude": -61.583333
+  },
+  "area": 1628,
+  "population": 400132,
+  "resources": {
+    "map": "https://goo.gl/maps/Dy9R2EufJtoWm8UN9",
+    "flag": "https://flagcdn.com/gp.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/gp.svg"
+  }
+}

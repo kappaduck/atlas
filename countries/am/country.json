@@ -1,0 +1,40 @@
+{
+  "cca2": "am",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Armenia"
+    },
+    {
+      "language": "fr",
+      "name": "Arm\u00E9nie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Yerevan",
+      "coordinate": {
+        "latitude": 40.17,
+        "longitude": 44.5
+      }
+    }
+  ],
+  "borders": [
+    "az",
+    "ge",
+    "ir",
+    "tr"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 40,
+    "longitude": 45
+  },
+  "area": 29743,
+  "population": 2963234,
+  "resources": {
+    "map": "https://goo.gl/maps/azWUtK9bUQYEyccbA",
+    "flag": "https://flagcdn.com/am.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/am.svg"
+  }
+}

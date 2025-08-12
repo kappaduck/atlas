@@ -1,0 +1,38 @@
+{
+  "cca2": "ad",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Andorra"
+    },
+    {
+      "language": "fr",
+      "name": "Andorre"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Andorra la Vella",
+      "coordinate": {
+        "latitude": 42.5,
+        "longitude": 1.52
+      }
+    }
+  ],
+  "borders": [
+    "fr",
+    "es"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 42.5,
+    "longitude": 1.5
+  },
+  "area": 468,
+  "population": 77265,
+  "resources": {
+    "map": "https://goo.gl/maps/JqAnacWE2qEznKgw7",
+    "flag": "https://flagcdn.com/ad.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ad.svg"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "cca2": "cc",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Cocos (Keeling) Islands"
+    },
+    {
+      "language": "fr",
+      "name": "\u00CEles Cocos"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "West Island",
+      "coordinate": {
+        "latitude": -12.17,
+        "longitude": 96.83
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -12.1642,
+    "longitude": 96.871
+  },
+  "area": 14,
+  "population": 544,
+  "resources": {
+    "map": "https://goo.gl/maps/3eCdKVpVfMcZyKcK6",
+    "flag": "https://flagcdn.com/cc.svg",
+    "coatOfArms": null
+  }
+}

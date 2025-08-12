@@ -1,0 +1,35 @@
+{
+  "cca2": "cu",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Cuba"
+    },
+    {
+      "language": "fr",
+      "name": "Cuba"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Havana",
+      "coordinate": {
+        "latitude": 23.12,
+        "longitude": -82.35
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 21.5,
+    "longitude": -80
+  },
+  "area": 109884,
+  "population": 11326616,
+  "resources": {
+    "map": "https://goo.gl/maps/1dDw1QfZspfMUTm99",
+    "flag": "https://flagcdn.com/cu.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cu.svg"
+  }
+}

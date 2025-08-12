@@ -1,0 +1,40 @@
+{
+  "cca2": "pk",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Pakistan"
+    },
+    {
+      "language": "fr",
+      "name": "Pakistan"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Islamabad",
+      "coordinate": {
+        "latitude": 33.68,
+        "longitude": 73.05
+      }
+    }
+  ],
+  "borders": [
+    "af",
+    "cn",
+    "in",
+    "ir"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 30,
+    "longitude": 70
+  },
+  "area": 881912,
+  "population": 220892331,
+  "resources": {
+    "map": "https://goo.gl/maps/5LYujdfR5yLUXoERA",
+    "flag": "https://flagcdn.com/pk.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/pk.svg"
+  }
+}

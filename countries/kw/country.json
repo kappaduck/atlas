@@ -1,0 +1,38 @@
+{
+  "cca2": "kw",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Kuwait"
+    },
+    {
+      "language": "fr",
+      "name": "Kowe\u00EFt"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Kuwait City",
+      "coordinate": {
+        "latitude": 29.37,
+        "longitude": 47.97
+      }
+    }
+  ],
+  "borders": [
+    "iq",
+    "sa"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 29.5,
+    "longitude": 45.75
+  },
+  "area": 17818,
+  "population": 4270563,
+  "resources": {
+    "map": "https://goo.gl/maps/aqr3aNQjS1BAvksJ7",
+    "flag": "https://flagcdn.com/kw.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/kw.svg"
+  }
+}

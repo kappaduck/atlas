@@ -1,0 +1,35 @@
+{
+  "cca2": "mq",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Martinique"
+    },
+    {
+      "language": "fr",
+      "name": "Martinique"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Fort-de-France",
+      "coordinate": {
+        "latitude": 14.6,
+        "longitude": -61.08
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 14.666667,
+    "longitude": -61
+  },
+  "area": 1128,
+  "population": 378243,
+  "resources": {
+    "map": "https://goo.gl/maps/87ER7sDAFU7JjcvR6",
+    "flag": "https://flagcdn.com/mq.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/mq.svg"
+  }
+}

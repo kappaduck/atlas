@@ -1,0 +1,39 @@
+{
+  "cca2": "gy",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Guyana"
+    },
+    {
+      "language": "fr",
+      "name": "Guyana"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Georgetown",
+      "coordinate": {
+        "latitude": 6.8,
+        "longitude": -58.15
+      }
+    }
+  ],
+  "borders": [
+    "br",
+    "sr",
+    "ve"
+  ],
+  "continent": "SouthAmerica",
+  "coordinate": {
+    "latitude": 5,
+    "longitude": -59
+  },
+  "area": 214969,
+  "population": 786559,
+  "resources": {
+    "map": "https://goo.gl/maps/DFsme2xEeugUAsCx5",
+    "flag": "https://flagcdn.com/gy.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/gy.svg"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "cca2": "bt",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Bhutan"
+    },
+    {
+      "language": "fr",
+      "name": "Bhoutan"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Thimphu",
+      "coordinate": {
+        "latitude": 27.47,
+        "longitude": 89.63
+      }
+    }
+  ],
+  "borders": [
+    "cn",
+    "in"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 27.5,
+    "longitude": 90.5
+  },
+  "area": 38394,
+  "population": 771612,
+  "resources": {
+    "map": "https://goo.gl/maps/VEfXXBftTFLUpNgp8",
+    "flag": "https://flagcdn.com/bt.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/bt.svg"
+  }
+}

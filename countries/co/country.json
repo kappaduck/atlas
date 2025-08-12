@@ -1,0 +1,41 @@
+{
+  "cca2": "co",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Colombia"
+    },
+    {
+      "language": "fr",
+      "name": "Colombie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Bogot\u00E1",
+      "coordinate": {
+        "latitude": 4.71,
+        "longitude": -74.07
+      }
+    }
+  ],
+  "borders": [
+    "br",
+    "ec",
+    "pa",
+    "pe",
+    "ve"
+  ],
+  "continent": "SouthAmerica",
+  "coordinate": {
+    "latitude": 4,
+    "longitude": -72
+  },
+  "area": 1141748,
+  "population": 50882884,
+  "resources": {
+    "map": "https://goo.gl/maps/zix9qNFX69E9yZ2M6",
+    "flag": "https://flagcdn.com/co.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/co.svg"
+  }
+}

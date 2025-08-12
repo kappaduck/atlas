@@ -1,0 +1,39 @@
+{
+  "cca2": "gh",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Ghana"
+    },
+    {
+      "language": "fr",
+      "name": "Ghana"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Accra",
+      "coordinate": {
+        "latitude": 5.55,
+        "longitude": -0.22
+      }
+    }
+  ],
+  "borders": [
+    "bf",
+    "ci",
+    "tg"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 8,
+    "longitude": -2
+  },
+  "area": 238533,
+  "population": 31072945,
+  "resources": {
+    "map": "https://goo.gl/maps/Avy5RSmdsXFBaiXq8",
+    "flag": "https://flagcdn.com/gh.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/gh.svg"
+  }
+}

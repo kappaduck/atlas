@@ -1,0 +1,40 @@
+{
+  "cca2": "ng",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Nigeria"
+    },
+    {
+      "language": "fr",
+      "name": "Nig\u00E9ria"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Abuja",
+      "coordinate": {
+        "latitude": 9.08,
+        "longitude": 7.53
+      }
+    }
+  ],
+  "borders": [
+    "bj",
+    "cm",
+    "td",
+    "ne"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 10,
+    "longitude": 8
+  },
+  "area": 923768,
+  "population": 206139587,
+  "resources": {
+    "map": "https://goo.gl/maps/LTn417qWwBPFszuV9",
+    "flag": "https://flagcdn.com/ng.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ng.svg"
+  }
+}

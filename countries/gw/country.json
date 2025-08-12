@@ -1,0 +1,38 @@
+{
+  "cca2": "gw",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Guinea-Bissau"
+    },
+    {
+      "language": "fr",
+      "name": "Guin\u00E9e-Bissau"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Bissau",
+      "coordinate": {
+        "latitude": 11.85,
+        "longitude": -15.58
+      }
+    }
+  ],
+  "borders": [
+    "gn",
+    "sn"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 12,
+    "longitude": -15
+  },
+  "area": 36125,
+  "population": 1967998,
+  "resources": {
+    "map": "https://goo.gl/maps/5Wyaz17miUc1zLc67",
+    "flag": "https://flagcdn.com/gw.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/gw.svg"
+  }
+}

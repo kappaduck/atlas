@@ -1,0 +1,41 @@
+{
+  "cca2": "es",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Spain"
+    },
+    {
+      "language": "fr",
+      "name": "Espagne"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Madrid",
+      "coordinate": {
+        "latitude": 40.4,
+        "longitude": -3.68
+      }
+    }
+  ],
+  "borders": [
+    "ad",
+    "fr",
+    "gi",
+    "pt",
+    "ma"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 40,
+    "longitude": -4
+  },
+  "area": 505992,
+  "population": 47351567,
+  "resources": {
+    "map": "https://goo.gl/maps/138JaXW8EZzRVitY9",
+    "flag": "https://flagcdn.com/es.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/es.svg"
+  }
+}

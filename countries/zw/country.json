@@ -1,0 +1,40 @@
+{
+  "cca2": "zw",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Zimbabwe"
+    },
+    {
+      "language": "fr",
+      "name": "Zimbabwe"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Harare",
+      "coordinate": {
+        "latitude": -17.82,
+        "longitude": 31.03
+      }
+    }
+  ],
+  "borders": [
+    "bw",
+    "mz",
+    "za",
+    "zm"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -20,
+    "longitude": 30
+  },
+  "area": 390757,
+  "population": 14862927,
+  "resources": {
+    "map": "https://goo.gl/maps/M26BqdwQctqxXS65A",
+    "flag": "https://flagcdn.com/zw.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/zw.svg"
+  }
+}

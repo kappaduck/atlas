@@ -1,0 +1,27 @@
+{
+  "cca2": "bv",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Bouvet Island"
+    },
+    {
+      "language": "fr",
+      "name": "\u00CEle Bouvet"
+    }
+  ],
+  "capitals": [],
+  "borders": [],
+  "continent": "Antarctica",
+  "coordinate": {
+    "latitude": 54.4208,
+    "longitude": 3.3464
+  },
+  "area": 49,
+  "population": 0,
+  "resources": {
+    "map": "https://goo.gl/maps/7WRQAEKZb4uK36yi9",
+    "flag": "https://flagcdn.com/bv.svg",
+    "coatOfArms": null
+  }
+}

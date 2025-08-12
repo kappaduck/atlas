@@ -1,0 +1,41 @@
+{
+  "cca2": "cg",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Republic of the Congo"
+    },
+    {
+      "language": "fr",
+      "name": "République du Congo"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Brazzaville",
+      "coordinate": {
+        "latitude": -4.25,
+        "longitude": 15.28
+      }
+    }
+  ],
+  "borders": [
+    "ao",
+    "cm",
+    "cf",
+    "cd",
+    "ga"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -1,
+    "longitude": 15
+  },
+  "area": 342000,
+  "population": 5657000,
+  "resources": {
+    "map": "https://goo.gl/maps/Phf5dDDKdfCtuBTb6",
+    "flag": "https://flagcdn.com/cg.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cd.svg"
+  }
+}

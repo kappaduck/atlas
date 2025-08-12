@@ -1,0 +1,41 @@
+{
+  "cca2": "ch",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Switzerland"
+    },
+    {
+      "language": "fr",
+      "name": "Suisse"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Bern",
+      "coordinate": {
+        "latitude": 46.92,
+        "longitude": 7.47
+      }
+    }
+  ],
+  "borders": [
+    "at",
+    "fr",
+    "it",
+    "li",
+    "de"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 47,
+    "longitude": 8
+  },
+  "area": 41284,
+  "population": 8654622,
+  "resources": {
+    "map": "https://goo.gl/maps/uVuZcXaxSx5jLyEC9",
+    "flag": "https://flagcdn.com/ch.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ch.svg"
+  }
+}

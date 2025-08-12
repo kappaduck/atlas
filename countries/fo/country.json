@@ -1,0 +1,35 @@
+{
+  "cca2": "fo",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Faroe Islands"
+    },
+    {
+      "language": "fr",
+      "name": "\u00CEles F\u00E9ro\u00E9"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "T\u00F3rshavn",
+      "coordinate": {
+        "latitude": 62.01,
+        "longitude": -6.77
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 62,
+    "longitude": -7
+  },
+  "area": 1393,
+  "population": 48865,
+  "resources": {
+    "map": "https://goo.gl/maps/6sTru4SmHdEVcNkM6",
+    "flag": "https://flagcdn.com/fo.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/fo.svg"
+  }
+}

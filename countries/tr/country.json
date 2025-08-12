@@ -1,0 +1,44 @@
+{
+  "cca2": "tr",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Turkey"
+    },
+    {
+      "language": "fr",
+      "name": "Turquie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Ankara",
+      "coordinate": {
+        "latitude": 39.93,
+        "longitude": 32.87
+      }
+    }
+  ],
+  "borders": [
+    "am",
+    "az",
+    "bg",
+    "ge",
+    "gr",
+    "ir",
+    "iq",
+    "sy"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 39,
+    "longitude": 35
+  },
+  "area": 783562,
+  "population": 84339067,
+  "resources": {
+    "map": "https://goo.gl/maps/dXFFraiUDfcB6Quk6",
+    "flag": "https://flagcdn.com/tr.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/tr.svg"
+  }
+}

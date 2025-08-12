@@ -1,0 +1,35 @@
+{
+  "cca2": "re",
+  "translations": [
+    {
+      "language": "en",
+      "name": "R\u00E9union"
+    },
+    {
+      "language": "fr",
+      "name": "R\u00E9union"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Saint-Denis",
+      "coordinate": {
+        "latitude": -20.88,
+        "longitude": 55.45
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -21.15,
+    "longitude": 55.5
+  },
+  "area": 2511,
+  "population": 840974,
+  "resources": {
+    "map": "https://goo.gl/maps/wWpBrXsp8UHVbah29",
+    "flag": "https://flagcdn.com/re.svg",
+    "coatOfArms": null
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "cca2": "se",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Sweden"
+    },
+    {
+      "language": "fr",
+      "name": "Su\u00E8de"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Stockholm",
+      "coordinate": {
+        "latitude": 59.33,
+        "longitude": 18.05
+      }
+    }
+  ],
+  "borders": [
+    "fi",
+    "no"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 62,
+    "longitude": 15
+  },
+  "area": 450295,
+  "population": 10353442,
+  "resources": {
+    "map": "https://goo.gl/maps/iqygE491ADVgnBW39",
+    "flag": "https://flagcdn.com/se.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/se.svg"
+  }
+}

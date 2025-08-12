@@ -1,0 +1,35 @@
+{
+  "cca2": "ag",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Antigua and Barbuda"
+    },
+    {
+      "language": "fr",
+      "name": "Antigua-et-Barbuda"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Saint John\u0027s",
+      "coordinate": {
+        "latitude": 17.12,
+        "longitude": -61.85
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 17.05,
+    "longitude": -61.8
+  },
+  "area": 442,
+  "population": 97928,
+  "resources": {
+    "map": "https://goo.gl/maps/fnye4wGJ1RzC9jpX9",
+    "flag": "https://flagcdn.com/ag.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ag.svg"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "cca2": "na",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Namibia"
+    },
+    {
+      "language": "fr",
+      "name": "Namibie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Windhoek",
+      "coordinate": {
+        "latitude": -22.57,
+        "longitude": 17.08
+      }
+    }
+  ],
+  "borders": [
+    "ao",
+    "bw",
+    "za",
+    "zm"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -22,
+    "longitude": 17
+  },
+  "area": 825615,
+  "population": 2540916,
+  "resources": {
+    "map": "https://goo.gl/maps/oR1i8BFEYX3EY83WA",
+    "flag": "https://flagcdn.com/na.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/na.svg"
+  }
+}

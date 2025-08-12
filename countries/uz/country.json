@@ -1,0 +1,41 @@
+{
+  "cca2": "uz",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Uzbekistan"
+    },
+    {
+      "language": "fr",
+      "name": "Ouzb\u00E9kistan"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Tashkent",
+      "coordinate": {
+        "latitude": 41.32,
+        "longitude": 69.25
+      }
+    }
+  ],
+  "borders": [
+    "af",
+    "kz",
+    "kg",
+    "tj",
+    "tm"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 41,
+    "longitude": 64
+  },
+  "area": 447400,
+  "population": 34232050,
+  "resources": {
+    "map": "https://goo.gl/maps/AJpo6MjMx23qSWCz8",
+    "flag": "https://flagcdn.com/uz.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/uz.svg"
+  }
+}

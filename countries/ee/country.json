@@ -1,0 +1,38 @@
+{
+  "cca2": "ee",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Estonia"
+    },
+    {
+      "language": "fr",
+      "name": "Estonie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Tallinn",
+      "coordinate": {
+        "latitude": 59.43,
+        "longitude": 24.72
+      }
+    }
+  ],
+  "borders": [
+    "lv",
+    "ru"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 59,
+    "longitude": 26
+  },
+  "area": 45227,
+  "population": 1331057,
+  "resources": {
+    "map": "https://goo.gl/maps/6SsynwGUodL1sDvq8",
+    "flag": "https://flagcdn.com/ee.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ee.svg"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "cca2": "my",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Malaysia"
+    },
+    {
+      "language": "fr",
+      "name": "Malaisie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Kuala Lumpur",
+      "coordinate": {
+        "latitude": 3.17,
+        "longitude": 101.7
+      }
+    }
+  ],
+  "borders": [
+    "bn",
+    "id",
+    "th"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 2.5,
+    "longitude": 112.5
+  },
+  "area": 330803,
+  "population": 32365998,
+  "resources": {
+    "map": "https://goo.gl/maps/qrY1PNeUXGyXDcPy6",
+    "flag": "https://flagcdn.com/my.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/my.svg"
+  }
+}

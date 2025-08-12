@@ -1,0 +1,37 @@
+{
+  "cca2": "mf",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Saint Martin"
+    },
+    {
+      "language": "fr",
+      "name": "Saint-Martin"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Marigot",
+      "coordinate": {
+        "latitude": 18.07,
+        "longitude": -63.08
+      }
+    }
+  ],
+  "borders": [
+    "sx"
+  ],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 18.0708,
+    "longitude": -63.0501
+  },
+  "area": 53,
+  "population": 38659,
+  "resources": {
+    "map": "https://goo.gl/maps/P9ho9QuJ9EAR28JEA",
+    "flag": "https://flagcdn.com/mf.svg",
+    "coatOfArms": null
+  }
+}

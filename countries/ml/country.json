@@ -1,0 +1,43 @@
+{
+  "cca2": "ml",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Mali"
+    },
+    {
+      "language": "fr",
+      "name": "Mali"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Bamako",
+      "coordinate": {
+        "latitude": 12.65,
+        "longitude": -8
+      }
+    }
+  ],
+  "borders": [
+    "dz",
+    "bf",
+    "gn",
+    "ci",
+    "mr",
+    "ne",
+    "sn"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 17,
+    "longitude": -4
+  },
+  "area": 1240192,
+  "population": 20250834,
+  "resources": {
+    "map": "https://goo.gl/maps/u9mYJkCB19wyuzh27",
+    "flag": "https://flagcdn.com/ml.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ml.svg"
+  }
+}

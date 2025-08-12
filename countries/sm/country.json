@@ -1,0 +1,37 @@
+{
+  "cca2": "sm",
+  "translations": [
+    {
+      "language": "en",
+      "name": "San Marino"
+    },
+    {
+      "language": "fr",
+      "name": "Saint-Marin"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "City of San Marino",
+      "coordinate": {
+        "latitude": 43.94,
+        "longitude": 12.45
+      }
+    }
+  ],
+  "borders": [
+    "it"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 43.76666666,
+    "longitude": 12.41666666
+  },
+  "area": 61,
+  "population": 33938,
+  "resources": {
+    "map": "https://goo.gl/maps/rxCVJjm8dVY93RPY8",
+    "flag": "https://flagcdn.com/sm.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/sm.svg"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "cca2": "kg",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Kyrgyzstan"
+    },
+    {
+      "language": "fr",
+      "name": "Kirghizistan"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Bishkek",
+      "coordinate": {
+        "latitude": 42.87,
+        "longitude": 74.6
+      }
+    }
+  ],
+  "borders": [
+    "cn",
+    "kz",
+    "tj",
+    "uz"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 41,
+    "longitude": 75
+  },
+  "area": 199951,
+  "population": 6591600,
+  "resources": {
+    "map": "https://goo.gl/maps/SKG8BSMMQVvxkRkB7",
+    "flag": "https://flagcdn.com/kg.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/kg.svg"
+  }
+}
