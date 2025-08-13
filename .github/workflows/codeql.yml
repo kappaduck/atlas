@@ -5,7 +5,7 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-    paths: ['.github/workflows/*.yml', '**/*.cs']
+    paths: ['.github/workflows/*.yml', '**/*.cs', '**/*.csproj']
   schedule:
     - cron: '0 2 * * 2' # Every Tuesday at 2 AM UTC
 
