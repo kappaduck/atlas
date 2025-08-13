@@ -32,13 +32,17 @@ public sealed partial class SettingsModal
 
     private void Show(TabItem tab)
     {
-        SelectTab(tab);
+        _selectedTab = tab;
 
         Show(_dialog);
         ScrollContentToTop(_dialog);
     }
 
-    private void SelectTab(TabItem tab) => _selectedTab = tab;
+    private void SelectTab(TabItem tab)
+    {
+        _selectedTab = tab;
+        ScrollContentToTop(_dialog);
+    }
 
     private string IsActive(TabItem tab) => _selectedTab == tab ? "active" : string.Empty;
 
