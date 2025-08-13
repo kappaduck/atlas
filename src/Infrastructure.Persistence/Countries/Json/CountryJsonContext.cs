@@ -2,10 +2,10 @@
 // The source code is licensed under MIT License.
 
 using Atlas.Domain.Countries;
-using Infrastructure.Json.Converters;
+using Infrastructure.Persistence.Countries.Json.Converters;
 using System.Text.Json.Serialization;
 
-namespace Infrastructure.Json;
+namespace Infrastructure.Persistence.Countries.Json;
 
 [JsonSerializable(typeof(Country[]))]
 [JsonSerializable(typeof(CountryLookup[]))]
@@ -14,4 +14,4 @@ namespace Infrastructure.Json;
     PropertyNameCaseInsensitive = true,
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase,
     UseStringEnumConverter = true)]
-public sealed partial class CountryJsonContext : JsonSerializerContext;
+internal sealed partial class CountryJsonContext : JsonSerializerContext;

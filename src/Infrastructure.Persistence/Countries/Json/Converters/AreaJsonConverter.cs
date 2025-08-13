@@ -5,7 +5,7 @@ using Atlas.Domain.Geography;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Infrastructure.Json.Converters;
+namespace Infrastructure.Persistence.Countries.Json.Converters;
 
 internal sealed class AreaJsonConverter : JsonConverter<Area>
 {

@@ -27,18 +27,15 @@
     <File Path="rules/underscore.editorconfig" />
     <File Path="rules/vsthrd.editorconfig" />
   </Folder>
-  <Folder Name="/core/">
+  <Folder Name="/backend/">
     <Project Path="src/Atlas.Application/Atlas.Application.csproj" />
     <Project Path="src/Atlas.Domain/Atlas.Domain.csproj" />
+    <Project Path="src/Infrastructure.Persistence/Infrastructure.Persistence.csproj" />
   </Folder>
   <Folder Name="/docs/">
     <File Path="changelog.md" />
     <File Path="license" />
     <File Path="readme.md" />
-  </Folder>
-  <Folder Name="/infrastructure/">
-    <Project Path="src/Infrastructure.Json/Infrastructure.Json.csproj" />
-    <Project Path="src/Infrastructure.Persistence/Infrastructure.Persistence.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <File Path="tests/.editorconfig" />

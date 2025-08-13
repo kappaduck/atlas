@@ -2,19 +2,19 @@
 // The source code is licensed under MIT License.
 
 using Atlas.Domain.Countries;
-using Infrastructure.Json;
+using Infrastructure.Persistence.Countries.Json;
+using Infrastructure.Persistence.Countries.Options;
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Http.Json;
 
 namespace Infrastructure.Persistence.Countries.Sources;
 
 [ExcludeFromCodeCoverage]
-internal sealed class CountryDataSource(HttpClient client) : IDataSource<Country>
+internal sealed class CountryDataSource(HttpClient client, CountryEndpointOptions options) : IDataSource<Country>
 {
     public async Task<Country[]> QueryAllAsync(CancellationToken cancellationToken)
     {
-        string endpoint = Path.Combine(DataJsonPaths.BaseDirectory, DataJsonPaths.Countries);
-        using HttpResponseMessage response = await client.GetAsync(endpoint, cancellationToken).ConfigureAwait(false);
+        using HttpResponseMessage response = await client.GetAsync(options.All, cancellationToken).ConfigureAwait(false);
 
         if (!response.IsSuccessStatusCode)
             return [];

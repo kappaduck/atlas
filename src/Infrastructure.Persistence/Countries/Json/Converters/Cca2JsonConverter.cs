@@ -5,7 +5,7 @@ using Atlas.Domain.Countries;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Infrastructure.Json.Converters;
+namespace Infrastructure.Persistence.Countries.Json.Converters;
 
 internal sealed class Cca2JsonConverter : JsonConverter<Cca2>
 {
