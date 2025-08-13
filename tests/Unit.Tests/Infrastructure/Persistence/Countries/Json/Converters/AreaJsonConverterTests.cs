@@ -6,6 +6,7 @@ using Infrastructure.Persistence.Countries.Json;
 using Infrastructure.Persistence.Countries.Json.Converters;
 using System.Text;
 using System.Text.Json;
+using TUnit.Assertions.AssertConditions.Throws;
 
 namespace Unit.Tests.Infrastructure.Persistence.Countries.Json.Converters;
 
@@ -25,21 +26,14 @@ public sealed class AreaJsonConverterTests
     }
 
     [Test]
-    public async Task WriteShouldWriteAreaToJson()
+    public async Task WriteShouldThrowNotSupportedException()
     {
         await using MemoryStream stream = new();
         await using Utf8JsonWriter writer = new(stream);
 
-        writer.WriteStartObject();
-        writer.WritePropertyName("area");
-
-        _converter.Write(writer, new Area(42.0), _options);
-
-        writer.WriteEndObject();
-        await writer.FlushAsync();
-
-        string json = Encoding.UTF8.GetString(stream.ToArray());
-        await Assert.That(json).IsEqualTo(/*lang=json,strict*/ """{"area":42}""");
+        await Assert.That(() => _converter.Write(writer, new Area(42.0), _options))
+                    .ThrowsExactly<NotSupportedException>()
+                    .WithMessage($"{nameof(AreaJsonConverter)} is only used for deserialization");
     }
 
     private static Utf8JsonReader CreateJsonReader()

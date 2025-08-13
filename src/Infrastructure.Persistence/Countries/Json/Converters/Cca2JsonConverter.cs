@@ -13,5 +13,5 @@ internal sealed class Cca2JsonConverter : JsonConverter<Cca2>
         => new(reader.GetString()!);
 
     public override void Write(Utf8JsonWriter writer, Cca2 value, JsonSerializerOptions options)
-        => writer.WriteStringValue(value);
+        => throw new NotSupportedException($"{nameof(Cca2JsonConverter)} is only used for deserialization");
 }

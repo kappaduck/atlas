@@ -13,5 +13,5 @@ internal sealed class AreaJsonConverter : JsonConverter<Area>
         => new(reader.GetDouble());
 
     public override void Write(Utf8JsonWriter writer, Area value, JsonSerializerOptions options)
-        => writer.WriteNumberValue(value);
+        => throw new NotSupportedException($"{nameof(AreaJsonConverter)} is only used for deserialization");
 }

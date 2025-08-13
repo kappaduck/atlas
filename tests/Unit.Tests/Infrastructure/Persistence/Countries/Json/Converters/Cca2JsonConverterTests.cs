@@ -6,6 +6,7 @@ using Infrastructure.Persistence.Countries.Json;
 using Infrastructure.Persistence.Countries.Json.Converters;
 using System.Text;
 using System.Text.Json;
+using TUnit.Assertions.AssertConditions.Throws;
 
 namespace Unit.Tests.Infrastructure.Persistence.Countries.Json.Converters;
 
@@ -25,21 +26,14 @@ public sealed class Cca2JsonConverterTests
     }
 
     [Test]
-    public async Task WriteShouldWriteCca2ToJson()
+    public async Task WriteShouldThrowNotSupportedException()
     {
         await using MemoryStream stream = new();
         await using Utf8JsonWriter writer = new(stream);
 
-        writer.WriteStartObject();
-        writer.WritePropertyName("cca2");
-
-        _converter.Write(writer, new Cca2("CA"), _options);
-
-        writer.WriteEndObject();
-        await writer.FlushAsync();
-
-        string json = Encoding.UTF8.GetString(stream.ToArray());
-        await Assert.That(json).IsEqualTo(/*lang=json,strict*/ """{"cca2":"CA"}""");
+        await Assert.That(() => _converter.Write(writer, new Cca2("CA"), _options))
+                    .ThrowsExactly<NotSupportedException>()
+                    .WithMessage($"{nameof(Cca2JsonConverter)} is only used for deserialization");
     }
 
     private static Utf8JsonReader CreateJsonReader()
