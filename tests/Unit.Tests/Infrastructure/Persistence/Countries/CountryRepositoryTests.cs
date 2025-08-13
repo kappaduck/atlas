@@ -24,7 +24,7 @@ public sealed class CountryRepositoryTests
     {
         _repository = new CountryRepository(_dataSource, _cache, new ExcludedCountriesOptions()
         {
-            Countries = ["IT"]
+            Excluded = ["IT"]
         });
     }
 
