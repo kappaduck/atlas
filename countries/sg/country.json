@@ -1,0 +1,35 @@
+{
+  "cca2": "sg",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Singapore"
+    },
+    {
+      "language": "fr",
+      "name": "Singapour"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Singapore",
+      "coordinate": {
+        "latitude": 1.28,
+        "longitude": 103.85
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 1.36666666,
+    "longitude": 103.8
+  },
+  "area": 710,
+  "population": 5685807,
+  "resources": {
+    "map": "https://goo.gl/maps/QbQt9Y9b5KFzsahV6",
+    "flag": "https://flagcdn.com/sg.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/sg.svg"
+  }
+}

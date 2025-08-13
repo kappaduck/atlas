@@ -1,0 +1,35 @@
+{
+  "cca2": "wf",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Wallis and Futuna"
+    },
+    {
+      "language": "fr",
+      "name": "Wallis-et-Futuna"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Mata-Utu",
+      "coordinate": {
+        "latitude": -13.95,
+        "longitude": -171.93
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -13.3,
+    "longitude": -176.2
+  },
+  "area": 142,
+  "population": 11750,
+  "resources": {
+    "map": "https://goo.gl/maps/CzVqK74QYtbHv65r5",
+    "flag": "https://flagcdn.com/wf.svg",
+    "coatOfArms": null
+  }
+}

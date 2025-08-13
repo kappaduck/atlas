@@ -1,0 +1,37 @@
+{
+  "cca2": "ls",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Lesotho"
+    },
+    {
+      "language": "fr",
+      "name": "Lesotho"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Maseru",
+      "coordinate": {
+        "latitude": -29.32,
+        "longitude": 27.48
+      }
+    }
+  ],
+  "borders": [
+    "za"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -29.5,
+    "longitude": 28.5
+  },
+  "area": 30355,
+  "population": 2142252,
+  "resources": {
+    "map": "https://goo.gl/maps/H8gJi5mL4Cmd1SF28",
+    "flag": "https://flagcdn.com/ls.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ls.svg"
+  }
+}

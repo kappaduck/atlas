@@ -1,0 +1,38 @@
+{
+  "cca2": "sv",
+  "translations": [
+    {
+      "language": "en",
+      "name": "El Salvador"
+    },
+    {
+      "language": "fr",
+      "name": "Salvador"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "San Salvador",
+      "coordinate": {
+        "latitude": 13.7,
+        "longitude": -89.2
+      }
+    }
+  ],
+  "borders": [
+    "gt",
+    "hn"
+  ],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 13.83333333,
+    "longitude": -88.91666666
+  },
+  "area": 21041,
+  "population": 6486201,
+  "resources": {
+    "map": "https://goo.gl/maps/cZnCEi5sEMQtKKcB7",
+    "flag": "https://flagcdn.com/sv.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/sv.svg"
+  }
+}

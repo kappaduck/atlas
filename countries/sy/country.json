@@ -1,0 +1,41 @@
+{
+  "cca2": "sy",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Syria"
+    },
+    {
+      "language": "fr",
+      "name": "Syrie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Damascus",
+      "coordinate": {
+        "latitude": 33.5,
+        "longitude": 36.3
+      }
+    }
+  ],
+  "borders": [
+    "iq",
+    "il",
+    "jo",
+    "lb",
+    "tr"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 35,
+    "longitude": 38
+  },
+  "area": 185180,
+  "population": 17500657,
+  "resources": {
+    "map": "https://goo.gl/maps/Xe3VnFbwdb4nv2SM9",
+    "flag": "https://flagcdn.com/sy.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/sy.svg"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "cca2": "ba",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Bosnia and Herzegovina"
+    },
+    {
+      "language": "fr",
+      "name": "Bosnie-Herz\u00E9govine"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Sarajevo",
+      "coordinate": {
+        "latitude": 43.87,
+        "longitude": 18.42
+      }
+    }
+  ],
+  "borders": [
+    "hr",
+    "me",
+    "rs"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 44,
+    "longitude": 18
+  },
+  "area": 51209,
+  "population": 3280815,
+  "resources": {
+    "map": "https://www.google.com/maps/place/Bosnia\u002Band\u002BHerzegovina",
+    "flag": "https://flagcdn.com/ba.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ba.svg"
+  }
+}

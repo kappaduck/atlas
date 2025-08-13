@@ -1,0 +1,39 @@
+{
+  "cca2": "lr",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Liberia"
+    },
+    {
+      "language": "fr",
+      "name": "Liberia"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Monrovia",
+      "coordinate": {
+        "latitude": 6.3,
+        "longitude": -10.8
+      }
+    }
+  ],
+  "borders": [
+    "gn",
+    "ci",
+    "sl"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 6.5,
+    "longitude": -9.5
+  },
+  "area": 111369,
+  "population": 5057677,
+  "resources": {
+    "map": "https://goo.gl/maps/4VsHsc2oeGeRL3wg6",
+    "flag": "https://flagcdn.com/lr.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/lr.svg"
+  }
+}

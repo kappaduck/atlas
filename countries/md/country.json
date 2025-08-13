@@ -1,0 +1,38 @@
+{
+  "cca2": "md",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Moldova"
+    },
+    {
+      "language": "fr",
+      "name": "Moldavie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Chi\u0219in\u0103u",
+      "coordinate": {
+        "latitude": 47.01,
+        "longitude": 28.9
+      }
+    }
+  ],
+  "borders": [
+    "ro",
+    "ua"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 47,
+    "longitude": 29
+  },
+  "area": 33846,
+  "population": 2617820,
+  "resources": {
+    "map": "https://goo.gl/maps/JjmyUuULujnDeFPf7",
+    "flag": "https://flagcdn.com/md.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/md.svg"
+  }
+}

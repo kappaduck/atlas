@@ -1,0 +1,42 @@
+{
+  "cca2": "bf",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Burkina Faso"
+    },
+    {
+      "language": "fr",
+      "name": "Burkina Faso"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Ouagadougou",
+      "coordinate": {
+        "latitude": 12.37,
+        "longitude": -1.52
+      }
+    }
+  ],
+  "borders": [
+    "bj",
+    "ci",
+    "gh",
+    "ml",
+    "ne",
+    "tg"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 13,
+    "longitude": -2
+  },
+  "area": 272967,
+  "population": 20903278,
+  "resources": {
+    "map": "https://goo.gl/maps/rKRmpcMbFher2ozb7",
+    "flag": "https://flagcdn.com/bf.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/bf.svg"
+  }
+}

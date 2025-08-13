@@ -7,7 +7,7 @@ using Infrastructure.Persistence.Changelog.Sources;
 
 namespace Unit.Tests.Infrastructure.Persistence.Changelog;
 
-internal sealed class ChangelogRepositoryTests
+public sealed class ChangelogRepositoryTests
 {
     private const string ExpectedKey = "changelog";
 

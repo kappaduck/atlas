@@ -1,0 +1,56 @@
+{
+  "cca2": "za",
+  "translations": [
+    {
+      "language": "en",
+      "name": "South Africa"
+    },
+    {
+      "language": "fr",
+      "name": "Afrique du Sud"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Pretoria",
+      "coordinate": {
+        "latitude": -25.7,
+        "longitude": 28.22
+      }
+    },
+    {
+      "name": "Bloemfontein",
+      "coordinate": {
+        "latitude": -25.7,
+        "longitude": 28.22
+      }
+    },
+    {
+      "name": "Cape Town",
+      "coordinate": {
+        "latitude": -25.7,
+        "longitude": 28.22
+      }
+    }
+  ],
+  "borders": [
+    "bw",
+    "ls",
+    "mz",
+    "na",
+    "sz",
+    "zw"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -29,
+    "longitude": 24
+  },
+  "area": 1221037,
+  "population": 59308690,
+  "resources": {
+    "map": "https://goo.gl/maps/CLCZ1R8Uz1KpYhRv6",
+    "flag": "https://flagcdn.com/za.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/za.svg"
+  }
+}

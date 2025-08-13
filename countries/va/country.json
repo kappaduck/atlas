@@ -1,0 +1,37 @@
+{
+  "cca2": "va",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Vatican City"
+    },
+    {
+      "language": "fr",
+      "name": "Cit\u00E9 du Vatican"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Vatican City",
+      "coordinate": {
+        "latitude": 41.9,
+        "longitude": 12.45
+      }
+    }
+  ],
+  "borders": [
+    "it"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 41.9,
+    "longitude": 12.45
+  },
+  "area": 0.44,
+  "population": 451,
+  "resources": {
+    "map": "https://goo.gl/maps/DTKvw5Bd1QZaDZmE8",
+    "flag": "https://flagcdn.com/va.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/va.svg"
+  }
+}

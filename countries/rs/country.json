@@ -1,0 +1,44 @@
+{
+  "cca2": "rs",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Serbia"
+    },
+    {
+      "language": "fr",
+      "name": "Serbie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Belgrade",
+      "coordinate": {
+        "latitude": 44.83,
+        "longitude": 20.5
+      }
+    }
+  ],
+  "borders": [
+    "ba",
+    "bg",
+    "hr",
+    "hu",
+    "xk",
+    "mk",
+    "me",
+    "ro"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 44,
+    "longitude": 21
+  },
+  "area": 88361,
+  "population": 6908224,
+  "resources": {
+    "map": "https://goo.gl/maps/2Aqof7aV2Naq8YEK8",
+    "flag": "https://flagcdn.com/rs.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/rs.svg"
+  }
+}

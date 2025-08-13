@@ -1,0 +1,39 @@
+{
+  "cca2": "ve",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Venezuela"
+    },
+    {
+      "language": "fr",
+      "name": "Venezuela"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Caracas",
+      "coordinate": {
+        "latitude": 10.48,
+        "longitude": -66.87
+      }
+    }
+  ],
+  "borders": [
+    "br",
+    "co",
+    "gy"
+  ],
+  "continent": "SouthAmerica",
+  "coordinate": {
+    "latitude": 8,
+    "longitude": -66
+  },
+  "area": 916445,
+  "population": 28435943,
+  "resources": {
+    "map": "https://goo.gl/maps/KLCwDN8sec7z2kse9",
+    "flag": "https://flagcdn.com/ve.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ve.svg"
+  }
+}

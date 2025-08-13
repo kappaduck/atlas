@@ -1,0 +1,42 @@
+{
+  "cca2": "ss",
+  "translations": [
+    {
+      "language": "en",
+      "name": "South Sudan"
+    },
+    {
+      "language": "fr",
+      "name": "Soudan du Sud"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Juba",
+      "coordinate": {
+        "latitude": 4.85,
+        "longitude": 31.62
+      }
+    }
+  ],
+  "borders": [
+    "cf",
+    "cd",
+    "et",
+    "ke",
+    "sd",
+    "ug"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 7,
+    "longitude": 30
+  },
+  "area": 619745,
+  "population": 11193729,
+  "resources": {
+    "map": "https://goo.gl/maps/Zm1AYCXb9HSNF1P27",
+    "flag": "https://flagcdn.com/ss.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ss.svg"
+  }
+}

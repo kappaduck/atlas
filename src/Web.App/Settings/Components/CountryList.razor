@@ -11,8 +11,8 @@
     {
         <div class="country-card">
             <picture>
-                <source type="@country.Resource.Flag.MediaType" srcset="@country.Resource.Flag.Uri" />
-                <img src="@country.Resource.Flag.Uri" alt="@country.Name" class="flag" />
+                <source srcset="@country.Resources.Flag" />
+                <img src="@country.Resources.Flag" alt="@country.Name" class="flag" />
             </picture>
             <h3 class="name">@country.Name</h3>
         </div>

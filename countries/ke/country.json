@@ -1,0 +1,41 @@
+{
+  "cca2": "ke",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Kenya"
+    },
+    {
+      "language": "fr",
+      "name": "Kenya"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Nairobi",
+      "coordinate": {
+        "latitude": -1.28,
+        "longitude": 36.82
+      }
+    }
+  ],
+  "borders": [
+    "et",
+    "so",
+    "ss",
+    "tz",
+    "ug"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 1,
+    "longitude": 38
+  },
+  "area": 580367,
+  "population": 53771300,
+  "resources": {
+    "map": "https://goo.gl/maps/Ni9M7wcCxf8bJHLX8",
+    "flag": "https://flagcdn.com/ke.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ke.svg"
+  }
+}

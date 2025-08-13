@@ -5,7 +5,7 @@ using Atlas.Domain.Geography;
 
 namespace Unit.Tests.Domain.Geography;
 
-internal sealed class AreaTests
+public sealed class AreaTests
 {
     [Test]
     public async Task CompareToShouldReturnSmallerWhenLeftIsSmallerThanRightArea()

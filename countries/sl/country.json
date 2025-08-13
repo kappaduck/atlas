@@ -1,0 +1,38 @@
+{
+  "cca2": "sl",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Sierra Leone"
+    },
+    {
+      "language": "fr",
+      "name": "Sierra Leone"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Freetown",
+      "coordinate": {
+        "latitude": 8.48,
+        "longitude": -13.23
+      }
+    }
+  ],
+  "borders": [
+    "gn",
+    "lr"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 8.5,
+    "longitude": -11.5
+  },
+  "area": 71740,
+  "population": 7976985,
+  "resources": {
+    "map": "https://goo.gl/maps/jhacar85oq9QaeKB7",
+    "flag": "https://flagcdn.com/sl.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/sl.svg"
+  }
+}

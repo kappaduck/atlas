@@ -1,0 +1,39 @@
+{
+  "cca2": "no",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Norway"
+    },
+    {
+      "language": "fr",
+      "name": "Norv\u00E8ge"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Oslo",
+      "coordinate": {
+        "latitude": 59.92,
+        "longitude": 10.75
+      }
+    }
+  ],
+  "borders": [
+    "fi",
+    "se",
+    "ru"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 62,
+    "longitude": 10
+  },
+  "area": 323802,
+  "population": 5379475,
+  "resources": {
+    "map": "https://goo.gl/maps/htWRrphA7vNgQNdSA",
+    "flag": "https://flagcdn.com/no.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/no.svg"
+  }
+}

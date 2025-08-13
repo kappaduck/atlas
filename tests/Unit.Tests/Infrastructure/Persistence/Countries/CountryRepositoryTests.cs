@@ -4,14 +4,14 @@
 using Atlas.Domain.Countries;
 using Atlas.Domain.Geography;
 using Atlas.Domain.Languages;
-using Atlas.Domain.Resources;
 using Infrastructure.Persistence.Caching;
 using Infrastructure.Persistence.Countries;
+using Infrastructure.Persistence.Countries.Options;
 using Infrastructure.Persistence.Countries.Sources;
 
 namespace Unit.Tests.Infrastructure.Persistence.Countries;
 
-internal sealed class CountryRepositoryTests
+public sealed class CountryRepositoryTests
 {
     private const string ExpectedAllCountriesKey = "countries";
 
@@ -22,7 +22,10 @@ internal sealed class CountryRepositoryTests
 
     public CountryRepositoryTests()
     {
-        _repository = new CountryRepository(_dataSource, _cache);
+        _repository = new CountryRepository(_dataSource, _cache, new ExcludedCountriesOptions()
+        {
+            Countries = ["IT"]
+        });
     }
 
     [Test]
@@ -42,6 +45,20 @@ internal sealed class CountryRepositoryTests
         await _repository.GetAllAsync(CancellationToken.None);
 
         await _dataSource.Received(1).QueryAllAsync(CancellationToken.None);
+    }
+
+    [Test]
+    public async Task GetAllAsyncShouldExcludedCountries()
+    {
+        Country canada = CreateCountry("CA");
+        Country italy = CreateCountry("IT");
+
+        _dataSource.QueryAllAsync(Arg.Any<CancellationToken>()).Returns([canada, italy]);
+
+        Country[] countries = await _repository.GetAllAsync(CancellationToken.None);
+
+        await Assert.That(countries).Contains(canada);
+        await Assert.That(countries).DoesNotContain(italy);
     }
 
     [Test]
@@ -130,10 +147,9 @@ internal sealed class CountryRepositoryTests
         Area = new Area(1),
         Population = 1,
         Translations = [new Translation(Language.English, "Canada")],
-        Borders = ["US"],
+        Borders = [new Cca2("US")],
         Continent = Continent.NorthAmerica,
         Coordinate = new Coordinate(0, 0),
-        IsExcluded = false,
-        Resource = new CountryResource(new Uri("https://www.google.com/maps/place/Canada"), new Image(new Uri("https://www.countryflags.io/ca/flat/64.svg"), "image/svg+xml"))
+        Resources = new Resources(new Uri("https://www.google.com/maps/place/Canada"), new Uri("https://canada.svg"), new Uri("https://canada.coat-of-arms.svg"))
     };
 }

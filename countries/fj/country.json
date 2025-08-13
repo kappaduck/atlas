@@ -1,0 +1,35 @@
+{
+  "cca2": "fj",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Fiji"
+    },
+    {
+      "language": "fr",
+      "name": "Fidji"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Suva",
+      "coordinate": {
+        "latitude": -18.13,
+        "longitude": 178.42
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -17.7134,
+    "longitude": 178.065
+  },
+  "area": 18272,
+  "population": 896444,
+  "resources": {
+    "map": "https://goo.gl/maps/r9fhDqoLZdg1zmE99",
+    "flag": "https://flagcdn.com/fj.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/fj.svg"
+  }
+}

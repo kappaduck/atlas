@@ -1,0 +1,37 @@
+{
+  "cca2": "gi",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Gibraltar"
+    },
+    {
+      "language": "fr",
+      "name": "Gibraltar"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Gibraltar",
+      "coordinate": {
+        "latitude": 36.13,
+        "longitude": -5.35
+      }
+    }
+  ],
+  "borders": [
+    "es"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 36.13333333,
+    "longitude": -5.35
+  },
+  "area": 6,
+  "population": 33691,
+  "resources": {
+    "map": "https://goo.gl/maps/CEoHAs1t6byCBhHFA",
+    "flag": "https://flagcdn.com/gi.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/gi.svg"
+  }
+}

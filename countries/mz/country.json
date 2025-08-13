@@ -1,0 +1,42 @@
+{
+  "cca2": "mz",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Mozambique"
+    },
+    {
+      "language": "fr",
+      "name": "Mozambique"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Maputo",
+      "coordinate": {
+        "latitude": -25.95,
+        "longitude": 32.58
+      }
+    }
+  ],
+  "borders": [
+    "mw",
+    "za",
+    "sz",
+    "tz",
+    "zm",
+    "zw"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -18.25,
+    "longitude": 35
+  },
+  "area": 801590,
+  "population": 31255435,
+  "resources": {
+    "map": "https://goo.gl/maps/xCLcY9fzU6x4Pueu5",
+    "flag": "https://flagcdn.com/mz.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/mz.svg"
+  }
+}

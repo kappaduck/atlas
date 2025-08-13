@@ -1,0 +1,35 @@
+{
+  "cca2": "gg",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Guernsey"
+    },
+    {
+      "language": "fr",
+      "name": "Guernesey"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "St. Peter Port",
+      "coordinate": {
+        "latitude": 49.45,
+        "longitude": -2.54
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 49.46666666,
+    "longitude": -2.58333333
+  },
+  "area": 78,
+  "population": 62999,
+  "resources": {
+    "map": "https://goo.gl/maps/6kXnQU5QvEZMD9VB7",
+    "flag": "https://flagcdn.com/gg.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/gg.svg"
+  }
+}

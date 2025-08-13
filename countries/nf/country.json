@@ -1,0 +1,35 @@
+{
+  "cca2": "nf",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Norfolk Island"
+    },
+    {
+      "language": "fr",
+      "name": "\u00CEle Norfolk"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Kingston",
+      "coordinate": {
+        "latitude": -29.05,
+        "longitude": 167.97
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -29.03333333,
+    "longitude": 167.95
+  },
+  "area": 36,
+  "population": 2302,
+  "resources": {
+    "map": "https://goo.gl/maps/pbvtm6XYd1iZbjky5",
+    "flag": "https://flagcdn.com/nf.svg",
+    "coatOfArms": null
+  }
+}

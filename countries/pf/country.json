@@ -1,0 +1,35 @@
+{
+  "cca2": "pf",
+  "translations": [
+    {
+      "language": "en",
+      "name": "French Polynesia"
+    },
+    {
+      "language": "fr",
+      "name": "Polyn\u00E9sie fran\u00E7aise"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Papeet\u0113",
+      "coordinate": {
+        "latitude": -17.53,
+        "longitude": -149.56
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -17.6797,
+    "longitude": -149.4068
+  },
+  "area": 4167,
+  "population": 280904,
+  "resources": {
+    "map": "https://goo.gl/maps/xgg6BQTRyeQg4e1m6",
+    "flag": "https://flagcdn.com/pf.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/pf.svg"
+  }
+}

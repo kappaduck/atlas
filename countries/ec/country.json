@@ -1,0 +1,38 @@
+{
+  "cca2": "ec",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Ecuador"
+    },
+    {
+      "language": "fr",
+      "name": "\u00C9quateur"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Quito",
+      "coordinate": {
+        "latitude": -0.22,
+        "longitude": -78.5
+      }
+    }
+  ],
+  "borders": [
+    "co",
+    "pe"
+  ],
+  "continent": "SouthAmerica",
+  "coordinate": {
+    "latitude": -2,
+    "longitude": -77.5
+  },
+  "area": 276841,
+  "population": 17643060,
+  "resources": {
+    "map": "https://goo.gl/maps/TbX8hUW4gcbRPZiK7",
+    "flag": "https://flagcdn.com/ec.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ec.svg"
+  }
+}

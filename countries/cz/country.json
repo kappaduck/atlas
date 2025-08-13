@@ -1,0 +1,40 @@
+{
+  "cca2": "cz",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Czechia"
+    },
+    {
+      "language": "fr",
+      "name": "Tch\u00E9quie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Prague",
+      "coordinate": {
+        "latitude": 50.08,
+        "longitude": 14.47
+      }
+    }
+  ],
+  "borders": [
+    "at",
+    "de",
+    "pl",
+    "sk"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 49.75,
+    "longitude": 15.5
+  },
+  "area": 78865,
+  "population": 10698896,
+  "resources": {
+    "map": "https://goo.gl/maps/47dmgeXMZyhDHyQW8",
+    "flag": "https://flagcdn.com/cz.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cz.svg"
+  }
+}

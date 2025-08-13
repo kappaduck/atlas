@@ -1,0 +1,40 @@
+{
+  "cca2": "bj",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Benin"
+    },
+    {
+      "language": "fr",
+      "name": "B\u00E9nin"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Porto-Novo",
+      "coordinate": {
+        "latitude": 6.48,
+        "longitude": 2.62
+      }
+    }
+  ],
+  "borders": [
+    "bf",
+    "ne",
+    "ng",
+    "tg"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 9.5,
+    "longitude": 2.25
+  },
+  "area": 112622,
+  "population": 12123198,
+  "resources": {
+    "map": "https://goo.gl/maps/uMw1BsHEXQYgVFFu6",
+    "flag": "https://flagcdn.com/bj.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/bj.svg"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "cca2": "cx",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Christmas Island"
+    },
+    {
+      "language": "fr",
+      "name": "\u00CEle Christmas"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Flying Fish Cove",
+      "coordinate": {
+        "latitude": -10.42,
+        "longitude": 105.68
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -10.5,
+    "longitude": 105.66666666
+  },
+  "area": 135,
+  "population": 2072,
+  "resources": {
+    "map": "https://goo.gl/maps/ZC17hHsQZpShN5wk9",
+    "flag": "https://flagcdn.com/cx.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cx.svg"
+  }
+}

@@ -6,7 +6,7 @@
     @foreach (GuessedCountryResponse guess in GameState.Guesses)
     {
         <li class="guess @FoundCountryCss(guess.Success)">
-            <img src="@guess.Flag.Uri" alt="@guess.Name" width="48" />
+            <img src="@guess.Flag" alt="@guess.Name" width="48" />
             <div class="information">
                 <div class="content">
                     <span title="@guess.Name" class="country-name">@guess.Name</span>

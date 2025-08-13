@@ -1,0 +1,42 @@
+{
+  "cca2": "td",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Chad"
+    },
+    {
+      "language": "fr",
+      "name": "Tchad"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "N\u0027Djamena",
+      "coordinate": {
+        "latitude": 12.1,
+        "longitude": 15.03
+      }
+    }
+  ],
+  "borders": [
+    "cm",
+    "cf",
+    "ly",
+    "ne",
+    "ng",
+    "sd"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 15,
+    "longitude": 19
+  },
+  "area": 1284000,
+  "population": 16425859,
+  "resources": {
+    "map": "https://goo.gl/maps/ziUdAZ8skuNfx5Hx7",
+    "flag": "https://flagcdn.com/td.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/td.svg"
+  }
+}

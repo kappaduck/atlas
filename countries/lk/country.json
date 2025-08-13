@@ -1,0 +1,37 @@
+{
+  "cca2": "lk",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Sri Lanka"
+    },
+    {
+      "language": "fr",
+      "name": "Sri Lanka"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Sri Jayawardenepura Kotte",
+      "coordinate": {
+        "latitude": 6.89,
+        "longitude": 79.9
+      }
+    }
+  ],
+  "borders": [
+    "in"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 7,
+    "longitude": 81
+  },
+  "area": 65610,
+  "population": 21919000,
+  "resources": {
+    "map": "https://goo.gl/maps/VkPHoeFSfgzRQCDv8",
+    "flag": "https://flagcdn.com/lk.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/lk.svg"
+  }
+}

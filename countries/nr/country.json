@@ -1,0 +1,35 @@
+{
+  "cca2": "nr",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Nauru"
+    },
+    {
+      "language": "fr",
+      "name": "Nauru"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Yaren",
+      "coordinate": {
+        "latitude": -0.55,
+        "longitude": 166.92
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -0.53333333,
+    "longitude": 166.91666666
+  },
+  "area": 21,
+  "population": 10834,
+  "resources": {
+    "map": "https://goo.gl/maps/kyAGw6XEJgjSMsTK7",
+    "flag": "https://flagcdn.com/nr.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/nr.svg"
+  }
+}

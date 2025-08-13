@@ -1,0 +1,35 @@
+{
+  "cca2": "je",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Jersey"
+    },
+    {
+      "language": "fr",
+      "name": "Jersey"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Saint Helier",
+      "coordinate": {
+        "latitude": 49.18,
+        "longitude": -2.1
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 49.25,
+    "longitude": -2.16666666
+  },
+  "area": 116,
+  "population": 100800,
+  "resources": {
+    "map": "https://goo.gl/maps/rXG8GZZtsqK92kTCA",
+    "flag": "https://flagcdn.com/je.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/je.svg"
+  }
+}

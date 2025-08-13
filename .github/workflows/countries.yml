@@ -1,0 +1,43 @@
+name: Countries
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths: [ 'countries/**', '!countries/all.json', '!countries/lookup.json', .github/workflows/countries.yml ]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build:
+    name: Update countries
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+          dotnet-quality: preview
+
+      - name: Merge countries
+        run: dotnet .\merge.countries.cs
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          title: "Update all/lookup json files"
+          base: main
+          branch: update-countries-json
+          commit-message: "Update all/lookup json files"
+          body: Update all and lookup json files with the latest data.
+          labels: dependencies, countries
+          reviewers: beauchama
+          assignees: beauchama
+          add-paths: ./countries/*.json
+          token: ${{ secrets.GITHUB_TOKEN }}

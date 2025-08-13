@@ -1,0 +1,41 @@
+{
+  "cca2": "mk",
+  "translations": [
+    {
+      "language": "en",
+      "name": "North Macedonia"
+    },
+    {
+      "language": "fr",
+      "name": "Mac\u00E9doine du Nord"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Skopje",
+      "coordinate": {
+        "latitude": 42,
+        "longitude": 21.43
+      }
+    }
+  ],
+  "borders": [
+    "al",
+    "bg",
+    "gr",
+    "xk",
+    "rs"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 41.83333333,
+    "longitude": 22
+  },
+  "area": 25713,
+  "population": 2077132,
+  "resources": {
+    "map": "https://goo.gl/maps/55Q8MEnF6ACdu3q79",
+    "flag": "https://flagcdn.com/mk.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/mk.svg"
+  }
+}

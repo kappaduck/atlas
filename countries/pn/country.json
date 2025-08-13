@@ -1,0 +1,35 @@
+{
+  "cca2": "pn",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Pitcairn Islands"
+    },
+    {
+      "language": "fr",
+      "name": "\u00CEles Pitcairn"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Adamstown",
+      "coordinate": {
+        "latitude": -25.07,
+        "longitude": -130.08
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -25.06666666,
+    "longitude": -130.1
+  },
+  "area": 47,
+  "population": 56,
+  "resources": {
+    "map": "https://goo.gl/maps/XGJMnMAigXjXcxSa7",
+    "flag": "https://flagcdn.com/pn.svg",
+    "coatOfArms": null
+  }
+}

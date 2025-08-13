@@ -1,0 +1,41 @@
+{
+  "cca2": "ar",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Argentina"
+    },
+    {
+      "language": "fr",
+      "name": "Argentine"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Buenos Aires",
+      "coordinate": {
+        "latitude": -34.58,
+        "longitude": -58.67
+      }
+    }
+  ],
+  "borders": [
+    "bo",
+    "br",
+    "cl",
+    "py",
+    "uy"
+  ],
+  "continent": "SouthAmerica",
+  "coordinate": {
+    "latitude": -34,
+    "longitude": -64
+  },
+  "area": 2780400,
+  "population": 45376763,
+  "resources": {
+    "map": "https://goo.gl/maps/Z9DXNxhf2o93kvyc6",
+    "flag": "https://flagcdn.com/ar.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ar.svg"
+  }
+}

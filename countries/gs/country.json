@@ -1,0 +1,35 @@
+{
+  "cca2": "gs",
+  "translations": [
+    {
+      "language": "en",
+      "name": "South Georgia"
+    },
+    {
+      "language": "fr",
+      "name": "G\u00E9orgie du Sud-et-les \u00CEles Sandwich du Sud"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "King Edward Point",
+      "coordinate": {
+        "latitude": -54.28,
+        "longitude": -36.5
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Antarctica",
+  "coordinate": {
+    "latitude": -54.5,
+    "longitude": -37
+  },
+  "area": 3903,
+  "population": 30,
+  "resources": {
+    "map": "https://goo.gl/maps/mJzdaBwKBbm2B81q9",
+    "flag": "https://flagcdn.com/gs.svg",
+    "coatOfArms": null
+  }
+}

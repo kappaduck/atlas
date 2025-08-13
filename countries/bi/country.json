@@ -1,0 +1,39 @@
+{
+  "cca2": "bi",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Burundi"
+    },
+    {
+      "language": "fr",
+      "name": "Burundi"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Gitega",
+      "coordinate": {
+        "latitude": -3.43,
+        "longitude": 29.93
+      }
+    }
+  ],
+  "borders": [
+    "cd",
+    "rw",
+    "tz"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -3.5,
+    "longitude": 30
+  },
+  "area": 27834,
+  "population": 11890781,
+  "resources": {
+    "map": "https://goo.gl/maps/RXPWoRrB9tfrJpUG7",
+    "flag": "https://flagcdn.com/bi.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/bi.svg"
+  }
+}

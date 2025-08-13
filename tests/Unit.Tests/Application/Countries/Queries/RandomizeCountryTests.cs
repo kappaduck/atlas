@@ -7,11 +7,10 @@ using Atlas.Application.Countries.Repositories;
 using Atlas.Domain.Countries;
 using Atlas.Domain.Geography;
 using Atlas.Domain.Languages;
-using Atlas.Domain.Resources;
 
 namespace Unit.Tests.Application.Countries.Queries;
 
-internal sealed class RandomizeCountryTests
+public sealed class RandomizeCountryTests
 {
     private readonly Country _country = CreateCanada();
 
@@ -65,13 +64,12 @@ internal sealed class RandomizeCountryTests
     {
         Cca2 = new Cca2("CA"),
         Area = new Area(9984670),
-        Borders = ["USA"],
+        Borders = [new Cca2("US")],
         Capitals = [new Capital("Ottawa", new Coordinate(42, 42))],
         Continent = Continent.NorthAmerica,
         Coordinate = new Coordinate(60, 95),
         Population = 38008005,
         Translations = [new Translation(Language.English, "Canada")],
-        IsExcluded = false,
-        Resource = new CountryResource(new Uri("https://www.google.com/maps/place/Canada"), new Image(new Uri("https://www.countryflags.io/ca/flat/64.svg"), "image/svg+xml"))
+        Resources = new Resources(new Uri("https://www.google.com/maps/place/Canada"), new Uri("https://www.countryflags.io/ca/flat/64.svg"), null)
     };
 }

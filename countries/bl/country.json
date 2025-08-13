@@ -1,0 +1,35 @@
+{
+  "cca2": "bl",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Saint Barth\u00E9lemy"
+    },
+    {
+      "language": "fr",
+      "name": "Saint-Barth\u00E9lemy"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Gustavia",
+      "coordinate": {
+        "latitude": 17.88,
+        "longitude": -62.85
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 18.5,
+    "longitude": -63.41666666
+  },
+  "area": 21,
+  "population": 4255,
+  "resources": {
+    "map": "https://goo.gl/maps/Mc7GqH466S7AAk297",
+    "flag": "https://flagcdn.com/bl.svg",
+    "coatOfArms": null
+  }
+}

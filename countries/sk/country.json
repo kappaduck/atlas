@@ -1,0 +1,41 @@
+{
+  "cca2": "sk",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Slovakia"
+    },
+    {
+      "language": "fr",
+      "name": "Slovaquie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Bratislava",
+      "coordinate": {
+        "latitude": 48.15,
+        "longitude": 17.12
+      }
+    }
+  ],
+  "borders": [
+    "at",
+    "cz",
+    "hu",
+    "pl",
+    "ua"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 48.66666666,
+    "longitude": 19.5
+  },
+  "area": 49037,
+  "population": 5458827,
+  "resources": {
+    "map": "https://goo.gl/maps/uNSH2wW4bLoZVYJj7",
+    "flag": "https://flagcdn.com/sk.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/sk.svg"
+  }
+}

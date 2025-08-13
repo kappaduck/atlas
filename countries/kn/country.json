@@ -1,0 +1,35 @@
+{
+  "cca2": "kn",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Saint Kitts and Nevis"
+    },
+    {
+      "language": "fr",
+      "name": "Saint-Christophe-et-Ni\u00E9v\u00E8s"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Basseterre",
+      "coordinate": {
+        "latitude": 17.3,
+        "longitude": -62.72
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 17.33333333,
+    "longitude": -62.75
+  },
+  "area": 261,
+  "population": 53192,
+  "resources": {
+    "map": "https://goo.gl/maps/qiaVwcLVTXX3eoTNA",
+    "flag": "https://flagcdn.com/kn.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/kn.svg"
+  }
+}

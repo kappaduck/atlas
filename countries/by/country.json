@@ -1,0 +1,41 @@
+{
+  "cca2": "by",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Belarus"
+    },
+    {
+      "language": "fr",
+      "name": "Bi\u00E9lorussie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Minsk",
+      "coordinate": {
+        "latitude": 53.9,
+        "longitude": 27.57
+      }
+    }
+  ],
+  "borders": [
+    "lv",
+    "lt",
+    "pl",
+    "ru",
+    "ua"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 53,
+    "longitude": 28
+  },
+  "area": 207600,
+  "population": 9398861,
+  "resources": {
+    "map": "https://goo.gl/maps/PJUDU3EBPSszCQcu6",
+    "flag": "https://flagcdn.com/by.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/by.svg"
+  }
+}

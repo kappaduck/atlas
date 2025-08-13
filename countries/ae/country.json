@@ -1,0 +1,38 @@
+{
+  "cca2": "ae",
+  "translations": [
+    {
+      "language": "en",
+      "name": "United Arab Emirates"
+    },
+    {
+      "language": "fr",
+      "name": "\u00C9mirats arabes unis"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Abu Dhabi",
+      "coordinate": {
+        "latitude": 24.47,
+        "longitude": 54.37
+      }
+    }
+  ],
+  "borders": [
+    "om",
+    "sa"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 24,
+    "longitude": 54
+  },
+  "area": 83600,
+  "population": 9890400,
+  "resources": {
+    "map": "https://goo.gl/maps/AZZTDA6GzVAnKMVd8",
+    "flag": "https://flagcdn.com/ae.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ae.svg"
+  }
+}

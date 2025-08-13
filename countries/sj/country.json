@@ -1,0 +1,35 @@
+{
+  "cca2": "sj",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Svalbard and Jan Mayen"
+    },
+    {
+      "language": "fr",
+      "name": "Svalbard et Jan Mayen"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Longyearbyen",
+      "coordinate": {
+        "latitude": 78.22,
+        "longitude": 15.63
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 78,
+    "longitude": 20
+  },
+  "area": 61399,
+  "population": 2562,
+  "resources": {
+    "map": "https://goo.gl/maps/L2wyyn3cQ16PzQ5J8",
+    "flag": "https://flagcdn.com/sj.svg",
+    "coatOfArms": null
+  }
+}

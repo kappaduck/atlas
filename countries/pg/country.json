@@ -1,0 +1,37 @@
+{
+  "cca2": "pg",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Papua New Guinea"
+    },
+    {
+      "language": "fr",
+      "name": "Papouasie-Nouvelle-Guin\u00E9e"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Port Moresby",
+      "coordinate": {
+        "latitude": -9.45,
+        "longitude": 147.18
+      }
+    }
+  ],
+  "borders": [
+    "id"
+  ],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -6,
+    "longitude": 147
+  },
+  "area": 462840,
+  "population": 8947027,
+  "resources": {
+    "map": "https://goo.gl/maps/ChGmzZBjZ3vnBwR2A",
+    "flag": "https://flagcdn.com/pg.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/pg.svg"
+  }
+}

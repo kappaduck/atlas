@@ -1,0 +1,52 @@
+{
+  "cca2": "cn",
+  "translations": [
+    {
+      "language": "en",
+      "name": "China"
+    },
+    {
+      "language": "fr",
+      "name": "Chine"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Beijing",
+      "coordinate": {
+        "latitude": 39.92,
+        "longitude": 116.38
+      }
+    }
+  ],
+  "borders": [
+    "af",
+    "bt",
+    "mm",
+    "hk",
+    "in",
+    "kz",
+    "np",
+    "kp",
+    "kg",
+    "la",
+    "mo",
+    "mn",
+    "pk",
+    "ru",
+    "tj",
+    "vn"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 35,
+    "longitude": 105
+  },
+  "area": 9706961,
+  "population": 1402112000,
+  "resources": {
+    "map": "https://goo.gl/maps/p9qC6vgiFRRXzvGi7",
+    "flag": "https://flagcdn.com/cn.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cn.svg"
+  }
+}

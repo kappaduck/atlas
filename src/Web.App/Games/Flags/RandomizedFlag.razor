@@ -15,8 +15,8 @@
     else
     {
         <picture class="@DifficultyCss" @onclick="() => _zoomModal.Show()">
-            <source srcset="@_gameState.Country.Resource.Flag.Uri" type="@_gameState.Country.Resource.Flag.MediaType" />
-            <img src="@_gameState.Country.Resource.Flag.Uri" alt="@localizer[Resources.FailedDisplayFlag]" />
+            <source srcset="@_gameState.Country.Resources.Flag" />
+            <img src="@_gameState.Country.Resources.Flag" alt="@localizer[Resources.FailedDisplayFlag]" />
         </picture>
     }
     <div class="content">
@@ -43,5 +43,5 @@
 
 @if (_gameState.Country is not null)
 {
-    <ZoomModal @ref="_zoomModal" Image="_gameState.Country.Resource.Flag" DifficultyCss="@DifficultyCss" />
+    <ZoomModal @ref="_zoomModal" Image="_gameState.Country.Resources.Flag" DifficultyCss="@DifficultyCss" />
 }

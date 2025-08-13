@@ -1,0 +1,37 @@
+{
+  "cca2": "sx",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Sint Maarten"
+    },
+    {
+      "language": "fr",
+      "name": "Saint-Martin"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Philipsburg",
+      "coordinate": {
+        "latitude": 18.02,
+        "longitude": -63.03
+      }
+    }
+  ],
+  "borders": [
+    "mf"
+  ],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 18.033333,
+    "longitude": -63.05
+  },
+  "area": 34,
+  "population": 40812,
+  "resources": {
+    "map": "https://goo.gl/maps/DjvcESy1a1oGEZuNA",
+    "flag": "https://flagcdn.com/sx.svg",
+    "coatOfArms": null
+  }
+}

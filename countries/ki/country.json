@@ -1,0 +1,35 @@
+{
+  "cca2": "ki",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Kiribati"
+    },
+    {
+      "language": "fr",
+      "name": "Kiribati"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "South Tarawa",
+      "coordinate": {
+        "latitude": 1.33,
+        "longitude": 172.98
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": 1.41666666,
+    "longitude": 173
+  },
+  "area": 811,
+  "population": 119446,
+  "resources": {
+    "map": "https://goo.gl/maps/NBfYvrndW4skAimw9",
+    "flag": "https://flagcdn.com/ki.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ki.svg"
+  }
+}

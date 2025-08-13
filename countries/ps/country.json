@@ -1,0 +1,46 @@
+{
+  "cca2": "ps",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Palestine"
+    },
+    {
+      "language": "fr",
+      "name": "Palestine"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Ramallah",
+      "coordinate": {
+        "latitude": 31.9,
+        "longitude": 35.2
+      }
+    },
+    {
+      "name": "Jerusalem",
+      "coordinate": {
+        "latitude": 31.9,
+        "longitude": 35.2
+      }
+    }
+  ],
+  "borders": [
+    "il",
+    "eg",
+    "jo"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 31.9,
+    "longitude": 35.2
+  },
+  "area": 6220,
+  "population": 4803269,
+  "resources": {
+    "map": "https://goo.gl/maps/QvTbkRdmdWEoYAmt5",
+    "flag": "https://flagcdn.com/ps.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ps.svg"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "cca2": "ir",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Iran"
+    },
+    {
+      "language": "fr",
+      "name": "Iran"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Tehran",
+      "coordinate": {
+        "latitude": 35.7,
+        "longitude": 51.42
+      }
+    }
+  ],
+  "borders": [
+    "af",
+    "am",
+    "az",
+    "iq",
+    "pk",
+    "tr",
+    "tm"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 32,
+    "longitude": 53
+  },
+  "area": 1648195,
+  "population": 83992953,
+  "resources": {
+    "map": "https://goo.gl/maps/dMgEGuacBPGYQnjY7",
+    "flag": "https://flagcdn.com/ir.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ir.svg"
+  }
+}

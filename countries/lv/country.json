@@ -1,0 +1,40 @@
+{
+  "cca2": "lv",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Latvia"
+    },
+    {
+      "language": "fr",
+      "name": "Lettonie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Riga",
+      "coordinate": {
+        "latitude": 56.95,
+        "longitude": 24.1
+      }
+    }
+  ],
+  "borders": [
+    "by",
+    "ee",
+    "lt",
+    "ru"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 57,
+    "longitude": 25
+  },
+  "area": 64559,
+  "population": 1901548,
+  "resources": {
+    "map": "https://goo.gl/maps/iQpUkH7ghq31ZtXe9",
+    "flag": "https://flagcdn.com/lv.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/lv.svg"
+  }
+}

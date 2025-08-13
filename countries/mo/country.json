@@ -1,0 +1,29 @@
+{
+  "cca2": "mo",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Macau"
+    },
+    {
+      "language": "fr",
+      "name": "Macao"
+    }
+  ],
+  "capitals": [],
+  "borders": [
+    "cn"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 22.16666666,
+    "longitude": 113.55
+  },
+  "area": 30,
+  "population": 649342,
+  "resources": {
+    "map": "https://goo.gl/maps/whymRdk3dZFfAAs4A",
+    "flag": "https://flagcdn.com/mo.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/mo.svg"
+  }
+}

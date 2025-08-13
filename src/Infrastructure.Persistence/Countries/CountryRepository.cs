@@ -4,11 +4,12 @@
 using Atlas.Application.Countries.Repositories;
 using Atlas.Domain.Countries;
 using Infrastructure.Persistence.Caching;
+using Infrastructure.Persistence.Countries.Options;
 using Infrastructure.Persistence.Countries.Sources;
 
 namespace Infrastructure.Persistence.Countries;
 
-internal sealed class CountryRepository(IDataSource<Country> source, ICache cache) : ICountryRepository
+internal sealed class CountryRepository(IDataSource<Country> source, ICache cache, ExcludedCountriesOptions options) : ICountryRepository
 {
     private const string Key = "countries";
 
@@ -19,7 +20,7 @@ internal sealed class CountryRepository(IDataSource<Country> source, ICache cach
 
         Country[] allCountries = await source.QueryAllAsync(cancellationToken).ConfigureAwait(false);
 
-        Country[] countries = [.. allCountries.Where(c => !c.IsExcluded)];
+        Country[] countries = [.. allCountries.Where(c => !options.Countries.Contains(c.Cca2))];
 
         cache.Save(Key, countries);
         return countries;

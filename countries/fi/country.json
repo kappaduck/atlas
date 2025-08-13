@@ -1,0 +1,39 @@
+{
+  "cca2": "fi",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Finland"
+    },
+    {
+      "language": "fr",
+      "name": "Finlande"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Helsinki",
+      "coordinate": {
+        "latitude": 60.17,
+        "longitude": 24.93
+      }
+    }
+  ],
+  "borders": [
+    "no",
+    "se",
+    "ru"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 64,
+    "longitude": 26
+  },
+  "area": 338424,
+  "population": 5530719,
+  "resources": {
+    "map": "https://goo.gl/maps/HjgWDCNKRAYHrkMn8",
+    "flag": "https://flagcdn.com/fi.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/fi.svg"
+  }
+}

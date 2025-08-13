@@ -1,0 +1,35 @@
+{
+  "cca2": "tk",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Tokelau"
+    },
+    {
+      "language": "fr",
+      "name": "Tokelau"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Fakaofo",
+      "coordinate": {
+        "latitude": -9.38,
+        "longitude": -171.22
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -9,
+    "longitude": -172
+  },
+  "area": 12,
+  "population": 1411,
+  "resources": {
+    "map": "https://goo.gl/maps/Ap5qN8qien6pT9UN6",
+    "flag": "https://flagcdn.com/tk.svg",
+    "coatOfArms": null
+  }
+}

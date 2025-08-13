@@ -1,0 +1,35 @@
+{
+  "cca2": "tv",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Tuvalu"
+    },
+    {
+      "language": "fr",
+      "name": "Tuvalu"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Funafuti",
+      "coordinate": {
+        "latitude": -8.52,
+        "longitude": 179.22
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -8,
+    "longitude": 178
+  },
+  "area": 26,
+  "population": 11792,
+  "resources": {
+    "map": "https://goo.gl/maps/LbuUxtkgm1dfN1Pn6",
+    "flag": "https://flagcdn.com/tv.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/tv.svg"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "cca2": "pe",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Peru"
+    },
+    {
+      "language": "fr",
+      "name": "P\u00E9rou"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Lima",
+      "coordinate": {
+        "latitude": -12.05,
+        "longitude": -77.05
+      }
+    }
+  ],
+  "borders": [
+    "bo",
+    "br",
+    "cl",
+    "co",
+    "ec"
+  ],
+  "continent": "SouthAmerica",
+  "coordinate": {
+    "latitude": -10,
+    "longitude": -76
+  },
+  "area": 1285216,
+  "population": 32971846,
+  "resources": {
+    "map": "https://goo.gl/maps/uDWEUaXNcZTng1fP6",
+    "flag": "https://flagcdn.com/pe.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/pe.svg"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "cca2": "np",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Nepal"
+    },
+    {
+      "language": "fr",
+      "name": "N\u00E9pal"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Kathmandu",
+      "coordinate": {
+        "latitude": 27.72,
+        "longitude": 85.32
+      }
+    }
+  ],
+  "borders": [
+    "cn",
+    "in"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 28,
+    "longitude": 84
+  },
+  "area": 147181,
+  "population": 29136808,
+  "resources": {
+    "map": "https://goo.gl/maps/UMj2zpbQp7B5c3yT7",
+    "flag": "https://flagcdn.com/np.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/np.svg"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "cca2": "cl",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Chile"
+    },
+    {
+      "language": "fr",
+      "name": "Chili"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Santiago",
+      "coordinate": {
+        "latitude": -33.45,
+        "longitude": -70.67
+      }
+    }
+  ],
+  "borders": [
+    "ar",
+    "bo",
+    "pe"
+  ],
+  "continent": "SouthAmerica",
+  "coordinate": {
+    "latitude": -30,
+    "longitude": -71
+  },
+  "area": 756102,
+  "population": 19116209,
+  "resources": {
+    "map": "https://goo.gl/maps/XboxyNHh2fAjCPNn9",
+    "flag": "https://flagcdn.com/cl.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cl.svg"
+  }
+}

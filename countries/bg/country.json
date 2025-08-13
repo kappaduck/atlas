@@ -1,0 +1,41 @@
+{
+  "cca2": "bg",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Bulgaria"
+    },
+    {
+      "language": "fr",
+      "name": "Bulgarie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Sofia",
+      "coordinate": {
+        "latitude": 42.68,
+        "longitude": 23.32
+      }
+    }
+  ],
+  "borders": [
+    "gr",
+    "mk",
+    "ro",
+    "rs",
+    "tr"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 43,
+    "longitude": 25
+  },
+  "area": 110879,
+  "population": 6927288,
+  "resources": {
+    "map": "https://goo.gl/maps/F5uAhDGWzc3BrHfm9",
+    "flag": "https://flagcdn.com/bg.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/bg.svg"
+  }
+}

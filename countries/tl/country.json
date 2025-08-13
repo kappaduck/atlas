@@ -1,0 +1,37 @@
+{
+  "cca2": "tl",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Timor-Leste"
+    },
+    {
+      "language": "fr",
+      "name": "Timor oriental"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Dili",
+      "coordinate": {
+        "latitude": -8.58,
+        "longitude": 125.6
+      }
+    }
+  ],
+  "borders": [
+    "id"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": -8.83333333,
+    "longitude": 125.91666666
+  },
+  "area": 14874,
+  "population": 1318442,
+  "resources": {
+    "map": "https://goo.gl/maps/sFqBC9zjgUXPR1iTA",
+    "flag": "https://flagcdn.com/tl.svg",
+    "coatOfArms": null
+  }
+}

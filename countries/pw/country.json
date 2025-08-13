@@ -1,0 +1,35 @@
+{
+  "cca2": "pw",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Palau"
+    },
+    {
+      "language": "fr",
+      "name": "Palaos (Palau)"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Ngerulmud",
+      "coordinate": {
+        "latitude": 7.5,
+        "longitude": 134.62
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": 7.5,
+    "longitude": 134.5
+  },
+  "area": 459,
+  "population": 18092,
+  "resources": {
+    "map": "https://goo.gl/maps/MVasQBbUkQP7qQDR9",
+    "flag": "https://flagcdn.com/pw.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/pw.svg"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "cca2": "im",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Isle of Man"
+    },
+    {
+      "language": "fr",
+      "name": "\u00CEle de Man"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Douglas",
+      "coordinate": {
+        "latitude": 54.15,
+        "longitude": -4.48
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 54.25,
+    "longitude": -4.5
+  },
+  "area": 572,
+  "population": 85032,
+  "resources": {
+    "map": "https://goo.gl/maps/4DqVHDgVaFgnh8ZV8",
+    "flag": "https://flagcdn.com/im.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/im.svg"
+  }
+}

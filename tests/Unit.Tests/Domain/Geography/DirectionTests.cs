@@ -5,7 +5,7 @@ using Atlas.Domain.Geography;
 
 namespace Unit.Tests.Domain.Geography;
 
-internal sealed class DirectionTests
+public sealed class DirectionTests
 {
     private readonly Coordinate _canada = new(60, -95);
     private readonly Coordinate _italy = new(42.83333333, 12.83333333);

@@ -1,0 +1,41 @@
+{
+  "cca2": "ro",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Romania"
+    },
+    {
+      "language": "fr",
+      "name": "Roumanie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Bucharest",
+      "coordinate": {
+        "latitude": 44.43,
+        "longitude": 26.1
+      }
+    }
+  ],
+  "borders": [
+    "bg",
+    "hu",
+    "md",
+    "rs",
+    "ua"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 46,
+    "longitude": 25
+  },
+  "area": 238391,
+  "population": 19286123,
+  "resources": {
+    "map": "https://goo.gl/maps/845hAgCf1mDkN3vr7",
+    "flag": "https://flagcdn.com/ro.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ro.svg"
+  }
+}

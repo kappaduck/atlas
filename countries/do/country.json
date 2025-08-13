@@ -1,0 +1,37 @@
+{
+  "cca2": "do",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Dominican Republic"
+    },
+    {
+      "language": "fr",
+      "name": "R\u00E9publique dominicaine"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Santo Domingo",
+      "coordinate": {
+        "latitude": 18.47,
+        "longitude": -69.9
+      }
+    }
+  ],
+  "borders": [
+    "ht"
+  ],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 19,
+    "longitude": -70.66666666
+  },
+  "area": 48671,
+  "population": 10847904,
+  "resources": {
+    "map": "https://goo.gl/maps/soxooTHxEeiAbn3UA",
+    "flag": "https://flagcdn.com/do.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/do.svg"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "cca2": "pa",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Panama"
+    },
+    {
+      "language": "fr",
+      "name": "Panama"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Panama City",
+      "coordinate": {
+        "latitude": 8.97,
+        "longitude": -79.53
+      }
+    }
+  ],
+  "borders": [
+    "co",
+    "cr"
+  ],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 9,
+    "longitude": -80
+  },
+  "area": 75417,
+  "population": 4314768,
+  "resources": {
+    "map": "https://goo.gl/maps/sEN7sKqeawa5oPNLA",
+    "flag": "https://flagcdn.com/pa.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/pa.svg"
+  }
+}

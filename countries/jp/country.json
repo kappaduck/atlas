@@ -1,0 +1,35 @@
+{
+  "cca2": "jp",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Japan"
+    },
+    {
+      "language": "fr",
+      "name": "Japon"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Tokyo",
+      "coordinate": {
+        "latitude": 35.68,
+        "longitude": 139.75
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 36,
+    "longitude": 138
+  },
+  "area": 377930,
+  "population": 125836021,
+  "resources": {
+    "map": "https://goo.gl/maps/NGTLSCSrA8bMrvnX9",
+    "flag": "https://flagcdn.com/jp.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/jp.svg"
+  }
+}

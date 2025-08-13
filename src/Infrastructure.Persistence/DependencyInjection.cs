@@ -18,7 +18,7 @@ public static class DependencyInjection
         public void AddInfrastructure(IConfiguration configuration, Action<HttpClient> configure)
         {
             services.AddCaching(configuration);
-            services.AddCountries(configure);
+            services.AddCountries(configure, configuration);
             services.AddChangelog(configuration);
         }
     }

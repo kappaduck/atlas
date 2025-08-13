@@ -1,0 +1,39 @@
+{
+  "cca2": "sr",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Suriname"
+    },
+    {
+      "language": "fr",
+      "name": "Surinam"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Paramaribo",
+      "coordinate": {
+        "latitude": 5.83,
+        "longitude": -55.17
+      }
+    }
+  ],
+  "borders": [
+    "br",
+    "gf",
+    "gy"
+  ],
+  "continent": "SouthAmerica",
+  "coordinate": {
+    "latitude": 4,
+    "longitude": -56
+  },
+  "area": 163820,
+  "population": 586634,
+  "resources": {
+    "map": "https://goo.gl/maps/iy7TuQLSi4qgoBoG7",
+    "flag": "https://flagcdn.com/sr.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/sr.svg"
+  }
+}

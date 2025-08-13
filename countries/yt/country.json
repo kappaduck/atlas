@@ -1,0 +1,35 @@
+{
+  "cca2": "yt",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Mayotte"
+    },
+    {
+      "language": "fr",
+      "name": "Mayotte"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Mamoudzou",
+      "coordinate": {
+        "latitude": -12.78,
+        "longitude": 45.22
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -12.83333333,
+    "longitude": 45.16666666
+  },
+  "area": 374,
+  "population": 226915,
+  "resources": {
+    "map": "https://goo.gl/maps/1e7MXmfBwQv3TQGF7",
+    "flag": "https://flagcdn.com/yt.svg",
+    "coatOfArms": null
+  }
+}

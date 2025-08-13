@@ -1,0 +1,35 @@
+{
+  "cca2": "gl",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Greenland"
+    },
+    {
+      "language": "fr",
+      "name": "Groenland"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Nuuk",
+      "coordinate": {
+        "latitude": 64.18,
+        "longitude": -51.75
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "NorthAmerica",
+  "coordinate": {
+    "latitude": 72,
+    "longitude": -40
+  },
+  "area": 2166086,
+  "population": 56367,
+  "resources": {
+    "map": "https://goo.gl/maps/j3289UPEQXt1ceSy8",
+    "flag": "https://flagcdn.com/gl.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/gl.svg"
+  }
+}

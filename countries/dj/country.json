@@ -1,0 +1,39 @@
+{
+  "cca2": "dj",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Djibouti"
+    },
+    {
+      "language": "fr",
+      "name": "Djibouti"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Djibouti",
+      "coordinate": {
+        "latitude": 11.58,
+        "longitude": 43.15
+      }
+    }
+  ],
+  "borders": [
+    "er",
+    "et",
+    "so"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 11.5,
+    "longitude": 43
+  },
+  "area": 23200,
+  "population": 988002,
+  "resources": {
+    "map": "https://goo.gl/maps/V1HWfzN3bS1kwf4C6",
+    "flag": "https://flagcdn.com/dj.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/dj.svg"
+  }
+}

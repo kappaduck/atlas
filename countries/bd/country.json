@@ -1,0 +1,38 @@
+{
+  "cca2": "bd",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Bangladesh"
+    },
+    {
+      "language": "fr",
+      "name": "Bangladesh"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Dhaka",
+      "coordinate": {
+        "latitude": 23.72,
+        "longitude": 90.4
+      }
+    }
+  ],
+  "borders": [
+    "mm",
+    "in"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 24,
+    "longitude": 90
+  },
+  "area": 147570,
+  "population": 164689383,
+  "resources": {
+    "map": "https://goo.gl/maps/op6gmLbHcvv6rLhH6",
+    "flag": "https://flagcdn.com/bd.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/bd.svg"
+  }
+}

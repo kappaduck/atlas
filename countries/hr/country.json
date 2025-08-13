@@ -1,0 +1,41 @@
+{
+  "cca2": "hr",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Croatia"
+    },
+    {
+      "language": "fr",
+      "name": "Croatie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Zagreb",
+      "coordinate": {
+        "latitude": 45.8,
+        "longitude": 16
+      }
+    }
+  ],
+  "borders": [
+    "ba",
+    "hu",
+    "me",
+    "rs",
+    "si"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 45.16666666,
+    "longitude": 15.5
+  },
+  "area": 56594,
+  "population": 4047200,
+  "resources": {
+    "map": "https://goo.gl/maps/qSG6xTKUmrYpwmGQ6",
+    "flag": "https://flagcdn.com/hr.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/hr.svg"
+  }
+}

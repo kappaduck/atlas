@@ -1,0 +1,41 @@
+{
+  "cca2": "la",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Laos"
+    },
+    {
+      "language": "fr",
+      "name": "Laos"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Vientiane",
+      "coordinate": {
+        "latitude": 17.97,
+        "longitude": 102.6
+      }
+    }
+  ],
+  "borders": [
+    "mm",
+    "kh",
+    "cn",
+    "th",
+    "vn"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 18,
+    "longitude": 105
+  },
+  "area": 236800,
+  "population": 7275556,
+  "resources": {
+    "map": "https://goo.gl/maps/F3asVB7sRKgSnwbE7",
+    "flag": "https://flagcdn.com/la.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/la.svg"
+  }
+}

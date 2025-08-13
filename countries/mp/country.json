@@ -1,0 +1,35 @@
+{
+  "cca2": "mp",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Northern Mariana Islands"
+    },
+    {
+      "language": "fr",
+      "name": "\u00CEles Mariannes du Nord"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Saipan",
+      "coordinate": {
+        "latitude": 15.2,
+        "longitude": 145.75
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": 15.2,
+    "longitude": 145.75
+  },
+  "area": 464,
+  "population": 57557,
+  "resources": {
+    "map": "https://goo.gl/maps/cpZ67knoRAcfu1417",
+    "flag": "https://flagcdn.com/mp.svg",
+    "coatOfArms": null
+  }
+}

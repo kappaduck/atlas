@@ -1,0 +1,37 @@
+{
+  "cca2": "gb",
+  "translations": [
+    {
+      "language": "en",
+      "name": "United Kingdom"
+    },
+    {
+      "language": "fr",
+      "name": "Royaume-Uni"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "London",
+      "coordinate": {
+        "latitude": 51.5,
+        "longitude": -0.08
+      }
+    }
+  ],
+  "borders": [
+    "ie"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 54,
+    "longitude": -2
+  },
+  "area": 242900,
+  "population": 67215293,
+  "resources": {
+    "map": "https://goo.gl/maps/FoDtc3UKMkFsXAjHA",
+    "flag": "https://flagcdn.com/gb.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/gb.svg"
+  }
+}

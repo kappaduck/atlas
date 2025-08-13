@@ -1,0 +1,39 @@
+{
+  "cca2": "so",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Somalia"
+    },
+    {
+      "language": "fr",
+      "name": "Somalie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Mogadishu",
+      "coordinate": {
+        "latitude": 2.07,
+        "longitude": 45.33
+      }
+    }
+  ],
+  "borders": [
+    "dj",
+    "et",
+    "ke"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 10,
+    "longitude": 49
+  },
+  "area": 637657,
+  "population": 15893219,
+  "resources": {
+    "map": "https://goo.gl/maps/8of8q7D1a8p7R6Fc9",
+    "flag": "https://flagcdn.com/so.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/so.svg"
+  }
+}

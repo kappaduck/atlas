@@ -1,0 +1,35 @@
+{
+  "cca2": "tf",
+  "translations": [
+    {
+      "language": "en",
+      "name": "French Southern and Antarctic Lands"
+    },
+    {
+      "language": "fr",
+      "name": "Terres australes et antarctiques fran\u00E7aises"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Port-aux-Fran\u00E7ais",
+      "coordinate": {
+        "latitude": 48.81,
+        "longitude": -1.4
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Antarctica",
+  "coordinate": {
+    "latitude": -49.25,
+    "longitude": 69.167
+  },
+  "area": 7747,
+  "population": 400,
+  "resources": {
+    "map": "https://goo.gl/maps/6ua6CX1m4w1xF2Em7",
+    "flag": "https://flagcdn.com/tf.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/tf.svg"
+  }
+}

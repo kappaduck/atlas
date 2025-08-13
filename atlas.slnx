@@ -1,10 +1,8 @@
 <Solution>
-  <Folder Name="/configurations/.github/">
-    <File Path=".github/ISSUE_TEMPLATE/bug.yml" />
-    <File Path=".github/ISSUE_TEMPLATE/config.yml" />
-    <File Path=".github/ISSUE_TEMPLATE/feature.yml" />
-    <File Path=".github/codeowners" />
-    <File Path=".github/dependabot.yml" />
+  <Folder Name="/backend/">
+    <Project Path="src/Atlas.Application/Atlas.Application.csproj" />
+    <Project Path="src/Atlas.Domain/Atlas.Domain.csproj" />
+    <Project Path="src/Infrastructure.Persistence/Infrastructure.Persistence.csproj" />
   </Folder>
   <Folder Name="/configurations/">
     <File Path=".editorconfig" />
@@ -14,6 +12,13 @@
     <File Path="directory.packages.props" />
     <File Path="dotnet.config" />
     <File Path="nuget.config" />
+  </Folder>
+  <Folder Name="/configurations/.github/">
+    <File Path=".github/ISSUE_TEMPLATE/bug.yml" />
+    <File Path=".github/ISSUE_TEMPLATE/config.yml" />
+    <File Path=".github/ISSUE_TEMPLATE/feature.yml" />
+    <File Path=".github/codeowners" />
+    <File Path=".github/dependabot.yml" />
   </Folder>
   <Folder Name="/configurations/src/">
     <File Path="src/directory.build.props" />
@@ -27,18 +32,10 @@
     <File Path="rules/underscore.editorconfig" />
     <File Path="rules/vsthrd.editorconfig" />
   </Folder>
-  <Folder Name="/core/">
-    <Project Path="src/Atlas.Application/Atlas.Application.csproj" />
-    <Project Path="src/Atlas.Domain/Atlas.Domain.csproj" />
-  </Folder>
   <Folder Name="/docs/">
     <File Path="changelog.md" />
     <File Path="license" />
     <File Path="readme.md" />
-  </Folder>
-  <Folder Name="/infrastructure/">
-    <Project Path="src/Infrastructure.Json/Infrastructure.Json.csproj" />
-    <Project Path="src/Infrastructure.Persistence/Infrastructure.Persistence.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <File Path="tests/.editorconfig" />
@@ -50,10 +47,10 @@
   <Folder Name="/workflows/">
     <File Path=".github/workflows/build.yml" />
     <File Path=".github/workflows/codeql.yml" />
+    <File Path=".github/workflows/countries.yml" />
     <File Path=".github/workflows/production.yml" />
     <File Path=".github/workflows/pull-request.yml" />
     <File Path=".github/workflows/staging.yml" />
   </Folder>
-  <Project Path="src/Prometheus/Prometheus.csproj" />
   <Project Path="src/Web.App/Web.App.csproj" />
 </Solution>

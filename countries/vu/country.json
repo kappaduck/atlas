@@ -1,0 +1,35 @@
+{
+  "cca2": "vu",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Vanuatu"
+    },
+    {
+      "language": "fr",
+      "name": "Vanuatu"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Port Vila",
+      "coordinate": {
+        "latitude": -17.73,
+        "longitude": 168.32
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -16,
+    "longitude": 167
+  },
+  "area": 12189,
+  "population": 307150,
+  "resources": {
+    "map": "https://goo.gl/maps/hwAjehcT7VfvP5zJ8",
+    "flag": "https://flagcdn.com/vu.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/vu.svg"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "cca2": "rw",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Rwanda"
+    },
+    {
+      "language": "fr",
+      "name": "Rwanda"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Kigali",
+      "coordinate": {
+        "latitude": -1.95,
+        "longitude": 30.05
+      }
+    }
+  ],
+  "borders": [
+    "bi",
+    "cd",
+    "tz",
+    "ug"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -2,
+    "longitude": 30
+  },
+  "area": 26338,
+  "population": 12952209,
+  "resources": {
+    "map": "https://goo.gl/maps/j5xb5r7CLqjYbyP86",
+    "flag": "https://flagcdn.com/rw.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/rw.svg"
+  }
+}

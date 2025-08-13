@@ -1,0 +1,39 @@
+{
+  "cca2": "py",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Paraguay"
+    },
+    {
+      "language": "fr",
+      "name": "Paraguay"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Asunci\u00F3n",
+      "coordinate": {
+        "latitude": -25.28,
+        "longitude": -57.57
+      }
+    }
+  ],
+  "borders": [
+    "ar",
+    "bo",
+    "br"
+  ],
+  "continent": "SouthAmerica",
+  "coordinate": {
+    "latitude": -23,
+    "longitude": -58
+  },
+  "area": 406752,
+  "population": 7132530,
+  "resources": {
+    "map": "https://goo.gl/maps/JtnqG73WJn1Gx6mz6",
+    "flag": "https://flagcdn.com/py.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/py.svg"
+  }
+}

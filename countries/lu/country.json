@@ -1,0 +1,39 @@
+{
+  "cca2": "lu",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Luxembourg"
+    },
+    {
+      "language": "fr",
+      "name": "Luxembourg"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Luxembourg",
+      "coordinate": {
+        "latitude": 49.6,
+        "longitude": 6.12
+      }
+    }
+  ],
+  "borders": [
+    "be",
+    "fr",
+    "de"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 49.75,
+    "longitude": 6.16666666
+  },
+  "area": 2586,
+  "population": 632275,
+  "resources": {
+    "map": "https://goo.gl/maps/L6b2AgndgHprt2Ko9",
+    "flag": "https://flagcdn.com/lu.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/lu.svg"
+  }
+}

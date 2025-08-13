@@ -1,0 +1,37 @@
+{
+  "cca2": "kr",
+  "translations": [
+    {
+      "language": "en",
+      "name": "South Korea"
+    },
+    {
+      "language": "fr",
+      "name": "Cor\u00E9e du Sud"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Seoul",
+      "coordinate": {
+        "latitude": 37.55,
+        "longitude": 126.98
+      }
+    }
+  ],
+  "borders": [
+    "kp"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 37,
+    "longitude": 127.5
+  },
+  "area": 100210,
+  "population": 51780579,
+  "resources": {
+    "map": "https://goo.gl/maps/7ecjaJXefjAQhxjGA",
+    "flag": "https://flagcdn.com/kr.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/kr.svg"
+  }
+}

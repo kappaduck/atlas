@@ -1,0 +1,40 @@
+{
+  "cca2": "lt",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Lithuania"
+    },
+    {
+      "language": "fr",
+      "name": "Lituanie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Vilnius",
+      "coordinate": {
+        "latitude": 54.68,
+        "longitude": 25.32
+      }
+    }
+  ],
+  "borders": [
+    "by",
+    "lv",
+    "pl",
+    "ru"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 56,
+    "longitude": 24
+  },
+  "area": 65300,
+  "population": 2794700,
+  "resources": {
+    "map": "https://goo.gl/maps/dd1s9rrLjrK2G8yY6",
+    "flag": "https://flagcdn.com/lt.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/lt.svg"
+  }
+}

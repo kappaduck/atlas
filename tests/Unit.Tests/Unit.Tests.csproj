@@ -1,10 +1,1 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-  <ItemGroup>
-    <Content Include="Fixtures\Data\antarctica.json" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Fixtures\Data\canada.json" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="skwas.MockHttp" />
-  </ItemGroup>
-</Project>
+﻿<Project Sdk="Microsoft.NET.Sdk" />

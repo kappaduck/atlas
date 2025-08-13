@@ -1,0 +1,35 @@
+{
+  "cca2": "is",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Iceland"
+    },
+    {
+      "language": "fr",
+      "name": "Islande"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Reykjavik",
+      "coordinate": {
+        "latitude": 64.15,
+        "longitude": -21.95
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 65,
+    "longitude": -18
+  },
+  "area": 103000,
+  "population": 366425,
+  "resources": {
+    "map": "https://goo.gl/maps/WxFWSQuc3oamNxoE6",
+    "flag": "https://flagcdn.com/is.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/is.svg"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "cca2": "ht",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Haiti"
+    },
+    {
+      "language": "fr",
+      "name": "Ha\u00EFti"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Port-au-Prince",
+      "coordinate": {
+        "latitude": 18.53,
+        "longitude": -72.33
+      }
+    }
+  ],
+  "borders": [
+    "do"
+  ],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 19,
+    "longitude": -72.41666666
+  },
+  "area": 27750,
+  "population": 11402533,
+  "resources": {
+    "map": "https://goo.gl/maps/9o13xtjuUdqFnHbn9",
+    "flag": "https://flagcdn.com/ht.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ht.svg"
+  }
+}

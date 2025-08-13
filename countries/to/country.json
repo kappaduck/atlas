@@ -1,0 +1,35 @@
+{
+  "cca2": "to",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Tonga"
+    },
+    {
+      "language": "fr",
+      "name": "Tonga"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Nuku\u0027alofa",
+      "coordinate": {
+        "latitude": -21.13,
+        "longitude": -175.2
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -20,
+    "longitude": -175
+  },
+  "area": 747,
+  "population": 105697,
+  "resources": {
+    "map": "https://goo.gl/maps/p5YALBY2QdEzswRo7",
+    "flag": "https://flagcdn.com/to.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/to.svg"
+  }
+}

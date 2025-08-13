@@ -1,0 +1,38 @@
+{
+  "cca2": "gf",
+  "translations": [
+    {
+      "language": "en",
+      "name": "French Guiana"
+    },
+    {
+      "language": "fr",
+      "name": "Guyane"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Cayenne",
+      "coordinate": {
+        "latitude": 4.94,
+        "longitude": -52.33
+      }
+    }
+  ],
+  "borders": [
+    "br",
+    "sr"
+  ],
+  "continent": "SouthAmerica",
+  "coordinate": {
+    "latitude": 4,
+    "longitude": -53
+  },
+  "area": 83534,
+  "population": 254541,
+  "resources": {
+    "map": "https://goo.gl/maps/NJawFwMzG7YtCrVP7",
+    "flag": "https://flagcdn.com/gf.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/gf.svg"
+  }
+}

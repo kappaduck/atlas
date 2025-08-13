@@ -1,0 +1,44 @@
+{
+  "cca2": "zm",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Zambia"
+    },
+    {
+      "language": "fr",
+      "name": "Zambie"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Lusaka",
+      "coordinate": {
+        "latitude": -15.42,
+        "longitude": 28.28
+      }
+    }
+  ],
+  "borders": [
+    "ao",
+    "bw",
+    "cd",
+    "mw",
+    "mz",
+    "na",
+    "tz",
+    "zw"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": -15,
+    "longitude": 30
+  },
+  "area": 752612,
+  "population": 18383956,
+  "resources": {
+    "map": "https://goo.gl/maps/mweBcqvW8TppZW6q9",
+    "flag": "https://flagcdn.com/zm.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/zm.svg"
+  }
+}

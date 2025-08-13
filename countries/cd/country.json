@@ -1,0 +1,45 @@
+{
+  "cca2": "cd",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Democratic Republic of the Congo"
+    },
+    {
+      "language": "fr",
+      "name": "République démocratique du Congo"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Kinshasa",
+      "coordinate": {
+        "latitude": -4.32,
+        "longitude": 15.3
+      }
+    }
+  ],
+  "borders": [
+    "ao",
+    "bi",
+    "cf",
+    "cg",
+    "rw",
+    "ss",
+    "tz",
+    "ug",
+    "zm"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 0,
+    "longitude": 25
+  },
+  "area": 2344858,
+  "population": 108407721,
+  "resources": {
+    "map": "https://goo.gl/maps/KfhNVn6VqdZXWu8n9",
+    "flag": "https://flagcdn.com/cd.svg",
+    "coatOfArms": null
+  }
+}

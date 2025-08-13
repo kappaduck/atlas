@@ -1,0 +1,42 @@
+{
+  "cca2": "cm",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Cameroon"
+    },
+    {
+      "language": "fr",
+      "name": "Cameroun"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Yaound\u00E9",
+      "coordinate": {
+        "latitude": 3.85,
+        "longitude": 11.5
+      }
+    }
+  ],
+  "borders": [
+    "cf",
+    "td",
+    "cg",
+    "gq",
+    "ga",
+    "ng"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 6,
+    "longitude": 12
+  },
+  "area": 475442,
+  "population": 26545864,
+  "resources": {
+    "map": "https://goo.gl/maps/JqiipHgFboG3rBJh9",
+    "flag": "https://flagcdn.com/cm.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cm.svg"
+  }
+}

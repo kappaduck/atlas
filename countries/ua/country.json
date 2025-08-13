@@ -1,0 +1,43 @@
+{
+  "cca2": "ua",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Ukraine"
+    },
+    {
+      "language": "fr",
+      "name": "Ukraine"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Kyiv",
+      "coordinate": {
+        "latitude": 50.43,
+        "longitude": 30.52
+      }
+    }
+  ],
+  "borders": [
+    "by",
+    "hu",
+    "md",
+    "pl",
+    "ro",
+    "ru",
+    "sk"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 49,
+    "longitude": 32
+  },
+  "area": 603500,
+  "population": 44134693,
+  "resources": {
+    "map": "https://goo.gl/maps/DvgJMiPJ7aozKFZv7",
+    "flag": "https://flagcdn.com/ua.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ua.svg"
+  }
+}

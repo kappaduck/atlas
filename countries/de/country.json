@@ -1,0 +1,45 @@
+{
+  "cca2": "de",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Germany"
+    },
+    {
+      "language": "fr",
+      "name": "Allemagne"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Berlin",
+      "coordinate": {
+        "latitude": 52.52,
+        "longitude": 13.4
+      }
+    }
+  ],
+  "borders": [
+    "at",
+    "be",
+    "cz",
+    "dk",
+    "fr",
+    "lu",
+    "nl",
+    "pl",
+    "ch"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 51,
+    "longitude": 9
+  },
+  "area": 357114,
+  "population": 83240525,
+  "resources": {
+    "map": "https://goo.gl/maps/mD9FBMq1nvXUBrkv6",
+    "flag": "https://flagcdn.com/de.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/de.svg"
+  }
+}

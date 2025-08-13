@@ -1,0 +1,35 @@
+{
+  "cca2": "bh",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Bahrain"
+    },
+    {
+      "language": "fr",
+      "name": "Bahre\u00EFn"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Manama",
+      "coordinate": {
+        "latitude": 26.23,
+        "longitude": 50.57
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 26,
+    "longitude": 50.55
+  },
+  "area": 765,
+  "population": 1701583,
+  "resources": {
+    "map": "https://goo.gl/maps/5Zue99Zc6vFBHxzJ7",
+    "flag": "https://flagcdn.com/bh.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/bh.svg"
+  }
+}

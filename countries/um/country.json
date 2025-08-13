@@ -1,0 +1,35 @@
+{
+  "cca2": "um",
+  "translations": [
+    {
+      "language": "en",
+      "name": "United States Minor Outlying Islands"
+    },
+    {
+      "language": "fr",
+      "name": "\u00CEles mineures \u00E9loign\u00E9es des \u00C9tats-Unis"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Washington DC",
+      "coordinate": {
+        "latitude": 19.3,
+        "longitude": 166.633333
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "NorthAmerica",
+  "coordinate": {
+    "latitude": 19.3,
+    "longitude": 166.633333
+  },
+  "area": 34.2,
+  "population": 300,
+  "resources": {
+    "map": "https://goo.gl/maps/hZKnrzgeK69dDyPF8",
+    "flag": "https://flagcdn.com/um.svg",
+    "coatOfArms": null
+  }
+}

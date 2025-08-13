@@ -3,7 +3,7 @@
 <div class="game-over">
     @if (!GameState.Guesses.Any(g => g.Success))
     {
-        <a class="link" target="_blank" href="@GameState.Country?.Resource.Map">
+        <a class="link" target="_blank" href="@GameState.Country?.Resources.Map">
             <i class="@Icons.GeoAlt"></i>
             <span class="answer">@GameState.Country?.Name</span>
         </a>
@@ -12,7 +12,7 @@
     {
         <div class="congratulations">
             <span>@localizer[Resources.Congratulations]</span>
-            <a class="link" target="_blank" href="@GameState.Country?.Resource.Map">
+            <a class="link" target="_blank" href="@GameState.Country?.Resources.Map">
                 <i class="@Icons.GeoAlt"></i>
                 <span class="answer">@localizer[Resources.SeeOnMap]</span>
             </a>

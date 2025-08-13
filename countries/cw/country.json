@@ -1,0 +1,35 @@
+{
+  "cca2": "cw",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Cura\u00E7ao"
+    },
+    {
+      "language": "fr",
+      "name": "Cura\u00E7ao"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Willemstad",
+      "coordinate": {
+        "latitude": 12.1,
+        "longitude": -68.92
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 12.116667,
+    "longitude": -68.933333
+  },
+  "area": 444,
+  "population": 155014,
+  "resources": {
+    "map": "https://goo.gl/maps/9D3hTeA3qKaRT7S16",
+    "flag": "https://flagcdn.com/cw.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cw.svg"
+  }
+}

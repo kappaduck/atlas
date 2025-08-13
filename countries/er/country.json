@@ -1,0 +1,39 @@
+{
+  "cca2": "er",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Eritrea"
+    },
+    {
+      "language": "fr",
+      "name": "\u00C9rythr\u00E9e"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Asmara",
+      "coordinate": {
+        "latitude": 15.33,
+        "longitude": 38.93
+      }
+    }
+  ],
+  "borders": [
+    "dj",
+    "et",
+    "sd"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 15,
+    "longitude": 39
+  },
+  "area": 117600,
+  "population": 5352000,
+  "resources": {
+    "map": "https://goo.gl/maps/HRyqUpnPwwG6jY5j6",
+    "flag": "https://flagcdn.com/er.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/er.svg"
+  }
+}

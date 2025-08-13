@@ -1,0 +1,35 @@
+{
+  "cca2": "as",
+  "translations": [
+    {
+      "language": "en",
+      "name": "American Samoa"
+    },
+    {
+      "language": "fr",
+      "name": "Samoa am\u00E9ricaines"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Pago Pago",
+      "coordinate": {
+        "latitude": -14.27,
+        "longitude": -170.7
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -14.33333333,
+    "longitude": -170
+  },
+  "area": 199,
+  "population": 55197,
+  "resources": {
+    "map": "https://goo.gl/maps/Re9ePMjwP1sFCBFA6",
+    "flag": "https://flagcdn.com/as.svg",
+    "coatOfArms": null
+  }
+}

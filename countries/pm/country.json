@@ -1,0 +1,35 @@
+{
+  "cca2": "pm",
+  "translations": [
+    {
+      "language": "en",
+      "name": "Saint Pierre and Miquelon"
+    },
+    {
+      "language": "fr",
+      "name": "Saint-Pierre-et-Miquelon"
+    }
+  ],
+  "capitals": [
+    {
+      "name": "Saint-Pierre",
+      "coordinate": {
+        "latitude": 46.77,
+        "longitude": -56.18
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "NorthAmerica",
+  "coordinate": {
+    "latitude": 46.83333333,
+    "longitude": -56.33333333
+  },
+  "area": 242,
+  "population": 6069,
+  "resources": {
+    "map": "https://goo.gl/maps/bUM8Yc8pA8ghyhmt6",
+    "flag": "https://flagcdn.com/pm.svg",
+    "coatOfArms": null
+  }
+}

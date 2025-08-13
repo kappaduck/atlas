@@ -3,4 +3,4 @@
 
 namespace Atlas.Application.Countries;
 
-public sealed record CountryResponse(string Cca2, string Name, CountryResourceResponse Resource);
+public sealed record CountryResponse(string Cca2, string Name, ResourcesResponse Resources);
