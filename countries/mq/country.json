@@ -1,15 +1,5 @@
 {
   "cca2": "mq",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Martinique"
-    },
-    {
-      "language": "fr",
-      "name": "Martinique"
-    }
-  ],
   "capitals": [
     {
       "name": "Fort-de-France",

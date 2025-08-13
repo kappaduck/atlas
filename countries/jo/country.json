@@ -1,15 +1,5 @@
 {
   "cca2": "jo",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Jordan"
-    },
-    {
-      "language": "fr",
-      "name": "Jordanie"
-    }
-  ],
   "capitals": [
     {
       "name": "Amman",

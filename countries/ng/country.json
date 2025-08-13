@@ -1,15 +1,5 @@
 {
   "cca2": "ng",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Nigeria"
-    },
-    {
-      "language": "fr",
-      "name": "Nig\u00E9ria"
-    }
-  ],
   "capitals": [
     {
       "name": "Abuja",

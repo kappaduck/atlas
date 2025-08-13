@@ -1,15 +1,5 @@
 {
   "cca2": "cz",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Czechia"
-    },
-    {
-      "language": "fr",
-      "name": "Tch\u00E9quie"
-    }
-  ],
   "capitals": [
     {
       "name": "Prague",

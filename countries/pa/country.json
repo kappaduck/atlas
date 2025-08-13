@@ -1,15 +1,5 @@
 {
   "cca2": "pa",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Panama"
-    },
-    {
-      "language": "fr",
-      "name": "Panama"
-    }
-  ],
   "capitals": [
     {
       "name": "Panama City",

@@ -1,15 +1,5 @@
 {
   "cca2": "is",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Iceland"
-    },
-    {
-      "language": "fr",
-      "name": "Islande"
-    }
-  ],
   "capitals": [
     {
       "name": "Reykjavik",

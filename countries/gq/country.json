@@ -1,15 +1,5 @@
 {
   "cca2": "gq",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Equatorial Guinea"
-    },
-    {
-      "language": "fr",
-      "name": "Guin\u00E9e \u00E9quatoriale"
-    }
-  ],
   "capitals": [
     {
       "name": "Malabo",

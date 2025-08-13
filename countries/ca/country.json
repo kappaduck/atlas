@@ -1,15 +1,5 @@
 {
   "cca2": "ca",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Canada"
-    },
-    {
-      "language": "fr",
-      "name": "Canada"
-    }
-  ],
   "capitals": [
     {
       "name": "Ottawa",

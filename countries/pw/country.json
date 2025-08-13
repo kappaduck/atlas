@@ -1,15 +1,5 @@
 {
   "cca2": "pw",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Palau"
-    },
-    {
-      "language": "fr",
-      "name": "Palaos (Palau)"
-    }
-  ],
   "capitals": [
     {
       "name": "Ngerulmud",

@@ -29,18 +29,11 @@ using Stream mergedStream = File.OpenWrite(mergedFile);
 await JsonSerializer.SerializeAsync(mergedStream, countries, JsonContext.Default.ListCountry);
 
 using Stream lookupStream = File.OpenWrite(lookupFile);
-await JsonSerializer.SerializeAsync(lookupStream, countries.Select(ToLookup), JsonContext.Default.IEnumerableCountryLookup);
-
-static CountryLookup ToLookup(Country country) => new()
-{
-    Cca2 = country.Cca2,
-    Translations = country.Translations
-};
+await JsonSerializer.SerializeAsync(lookupStream, countries.Select(c => c.Cca2), JsonContext.Default.IEnumerableString);
 
 [JsonSerializable(typeof(Country))]
-[JsonSerializable(typeof(CountryLookup), GenerationMode = JsonSourceGenerationMode.Metadata)]
 [JsonSerializable(typeof(List<Country>), GenerationMode = JsonSourceGenerationMode.Serialization)]
-[JsonSerializable(typeof(IEnumerable<CountryLookup>), GenerationMode = JsonSourceGenerationMode.Serialization)]
+[JsonSerializable(typeof(IEnumerable<string>), GenerationMode = JsonSourceGenerationMode.Serialization)]
 [JsonSourceGenerationOptions(
     PropertyNameCaseInsensitive = true,
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase)]
@@ -49,8 +42,6 @@ internal sealed partial class JsonContext : JsonSerializerContext;
 internal sealed record Country
 {
     public required string Cca2 { get; init; }
-
-    public required IEnumerable<Translation> Translations { get; init; }
 
     public required IEnumerable<Capital> Capitals { get; init; }
 
@@ -66,15 +57,6 @@ internal sealed record Country
 
     public required Resources Resources { get; init; }
 }
-
-internal sealed record CountryLookup
-{
-    public required string Cca2 { get; init; }
-
-    public required IEnumerable<Translation> Translations { get; init; }
-}
-
-internal sealed record Translation(string Language, string Name);
 
 internal sealed record Capital(string Name, Coordinate Coordinate);
 

@@ -1,15 +1,5 @@
 {
   "cca2": "ne",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Niger"
-    },
-    {
-      "language": "fr",
-      "name": "Niger"
-    }
-  ],
   "capitals": [
     {
       "name": "Niamey",

@@ -1,15 +1,5 @@
 {
   "cca2": "es",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Spain"
-    },
-    {
-      "language": "fr",
-      "name": "Espagne"
-    }
-  ],
   "capitals": [
     {
       "name": "Madrid",

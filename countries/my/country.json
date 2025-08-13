@@ -1,15 +1,5 @@
 {
   "cca2": "my",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Malaysia"
-    },
-    {
-      "language": "fr",
-      "name": "Malaisie"
-    }
-  ],
   "capitals": [
     {
       "name": "Kuala Lumpur",

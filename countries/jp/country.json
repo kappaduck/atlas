@@ -1,15 +1,5 @@
 {
   "cca2": "jp",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Japan"
-    },
-    {
-      "language": "fr",
-      "name": "Japon"
-    }
-  ],
   "capitals": [
     {
       "name": "Tokyo",

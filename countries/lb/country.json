@@ -1,15 +1,5 @@
 {
   "cca2": "lb",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Lebanon"
-    },
-    {
-      "language": "fr",
-      "name": "Liban"
-    }
-  ],
   "capitals": [
     {
       "name": "Beirut",

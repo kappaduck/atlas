@@ -1,15 +1,5 @@
 {
   "cca2": "tn",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Tunisia"
-    },
-    {
-      "language": "fr",
-      "name": "Tunisie"
-    }
-  ],
   "capitals": [
     {
       "name": "Tunis",

@@ -1,15 +1,5 @@
 {
   "cca2": "rw",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Rwanda"
-    },
-    {
-      "language": "fr",
-      "name": "Rwanda"
-    }
-  ],
   "capitals": [
     {
       "name": "Kigali",

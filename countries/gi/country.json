@@ -1,15 +1,5 @@
 {
   "cca2": "gi",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Gibraltar"
-    },
-    {
-      "language": "fr",
-      "name": "Gibraltar"
-    }
-  ],
   "capitals": [
     {
       "name": "Gibraltar",

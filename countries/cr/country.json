@@ -1,15 +1,5 @@
 {
   "cca2": "cr",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Costa Rica"
-    },
-    {
-      "language": "fr",
-      "name": "Costa Rica"
-    }
-  ],
   "capitals": [
     {
       "name": "San Jos\u00E9",

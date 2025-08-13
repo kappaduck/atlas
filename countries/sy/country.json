@@ -1,15 +1,5 @@
 {
   "cca2": "sy",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Syria"
-    },
-    {
-      "language": "fr",
-      "name": "Syrie"
-    }
-  ],
   "capitals": [
     {
       "name": "Damascus",

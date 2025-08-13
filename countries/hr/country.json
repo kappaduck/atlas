@@ -1,15 +1,5 @@
 {
   "cca2": "hr",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Croatia"
-    },
-    {
-      "language": "fr",
-      "name": "Croatie"
-    }
-  ],
   "capitals": [
     {
       "name": "Zagreb",

@@ -1,15 +1,5 @@
 {
   "cca2": "gg",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Guernsey"
-    },
-    {
-      "language": "fr",
-      "name": "Guernesey"
-    }
-  ],
   "capitals": [
     {
       "name": "St. Peter Port",

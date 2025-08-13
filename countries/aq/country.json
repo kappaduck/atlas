@@ -1,15 +1,5 @@
 {
   "cca2": "aq",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Antarctica"
-    },
-    {
-      "language": "fr",
-      "name": "Antarctique"
-    }
-  ],
   "capitals": [],
   "borders": [],
   "continent": "Antarctica",

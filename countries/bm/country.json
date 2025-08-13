@@ -1,15 +1,5 @@
 {
   "cca2": "bm",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Bermuda"
-    },
-    {
-      "language": "fr",
-      "name": "Bermudes"
-    }
-  ],
   "capitals": [
     {
       "name": "Hamilton",

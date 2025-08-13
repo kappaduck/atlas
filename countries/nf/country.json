@@ -1,15 +1,5 @@
 {
   "cca2": "nf",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Norfolk Island"
-    },
-    {
-      "language": "fr",
-      "name": "\u00CEle Norfolk"
-    }
-  ],
   "capitals": [
     {
       "name": "Kingston",

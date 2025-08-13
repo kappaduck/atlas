@@ -1,15 +1,5 @@
 {
   "cca2": "us",
-  "translations": [
-    {
-      "language": "en",
-      "name": "United States"
-    },
-    {
-      "language": "fr",
-      "name": "\u00C9tats-Unis"
-    }
-  ],
   "capitals": [
     {
       "name": "Washington, D.C.",

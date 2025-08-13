@@ -1,15 +1,5 @@
 {
   "cca2": "br",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Brazil"
-    },
-    {
-      "language": "fr",
-      "name": "Br\u00E9sil"
-    }
-  ],
   "capitals": [
     {
       "name": "Bras\u00EDlia",

@@ -1,15 +1,5 @@
 {
   "cca2": "mp",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Northern Mariana Islands"
-    },
-    {
-      "language": "fr",
-      "name": "\u00CEles Mariannes du Nord"
-    }
-  ],
   "capitals": [
     {
       "name": "Saipan",

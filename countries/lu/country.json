@@ -1,15 +1,5 @@
 {
   "cca2": "lu",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Luxembourg"
-    },
-    {
-      "language": "fr",
-      "name": "Luxembourg"
-    }
-  ],
   "capitals": [
     {
       "name": "Luxembourg",

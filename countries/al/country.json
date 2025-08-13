@@ -1,15 +1,5 @@
 {
   "cca2": "al",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Albania"
-    },
-    {
-      "language": "fr",
-      "name": "Albanie"
-    }
-  ],
   "capitals": [
     {
       "name": "Tirana",

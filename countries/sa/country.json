@@ -1,15 +1,5 @@
 {
   "cca2": "sa",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Saudi Arabia"
-    },
-    {
-      "language": "fr",
-      "name": "Arabie Saoudite"
-    }
-  ],
   "capitals": [
     {
       "name": "Riyadh",

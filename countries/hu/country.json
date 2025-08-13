@@ -1,15 +1,5 @@
 {
   "cca2": "hu",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Hungary"
-    },
-    {
-      "language": "fr",
-      "name": "Hongrie"
-    }
-  ],
   "capitals": [
     {
       "name": "Budapest",

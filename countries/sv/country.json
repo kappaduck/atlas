@@ -1,15 +1,5 @@
 {
   "cca2": "sv",
-  "translations": [
-    {
-      "language": "en",
-      "name": "El Salvador"
-    },
-    {
-      "language": "fr",
-      "name": "Salvador"
-    }
-  ],
   "capitals": [
     {
       "name": "San Salvador",

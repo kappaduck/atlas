@@ -1,15 +1,5 @@
 {
   "cca2": "cn",
-  "translations": [
-    {
-      "language": "en",
-      "name": "China"
-    },
-    {
-      "language": "fr",
-      "name": "Chine"
-    }
-  ],
   "capitals": [
     {
       "name": "Beijing",

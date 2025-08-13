@@ -1,15 +1,5 @@
 {
   "cca2": "tl",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Timor-Leste"
-    },
-    {
-      "language": "fr",
-      "name": "Timor oriental"
-    }
-  ],
   "capitals": [
     {
       "name": "Dili",

@@ -1,15 +1,5 @@
 {
   "cca2": "se",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Sweden"
-    },
-    {
-      "language": "fr",
-      "name": "Su\u00E8de"
-    }
-  ],
   "capitals": [
     {
       "name": "Stockholm",

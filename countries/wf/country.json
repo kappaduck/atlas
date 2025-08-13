@@ -1,15 +1,5 @@
 {
   "cca2": "wf",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Wallis and Futuna"
-    },
-    {
-      "language": "fr",
-      "name": "Wallis-et-Futuna"
-    }
-  ],
   "capitals": [
     {
       "name": "Mata-Utu",

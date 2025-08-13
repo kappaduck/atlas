@@ -1,15 +1,5 @@
 {
   "cca2": "gh",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Ghana"
-    },
-    {
-      "language": "fr",
-      "name": "Ghana"
-    }
-  ],
   "capitals": [
     {
       "name": "Accra",

@@ -1,15 +1,5 @@
 {
   "cca2": "li",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Liechtenstein"
-    },
-    {
-      "language": "fr",
-      "name": "Liechtenstein"
-    }
-  ],
   "capitals": [
     {
       "name": "Vaduz",

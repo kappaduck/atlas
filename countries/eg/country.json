@@ -1,15 +1,5 @@
 {
   "cca2": "eg",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Egypt"
-    },
-    {
-      "language": "fr",
-      "name": "\u00C9gypte"
-    }
-  ],
   "capitals": [
     {
       "name": "Cairo",

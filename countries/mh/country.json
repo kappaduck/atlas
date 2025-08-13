@@ -1,15 +1,5 @@
 {
   "cca2": "mh",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Marshall Islands"
-    },
-    {
-      "language": "fr",
-      "name": "\u00CEles Marshall"
-    }
-  ],
   "capitals": [
     {
       "name": "Majuro",

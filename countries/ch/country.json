@@ -1,15 +1,5 @@
 {
   "cca2": "ch",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Switzerland"
-    },
-    {
-      "language": "fr",
-      "name": "Suisse"
-    }
-  ],
   "capitals": [
     {
       "name": "Bern",

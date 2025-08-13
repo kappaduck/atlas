@@ -1,15 +1,5 @@
 {
   "cca2": "vi",
-  "translations": [
-    {
-      "language": "en",
-      "name": "United States Virgin Islands"
-    },
-    {
-      "language": "fr",
-      "name": "\u00CEles Vierges des \u00C9tats-Unis"
-    }
-  ],
   "capitals": [
     {
       "name": "Charlotte Amalie",

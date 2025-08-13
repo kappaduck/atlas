@@ -1,15 +1,5 @@
 {
   "cca2": "cm",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Cameroon"
-    },
-    {
-      "language": "fr",
-      "name": "Cameroun"
-    }
-  ],
   "capitals": [
     {
       "name": "Yaound\u00E9",

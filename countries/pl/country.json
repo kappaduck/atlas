@@ -1,15 +1,5 @@
 {
   "cca2": "pl",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Poland"
-    },
-    {
-      "language": "fr",
-      "name": "Pologne"
-    }
-  ],
   "capitals": [
     {
       "name": "Warsaw",

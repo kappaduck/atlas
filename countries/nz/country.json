@@ -1,15 +1,5 @@
 {
   "cca2": "nz",
-  "translations": [
-    {
-      "language": "en",
-      "name": "New Zealand"
-    },
-    {
-      "language": "fr",
-      "name": "Nouvelle-Z\u00E9lande"
-    }
-  ],
   "capitals": [
     {
       "name": "Wellington",

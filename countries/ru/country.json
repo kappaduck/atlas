@@ -1,15 +1,5 @@
 {
   "cca2": "ru",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Russia"
-    },
-    {
-      "language": "fr",
-      "name": "Russie"
-    }
-  ],
   "capitals": [
     {
       "name": "Moscow",

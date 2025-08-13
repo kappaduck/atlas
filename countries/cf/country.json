@@ -1,15 +1,5 @@
 {
   "cca2": "cf",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Central African Republic"
-    },
-    {
-      "language": "fr",
-      "name": "R\u00E9publique centrafricaine"
-    }
-  ],
   "capitals": [
     {
       "name": "Bangui",

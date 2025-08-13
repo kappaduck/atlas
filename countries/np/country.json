@@ -1,15 +1,5 @@
 {
   "cca2": "np",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Nepal"
-    },
-    {
-      "language": "fr",
-      "name": "N\u00E9pal"
-    }
-  ],
   "capitals": [
     {
       "name": "Kathmandu",

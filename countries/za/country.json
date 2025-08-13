@@ -1,15 +1,5 @@
 {
   "cca2": "za",
-  "translations": [
-    {
-      "language": "en",
-      "name": "South Africa"
-    },
-    {
-      "language": "fr",
-      "name": "Afrique du Sud"
-    }
-  ],
   "capitals": [
     {
       "name": "Pretoria",

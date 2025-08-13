@@ -1,15 +1,5 @@
 {
   "cca2": "ve",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Venezuela"
-    },
-    {
-      "language": "fr",
-      "name": "Venezuela"
-    }
-  ],
   "capitals": [
     {
       "name": "Caracas",

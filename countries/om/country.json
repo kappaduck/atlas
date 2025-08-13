@@ -1,15 +1,5 @@
 {
   "cca2": "om",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Oman"
-    },
-    {
-      "language": "fr",
-      "name": "Oman"
-    }
-  ],
   "capitals": [
     {
       "name": "Muscat",

@@ -1,15 +1,5 @@
 {
   "cca2": "bo",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Bolivia"
-    },
-    {
-      "language": "fr",
-      "name": "Bolivie"
-    }
-  ],
   "capitals": [
     {
       "name": "Sucre",

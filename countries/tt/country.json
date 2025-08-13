@@ -1,15 +1,5 @@
 {
   "cca2": "tt",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Trinidad and Tobago"
-    },
-    {
-      "language": "fr",
-      "name": "Trinit\u00E9-et-Tobago"
-    }
-  ],
   "capitals": [
     {
       "name": "Port of Spain",

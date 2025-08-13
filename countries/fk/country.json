@@ -1,15 +1,5 @@
 {
   "cca2": "fk",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Falkland Islands"
-    },
-    {
-      "language": "fr",
-      "name": "\u00CEles Malouines"
-    }
-  ],
   "capitals": [
     {
       "name": "Stanley",

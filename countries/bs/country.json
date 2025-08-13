@@ -1,15 +1,5 @@
 {
   "cca2": "bs",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Bahamas"
-    },
-    {
-      "language": "fr",
-      "name": "Bahamas"
-    }
-  ],
   "capitals": [
     {
       "name": "Nassau",

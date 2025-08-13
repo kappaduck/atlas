@@ -1,15 +1,5 @@
 {
   "cca2": "lt",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Lithuania"
-    },
-    {
-      "language": "fr",
-      "name": "Lituanie"
-    }
-  ],
   "capitals": [
     {
       "name": "Vilnius",

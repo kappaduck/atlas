@@ -1,15 +1,5 @@
 {
   "cca2": "lr",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Liberia"
-    },
-    {
-      "language": "fr",
-      "name": "Liberia"
-    }
-  ],
   "capitals": [
     {
       "name": "Monrovia",

@@ -1,15 +1,5 @@
 {
   "cca2": "ec",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Ecuador"
-    },
-    {
-      "language": "fr",
-      "name": "\u00C9quateur"
-    }
-  ],
   "capitals": [
     {
       "name": "Quito",

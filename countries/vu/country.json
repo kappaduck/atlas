@@ -1,15 +1,5 @@
 {
   "cca2": "vu",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Vanuatu"
-    },
-    {
-      "language": "fr",
-      "name": "Vanuatu"
-    }
-  ],
   "capitals": [
     {
       "name": "Port Vila",

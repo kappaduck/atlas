@@ -1,15 +1,5 @@
 {
   "cca2": "hn",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Honduras"
-    },
-    {
-      "language": "fr",
-      "name": "Honduras"
-    }
-  ],
   "capitals": [
     {
       "name": "Tegucigalpa",

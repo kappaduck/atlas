@@ -1,15 +1,5 @@
 {
   "cca2": "bl",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Saint Barth\u00E9lemy"
-    },
-    {
-      "language": "fr",
-      "name": "Saint-Barth\u00E9lemy"
-    }
-  ],
   "capitals": [
     {
       "name": "Gustavia",

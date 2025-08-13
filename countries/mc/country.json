@@ -1,15 +1,5 @@
 {
   "cca2": "mc",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Monaco"
-    },
-    {
-      "language": "fr",
-      "name": "Monaco"
-    }
-  ],
   "capitals": [
     {
       "name": "Monaco",

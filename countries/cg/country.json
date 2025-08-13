@@ -1,15 +1,5 @@
 {
   "cca2": "cg",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Republic of the Congo"
-    },
-    {
-      "language": "fr",
-      "name": "République du Congo"
-    }
-  ],
   "capitals": [
     {
       "name": "Brazzaville",

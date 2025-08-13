@@ -1,15 +1,5 @@
 {
   "cca2": "dm",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Dominica"
-    },
-    {
-      "language": "fr",
-      "name": "Dominique"
-    }
-  ],
   "capitals": [
     {
       "name": "Roseau",

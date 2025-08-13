@@ -1,15 +1,5 @@
 {
   "cca2": "mk",
-  "translations": [
-    {
-      "language": "en",
-      "name": "North Macedonia"
-    },
-    {
-      "language": "fr",
-      "name": "Mac\u00E9doine du Nord"
-    }
-  ],
   "capitals": [
     {
       "name": "Skopje",

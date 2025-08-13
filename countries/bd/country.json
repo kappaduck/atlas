@@ -1,15 +1,5 @@
 {
   "cca2": "bd",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Bangladesh"
-    },
-    {
-      "language": "fr",
-      "name": "Bangladesh"
-    }
-  ],
   "capitals": [
     {
       "name": "Dhaka",

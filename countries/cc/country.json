@@ -1,15 +1,5 @@
 {
   "cca2": "cc",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Cocos (Keeling) Islands"
-    },
-    {
-      "language": "fr",
-      "name": "\u00CEles Cocos"
-    }
-  ],
   "capitals": [
     {
       "name": "West Island",

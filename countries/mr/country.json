@@ -1,15 +1,5 @@
 {
   "cca2": "mr",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Mauritania"
-    },
-    {
-      "language": "fr",
-      "name": "Mauritanie"
-    }
-  ],
   "capitals": [
     {
       "name": "Nouakchott",

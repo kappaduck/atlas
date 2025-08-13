@@ -1,15 +1,5 @@
 {
   "cca2": "at",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Austria"
-    },
-    {
-      "language": "fr",
-      "name": "Autriche"
-    }
-  ],
   "capitals": [
     {
       "name": "Vienna",

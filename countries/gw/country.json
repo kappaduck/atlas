@@ -1,15 +1,5 @@
 {
   "cca2": "gw",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Guinea-Bissau"
-    },
-    {
-      "language": "fr",
-      "name": "Guin\u00E9e-Bissau"
-    }
-  ],
   "capitals": [
     {
       "name": "Bissau",

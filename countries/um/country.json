@@ -1,15 +1,5 @@
 {
   "cca2": "um",
-  "translations": [
-    {
-      "language": "en",
-      "name": "United States Minor Outlying Islands"
-    },
-    {
-      "language": "fr",
-      "name": "\u00CEles mineures \u00E9loign\u00E9es des \u00C9tats-Unis"
-    }
-  ],
   "capitals": [
     {
       "name": "Washington DC",

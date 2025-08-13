@@ -1,15 +1,5 @@
 {
   "cca2": "au",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Australia"
-    },
-    {
-      "language": "fr",
-      "name": "Australie"
-    }
-  ],
   "capitals": [
     {
       "name": "Canberra",

@@ -1,15 +1,5 @@
 {
   "cca2": "co",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Colombia"
-    },
-    {
-      "language": "fr",
-      "name": "Colombie"
-    }
-  ],
   "capitals": [
     {
       "name": "Bogot\u00E1",

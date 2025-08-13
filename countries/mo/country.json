@@ -1,15 +1,5 @@
 {
   "cca2": "mo",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Macau"
-    },
-    {
-      "language": "fr",
-      "name": "Macao"
-    }
-  ],
   "capitals": [],
   "borders": [
     "cn"

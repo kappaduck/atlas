@@ -1,15 +1,5 @@
 {
   "cca2": "sz",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Eswatini"
-    },
-    {
-      "language": "fr",
-      "name": "Swaziland"
-    }
-  ],
   "capitals": [
     {
       "name": "Mbabane",

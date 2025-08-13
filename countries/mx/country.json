@@ -1,15 +1,5 @@
 {
   "cca2": "mx",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Mexico"
-    },
-    {
-      "language": "fr",
-      "name": "Mexique"
-    }
-  ],
   "capitals": [
     {
       "name": "Mexico City",

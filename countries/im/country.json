@@ -1,15 +1,5 @@
 {
   "cca2": "im",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Isle of Man"
-    },
-    {
-      "language": "fr",
-      "name": "\u00CEle de Man"
-    }
-  ],
   "capitals": [
     {
       "name": "Douglas",

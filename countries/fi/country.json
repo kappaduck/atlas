@@ -1,15 +1,5 @@
 {
   "cca2": "fi",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Finland"
-    },
-    {
-      "language": "fr",
-      "name": "Finlande"
-    }
-  ],
   "capitals": [
     {
       "name": "Helsinki",

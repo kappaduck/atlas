@@ -1,15 +1,5 @@
 {
   "cca2": "et",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Ethiopia"
-    },
-    {
-      "language": "fr",
-      "name": "\u00C9thiopie"
-    }
-  ],
   "capitals": [
     {
       "name": "Addis Ababa",

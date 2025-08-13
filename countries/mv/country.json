@@ -1,15 +1,5 @@
 {
   "cca2": "mv",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Maldives"
-    },
-    {
-      "language": "fr",
-      "name": "Maldives"
-    }
-  ],
   "capitals": [
     {
       "name": "Mal\u00E9",

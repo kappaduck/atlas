@@ -1,15 +1,5 @@
 {
   "cca2": "tz",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Tanzania"
-    },
-    {
-      "language": "fr",
-      "name": "Tanzanie"
-    }
-  ],
   "capitals": [
     {
       "name": "Dodoma",

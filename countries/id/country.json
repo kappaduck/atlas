@@ -1,15 +1,5 @@
 {
   "cca2": "id",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Indonesia"
-    },
-    {
-      "language": "fr",
-      "name": "Indon\u00E9sie"
-    }
-  ],
   "capitals": [
     {
       "name": "Jakarta",

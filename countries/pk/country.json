@@ -1,15 +1,5 @@
 {
   "cca2": "pk",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Pakistan"
-    },
-    {
-      "language": "fr",
-      "name": "Pakistan"
-    }
-  ],
   "capitals": [
     {
       "name": "Islamabad",

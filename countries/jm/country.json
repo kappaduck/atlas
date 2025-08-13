@@ -1,15 +1,5 @@
 {
   "cca2": "jm",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Jamaica"
-    },
-    {
-      "language": "fr",
-      "name": "Jama\u00EFque"
-    }
-  ],
   "capitals": [
     {
       "name": "Kingston",

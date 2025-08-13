@@ -1,15 +1,5 @@
 {
   "cca2": "iq",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Iraq"
-    },
-    {
-      "language": "fr",
-      "name": "Irak"
-    }
-  ],
   "capitals": [
     {
       "name": "Baghdad",

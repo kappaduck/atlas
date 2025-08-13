@@ -1,15 +1,5 @@
 {
   "cca2": "si",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Slovenia"
-    },
-    {
-      "language": "fr",
-      "name": "Slov\u00E9nie"
-    }
-  ],
   "capitals": [
     {
       "name": "Ljubljana",

@@ -1,15 +1,5 @@
 {
   "cca2": "bg",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Bulgaria"
-    },
-    {
-      "language": "fr",
-      "name": "Bulgarie"
-    }
-  ],
   "capitals": [
     {
       "name": "Sofia",

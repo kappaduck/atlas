@@ -1,15 +1,5 @@
 {
   "cca2": "ir",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Iran"
-    },
-    {
-      "language": "fr",
-      "name": "Iran"
-    }
-  ],
   "capitals": [
     {
       "name": "Tehran",

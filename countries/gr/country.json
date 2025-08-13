@@ -1,15 +1,5 @@
 {
   "cca2": "gr",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Greece"
-    },
-    {
-      "language": "fr",
-      "name": "Gr\u00E8ce"
-    }
-  ],
   "capitals": [
     {
       "name": "Athens",

@@ -1,15 +1,5 @@
 {
   "cca2": "na",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Namibia"
-    },
-    {
-      "language": "fr",
-      "name": "Namibie"
-    }
-  ],
   "capitals": [
     {
       "name": "Windhoek",

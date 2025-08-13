@@ -1,15 +1,5 @@
 {
   "cca2": "tg",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Togo"
-    },
-    {
-      "language": "fr",
-      "name": "Togo"
-    }
-  ],
   "capitals": [
     {
       "name": "Lom\u00E9",

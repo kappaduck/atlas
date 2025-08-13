@@ -1,15 +1,5 @@
 {
   "cca2": "ua",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Ukraine"
-    },
-    {
-      "language": "fr",
-      "name": "Ukraine"
-    }
-  ],
   "capitals": [
     {
       "name": "Kyiv",

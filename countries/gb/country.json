@@ -1,15 +1,5 @@
 {
   "cca2": "gb",
-  "translations": [
-    {
-      "language": "en",
-      "name": "United Kingdom"
-    },
-    {
-      "language": "fr",
-      "name": "Royaume-Uni"
-    }
-  ],
   "capitals": [
     {
       "name": "London",

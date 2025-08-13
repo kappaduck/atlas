@@ -1,15 +1,5 @@
 {
   "cca2": "qa",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Qatar"
-    },
-    {
-      "language": "fr",
-      "name": "Qatar"
-    }
-  ],
   "capitals": [
     {
       "name": "Doha",

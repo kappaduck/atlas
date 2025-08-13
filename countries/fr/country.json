@@ -1,15 +1,5 @@
 {
   "cca2": "fr",
-  "translations": [
-    {
-      "language": "en",
-      "name": "France"
-    },
-    {
-      "language": "fr",
-      "name": "France"
-    }
-  ],
   "capitals": [
     {
       "name": "Paris",

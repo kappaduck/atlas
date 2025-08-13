@@ -1,15 +1,5 @@
 {
   "cca2": "mf",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Saint Martin"
-    },
-    {
-      "language": "fr",
-      "name": "Saint-Martin"
-    }
-  ],
   "capitals": [
     {
       "name": "Marigot",

@@ -1,15 +1,5 @@
 {
   "cca2": "gs",
-  "translations": [
-    {
-      "language": "en",
-      "name": "South Georgia"
-    },
-    {
-      "language": "fr",
-      "name": "G\u00E9orgie du Sud-et-les \u00CEles Sandwich du Sud"
-    }
-  ],
   "capitals": [
     {
       "name": "King Edward Point",

@@ -1,15 +1,5 @@
 {
   "cca2": "ro",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Romania"
-    },
-    {
-      "language": "fr",
-      "name": "Roumanie"
-    }
-  ],
   "capitals": [
     {
       "name": "Bucharest",

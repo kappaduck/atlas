@@ -1,15 +1,5 @@
 {
   "cca2": "ad",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Andorra"
-    },
-    {
-      "language": "fr",
-      "name": "Andorre"
-    }
-  ],
   "capitals": [
     {
       "name": "Andorra la Vella",

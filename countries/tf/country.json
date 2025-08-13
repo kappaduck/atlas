@@ -1,15 +1,5 @@
 {
   "cca2": "tf",
-  "translations": [
-    {
-      "language": "en",
-      "name": "French Southern and Antarctic Lands"
-    },
-    {
-      "language": "fr",
-      "name": "Terres australes et antarctiques fran\u00E7aises"
-    }
-  ],
   "capitals": [
     {
       "name": "Port-aux-Fran\u00E7ais",
