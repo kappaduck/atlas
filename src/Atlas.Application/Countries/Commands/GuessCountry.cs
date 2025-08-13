@@ -31,7 +31,7 @@ public static class GuessCountry
             Kilometers = (int)Math.Round(Distance.Calculate(guessed.Coordinate, answer.Coordinate).Kilometers),
             IsSameContinent = guessed.Continent == answer.Continent,
             Success = guessed.Cca2 == answer.Cca2,
-            Flag = new ImageResponse(guessed.Resource.Flag.Uri, guessed.Resource.Flag.MediaType)
+            Flag = guessed.Resources.Flag
         };
     }
 }

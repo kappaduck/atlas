@@ -3,7 +3,6 @@
 
 using Atlas.Domain.Geography;
 using Atlas.Domain.Languages;
-using Atlas.Domain.Resources;
 
 namespace Atlas.Domain.Countries;
 
@@ -25,7 +24,5 @@ public sealed record Country
 
     public required int Population { get; init; }
 
-    public required CountryResource Resource { get; init; }
-
-    public required bool IsExcluded { get; init; }
+    public required Resources Resources { get; init; }
 }

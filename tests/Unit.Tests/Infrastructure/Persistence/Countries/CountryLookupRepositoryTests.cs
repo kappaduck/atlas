@@ -5,6 +5,7 @@ using Atlas.Domain.Countries;
 using Atlas.Domain.Languages;
 using Infrastructure.Persistence.Caching;
 using Infrastructure.Persistence.Countries;
+using Infrastructure.Persistence.Countries.Options;
 using Infrastructure.Persistence.Countries.Sources;
 
 namespace Unit.Tests.Infrastructure.Persistence.Countries;
@@ -20,7 +21,10 @@ internal sealed class CountryLookupRepositoryTests
 
     public CountryLookupRepositoryTests()
     {
-        _repository = new CountryLookupRepository(_dataSource, _cache);
+        _repository = new CountryLookupRepository(_dataSource, _cache, new ExcludedCountriesOptions()
+        {
+            Countries = ["CA"]
+        });
     }
 
     [Test]
@@ -29,6 +33,20 @@ internal sealed class CountryLookupRepositoryTests
         await _repository.LookupAsync(CancellationToken.None);
 
         await _dataSource.Received(1).QueryAllAsync(CancellationToken.None);
+    }
+
+    [Test]
+    public async Task LookupAsyncShouldExcludeCountries()
+    {
+        CountryLookup canada = CreateCountry("CA");
+        CountryLookup italy = CreateCountry("IT");
+
+        _dataSource.QueryAllAsync(Arg.Any<CancellationToken>()).Returns([canada, italy]);
+
+        CountryLookup[] countries = await _repository.LookupAsync(CancellationToken.None);
+
+        await Assert.That(countries).DoesNotContain(canada);
+        await Assert.That(countries).Contains(italy);
     }
 
     [Test]
@@ -55,7 +73,6 @@ internal sealed class CountryLookupRepositoryTests
     private static CountryLookup CreateCountry(string cca2) => new()
     {
         Cca2 = new Cca2(cca2),
-        Translations = [new Translation(Language.English, "Canada")],
-        IsExcluded = false
+        Translations = [new Translation(Language.English, "Canada")]
     };
 }

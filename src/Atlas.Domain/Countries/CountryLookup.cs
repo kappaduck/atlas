@@ -10,6 +10,4 @@ public sealed record CountryLookup
     public required Cca2 Cca2 { get; init; }
 
     public required IEnumerable<Translation> Translations { get; init; }
-
-    public bool IsExcluded { get; init; }
 }

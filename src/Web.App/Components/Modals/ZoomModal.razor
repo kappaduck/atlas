@@ -5,8 +5,8 @@
 
 <dialog @ref="_dialog" class="modal zoom" @onclick="Close">
     <picture class="zoom @DifficultyCss">
-        <source srcset="@Image.Uri" type="@Image.MediaType" />
-        <img src="@Image.Uri" alt="@localizer[Resources.FailedDisplayFlag]" />
+        <source srcset="@Image" />
+        <img src="@Image" alt="@localizer[Resources.FailedDisplayFlag]" />
     </picture>
 </dialog>
 
@@ -14,7 +14,7 @@
     private ElementReference _dialog;
 
     [Parameter, EditorRequired]
-    public required ImageResponse Image { get; init; }
+    public required Uri Image { get; init; }
 
     [Parameter, EditorRequired]
     public required string DifficultyCss { get; set; }

@@ -7,7 +7,6 @@ using Atlas.Application.Countries.Repositories;
 using Atlas.Domain.Countries;
 using Atlas.Domain.Geography;
 using Atlas.Domain.Languages;
-using Atlas.Domain.Resources;
 
 namespace Unit.Tests.Application.Countries.Commands;
 
@@ -41,8 +40,7 @@ internal sealed class GuessCountryTests
         await Assert.That(guessedCountry.IsSameContinent).IsFalse();
         await Assert.That(guessedCountry.Direction).IsEqualTo(104);
         await Assert.That(guessedCountry.Kilometers).IsEqualTo(6843);
-        await Assert.That(guessedCountry.Flag.Uri).IsEqualTo(_canada.Resource.Flag.Uri);
-        await Assert.That(guessedCountry.Flag.MediaType).IsEqualTo(_canada.Resource.Flag.MediaType);
+        await Assert.That(guessedCountry.Flag).IsEqualTo(_canada.Resources.Flag);
     }
 
     [Test]
@@ -58,8 +56,7 @@ internal sealed class GuessCountryTests
         await Assert.That(guessedCountry.IsSameContinent).IsTrue();
         await Assert.That(guessedCountry.Direction).IsEqualTo(0);
         await Assert.That(guessedCountry.Kilometers).IsEqualTo(0);
-        await Assert.That(guessedCountry.Flag.Uri).IsEqualTo(_italy.Resource.Flag.Uri);
-        await Assert.That(guessedCountry.Flag.MediaType).IsEqualTo(_italy.Resource.Flag.MediaType);
+        await Assert.That(guessedCountry.Flag).IsEqualTo(_italy.Resources.Flag);
     }
 
     private static Country CreateCanada() => new()
@@ -72,8 +69,7 @@ internal sealed class GuessCountryTests
         Coordinate = new Coordinate(60, -95),
         Population = 38005238,
         Translations = [new Translation(Language.English, "Canada")],
-        IsExcluded = false,
-        Resource = new CountryResource(new Uri("https://www.google.com/maps/place/Canada"), new Image(new Uri("https://www.countryflags.io/ca/flat/64.svg"), "svg"))
+        Resources = new Resources(new Uri("https://www.google.com/maps/place/Canada"), new Uri("https://www.countryflags.io/ca/flat/64.svg"), null)
     };
 
     private static Country CreateItaly() => new()
@@ -86,7 +82,6 @@ internal sealed class GuessCountryTests
         Coordinate = new Coordinate(42.83333333, 12.83333333),
         Population = 59554023,
         Translations = [new Translation(Language.English, "Italy")],
-        IsExcluded = false,
-        Resource = new CountryResource(new Uri("https://www.google.com/maps/place/Italy"), new Image(new Uri("https://www.countryflags.io/it/flat/64.svg"), "svg"))
+        Resources = new Resources(new Uri("https://www.google.com/maps/place/Italy"), new Uri("https://www.countryflags.io/it/flat/64.svg"), null)
     };
 }
