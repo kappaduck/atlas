@@ -19,7 +19,7 @@ public sealed partial class DailyFlag(ILocalStorage storage, IMediator mediator,
 
     private ZoomModal _zoomModal = default!;
 
-    private GameState _gameState = default!;
+    private readonly GameState _gameState = new(null, MaxAttempts);
 
     [CascadingParameter]
     public required AppSettings Settings { get; init; }
@@ -40,7 +40,7 @@ public sealed partial class DailyFlag(ILocalStorage storage, IMediator mediator,
             storage.SetItem(LocalStorageKeys.Today, today);
         }
 
-        _gameState = new GameState(country, MaxAttempts);
+        _gameState.Reset(country);
 
         if (storage.GetItem<bool>(LocalStorageKeys.GiveUp))
             _gameState.GiveUp();

@@ -20,7 +20,7 @@ internal sealed class CountryRepository(IDataSource<Country> source, ICache cach
 
         Country[] allCountries = await source.QueryAllAsync(cancellationToken).ConfigureAwait(false);
 
-        Country[] countries = [.. allCountries.Where(c => !options.Countries.Contains(c.Cca2))];
+        Country[] countries = [.. allCountries.Where(c => !options.Excluded.Contains(c.Cca2))];
 
         cache.Save(Key, countries);
         return countries;

@@ -10,10 +10,10 @@ namespace Infrastructure.Persistence.Countries.Options;
 [ExcludeFromCodeCoverage]
 internal sealed partial class ExcludedCountriesOptions
 {
-    internal const string Section = "countries:excluded";
+    internal const string Section = "countries";
 
     [Required]
-    public required IEnumerable<string> Countries { get; set; }
+    public required IEnumerable<string> Excluded { get; set; }
 
     [OptionsValidator]
     internal sealed partial class Validator : IValidateOptions<ExcludedCountriesOptions>;

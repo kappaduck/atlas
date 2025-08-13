@@ -23,7 +23,7 @@ public sealed class CountryLookupRepositoryTests
     {
         _repository = new CountryLookupRepository(_dataSource, _cache, new ExcludedCountriesOptions()
         {
-            Countries = ["IT"]
+            Excluded = ["IT"]
         });
     }
 

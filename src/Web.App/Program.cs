@@ -18,6 +18,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.ConfigureLoggings();
 builder.AddOptions();
 builder.AddServices();
+builder.UseDefaultServiceProvider(x => x.ValidateOnBuild = true);
 
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration, c => c.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress));

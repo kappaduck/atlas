@@ -20,7 +20,7 @@ internal sealed class CountryLookupRepository(IDataSource<CountryLookup> source,
 
         CountryLookup[] countries = await source.QueryAllAsync(cancellationToken).ConfigureAwait(false);
 
-        CountryLookup[] lookups = [.. countries.Where(c => !options.Countries.Contains(c.Cca2))];
+        CountryLookup[] lookups = [.. countries.Where(c => !options.Excluded.Contains(c.Cca2))];
 
         cache.Save(Key, lookups);
         return lookups;

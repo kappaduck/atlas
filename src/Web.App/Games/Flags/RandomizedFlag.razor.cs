@@ -19,7 +19,7 @@ public sealed partial class RandomizedFlag(IMediator mediator)
     private CountryLookupInput _input = default!;
     private ZoomModal _zoomModal = default!;
 
-    private GameState _gameState = default!;
+    private readonly GameState _gameState = new(null, MaxAttempts);
 
     [CascadingParameter]
     public required AppSettings Settings { get; init; }
@@ -30,7 +30,7 @@ public sealed partial class RandomizedFlag(IMediator mediator)
     {
         CountryResponse? country = await mediator.Send(new RandomizeCountry.Query());
 
-        _gameState = new(country, MaxAttempts);
+        _gameState.Reset(country);
     }
 
     private async Task GuessAsync(string cca2)
