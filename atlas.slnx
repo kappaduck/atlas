@@ -41,7 +41,6 @@
     <File Path="tests/.editorconfig" />
     <File Path="tests/directory.build.props" />
     <File Path="tests/directory.packages.props" />
-    <Project Path="tests/Integration.Tests/Integration.Tests.csproj" />
     <Project Path="tests/Unit.Tests/Unit.Tests.csproj" />
   </Folder>
   <Folder Name="/workflows/">
