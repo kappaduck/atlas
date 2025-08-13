@@ -4,6 +4,7 @@
 using Atlas.Application.Countries.Repositories;
 using Atlas.Domain.Countries;
 using Mediator;
+using Microsoft.Extensions.Localization;
 
 namespace Atlas.Application.Countries.Queries;
 
@@ -11,7 +12,7 @@ public static class GetDailyCountry
 {
     public sealed record Query : IQuery<CountryResponse?>;
 
-    internal sealed class Handler(ICountryRepository repository) : IQueryHandler<Query, CountryResponse?>
+    internal sealed class Handler(ICountryRepository repository, IStringLocalizer<Resources> localizer) : IQueryHandler<Query, CountryResponse?>
     {
         public async ValueTask<CountryResponse?> Handle(Query query, CancellationToken cancellationToken)
         {
@@ -25,7 +26,7 @@ public static class GetDailyCountry
             Country country = countries[(int)(hash % countries.Length)];
 
             repository.Save(country);
-            return country.ToResponse();
+            return country.ToResponse(localizer);
         }
 
         /// <summary>

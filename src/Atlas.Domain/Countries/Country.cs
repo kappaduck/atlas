@@ -2,15 +2,12 @@
 // The source code is licensed under MIT License.
 
 using Atlas.Domain.Geography;
-using Atlas.Domain.Languages;
 
 namespace Atlas.Domain.Countries;
 
 public sealed record Country
 {
     public required Cca2 Cca2 { get; init; }
-
-    public required IEnumerable<Translation> Translations { get; init; }
 
     public required IEnumerable<Capital> Capitals { get; init; }
 

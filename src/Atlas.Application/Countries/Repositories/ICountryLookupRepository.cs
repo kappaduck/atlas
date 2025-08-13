@@ -7,5 +7,5 @@ namespace Atlas.Application.Countries.Repositories;
 
 public interface ICountryLookupRepository
 {
-    ValueTask<CountryLookup[]> LookupAsync(CancellationToken cancellationToken);
+    ValueTask<Cca2[]> LookupAsync(CancellationToken cancellationToken);
 }

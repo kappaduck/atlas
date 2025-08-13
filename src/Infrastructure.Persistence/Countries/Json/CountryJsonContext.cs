@@ -8,9 +8,9 @@ using System.Text.Json.Serialization;
 namespace Infrastructure.Persistence.Countries.Json;
 
 [JsonSerializable(typeof(Country[]))]
-[JsonSerializable(typeof(CountryLookup[]))]
+[JsonSerializable(typeof(Cca2[]))]
 [JsonSourceGenerationOptions(
-    Converters = [typeof(AreaJsonConverter), typeof(Cca2JsonConverter), typeof(TranslationJsonConverter)],
+    Converters = [typeof(AreaJsonConverter), typeof(Cca2JsonConverter)],
     PropertyNameCaseInsensitive = true,
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase,
     UseStringEnumConverter = true)]

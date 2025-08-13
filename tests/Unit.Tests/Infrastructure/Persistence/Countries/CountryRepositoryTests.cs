@@ -3,7 +3,6 @@
 
 using Atlas.Domain.Countries;
 using Atlas.Domain.Geography;
-using Atlas.Domain.Languages;
 using Infrastructure.Persistence.Caching;
 using Infrastructure.Persistence.Countries;
 using Infrastructure.Persistence.Countries.Options;
@@ -146,7 +145,6 @@ public sealed class CountryRepositoryTests
         Capitals = [new Capital("Ottawa", new Coordinate(0, 0))],
         Area = new Area(1),
         Population = 1,
-        Translations = [new Translation(Language.English, "Canada")],
         Borders = [new Cca2("US")],
         Continent = Continent.NorthAmerica,
         Coordinate = new Coordinate(0, 0),

@@ -9,18 +9,18 @@ using Infrastructure.Persistence.Countries.Sources;
 
 namespace Infrastructure.Persistence.Countries;
 
-internal sealed class CountryLookupRepository(IDataSource<CountryLookup> source, ICache cache, ExcludedCountriesOptions options) : ICountryLookupRepository
+internal sealed class CountryLookupRepository(IDataSource<Cca2> source, ICache cache, ExcludedCountriesOptions options) : ICountryLookupRepository
 {
     private const string Key = "countries:lookup";
 
-    public async ValueTask<CountryLookup[]> LookupAsync(CancellationToken cancellationToken)
+    public async ValueTask<Cca2[]> LookupAsync(CancellationToken cancellationToken)
     {
-        if (cache.TryGet(Key, out CountryLookup[]? cachedLookups))
+        if (cache.TryGet(Key, out Cca2[]? cachedLookups))
             return cachedLookups;
 
-        CountryLookup[] countries = await source.QueryAllAsync(cancellationToken).ConfigureAwait(false);
+        Cca2[] countries = await source.QueryAllAsync(cancellationToken).ConfigureAwait(false);
 
-        CountryLookup[] lookups = [.. countries.Where(c => !options.Excluded.Contains(c.Cca2))];
+        Cca2[] lookups = [.. countries.Where(cca2 => !options.Excluded.Contains(cca2))];
 
         cache.Save(Key, lookups);
         return lookups;
