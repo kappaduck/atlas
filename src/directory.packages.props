@@ -2,7 +2,6 @@
   <Import Project="$([MSBuild]::GetPathOfFileAbove('directory.packages.props', '$(MSBuildThisFileDirectory)../'))" />
   <ItemGroup Label="Common packages">
     <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.2.25" />
-    <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.0-preview.5.25277.114" />
   </ItemGroup>
   <ItemGroup Label="Application packages">
     <PackageVersion Include="Mediator.Abstractions" Version="3.0.0-preview.65" />
@@ -10,9 +9,7 @@
   </ItemGroup>
   <ItemGroup Label="Infrastructure packages">
     <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="10.0.0-preview.5.25277.114" />
-  </ItemGroup>
-  <ItemGroup Label="ETL packages">
-    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.0-preview.5.25277.114" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="10.0.0-preview.5.25277.114" />
   </ItemGroup>
   <ItemGroup Label="Web packages">
     <PackageVersion Include="Markdig" Version="0.41.3" />
