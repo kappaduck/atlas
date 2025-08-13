@@ -5,7 +5,7 @@ using Atlas.Domain.Extensions;
 
 namespace Unit.Tests.Domain.Extensions;
 
-internal sealed class MathExtensionsTests
+public sealed class MathExtensionsTests
 {
     [Test]
     public async Task ToRadiansShouldConvertDegreesToRadians()

@@ -5,7 +5,7 @@ using Atlas.Domain.Countries;
 
 namespace Unit.Tests.Domain.Countries;
 
-internal sealed class Cca2Tests
+public sealed class Cca2Tests
 {
     private readonly Cca2 _cca2 = new("CA");
 

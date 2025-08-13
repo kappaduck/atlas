@@ -11,7 +11,7 @@ using Infrastructure.Persistence.Countries.Sources;
 
 namespace Unit.Tests.Infrastructure.Persistence.Countries;
 
-internal sealed class CountryRepositoryTests
+public sealed class CountryRepositoryTests
 {
     private const string ExpectedAllCountriesKey = "countries";
 
@@ -24,7 +24,7 @@ internal sealed class CountryRepositoryTests
     {
         _repository = new CountryRepository(_dataSource, _cache, new ExcludedCountriesOptions()
         {
-            Countries = ["CA"]
+            Countries = ["IT"]
         });
     }
 
@@ -57,8 +57,8 @@ internal sealed class CountryRepositoryTests
 
         Country[] countries = await _repository.GetAllAsync(CancellationToken.None);
 
-        await Assert.That(countries).DoesNotContain(canada);
-        await Assert.That(countries).Contains(italy);
+        await Assert.That(countries).Contains(canada);
+        await Assert.That(countries).DoesNotContain(italy);
     }
 
     [Test]
@@ -147,9 +147,9 @@ internal sealed class CountryRepositoryTests
         Area = new Area(1),
         Population = 1,
         Translations = [new Translation(Language.English, "Canada")],
-        Borders = ["US"],
+        Borders = [new Cca2("US")],
         Continent = Continent.NorthAmerica,
         Coordinate = new Coordinate(0, 0),
-        Resources = new Resources(new Uri("https://www.google.com/maps/place/Canada"), new Uri("canada.svg"), new Uri("canada.coat-of-arms.svg"))
+        Resources = new Resources(new Uri("https://www.google.com/maps/place/Canada"), new Uri("https://canada.svg"), new Uri("https://canada.coat-of-arms.svg"))
     };
 }

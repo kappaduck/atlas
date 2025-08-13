@@ -10,7 +10,7 @@ using Atlas.Domain.Languages;
 
 namespace Unit.Tests.Application.Countries.Commands;
 
-internal sealed class GuessCountryTests
+public sealed class GuessCountryTests
 {
     private readonly Country _canada = CreateCanada();
     private readonly Country _italy = CreateItaly();

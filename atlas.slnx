@@ -1,10 +1,8 @@
 <Solution>
-  <Folder Name="/configurations/.github/">
-    <File Path=".github/ISSUE_TEMPLATE/bug.yml" />
-    <File Path=".github/ISSUE_TEMPLATE/config.yml" />
-    <File Path=".github/ISSUE_TEMPLATE/feature.yml" />
-    <File Path=".github/codeowners" />
-    <File Path=".github/dependabot.yml" />
+  <Folder Name="/backend/">
+    <Project Path="src/Atlas.Application/Atlas.Application.csproj" />
+    <Project Path="src/Atlas.Domain/Atlas.Domain.csproj" />
+    <Project Path="src/Infrastructure.Persistence/Infrastructure.Persistence.csproj" />
   </Folder>
   <Folder Name="/configurations/">
     <File Path=".editorconfig" />
@@ -14,6 +12,13 @@
     <File Path="directory.packages.props" />
     <File Path="dotnet.config" />
     <File Path="nuget.config" />
+  </Folder>
+  <Folder Name="/configurations/.github/">
+    <File Path=".github/ISSUE_TEMPLATE/bug.yml" />
+    <File Path=".github/ISSUE_TEMPLATE/config.yml" />
+    <File Path=".github/ISSUE_TEMPLATE/feature.yml" />
+    <File Path=".github/codeowners" />
+    <File Path=".github/dependabot.yml" />
   </Folder>
   <Folder Name="/configurations/src/">
     <File Path="src/directory.build.props" />
@@ -26,11 +31,6 @@
     <File Path="rules/sonar.editorconfig" />
     <File Path="rules/underscore.editorconfig" />
     <File Path="rules/vsthrd.editorconfig" />
-  </Folder>
-  <Folder Name="/backend/">
-    <Project Path="src/Atlas.Application/Atlas.Application.csproj" />
-    <Project Path="src/Atlas.Domain/Atlas.Domain.csproj" />
-    <Project Path="src/Infrastructure.Persistence/Infrastructure.Persistence.csproj" />
   </Folder>
   <Folder Name="/docs/">
     <File Path="changelog.md" />

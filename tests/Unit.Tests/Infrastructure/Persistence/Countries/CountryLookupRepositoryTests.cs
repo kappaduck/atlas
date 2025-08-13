@@ -10,7 +10,7 @@ using Infrastructure.Persistence.Countries.Sources;
 
 namespace Unit.Tests.Infrastructure.Persistence.Countries;
 
-internal sealed class CountryLookupRepositoryTests
+public sealed class CountryLookupRepositoryTests
 {
     private const string ExpectedAllCountriesKey = "countries:lookup";
 
@@ -23,7 +23,7 @@ internal sealed class CountryLookupRepositoryTests
     {
         _repository = new CountryLookupRepository(_dataSource, _cache, new ExcludedCountriesOptions()
         {
-            Countries = ["CA"]
+            Countries = ["IT"]
         });
     }
 
@@ -45,8 +45,8 @@ internal sealed class CountryLookupRepositoryTests
 
         CountryLookup[] countries = await _repository.LookupAsync(CancellationToken.None);
 
-        await Assert.That(countries).DoesNotContain(canada);
-        await Assert.That(countries).Contains(italy);
+        await Assert.That(countries).Contains(canada);
+        await Assert.That(countries).DoesNotContain(italy);
     }
 
     [Test]

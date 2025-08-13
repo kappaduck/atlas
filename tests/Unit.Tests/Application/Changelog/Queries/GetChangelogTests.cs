@@ -6,7 +6,7 @@ using Atlas.Application.Changelog.Repositories;
 
 namespace Unit.Tests.Application.Changelog.Queries;
 
-internal sealed class GetChangelogTests
+public sealed class GetChangelogTests
 {
     private readonly IChangelogRepository _repository = Substitute.For<IChangelogRepository>();
 

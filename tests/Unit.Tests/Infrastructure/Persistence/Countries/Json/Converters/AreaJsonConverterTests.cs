@@ -9,7 +9,7 @@ using System.Text.Json;
 
 namespace Unit.Tests.Infrastructure.Persistence.Countries.Json.Converters;
 
-internal sealed class AreaJsonConverterTests
+public sealed class AreaJsonConverterTests
 {
     private readonly JsonSerializerOptions _options = CountryJsonContext.Default.Options;
     private readonly AreaJsonConverter _converter = new();

@@ -10,7 +10,7 @@ using Atlas.Domain.Languages;
 
 namespace Unit.Tests.Application.Countries.Queries;
 
-internal sealed class GetDailyCountryTests
+public sealed class GetDailyCountryTests
 {
     private readonly Country _country = CreateCanada();
 
@@ -56,7 +56,7 @@ internal sealed class GetDailyCountryTests
     {
         Cca2 = new Cca2("CA"),
         Area = new Area(9984670),
-        Borders = ["USA"],
+        Borders = [new Cca2("US")],
         Capitals = [new Capital("Ottawa", new Coordinate(42, 42))],
         Continent = Continent.NorthAmerica,
         Coordinate = new Coordinate(60, 95),

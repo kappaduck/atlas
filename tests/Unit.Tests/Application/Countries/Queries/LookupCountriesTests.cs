@@ -9,7 +9,7 @@ using Atlas.Domain.Languages;
 
 namespace Unit.Tests.Application.Countries.Queries;
 
-internal sealed class LookupCountriesTests
+public sealed class LookupCountriesTests
 {
     private readonly ICountryLookupRepository _repository = Substitute.For<ICountryLookupRepository>();
 

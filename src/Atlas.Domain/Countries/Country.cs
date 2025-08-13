@@ -14,7 +14,7 @@ public sealed record Country
 
     public required IEnumerable<Capital> Capitals { get; init; }
 
-    public required IEnumerable<string> Borders { get; init; }
+    public required IEnumerable<Cca2> Borders { get; init; }
 
     public required Continent Continent { get; init; }
 
