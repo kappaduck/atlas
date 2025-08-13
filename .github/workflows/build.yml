@@ -21,6 +21,8 @@ on:
 jobs:
   build:
     runs-on: windows-latest
+    env:
+      webApp: ./src/Web.App/Web.App.csproj
 
     name: Build
     steps:
@@ -33,21 +35,18 @@ jobs:
           dotnet-version: 10.0.x
           dotnet-quality: preview
 
-      - name: Install wasm-tools workload
-        run: dotnet workload install wasm-tools
-
       - name: Bump version
         if: ${{ inputs.bumpVersion }}
         run: dotnet .\bump.version.cs
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore ${{ env.webApp }}
 
       - name: Build
-        run: dotnet build --configuration release --no-restore
+        run: dotnet build ${{ env.webApp }} --configuration release --no-restore
 
       - name: Publish web app
-        run: dotnet publish ./src/Web.App/Web.App.csproj -p:WasmApplicationEnvironmentName=${{ inputs.environment }} --output ./artifacts
+        run: dotnet publish ${{ env.webApp }} -p:WasmApplicationEnvironmentName=${{ inputs.environment }} --output ./artifacts
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4

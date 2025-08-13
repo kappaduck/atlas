@@ -1,8 +1,13 @@
 name: CodeQL
 
 on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    paths: ['.github/workflows/*.yml', '**/*.cs']
   schedule:
-    - cron: 0 2 * * *
+    - cron: '0 2 * * 2' # Every Tuesday at 2 AM UTC
 
 jobs:
   analyze:
@@ -37,10 +42,6 @@ jobs:
         with:
           dotnet-version: 10.0.x
           dotnet-quality: preview
-
-      - name: Install wasm-tools workload
-        if: matrix.language == 'csharp'
-        run: dotnet workload install wasm-tools
 
       - name: Restore dependencies
         if: matrix.language == 'csharp'
