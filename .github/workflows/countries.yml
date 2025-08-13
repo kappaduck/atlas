@@ -3,8 +3,8 @@ name: Countries
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
-    paths: [ 'countries/**', '!countries/all.json', '!countries/lookup.json', .github/workflows/countries.yml ]
+    branches: [main]
+    paths: ['countries/**', '!countries/all.json', '!countries/lookup.json', .github/workflows/countries.yml]
 
 permissions:
   contents: write

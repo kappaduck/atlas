@@ -3,8 +3,8 @@ name: Staging
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
-    paths: [ 'src/Web.App/**', .github/workflows/build.yml, .github/workflows/staging.yml ]
+    branches: [main ]
+    paths: ['src/Web.App/**', .github/workflows/build.yml, .github/workflows/staging.yml]
 
 jobs:
   staging:
