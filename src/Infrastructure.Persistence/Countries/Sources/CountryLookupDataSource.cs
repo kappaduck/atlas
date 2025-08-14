@@ -20,7 +20,7 @@ internal sealed class CountryLookupDataSource(HttpClient client, CountryEndpoint
             return [];
 
         Cca2[]? countries = await response.Content.ReadFromJsonAsync(CountryJsonContext.Default.Cca2Array, cancellationToken)
-                                                           .ConfigureAwait(false);
+                                                  .ConfigureAwait(false);
 
         return countries ?? [];
     }
