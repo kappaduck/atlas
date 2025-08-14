@@ -1,15 +1,5 @@
 {
   "cca2": "mg",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Madagascar"
-    },
-    {
-      "language": "fr",
-      "name": "Madagascar"
-    }
-  ],
   "capitals": [
     {
       "name": "Antananarivo",

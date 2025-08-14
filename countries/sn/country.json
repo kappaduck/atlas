@@ -1,15 +1,5 @@
 {
   "cca2": "sn",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Senegal"
-    },
-    {
-      "language": "fr",
-      "name": "S\u00E9n\u00E9gal"
-    }
-  ],
   "capitals": [
     {
       "name": "Dakar",

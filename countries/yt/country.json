@@ -1,15 +1,5 @@
 {
   "cca2": "yt",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Mayotte"
-    },
-    {
-      "language": "fr",
-      "name": "Mayotte"
-    }
-  ],
   "capitals": [
     {
       "name": "Mamoudzou",

@@ -1,15 +1,5 @@
 {
   "cca2": "gf",
-  "translations": [
-    {
-      "language": "en",
-      "name": "French Guiana"
-    },
-    {
-      "language": "fr",
-      "name": "Guyane"
-    }
-  ],
   "capitals": [
     {
       "name": "Cayenne",

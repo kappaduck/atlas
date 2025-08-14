@@ -1,15 +1,5 @@
 {
   "cca2": "uz",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Uzbekistan"
-    },
-    {
-      "language": "fr",
-      "name": "Ouzb\u00E9kistan"
-    }
-  ],
   "capitals": [
     {
       "name": "Tashkent",

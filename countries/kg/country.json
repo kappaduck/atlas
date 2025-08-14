@@ -1,15 +1,5 @@
 {
   "cca2": "kg",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Kyrgyzstan"
-    },
-    {
-      "language": "fr",
-      "name": "Kirghizistan"
-    }
-  ],
   "capitals": [
     {
       "name": "Bishkek",

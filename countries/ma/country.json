@@ -1,15 +1,5 @@
 {
   "cca2": "ma",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Morocco"
-    },
-    {
-      "language": "fr",
-      "name": "Maroc"
-    }
-  ],
   "capitals": [
     {
       "name": "Rabat",

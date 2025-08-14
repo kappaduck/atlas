@@ -1,15 +1,5 @@
 {
   "cca2": "pg",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Papua New Guinea"
-    },
-    {
-      "language": "fr",
-      "name": "Papouasie-Nouvelle-Guin\u00E9e"
-    }
-  ],
   "capitals": [
     {
       "name": "Port Moresby",

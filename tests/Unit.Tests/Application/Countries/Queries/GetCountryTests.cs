@@ -6,10 +6,11 @@ using Atlas.Application.Countries.Queries;
 using Atlas.Application.Countries.Repositories;
 using Atlas.Domain.Countries;
 using Atlas.Domain.Geography;
-using Atlas.Domain.Languages;
+using Unit.Tests.Fixtures;
 
 namespace Unit.Tests.Application.Countries.Queries;
 
+[ClassDataSource<LocalizerFixture>]
 public sealed class GetCountryTests
 {
     private readonly Country _country = CreateCanada();
@@ -19,12 +20,12 @@ public sealed class GetCountryTests
     private readonly GetCountry.Query _query;
     private readonly GetCountry.Handler _handler;
 
-    public GetCountryTests()
+    public GetCountryTests(LocalizerFixture localizer)
     {
         _repository.GetAsync(_country.Cca2, CancellationToken.None).Returns(_country);
 
         _query = new GetCountry.Query(_country.Cca2);
-        _handler = new GetCountry.Handler(_repository);
+        _handler = new GetCountry.Handler(_repository, localizer.Countries);
     }
 
     [Test]
@@ -52,7 +53,6 @@ public sealed class GetCountryTests
         Continent = Continent.NorthAmerica,
         Coordinate = new Coordinate(60, 95),
         Population = 38008005,
-        Translations = [new Translation(Language.English, "Canada")],
         Resources = new Resources(new Uri("https://www.google.com/maps/place/Canada"), new Uri("https://www.countryflags.io/ca/flat/64.svg"), null)
     };
 }

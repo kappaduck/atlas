@@ -1,15 +1,5 @@
 {
   "cca2": "bz",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Belize"
-    },
-    {
-      "language": "fr",
-      "name": "Belize"
-    }
-  ],
   "capitals": [
     {
       "name": "Belmopan",

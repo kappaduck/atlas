@@ -1,15 +1,5 @@
 {
   "cca2": "mn",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Mongolia"
-    },
-    {
-      "language": "fr",
-      "name": "Mongolie"
-    }
-  ],
   "capitals": [
     {
       "name": "Ulan Bator",

@@ -1,15 +1,5 @@
 {
   "cca2": "be",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Belgium"
-    },
-    {
-      "language": "fr",
-      "name": "Belgique"
-    }
-  ],
   "capitals": [
     {
       "name": "Brussels",

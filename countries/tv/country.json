@@ -1,15 +1,5 @@
 {
   "cca2": "tv",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Tuvalu"
-    },
-    {
-      "language": "fr",
-      "name": "Tuvalu"
-    }
-  ],
   "capitals": [
     {
       "name": "Funafuti",

@@ -1,15 +1,5 @@
 {
   "cca2": "ar",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Argentina"
-    },
-    {
-      "language": "fr",
-      "name": "Argentine"
-    }
-  ],
   "capitals": [
     {
       "name": "Buenos Aires",

@@ -1,15 +1,5 @@
 {
   "cca2": "re",
-  "translations": [
-    {
-      "language": "en",
-      "name": "R\u00E9union"
-    },
-    {
-      "language": "fr",
-      "name": "R\u00E9union"
-    }
-  ],
   "capitals": [
     {
       "name": "Saint-Denis",

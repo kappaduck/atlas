@@ -1,15 +1,5 @@
 {
   "cca2": "it",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Italy"
-    },
-    {
-      "language": "fr",
-      "name": "Italie"
-    }
-  ],
   "capitals": [
     {
       "name": "Rome",

@@ -1,15 +1,5 @@
 {
   "cca2": "cl",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Chile"
-    },
-    {
-      "language": "fr",
-      "name": "Chili"
-    }
-  ],
   "capitals": [
     {
       "name": "Santiago",

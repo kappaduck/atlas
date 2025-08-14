@@ -4,6 +4,7 @@
 using Atlas.Application.Countries.Repositories;
 using Atlas.Domain.Countries;
 using Mediator;
+using Microsoft.Extensions.Localization;
 
 namespace Atlas.Application.Countries.Queries;
 
@@ -11,7 +12,7 @@ public static class RandomizeCountry
 {
     public sealed record Query : IQuery<CountryResponse?>;
 
-    internal sealed class Handler(ICountryRepository repository) : IQueryHandler<Query, CountryResponse?>
+    internal sealed class Handler(ICountryRepository repository, IStringLocalizer<Resources> localizer) : IQueryHandler<Query, CountryResponse?>
     {
         public async ValueTask<CountryResponse?> Handle(Query query, CancellationToken cancellationToken)
         {
@@ -23,7 +24,7 @@ public static class RandomizeCountry
             Country country = countries[Random.Shared.Next(countries.Length)];
 
             repository.Save(country);
-            return country.ToResponse();
+            return country.ToResponse(localizer);
         }
     }
 }

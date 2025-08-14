@@ -1,15 +1,5 @@
 {
   "cca2": "th",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Thailand"
-    },
-    {
-      "language": "fr",
-      "name": "Tha\u00EFlande"
-    }
-  ],
   "capitals": [
     {
       "name": "Bangkok",

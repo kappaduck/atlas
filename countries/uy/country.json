@@ -1,15 +1,5 @@
 {
   "cca2": "uy",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Uruguay"
-    },
-    {
-      "language": "fr",
-      "name": "Uruguay"
-    }
-  ],
   "capitals": [
     {
       "name": "Montevideo",

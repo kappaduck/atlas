@@ -1,15 +1,5 @@
 {
   "cca2": "pe",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Peru"
-    },
-    {
-      "language": "fr",
-      "name": "P\u00E9rou"
-    }
-  ],
   "capitals": [
     {
       "name": "Lima",

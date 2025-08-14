@@ -6,7 +6,6 @@ using Infrastructure.Persistence.Countries.Json;
 using Infrastructure.Persistence.Countries.Json.Converters;
 using System.Text;
 using System.Text.Json;
-using TUnit.Assertions.AssertConditions.Throws;
 
 namespace Unit.Tests.Infrastructure.Persistence.Countries.Json.Converters;
 

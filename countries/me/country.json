@@ -1,15 +1,5 @@
 {
   "cca2": "me",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Montenegro"
-    },
-    {
-      "language": "fr",
-      "name": "Mont\u00E9n\u00E9gro"
-    }
-  ],
   "capitals": [
     {
       "name": "Podgorica",

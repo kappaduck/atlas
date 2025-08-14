@@ -1,15 +1,5 @@
 {
   "cca2": "ge",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Georgia"
-    },
-    {
-      "language": "fr",
-      "name": "G\u00E9orgie"
-    }
-  ],
   "capitals": [
     {
       "name": "Tbilisi",

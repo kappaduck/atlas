@@ -1,15 +1,5 @@
 {
   "cca2": "ph",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Philippines"
-    },
-    {
-      "language": "fr",
-      "name": "Philippines"
-    }
-  ],
   "capitals": [
     {
       "name": "Manila",

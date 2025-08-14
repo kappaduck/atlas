@@ -1,15 +1,5 @@
 {
   "cca2": "nl",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Netherlands"
-    },
-    {
-      "language": "fr",
-      "name": "Pays-Bas"
-    }
-  ],
   "capitals": [
     {
       "name": "Amsterdam",

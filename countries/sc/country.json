@@ -1,15 +1,5 @@
 {
   "cca2": "sc",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Seychelles"
-    },
-    {
-      "language": "fr",
-      "name": "Seychelles"
-    }
-  ],
   "capitals": [
     {
       "name": "Victoria",

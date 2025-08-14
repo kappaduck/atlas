@@ -1,15 +1,5 @@
 {
   "cca2": "af",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Afghanistan"
-    },
-    {
-      "language": "fr",
-      "name": "Afghanistan"
-    }
-  ],
   "capitals": [
     {
       "name": "Kabul",

@@ -1,15 +1,5 @@
 {
   "cca2": "sx",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Sint Maarten"
-    },
-    {
-      "language": "fr",
-      "name": "Saint-Martin"
-    }
-  ],
   "capitals": [
     {
       "name": "Philipsburg",

@@ -1,15 +1,5 @@
 {
   "cca2": "sj",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Svalbard and Jan Mayen"
-    },
-    {
-      "language": "fr",
-      "name": "Svalbard et Jan Mayen"
-    }
-  ],
   "capitals": [
     {
       "name": "Longyearbyen",

@@ -1,15 +1,5 @@
 {
   "cca2": "ae",
-  "translations": [
-    {
-      "language": "en",
-      "name": "United Arab Emirates"
-    },
-    {
-      "language": "fr",
-      "name": "\u00C9mirats arabes unis"
-    }
-  ],
   "capitals": [
     {
       "name": "Abu Dhabi",

@@ -1,15 +1,5 @@
 {
   "cca2": "mm",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Myanmar"
-    },
-    {
-      "language": "fr",
-      "name": "Birmanie"
-    }
-  ],
   "capitals": [
     {
       "name": "Naypyidaw",

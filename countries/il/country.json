@@ -1,15 +1,5 @@
 {
   "cca2": "il",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Israel"
-    },
-    {
-      "language": "fr",
-      "name": "Isra\u00EBl"
-    }
-  ],
   "capitals": [
     {
       "name": "Jerusalem",

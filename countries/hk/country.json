@@ -1,15 +1,5 @@
 {
   "cca2": "hk",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Hong Kong"
-    },
-    {
-      "language": "fr",
-      "name": "Hong Kong"
-    }
-  ],
   "capitals": [
     {
       "name": "City of Victoria",

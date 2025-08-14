@@ -1,15 +1,5 @@
 {
   "cca2": "bn",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Brunei"
-    },
-    {
-      "language": "fr",
-      "name": "Brunei"
-    }
-  ],
   "capitals": [
     {
       "name": "Bandar Seri Begawan",

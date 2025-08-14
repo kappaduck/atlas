@@ -1,15 +1,5 @@
 {
   "cca2": "bj",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Benin"
-    },
-    {
-      "language": "fr",
-      "name": "B\u00E9nin"
-    }
-  ],
   "capitals": [
     {
       "name": "Porto-Novo",

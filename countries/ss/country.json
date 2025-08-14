@@ -1,15 +1,5 @@
 {
   "cca2": "ss",
-  "translations": [
-    {
-      "language": "en",
-      "name": "South Sudan"
-    },
-    {
-      "language": "fr",
-      "name": "Soudan du Sud"
-    }
-  ],
   "capitals": [
     {
       "name": "Juba",

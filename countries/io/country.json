@@ -1,15 +1,5 @@
 {
   "cca2": "io",
-  "translations": [
-    {
-      "language": "en",
-      "name": "British Indian Ocean Territory"
-    },
-    {
-      "language": "fr",
-      "name": "Territoire britannique de l\u0027oc\u00E9an Indien"
-    }
-  ],
   "capitals": [
     {
       "name": "Diego Garcia",

@@ -1,15 +1,5 @@
 {
   "cca2": "lv",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Latvia"
-    },
-    {
-      "language": "fr",
-      "name": "Lettonie"
-    }
-  ],
   "capitals": [
     {
       "name": "Riga",

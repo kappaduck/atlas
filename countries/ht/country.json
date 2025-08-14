@@ -1,15 +1,5 @@
 {
   "cca2": "ht",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Haiti"
-    },
-    {
-      "language": "fr",
-      "name": "Ha\u00EFti"
-    }
-  ],
   "capitals": [
     {
       "name": "Port-au-Prince",

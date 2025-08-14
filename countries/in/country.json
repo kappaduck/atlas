@@ -1,15 +1,5 @@
 {
   "cca2": "in",
-  "translations": [
-    {
-      "language": "en",
-      "name": "India"
-    },
-    {
-      "language": "fr",
-      "name": "Inde"
-    }
-  ],
   "capitals": [
     {
       "name": "New Delhi",

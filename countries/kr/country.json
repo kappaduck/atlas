@@ -1,15 +1,5 @@
 {
   "cca2": "kr",
-  "translations": [
-    {
-      "language": "en",
-      "name": "South Korea"
-    },
-    {
-      "language": "fr",
-      "name": "Cor\u00E9e du Sud"
-    }
-  ],
   "capitals": [
     {
       "name": "Seoul",

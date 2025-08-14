@@ -1,15 +1,5 @@
 {
   "cca2": "pt",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Portugal"
-    },
-    {
-      "language": "fr",
-      "name": "Portugal"
-    }
-  ],
   "capitals": [
     {
       "name": "Lisbon",

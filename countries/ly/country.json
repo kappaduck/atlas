@@ -1,15 +1,5 @@
 {
   "cca2": "ly",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Libya"
-    },
-    {
-      "language": "fr",
-      "name": "Libye"
-    }
-  ],
   "capitals": [
     {
       "name": "Tripoli",

@@ -1,15 +1,5 @@
 {
   "cca2": "sd",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Sudan"
-    },
-    {
-      "language": "fr",
-      "name": "Soudan"
-    }
-  ],
   "capitals": [
     {
       "name": "Khartoum",

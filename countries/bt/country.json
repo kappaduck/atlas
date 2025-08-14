@@ -1,15 +1,5 @@
 {
   "cca2": "bt",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Bhutan"
-    },
-    {
-      "language": "fr",
-      "name": "Bhoutan"
-    }
-  ],
   "capitals": [
     {
       "name": "Thimphu",

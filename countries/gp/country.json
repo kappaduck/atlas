@@ -1,15 +1,5 @@
 {
   "cca2": "gp",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Guadeloupe"
-    },
-    {
-      "language": "fr",
-      "name": "Guadeloupe"
-    }
-  ],
   "capitals": [
     {
       "name": "Basse-Terre",

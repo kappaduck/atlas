@@ -1,15 +1,5 @@
 {
   "cca2": "kn",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Saint Kitts and Nevis"
-    },
-    {
-      "language": "fr",
-      "name": "Saint-Christophe-et-Ni\u00E9v\u00E8s"
-    }
-  ],
   "capitals": [
     {
       "name": "Basseterre",

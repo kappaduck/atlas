@@ -1,15 +1,5 @@
 {
   "cca2": "kp",
-  "translations": [
-    {
-      "language": "en",
-      "name": "North Korea"
-    },
-    {
-      "language": "fr",
-      "name": "Cor\u00E9e du Nord"
-    }
-  ],
   "capitals": [
     {
       "name": "Pyongyang",

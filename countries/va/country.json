@@ -1,15 +1,5 @@
 {
   "cca2": "va",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Vatican City"
-    },
-    {
-      "language": "fr",
-      "name": "Cit\u00E9 du Vatican"
-    }
-  ],
   "capitals": [
     {
       "name": "Vatican City",

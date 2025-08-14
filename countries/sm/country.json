@@ -1,15 +1,5 @@
 {
   "cca2": "sm",
-  "translations": [
-    {
-      "language": "en",
-      "name": "San Marino"
-    },
-    {
-      "language": "fr",
-      "name": "Saint-Marin"
-    }
-  ],
   "capitals": [
     {
       "name": "City of San Marino",

@@ -1,15 +1,5 @@
 {
   "cca2": "tr",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Turkey"
-    },
-    {
-      "language": "fr",
-      "name": "Turquie"
-    }
-  ],
   "capitals": [
     {
       "name": "Ankara",

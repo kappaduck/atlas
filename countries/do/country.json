@@ -1,15 +1,5 @@
 {
   "cca2": "do",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Dominican Republic"
-    },
-    {
-      "language": "fr",
-      "name": "R\u00E9publique dominicaine"
-    }
-  ],
   "capitals": [
     {
       "name": "Santo Domingo",

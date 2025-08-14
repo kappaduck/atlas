@@ -1,15 +1,5 @@
 {
   "cca2": "ag",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Antigua and Barbuda"
-    },
-    {
-      "language": "fr",
-      "name": "Antigua-et-Barbuda"
-    }
-  ],
   "capitals": [
     {
       "name": "Saint John\u0027s",

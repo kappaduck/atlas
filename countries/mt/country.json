@@ -1,15 +1,5 @@
 {
   "cca2": "mt",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Malta"
-    },
-    {
-      "language": "fr",
-      "name": "Malte"
-    }
-  ],
   "capitals": [
     {
       "name": "Valletta",

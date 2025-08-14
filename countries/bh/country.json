@@ -1,15 +1,5 @@
 {
   "cca2": "bh",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Bahrain"
-    },
-    {
-      "language": "fr",
-      "name": "Bahre\u00EFn"
-    }
-  ],
   "capitals": [
     {
       "name": "Manama",

@@ -1,15 +1,5 @@
 {
   "cca2": "ax",
-  "translations": [
-    {
-      "language": "en",
-      "name": "\u00C5land Islands"
-    },
-    {
-      "language": "fr",
-      "name": "Ahvenanmaa"
-    }
-  ],
   "capitals": [
     {
       "name": "Mariehamn",

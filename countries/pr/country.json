@@ -1,15 +1,5 @@
 {
   "cca2": "pr",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Puerto Rico"
-    },
-    {
-      "language": "fr",
-      "name": "Porto Rico"
-    }
-  ],
   "capitals": [
     {
       "name": "San Juan",

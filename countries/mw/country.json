@@ -1,15 +1,5 @@
 {
   "cca2": "mw",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Malawi"
-    },
-    {
-      "language": "fr",
-      "name": "Malawi"
-    }
-  ],
   "capitals": [
     {
       "name": "Lilongwe",

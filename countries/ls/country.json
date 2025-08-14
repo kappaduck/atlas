@@ -1,15 +1,5 @@
 {
   "cca2": "ls",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Lesotho"
-    },
-    {
-      "language": "fr",
-      "name": "Lesotho"
-    }
-  ],
   "capitals": [
     {
       "name": "Maseru",

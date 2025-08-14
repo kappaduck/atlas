@@ -1,15 +1,5 @@
 {
   "cca2": "ws",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Samoa"
-    },
-    {
-      "language": "fr",
-      "name": "Samoa"
-    }
-  ],
   "capitals": [
     {
       "name": "Apia",

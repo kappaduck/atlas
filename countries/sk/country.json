@@ -1,15 +1,5 @@
 {
   "cca2": "sk",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Slovakia"
-    },
-    {
-      "language": "fr",
-      "name": "Slovaquie"
-    }
-  ],
   "capitals": [
     {
       "name": "Bratislava",

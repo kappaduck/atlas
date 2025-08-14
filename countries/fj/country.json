@@ -1,15 +1,5 @@
 {
   "cca2": "fj",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Fiji"
-    },
-    {
-      "language": "fr",
-      "name": "Fidji"
-    }
-  ],
   "capitals": [
     {
       "name": "Suva",

@@ -1,15 +1,5 @@
 {
   "cca2": "dk",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Denmark"
-    },
-    {
-      "language": "fr",
-      "name": "Danemark"
-    }
-  ],
   "capitals": [
     {
       "name": "Copenhagen",

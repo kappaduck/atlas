@@ -2,7 +2,7 @@
 // The source code is licensed under MIT License.
 
 using Atlas.Domain.Countries;
-using Atlas.Domain.Languages;
+using Microsoft.Extensions.Localization;
 
 namespace Atlas.Application.Countries;
 
@@ -10,12 +10,11 @@ internal static class CountryMappers
 {
     extension(Country country)
     {
-        internal CountryResponse ToResponse()
+        internal CountryResponse ToResponse(IStringLocalizer<Resources> localizer)
         {
-            string name = country.Translations.First(t => t.Language == Language.English).Name;
             (Uri map, Uri flag, _) = country.Resources;
 
-            return new CountryResponse(country.Cca2, name, new ResourcesResponse(map, flag));
+            return new CountryResponse(country.Cca2, localizer[country.Cca2], new ResourcesResponse(map, flag));
         }
     }
 }

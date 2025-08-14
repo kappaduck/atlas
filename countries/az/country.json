@@ -1,15 +1,5 @@
 {
   "cca2": "az",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Azerbaijan"
-    },
-    {
-      "language": "fr",
-      "name": "Azerba\u00EFdjan"
-    }
-  ],
   "capitals": [
     {
       "name": "Baku",

@@ -4,8 +4,8 @@
 using Atlas.Application.Countries.Repositories;
 using Atlas.Domain.Countries;
 using Atlas.Domain.Geography;
-using Atlas.Domain.Languages;
 using Mediator;
+using Microsoft.Extensions.Localization;
 
 namespace Atlas.Application.Countries.Commands;
 
@@ -13,7 +13,7 @@ public static class GuessCountry
 {
     public sealed record Command(string GuessedCca2, string AnswerCca2) : ICommand<GuessedCountryResponse>;
 
-    internal sealed class Handler(ICountryRepository repository) : ICommandHandler<Command, GuessedCountryResponse>
+    internal sealed class Handler(ICountryRepository repository, IStringLocalizer<Resources> localizer) : ICommandHandler<Command, GuessedCountryResponse>
     {
         public async ValueTask<GuessedCountryResponse> Handle(Command command, CancellationToken cancellationToken)
         {
@@ -23,10 +23,10 @@ public static class GuessCountry
             return Guess(country!, guessedCountry!);
         }
 
-        private static GuessedCountryResponse Guess(Country answer, Country guessed) => new()
+        private GuessedCountryResponse Guess(Country answer, Country guessed) => new()
         {
             Cca2 = guessed.Cca2,
-            Name = guessed.Translations.First(t => t.Language == Language.English).Name,
+            Name = localizer[guessed.Cca2],
             Direction = Direction.Calculate(guessed.Coordinate, answer.Coordinate),
             Kilometers = (int)Math.Round(Distance.Calculate(guessed.Coordinate, answer.Coordinate).Kilometers),
             IsSameContinent = guessed.Continent == answer.Continent,

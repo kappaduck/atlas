@@ -1,15 +1,5 @@
 {
   "cca2": "kz",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Kazakhstan"
-    },
-    {
-      "language": "fr",
-      "name": "Kazakhstan"
-    }
-  ],
   "capitals": [
     {
       "name": "Astana",

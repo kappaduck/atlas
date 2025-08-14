@@ -1,15 +1,5 @@
 {
   "cca2": "je",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Jersey"
-    },
-    {
-      "language": "fr",
-      "name": "Jersey"
-    }
-  ],
   "capitals": [
     {
       "name": "Saint Helier",

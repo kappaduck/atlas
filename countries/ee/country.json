@@ -1,15 +1,5 @@
 {
   "cca2": "ee",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Estonia"
-    },
-    {
-      "language": "fr",
-      "name": "Estonie"
-    }
-  ],
   "capitals": [
     {
       "name": "Tallinn",

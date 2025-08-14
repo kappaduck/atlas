@@ -1,15 +1,5 @@
 {
   "cca2": "no",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Norway"
-    },
-    {
-      "language": "fr",
-      "name": "Norv\u00E8ge"
-    }
-  ],
   "capitals": [
     {
       "name": "Oslo",

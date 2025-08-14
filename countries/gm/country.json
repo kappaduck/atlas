@@ -1,15 +1,5 @@
 {
   "cca2": "gm",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Gambia"
-    },
-    {
-      "language": "fr",
-      "name": "Gambie"
-    }
-  ],
   "capitals": [
     {
       "name": "Banjul",

@@ -1,15 +1,5 @@
 {
   "cca2": "aw",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Aruba"
-    },
-    {
-      "language": "fr",
-      "name": "Aruba"
-    }
-  ],
   "capitals": [
     {
       "name": "Oranjestad",

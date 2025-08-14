@@ -1,15 +1,5 @@
 {
   "cca2": "kh",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Cambodia"
-    },
-    {
-      "language": "fr",
-      "name": "Cambodge"
-    }
-  ],
   "capitals": [
     {
       "name": "Phnom Penh",

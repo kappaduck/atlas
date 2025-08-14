@@ -1,15 +1,5 @@
 {
   "cca2": "cu",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Cuba"
-    },
-    {
-      "language": "fr",
-      "name": "Cuba"
-    }
-  ],
   "capitals": [
     {
       "name": "Havana",

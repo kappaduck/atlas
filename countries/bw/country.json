@@ -1,15 +1,5 @@
 {
   "cca2": "bw",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Botswana"
-    },
-    {
-      "language": "fr",
-      "name": "Botswana"
-    }
-  ],
   "capitals": [
     {
       "name": "Gaborone",

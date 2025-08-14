@@ -1,15 +1,5 @@
 {
   "cca2": "mu",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Mauritius"
-    },
-    {
-      "language": "fr",
-      "name": "\u00CEle Maurice"
-    }
-  ],
   "capitals": [
     {
       "name": "Port Louis",

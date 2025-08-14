@@ -1,15 +1,5 @@
 {
   "cca2": "sr",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Suriname"
-    },
-    {
-      "language": "fr",
-      "name": "Surinam"
-    }
-  ],
   "capitals": [
     {
       "name": "Paramaribo",

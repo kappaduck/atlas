@@ -1,15 +1,5 @@
 {
   "cca2": "vc",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Saint Vincent and the Grenadines"
-    },
-    {
-      "language": "fr",
-      "name": "Saint-Vincent-et-les-Grenadines"
-    }
-  ],
   "capitals": [
     {
       "name": "Kingstown",

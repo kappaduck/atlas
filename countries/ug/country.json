@@ -1,15 +1,5 @@
 {
   "cca2": "ug",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Uganda"
-    },
-    {
-      "language": "fr",
-      "name": "Ouganda"
-    }
-  ],
   "capitals": [
     {
       "name": "Kampala",

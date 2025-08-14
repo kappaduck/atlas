@@ -1,15 +1,5 @@
 {
   "cca2": "cd",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Democratic Republic of the Congo"
-    },
-    {
-      "language": "fr",
-      "name": "République démocratique du Congo"
-    }
-  ],
   "capitals": [
     {
       "name": "Kinshasa",

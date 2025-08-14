@@ -1,15 +1,5 @@
 {
   "cca2": "bi",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Burundi"
-    },
-    {
-      "language": "fr",
-      "name": "Burundi"
-    }
-  ],
   "capitals": [
     {
       "name": "Gitega",

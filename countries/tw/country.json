@@ -1,15 +1,5 @@
 {
   "cca2": "tw",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Taiwan"
-    },
-    {
-      "language": "fr",
-      "name": "Ta\u00EFwan"
-    }
-  ],
   "capitals": [
     {
       "name": "Taipei",

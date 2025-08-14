@@ -1,15 +1,5 @@
 {
   "cca2": "zm",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Zambia"
-    },
-    {
-      "language": "fr",
-      "name": "Zambie"
-    }
-  ],
   "capitals": [
     {
       "name": "Lusaka",

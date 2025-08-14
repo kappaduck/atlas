@@ -1,15 +1,5 @@
 {
   "cca2": "cy",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Cyprus"
-    },
-    {
-      "language": "fr",
-      "name": "Chypre"
-    }
-  ],
   "capitals": [
     {
       "name": "Nicosia",

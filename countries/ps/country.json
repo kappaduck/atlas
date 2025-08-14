@@ -1,15 +1,5 @@
 {
   "cca2": "ps",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Palestine"
-    },
-    {
-      "language": "fr",
-      "name": "Palestine"
-    }
-  ],
   "capitals": [
     {
       "name": "Ramallah",

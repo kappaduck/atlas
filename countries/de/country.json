@@ -1,15 +1,5 @@
 {
   "cca2": "de",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Germany"
-    },
-    {
-      "language": "fr",
-      "name": "Allemagne"
-    }
-  ],
   "capitals": [
     {
       "name": "Berlin",

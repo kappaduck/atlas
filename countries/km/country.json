@@ -1,15 +1,5 @@
 {
   "cca2": "km",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Comoros"
-    },
-    {
-      "language": "fr",
-      "name": "Comores"
-    }
-  ],
   "capitals": [
     {
       "name": "Moroni",

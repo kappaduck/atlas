@@ -1,15 +1,5 @@
 {
   "cca2": "nc",
-  "translations": [
-    {
-      "language": "en",
-      "name": "New Caledonia"
-    },
-    {
-      "language": "fr",
-      "name": "Nouvelle-Cal\u00E9donie"
-    }
-  ],
   "capitals": [
     {
       "name": "Noum\u00E9a",

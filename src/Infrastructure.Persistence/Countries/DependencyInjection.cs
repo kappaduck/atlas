@@ -30,7 +30,7 @@ internal static class DependencyInjection
                     .AddOptionsWithValidateOnStart<ExcludedCountriesOptions>();
 
             services.AddHttpClient<IDataSource<Country>, CountryDataSource>(configure);
-            services.AddHttpClient<IDataSource<CountryLookup>, CountryLookupDataSource>(configure);
+            services.AddHttpClient<IDataSource<Cca2>, CountryLookupDataSource>(configure);
 
             services.AddSingleton<ICountryRepository, CountryRepository>();
             services.AddSingleton<ICountryLookupRepository, CountryLookupRepository>();

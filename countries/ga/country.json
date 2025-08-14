@@ -1,15 +1,5 @@
 {
   "cca2": "ga",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Gabon"
-    },
-    {
-      "language": "fr",
-      "name": "Gabon"
-    }
-  ],
   "capitals": [
     {
       "name": "Libreville",

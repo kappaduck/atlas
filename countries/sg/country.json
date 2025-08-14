@@ -1,15 +1,5 @@
 {
   "cca2": "sg",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Singapore"
-    },
-    {
-      "language": "fr",
-      "name": "Singapour"
-    }
-  ],
   "capitals": [
     {
       "name": "Singapore",

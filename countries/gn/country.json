@@ -1,15 +1,5 @@
 {
   "cca2": "gn",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Guinea"
-    },
-    {
-      "language": "fr",
-      "name": "Guin\u00E9e"
-    }
-  ],
   "capitals": [
     {
       "name": "Conakry",

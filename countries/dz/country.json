@@ -1,15 +1,5 @@
 {
   "cca2": "dz",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Algeria"
-    },
-    {
-      "language": "fr",
-      "name": "Alg\u00E9rie"
-    }
-  ],
   "capitals": [
     {
       "name": "Algiers",

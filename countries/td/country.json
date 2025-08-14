@@ -1,15 +1,5 @@
 {
   "cca2": "td",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Chad"
-    },
-    {
-      "language": "fr",
-      "name": "Tchad"
-    }
-  ],
   "capitals": [
     {
       "name": "N\u0027Djamena",

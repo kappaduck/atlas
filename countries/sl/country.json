@@ -1,15 +1,5 @@
 {
   "cca2": "sl",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Sierra Leone"
-    },
-    {
-      "language": "fr",
-      "name": "Sierra Leone"
-    }
-  ],
   "capitals": [
     {
       "name": "Freetown",

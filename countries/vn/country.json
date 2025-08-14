@@ -1,15 +1,5 @@
 {
   "cca2": "vn",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Vietnam"
-    },
-    {
-      "language": "fr",
-      "name": "Vi\u00EAt Nam"
-    }
-  ],
   "capitals": [
     {
       "name": "Hanoi",

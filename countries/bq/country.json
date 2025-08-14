@@ -1,15 +1,5 @@
 {
   "cca2": "bq",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Caribbean Netherlands"
-    },
-    {
-      "language": "fr",
-      "name": "Pays-Bas carib\u00E9ens"
-    }
-  ],
   "capitals": [
     {
       "name": "Kralendijk",

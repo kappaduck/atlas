@@ -1,15 +1,5 @@
 {
   "cca2": "so",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Somalia"
-    },
-    {
-      "language": "fr",
-      "name": "Somalie"
-    }
-  ],
   "capitals": [
     {
       "name": "Mogadishu",

@@ -1,15 +1,5 @@
 {
   "cca2": "gl",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Greenland"
-    },
-    {
-      "language": "fr",
-      "name": "Groenland"
-    }
-  ],
   "capitals": [
     {
       "name": "Nuuk",

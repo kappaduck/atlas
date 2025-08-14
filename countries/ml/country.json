@@ -1,15 +1,5 @@
 {
   "cca2": "ml",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Mali"
-    },
-    {
-      "language": "fr",
-      "name": "Mali"
-    }
-  ],
   "capitals": [
     {
       "name": "Bamako",

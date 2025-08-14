@@ -1,15 +1,5 @@
 {
   "cca2": "cv",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Cape Verde"
-    },
-    {
-      "language": "fr",
-      "name": "\u00CEles du Cap-Vert"
-    }
-  ],
   "capitals": [
     {
       "name": "Praia",

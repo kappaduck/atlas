@@ -1,15 +1,5 @@
 {
   "cca2": "gt",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Guatemala"
-    },
-    {
-      "language": "fr",
-      "name": "Guatemala"
-    }
-  ],
   "capitals": [
     {
       "name": "Guatemala City",

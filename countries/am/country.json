@@ -1,15 +1,5 @@
 {
   "cca2": "am",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Armenia"
-    },
-    {
-      "language": "fr",
-      "name": "Arm\u00E9nie"
-    }
-  ],
   "capitals": [
     {
       "name": "Yerevan",

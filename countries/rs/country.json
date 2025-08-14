@@ -1,15 +1,5 @@
 {
   "cca2": "rs",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Serbia"
-    },
-    {
-      "language": "fr",
-      "name": "Serbie"
-    }
-  ],
   "capitals": [
     {
       "name": "Belgrade",

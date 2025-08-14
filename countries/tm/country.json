@@ -1,15 +1,5 @@
 {
   "cca2": "tm",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Turkmenistan"
-    },
-    {
-      "language": "fr",
-      "name": "Turkm\u00E9nistan"
-    }
-  ],
   "capitals": [
     {
       "name": "Ashgabat",

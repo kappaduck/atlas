@@ -1,15 +1,5 @@
 {
   "cca2": "la",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Laos"
-    },
-    {
-      "language": "fr",
-      "name": "Laos"
-    }
-  ],
   "capitals": [
     {
       "name": "Vientiane",

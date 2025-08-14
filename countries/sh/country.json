@@ -1,15 +1,5 @@
 {
   "cca2": "sh",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Saint Helena, Ascension and Tristan da Cunha"
-    },
-    {
-      "language": "fr",
-      "name": "Sainte-H\u00E9l\u00E8ne, Ascension et Tristan da Cunha"
-    }
-  ],
   "capitals": [
     {
       "name": "Jamestown",

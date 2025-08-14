@@ -1,15 +1,5 @@
 {
   "cca2": "bb",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Barbados"
-    },
-    {
-      "language": "fr",
-      "name": "Barbade"
-    }
-  ],
   "capitals": [
     {
       "name": "Bridgetown",

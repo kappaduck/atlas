@@ -1,15 +1,5 @@
 {
   "cca2": "pm",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Saint Pierre and Miquelon"
-    },
-    {
-      "language": "fr",
-      "name": "Saint-Pierre-et-Miquelon"
-    }
-  ],
   "capitals": [
     {
       "name": "Saint-Pierre",

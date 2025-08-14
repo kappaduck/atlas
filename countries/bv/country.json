@@ -1,15 +1,5 @@
 {
   "cca2": "bv",
-  "translations": [
-    {
-      "language": "en",
-      "name": "Bouvet Island"
-    },
-    {
-      "language": "fr",
-      "name": "\u00CEle Bouvet"
-    }
-  ],
   "capitals": [],
   "borders": [],
   "continent": "Antarctica",
