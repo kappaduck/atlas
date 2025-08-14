@@ -144,6 +144,10 @@ body {
     }
   }
 
+  .zoom-cursor {
+    cursor: zoom-in;
+  }
+
   button, .btn-link {
     cursor: pointer;
     border: 1px solid var(--color-text);

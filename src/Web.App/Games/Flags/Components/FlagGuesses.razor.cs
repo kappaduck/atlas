@@ -4,6 +4,7 @@
 using Microsoft.AspNetCore.Components;
 using System.Globalization;
 using Web.App.Components;
+using Web.App.Components.Modals;
 
 namespace Web.App.Games.Flags.Components;
 
@@ -16,6 +17,9 @@ public sealed partial class FlagGuesses
 
     [CascadingParameter]
     public required GameState GameState { get; init; }
+
+    [CascadingParameter]
+    public required ZoomModal ZoomModal { get; init; }
 
     private string HasWonGameCss => GameState.GameFinished ? "found" : string.Empty;
 

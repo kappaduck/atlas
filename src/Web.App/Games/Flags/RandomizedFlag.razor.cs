@@ -17,12 +17,14 @@ public sealed partial class RandomizedFlag(IMediator mediator)
     private const int MaxAttempts = 6;
 
     private CountryLookupInput _input = default!;
-    private ZoomModal _zoomModal = default!;
 
     private readonly GameState _gameState = new(null, MaxAttempts);
 
     [CascadingParameter]
     public required AppSettings Settings { get; init; }
+
+    [CascadingParameter]
+    public required ZoomModal ZoomModal { get; init; }
 
     private string DifficultyCss => Settings.DifficultyCss(Settings.Flag.Random, _gameState.Guesses.Count);
 

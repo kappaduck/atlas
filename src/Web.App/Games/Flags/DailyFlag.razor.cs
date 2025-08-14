@@ -17,12 +17,13 @@ public sealed partial class DailyFlag(ILocalStorage storage, IMediator mediator,
 {
     private const int MaxAttempts = 6;
 
-    private ZoomModal _zoomModal = default!;
-
     private readonly GameState _gameState = new(null, MaxAttempts);
 
     [CascadingParameter]
     public required AppSettings Settings { get; init; }
+
+    [CascadingParameter]
+    public required ZoomModal ZoomModal { get; init; }
 
     private string DifficultyCss => Settings.DifficultyCss(Settings.Flag.Daily, _gameState.Guesses.Count);
 
