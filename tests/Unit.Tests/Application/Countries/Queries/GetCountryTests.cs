@@ -17,21 +17,19 @@ public sealed class GetCountryTests
 
     private readonly ICountryRepository _repository = Substitute.For<ICountryRepository>();
 
-    private readonly GetCountry.Query _query;
-    private readonly GetCountry.Handler _handler;
+    private readonly GetCountry _handler;
 
     public GetCountryTests(LocalizerFixture localizer)
     {
         _repository.GetAsync(_country.Cca2, CancellationToken.None).Returns(_country);
 
-        _query = new GetCountry.Query(_country.Cca2);
-        _handler = new GetCountry.Handler(_repository, localizer.Countries);
+        _handler = new GetCountry(_repository, localizer.Countries);
     }
 
     [Test]
     public async Task HandleShouldGetTheCountry()
     {
-        await _handler.Handle(_query, CancellationToken.None);
+        await _handler.HandleAsync(_country.Cca2, CancellationToken.None);
 
         await _repository.Received(1).GetAsync(_country.Cca2, CancellationToken.None);
     }
@@ -39,7 +37,7 @@ public sealed class GetCountryTests
     [Test]
     public async Task HandleShouldReturnTheCountry()
     {
-        CountryResponse? country = await _handler.Handle(_query, CancellationToken.None);
+        CountryResponse? country = await _handler.HandleAsync(_country.Cca2, CancellationToken.None);
 
         await Assert.That(country!.Cca2).IsEqualTo(_country.Cca2);
     }

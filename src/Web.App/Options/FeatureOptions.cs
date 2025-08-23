@@ -6,7 +6,7 @@ using System.Diagnostics.CodeAnalysis;
 namespace Web.App.Options;
 
 [ExcludeFromCodeCoverage]
-internal sealed class FeatureOptions
+public sealed class FeatureOptions
 {
     internal const string Section = "features";
 

@@ -17,20 +17,19 @@ public sealed class GetDailyCountryTests
 
     private readonly ICountryRepository _repository = Substitute.For<ICountryRepository>();
 
-    private readonly GetDailyCountry.Query _query = new();
-    private readonly GetDailyCountry.Handler _handler;
+    private readonly GetDailyCountry _handler;
 
     public GetDailyCountryTests(LocalizerFixture localizer)
     {
         _repository.GetAllAsync(CancellationToken.None).Returns([_country]);
 
-        _handler = new GetDailyCountry.Handler(_repository, localizer.Countries);
+        _handler = new GetDailyCountry(_repository, localizer.Countries);
     }
 
     [Test]
     public async Task HandleShouldGetAllCountries()
     {
-        await _handler.Handle(_query, CancellationToken.None);
+        await _handler.HandleAsync(CancellationToken.None);
 
         await _repository.Received(1).GetAllAsync(CancellationToken.None);
     }
@@ -40,7 +39,7 @@ public sealed class GetDailyCountryTests
     {
         _repository.GetAllAsync(CancellationToken.None).Returns([]);
 
-        CountryResponse? country = await _handler.Handle(_query, CancellationToken.None);
+        CountryResponse? country = await _handler.HandleAsync(CancellationToken.None);
 
         await Assert.That(country).IsNull();
     }
@@ -48,7 +47,7 @@ public sealed class GetDailyCountryTests
     [Test]
     public async Task HandleShouldReturnTheCountryOfTheDay()
     {
-        CountryResponse? country = await _handler.Handle(_query, CancellationToken.None);
+        CountryResponse? country = await _handler.HandleAsync(CancellationToken.None);
 
         await Assert.That(country!.Cca2).IsEqualTo(_country.Cca2);
     }

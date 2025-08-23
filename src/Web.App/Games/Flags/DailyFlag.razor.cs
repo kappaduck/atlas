@@ -4,7 +4,6 @@
 using Atlas.Application.Countries;
 using Atlas.Application.Countries.Commands;
 using Atlas.Application.Countries.Queries;
-using Mediator;
 using Microsoft.AspNetCore.Components;
 using Web.App.Components.Modals;
 using Web.App.Services;
@@ -13,7 +12,7 @@ using Web.App.Storage;
 
 namespace Web.App.Games.Flags;
 
-public sealed partial class DailyFlag(ILocalStorage storage, IMediator mediator, ITimeService timeService)
+public sealed partial class DailyFlag(ILocalStorage storage, IGetDailyCountry dailyHandler, IGuessCountry guessHandler, ITimeService timeService)
 {
     private const int MaxAttempts = 6;
 
@@ -29,7 +28,7 @@ public sealed partial class DailyFlag(ILocalStorage storage, IMediator mediator,
 
     protected override async Task OnInitializedAsync()
     {
-        CountryResponse? country = await mediator.Send(new GetDailyCountry.Query());
+        CountryResponse? country = await dailyHandler.HandleAsync(CancellationToken.None);
 
         DateOnly today = timeService.Today;
         DateOnly lastPlayed = storage.GetItem<DateOnly>(LocalStorageKeys.Today);
@@ -52,7 +51,7 @@ public sealed partial class DailyFlag(ILocalStorage storage, IMediator mediator,
 
     private async Task GuessAsync(string cca2)
     {
-        GuessedCountryResponse guessedCountry = await mediator.Send(new GuessCountry.Command(cca2, _gameState.Country!.Cca2));
+        GuessedCountryResponse guessedCountry = await guessHandler.HandleAsync(cca2, _gameState.Country!.Cca2, CancellationToken.None);
 
         _gameState.Guesses.Add(guessedCountry);
         storage.SetItem(LocalStorageKeys.Guesses, _gameState.Guesses);

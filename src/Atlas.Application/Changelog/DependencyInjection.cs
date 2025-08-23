@@ -1,22 +1,17 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
-using Atlas.Application.Changelog;
-using Atlas.Application.Countries;
+using Atlas.Application.Changelog.Queries;
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Atlas.Application;
+namespace Atlas.Application.Changelog;
 
 [ExcludeFromCodeCoverage]
-public static class DependencyInjection
+internal static class DependencyInjection
 {
     extension(IServiceCollection services)
     {
-        public void AddApplication()
-        {
-            services.AddChangelog();
-            services.AddCountries();
-        }
+        internal void AddChangelog() => services.AddSingleton<IGetChangelog, GetChangelog>();
     }
 }

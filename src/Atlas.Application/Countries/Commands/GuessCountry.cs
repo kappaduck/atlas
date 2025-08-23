@@ -4,34 +4,33 @@
 using Atlas.Application.Countries.Repositories;
 using Atlas.Domain.Countries;
 using Atlas.Domain.Geography;
-using Mediator;
 using Microsoft.Extensions.Localization;
 
 namespace Atlas.Application.Countries.Commands;
 
-public static class GuessCountry
+public interface IGuessCountry
 {
-    public sealed record Command(string GuessedCca2, string AnswerCca2) : ICommand<GuessedCountryResponse>;
+    ValueTask<GuessedCountryResponse> HandleAsync(string guessedCca2, string answerCca2, CancellationToken cancellationToken);
+}
 
-    internal sealed class Handler(ICountryRepository repository, IStringLocalizer<Resources> localizer) : ICommandHandler<Command, GuessedCountryResponse>
+internal sealed class GuessCountry(ICountryRepository repository, IStringLocalizer<Resources> localizer) : IGuessCountry
+{
+    public async ValueTask<GuessedCountryResponse> HandleAsync(string guessedCca2, string answerCca2, CancellationToken cancellationToken)
     {
-        public async ValueTask<GuessedCountryResponse> Handle(Command command, CancellationToken cancellationToken)
-        {
-            Country? country = await repository.GetAsync(new Cca2(command.AnswerCca2), cancellationToken).ConfigureAwait(false);
-            Country? guessedCountry = await repository.GetAsync(new Cca2(command.GuessedCca2), cancellationToken).ConfigureAwait(false);
+        Country? country = await repository.GetAsync(new Cca2(answerCca2), cancellationToken).ConfigureAwait(false);
+        Country? guessedCountry = await repository.GetAsync(new Cca2(guessedCca2), cancellationToken).ConfigureAwait(false);
 
-            return Guess(country!, guessedCountry!);
-        }
-
-        private GuessedCountryResponse Guess(Country answer, Country guessed) => new()
-        {
-            Cca2 = guessed.Cca2,
-            Name = localizer[guessed.Cca2],
-            Direction = Direction.Calculate(guessed.Coordinate, answer.Coordinate),
-            Kilometers = (int)Math.Round(Distance.Calculate(guessed.Coordinate, answer.Coordinate).Kilometers),
-            IsSameContinent = guessed.Continent == answer.Continent,
-            Success = guessed.Cca2 == answer.Cca2,
-            Flag = guessed.Resources.Flag
-        };
+        return Guess(country!, guessedCountry!);
     }
+
+    private GuessedCountryResponse Guess(Country answer, Country guessed) => new()
+    {
+        Cca2 = guessed.Cca2,
+        Name = localizer[guessed.Cca2],
+        Direction = Direction.Calculate(guessed.Coordinate, answer.Coordinate),
+        Kilometers = (int)Math.Round(Distance.Calculate(guessed.Coordinate, answer.Coordinate).Kilometers),
+        IsSameContinent = guessed.Continent == answer.Continent,
+        Success = guessed.Cca2 == answer.Cca2,
+        Flag = guessed.Resources.Flag
+    };
 }

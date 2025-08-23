@@ -1,9 +1,8 @@
 ﻿@using Atlas.Application.Countries
 @using Atlas.Application.Countries.Queries
-@using Mediator
 
 @inject IStringLocalizer<Resources> localizer
-@inject IMediator mediator
+@inject IGetAllCountries handler
 
 @if (_countries.Length > 0)
 {
@@ -27,5 +26,5 @@ else
     private CountryResponse[] _countries = [];
 
     protected override async Task OnInitializedAsync()
-        => _countries = await mediator.Send(new GetAllCountries.Query());
+        => _countries = await handler.HandleAsync(CancellationToken.None);
 }

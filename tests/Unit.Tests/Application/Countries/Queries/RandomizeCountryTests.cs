@@ -17,20 +17,19 @@ public sealed class RandomizeCountryTests
 
     private readonly ICountryRepository _repository = Substitute.For<ICountryRepository>();
 
-    private readonly RandomizeCountry.Query _query = new();
-    private readonly RandomizeCountry.Handler _handler;
+    private readonly RandomizeCountry _handler;
 
     public RandomizeCountryTests(LocalizerFixture localizer)
     {
         _repository.GetAllAsync(CancellationToken.None).Returns([_country]);
 
-        _handler = new RandomizeCountry.Handler(_repository, localizer.Countries);
+        _handler = new RandomizeCountry(_repository, localizer.Countries);
     }
 
     [Test]
     public async Task HandleShouldGetAllCountries()
     {
-        await _handler.Handle(_query, CancellationToken.None);
+        await _handler.HandleAsync(CancellationToken.None);
 
         await _repository.Received(1).GetAllAsync(CancellationToken.None);
     }
@@ -38,7 +37,7 @@ public sealed class RandomizeCountryTests
     [Test]
     public async Task HandleShouldReturnTheRandomizedCountry()
     {
-        CountryResponse? country = await _handler.Handle(_query, CancellationToken.None);
+        CountryResponse? country = await _handler.HandleAsync(CancellationToken.None);
 
         await Assert.That(country!.Cca2).IsEqualTo(_country.Cca2);
     }
@@ -48,7 +47,7 @@ public sealed class RandomizeCountryTests
     {
         _repository.GetAllAsync(CancellationToken.None).Returns([]);
 
-        CountryResponse? country = await _handler.Handle(_query, CancellationToken.None);
+        CountryResponse? country = await _handler.HandleAsync(CancellationToken.None);
 
         await Assert.That(country).IsNull();
     }
@@ -56,7 +55,7 @@ public sealed class RandomizeCountryTests
     [Test]
     public async Task HandleShouldCacheTheRandomizedCountry()
     {
-        await _handler.Handle(_query, CancellationToken.None);
+        await _handler.HandleAsync(CancellationToken.None);
 
         _repository.Received(1).Save(Arg.Is<Country>(c => c.Cca2 == _country.Cca2));
     }

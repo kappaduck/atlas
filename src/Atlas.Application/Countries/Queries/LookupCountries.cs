@@ -3,24 +3,23 @@
 
 using Atlas.Application.Countries.Repositories;
 using Atlas.Domain.Countries;
-using Mediator;
 using Microsoft.Extensions.Localization;
 
 namespace Atlas.Application.Countries.Queries;
 
-public static class LookupCountries
+public interface ILookupCountries
 {
-    public sealed record Query : IQuery<CountryLookupResponse[]>;
+    ValueTask<CountryLookupResponse[]> HandleAsync(CancellationToken cancellationToken);
+}
 
-    internal sealed class Handler(ICountryLookupRepository repository, IStringLocalizer<Resources> localizer) : IQueryHandler<Query, CountryLookupResponse[]>
+internal sealed class LookupCountries(ICountryLookupRepository repository, IStringLocalizer<Resources> localizer) : ILookupCountries
+{
+    public async ValueTask<CountryLookupResponse[]> HandleAsync(CancellationToken cancellationToken)
     {
-        public async ValueTask<CountryLookupResponse[]> Handle(Query query, CancellationToken cancellationToken)
-        {
-            Cca2[] countries = await repository.LookupAsync(cancellationToken).ConfigureAwait(false);
+        Cca2[] countries = await repository.LookupAsync(cancellationToken).ConfigureAwait(false);
 
-            return [.. countries.Select(Map)];
-        }
-
-        private CountryLookupResponse Map(Cca2 cca2) => new(cca2, localizer[cca2]);
+        return [.. countries.Select(Map)];
     }
+
+    private CountryLookupResponse Map(Cca2 cca2) => new(cca2, localizer[cca2]);
 }
