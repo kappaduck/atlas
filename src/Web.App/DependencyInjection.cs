@@ -25,6 +25,9 @@ internal static class DependencyInjection
             builder.Services.Configure<CompanyOptions>(builder.Configuration.GetRequiredSection(CompanyOptions.Section))
                             .AddSingleton<IValidateOptions<CompanyOptions>, CompanyOptions.Validator>()
                             .AddSingleton(sp => sp.GetRequiredService<IOptions<CompanyOptions>>().Value);
+
+            builder.Services.Configure<FeatureOptions>(builder.Configuration.GetRequiredSection(FeatureOptions.Section))
+                            .AddSingleton(sp => sp.GetRequiredService<IOptions<FeatureOptions>>().Value);
         }
 
         internal void AddServices()

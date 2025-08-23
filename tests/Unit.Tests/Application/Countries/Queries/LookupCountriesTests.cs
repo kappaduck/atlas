@@ -16,13 +16,12 @@ public sealed class LookupCountriesTests
     private readonly LocalizerFixture _localizer;
     private readonly ICountryLookupRepository _repository = Substitute.For<ICountryLookupRepository>();
 
-    private readonly LookupCountries.Query _query = new();
-    private readonly LookupCountries.Handler _handler;
+    private readonly LookupCountries _handler;
 
     public LookupCountriesTests(LocalizerFixture localizer)
     {
         _localizer = localizer;
-        _handler = new LookupCountries.Handler(_repository, _localizer.Countries);
+        _handler = new LookupCountries(_repository, _localizer.Countries);
     }
 
     [Test]
@@ -30,7 +29,7 @@ public sealed class LookupCountriesTests
     {
         _repository.LookupAsync(CancellationToken.None).Returns([]);
 
-        await _handler.Handle(_query, CancellationToken.None);
+        await _handler.HandleAsync(CancellationToken.None);
 
         await _repository.Received(1).LookupAsync(CancellationToken.None);
     }
@@ -43,7 +42,7 @@ public sealed class LookupCountriesTests
 
         _repository.LookupAsync(CancellationToken.None).Returns([cca2]);
 
-        CountryLookupResponse[] response = await _handler.Handle(_query, CancellationToken.None);
+        CountryLookupResponse[] response = await _handler.HandleAsync(CancellationToken.None);
 
         await Assert.That(response[0].Cca2).IsEqualTo(cca2);
         await Assert.That(response[0].Name).IsEqualTo("Canada");

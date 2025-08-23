@@ -3,7 +3,6 @@
 
 using Atlas.Application.Countries;
 using Atlas.Application.Countries.Queries;
-using Mediator;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
@@ -13,7 +12,7 @@ using System.Text;
 
 namespace Web.App.Games.Components;
 
-public sealed partial class CountryLookupInput(IMediator mediator, IJSInProcessRuntime jsRuntime) : IDisposable
+public sealed partial class CountryLookupInput(ILookupCountries handler, IJSInProcessRuntime jsRuntime) : IDisposable
 {
     private string _input = string.Empty;
     private CountryLookupResponse[] _filteredCountries = [];
@@ -54,7 +53,7 @@ public sealed partial class CountryLookupInput(IMediator mediator, IJSInProcessR
     }
 
     protected override async Task OnInitializedAsync()
-        => _countries = await mediator.Send(new LookupCountries.Query());
+        => _countries = await handler.HandleAsync(CancellationToken.None);
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {

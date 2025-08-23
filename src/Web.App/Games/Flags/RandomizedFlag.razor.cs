@@ -4,15 +4,15 @@
 using Atlas.Application.Countries;
 using Atlas.Application.Countries.Commands;
 using Atlas.Application.Countries.Queries;
-using Mediator;
 using Microsoft.AspNetCore.Components;
 using Web.App.Components.Modals;
 using Web.App.Games.Components;
+using Web.App.Options;
 using Web.App.Settings;
 
 namespace Web.App.Games.Flags;
 
-public sealed partial class RandomizedFlag(IMediator mediator)
+public sealed partial class RandomizedFlag(IRandomizeCountry randomizeHandler, IGetCountry getHandler, IGuessCountry guessHandler, FeatureOptions options)
 {
     private const int MaxAttempts = 6;
 
@@ -26,18 +26,28 @@ public sealed partial class RandomizedFlag(IMediator mediator)
     [CascadingParameter]
     public required ZoomModal ZoomModal { get; init; }
 
+    [Parameter, SupplyParameterFromQuery(Name = "cca2")]
+    public string? Cca2 { get; set; }
+
     private string DifficultyCss => Settings.DifficultyCss(Settings.Flag.Random, _gameState.Guesses.Count);
 
     protected override async Task OnInitializedAsync()
     {
-        CountryResponse? country = await mediator.Send(new RandomizeCountry.Query());
-
+        CountryResponse? country = await GetCountryAsync();
         _gameState.Reset(country);
+
+        ValueTask<CountryResponse?> GetCountryAsync()
+        {
+            if (options.DevMode && !string.IsNullOrEmpty(Cca2))
+                return getHandler.HandleAsync(Cca2, CancellationToken.None);
+
+            return randomizeHandler.HandleAsync(CancellationToken.None);
+        }
     }
 
     private async Task GuessAsync(string cca2)
     {
-        GuessedCountryResponse guessedCountry = await mediator.Send(new GuessCountry.Command(cca2, _gameState.Country!.Cca2));
+        GuessedCountryResponse guessedCountry = await guessHandler.HandleAsync(cca2, _gameState.Country!.Cca2, CancellationToken.None);
 
         _gameState.Guesses.Add(guessedCountry);
     }
@@ -46,7 +56,7 @@ public sealed partial class RandomizedFlag(IMediator mediator)
     {
         _input.Reset();
 
-        CountryResponse? country = await mediator.Send(new RandomizeCountry.Query());
+        CountryResponse? country = await randomizeHandler.HandleAsync(CancellationToken.None);
         _gameState.Reset(country);
     }
 

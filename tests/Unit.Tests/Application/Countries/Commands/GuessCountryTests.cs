@@ -19,14 +19,14 @@ public sealed class GuessCountryTests
 
     private readonly ICountryRepository _repository = Substitute.For<ICountryRepository>();
 
-    private readonly GuessCountry.Handler _handler;
+    private readonly GuessCountry _handler;
 
     public GuessCountryTests(LocalizerFixture localizer)
     {
         _repository.GetAsync(_canada.Cca2, CancellationToken.None).Returns(_canada);
         _repository.GetAsync(_italy.Cca2, CancellationToken.None).Returns(_italy);
 
-        _handler = new GuessCountry.Handler(_repository, localizer.Countries);
+        _handler = new GuessCountry(_repository, localizer.Countries);
 
         localizer.Countries[_canada.Cca2].Returns(new LocalizedString(_canada.Cca2, "Canada"));
         localizer.Countries[_italy.Cca2].Returns(new LocalizedString(_italy.Cca2, "Italy"));
@@ -35,9 +35,7 @@ public sealed class GuessCountryTests
     [Test]
     public async Task HandleShouldReturnTheGuessedCountryWhenIsNotSameCountry()
     {
-        GuessCountry.Command command = new(_canada.Cca2, _italy.Cca2);
-
-        GuessedCountryResponse guessedCountry = await _handler.Handle(command, CancellationToken.None);
+        GuessedCountryResponse guessedCountry = await _handler.HandleAsync(_canada.Cca2, _italy.Cca2, CancellationToken.None);
 
         await Assert.That(guessedCountry.Cca2).IsEqualTo(_canada.Cca2);
         await Assert.That(guessedCountry.Name).IsEqualTo("Canada");
@@ -51,9 +49,7 @@ public sealed class GuessCountryTests
     [Test]
     public async Task HandleShouldReturnTheCountryWhenIsSameCountry()
     {
-        GuessCountry.Command command = new(_italy.Cca2, _italy.Cca2);
-
-        GuessedCountryResponse guessedCountry = await _handler.Handle(command, CancellationToken.None);
+        GuessedCountryResponse guessedCountry = await _handler.HandleAsync(_italy.Cca2, _italy.Cca2, CancellationToken.None);
 
         await Assert.That(guessedCountry.Cca2).IsEqualTo(_italy.Cca2);
         await Assert.That(guessedCountry.Name).IsEqualTo("Italy");

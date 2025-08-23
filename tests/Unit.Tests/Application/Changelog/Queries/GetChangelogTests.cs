@@ -10,18 +10,17 @@ public sealed class GetChangelogTests
 {
     private readonly IChangelogRepository _repository = Substitute.For<IChangelogRepository>();
 
-    private readonly GetChangelog.Query _query = new();
-    private readonly GetChangelog.Handler _handler;
+    private readonly GetChangelog _handler;
 
     public GetChangelogTests()
     {
-        _handler = new GetChangelog.Handler(_repository);
+        _handler = new GetChangelog(_repository);
     }
 
     [Test]
     public async Task HandleShouldGetChangelog()
     {
-        await _handler.Handle(_query, CancellationToken.None);
+        await _handler.HandleAsync(CancellationToken.None);
 
         await _repository.Received(1).GetAsync(CancellationToken.None);
     }

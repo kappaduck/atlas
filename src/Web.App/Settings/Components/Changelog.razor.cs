@@ -6,12 +6,11 @@ using Markdig;
 using Markdig.Renderers.Html;
 using Markdig.Syntax;
 using Markdig.Syntax.Inlines;
-using Mediator;
 using Microsoft.AspNetCore.Components;
 
 namespace Web.App.Settings.Components;
 
-public sealed partial class Changelog(IMediator mediator)
+public sealed partial class Changelog(IGetChangelog handler)
 {
     private string? _changelog;
     private bool _isLoading;
@@ -19,7 +18,7 @@ public sealed partial class Changelog(IMediator mediator)
     protected override async Task OnInitializedAsync()
     {
         _isLoading = true;
-        _changelog = await mediator.Send(new GetChangelog.Query());
+        _changelog = await handler.HandleAsync(CancellationToken.None);
 
         _isLoading = false;
         StateHasChanged();
