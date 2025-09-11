@@ -34,7 +34,7 @@ internal sealed class GetDailyCountry(ICountryRepository repository, IStringLoca
     /// https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function.
     /// </summary>
     /// <returns>The hashed value.</returns>
-    private uint Hash()
+    private static uint Hash()
     {
         const uint prime = 16777619;
         uint hash = 2166136261;
