@@ -19,7 +19,7 @@ public sealed partial class InputDifficulty
     [Parameter]
     public bool Disabled { get; init; }
 
-    private (Difficulty Difficulty, string Name)[] GetDifficulties()
+    private static (Difficulty Difficulty, string Name)[] GetDifficulties()
         => [.. Enum.GetValues<Difficulty>().Select(d => (d, d.ToString()))];
 
     private string GetRadioId(string difficultyName)
