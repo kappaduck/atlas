@@ -28,6 +28,8 @@ internal sealed class Resources
 
     internal const string Continent = nameof(Continent);
 
+    internal const string Countries = nameof(Countries);
+
     internal const string CountryList = nameof(CountryList);
 
     internal const string Daily = nameof(Daily);
