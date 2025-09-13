@@ -16,6 +16,16 @@ export function scrollToLookup() {
   }, 300);
 }
 
+export function scrollToCountry(id: string) {
+  const element = document.getElementById(id);
+
+  if (!element) {
+    return;
+  }
+
+  element.scrollIntoView({ behavior: 'instant', block: 'nearest' });
+}
+
 export function init(dotnet: DotNet) {
   eventCallback = (event: MouseEvent) => {
     const lookup = document.querySelector('.container');

@@ -28,7 +28,7 @@
     padding-block: var(--item-padding-block);
     padding-inline-start: 0.5em;
 
-    &:hover {
+    &:hover, &.active {
       background-color: var(--color-background);
     }
 

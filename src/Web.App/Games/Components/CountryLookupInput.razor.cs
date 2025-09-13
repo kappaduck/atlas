@@ -17,6 +17,7 @@ public sealed partial class CountryLookupInput(ILookupCountries handler, IJSInPr
     private string _input = string.Empty;
     private CountryLookupResponse[] _filteredCountries = [];
     private CountryLookupResponse[] _countries = [];
+    private int _selectedIndex = -1;
 
     private IJSInProcessObjectReference? _module;
 
@@ -32,12 +33,15 @@ public sealed partial class CountryLookupInput(ILookupCountries handler, IJSInPr
     {
         _input = string.Empty;
         _filteredCountries = [];
+        _selectedIndex = -1;
     }
 
     [JSInvokable]
     public void Clear()
     {
         _filteredCountries = [];
+        _selectedIndex = -1;
+
         StateHasChanged();
     }
 
@@ -53,7 +57,7 @@ public sealed partial class CountryLookupInput(ILookupCountries handler, IJSInPr
     }
 
     protected override async Task OnInitializedAsync()
-        => _countries = await handler.HandleAsync(CancellationToken.None);
+        => _countries = [.. (await handler.HandleAsync(CancellationToken.None)).OrderBy(c => c.Name)];
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -84,20 +88,36 @@ public sealed partial class CountryLookupInput(ILookupCountries handler, IJSInPr
         if (e.Key == Keyboard.Enter && TrySelectCountry(out string? cca2))
             return SelectCountryAsync(cca2);
 
+        HandleCountryNavigation(e.Key);
+
         return Task.CompletedTask;
     }
+
+    private void HandleCountryNavigation(string key)
+    {
+        if (key == Keyboard.ArrowDown)
+            _selectedIndex = (_selectedIndex + 1) % _filteredCountries.Length;
+
+        if (key == Keyboard.ArrowUp)
+            _selectedIndex = (_selectedIndex - 1 + _filteredCountries.Length) % _filteredCountries.Length;
+
+        _module?.InvokeVoid("scrollToCountry", $"country-{_selectedIndex}");
+    }
+
+    private string IsActive(int index) => index == _selectedIndex ? "active" : string.Empty;
 
     private void Focus()
     {
         _module?.InvokeVoid("scrollToLookup");
         _filteredCountries = LookupCountries();
+
+        StateHasChanged();
+        _module?.InvokeVoid("scrollToCountry", $"country-{0}");
     }
 
     private Task SelectCountryAsync(string cca2)
     {
-        _input = string.Empty;
-        _filteredCountries = [];
-
+        Reset();
         return Guess.InvokeAsync(cca2);
     }
 
@@ -108,6 +128,13 @@ public sealed partial class CountryLookupInput(ILookupCountries handler, IJSInPr
         if (_filteredCountries.Length == 1)
         {
             cca2 = _filteredCountries[0].Cca2;
+            return true;
+        }
+
+        if (_selectedIndex != -1)
+        {
+            Console.WriteLine(_selectedIndex);
+            cca2 = _filteredCountries[_selectedIndex].Cca2;
             return true;
         }
 
@@ -187,6 +214,8 @@ public sealed partial class CountryLookupInput(ILookupCountries handler, IJSInPr
 
     private static class Keyboard
     {
+        internal const string ArrowDown = "ArrowDown";
+        internal const string ArrowUp = "ArrowUp";
         internal const string Escape = "Escape";
         internal const string Enter = "Enter";
     }
