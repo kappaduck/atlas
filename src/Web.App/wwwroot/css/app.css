@@ -346,6 +346,14 @@ body {
   .shift {
     filter: hue-rotate(90deg);
   }
+
+  .mirrored {
+    transform: scaleX(-1);
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
 }
 
 @keyframes placeholder-glow {

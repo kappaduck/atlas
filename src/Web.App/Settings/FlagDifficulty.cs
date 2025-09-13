@@ -3,11 +3,11 @@
 
 namespace Web.App.Settings;
 
-public sealed record FlagDifficulty
+public enum FlagDifficulty
 {
-    public Difficulty All { get; init; }
-
-    public Difficulty Daily { get; init; }
-
-    public Difficulty Random { get; init; }
+    None = 0,
+    Blur = 1,
+    Invert = 2,
+    Shift = 3,
+    Grayscale = 4,
 }

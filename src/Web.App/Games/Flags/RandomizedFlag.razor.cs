@@ -29,7 +29,7 @@ public sealed partial class RandomizedFlag(IRandomizeCountry randomizeHandler, I
     [Parameter, SupplyParameterFromQuery(Name = "cca2")]
     public string? Cca2 { get; set; }
 
-    private string DifficultyCss => Settings.DifficultyCss(Settings.Flag.Random, _gameState.Guesses.Count);
+    private string DifficultyCss => Settings.FlagDifficultyCss(Settings.Flag.Random, _gameState.Guesses.Count);
 
     protected override async Task OnInitializedAsync()
     {

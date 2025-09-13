@@ -5,13 +5,13 @@ using Microsoft.AspNetCore.Components;
 
 namespace Web.App.Settings.Components;
 
-public sealed partial class InputDifficulty
+public sealed partial class InputDifficulty<T> where T : struct, Enum
 {
     [Parameter]
-    public Difficulty Value { get; init; }
+    public T Value { get; init; }
 
     [Parameter]
-    public EventCallback<Difficulty> ValueChanged { get; init; }
+    public EventCallback<T> ValueChanged { get; init; }
 
     [Parameter, EditorRequired]
     public required string GroupName { get; init; }
@@ -19,8 +19,8 @@ public sealed partial class InputDifficulty
     [Parameter]
     public bool Disabled { get; init; }
 
-    private static (Difficulty Difficulty, string Name)[] GetDifficulties()
-        => [.. Enum.GetValues<Difficulty>().Select(d => (d, d.ToString()))];
+    private static (T Difficulty, string Name)[] GetDifficulties()
+        => [.. Enum.GetValues<T>().Select(d => (d, d.ToString()))];
 
     private string GetRadioId(string difficultyName)
         => $"{GroupName}-{difficultyName}";

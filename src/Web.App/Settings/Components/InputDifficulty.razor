@@ -1,8 +1,9 @@
-﻿
+﻿@typeparam T where T : struct, Enum
+
 @inject IStringLocalizer<Resources> localizer
 
 <div class="radio-group">
-    @foreach ((Difficulty difficulty, string name) in GetDifficulties())
+    @foreach ((T difficulty, string name) in GetDifficulties())
     {
         <div class="radio">
             <label for="@GetRadioId(name)">@localizer[name]</label>
@@ -10,7 +11,7 @@
                    name="@GroupName"
                    type="radio"
                    disabled="@Disabled"
-                   checked="@(Value == difficulty)"
+                   checked="@Value.Equals(difficulty)"
                    @onchange="async () => await ValueChanged.InvokeAsync(difficulty)" />
         </div>
     }

@@ -10,21 +10,25 @@ public sealed partial class DifficultySettings
     [CascadingParameter]
     public required AppSettings Settings { get; set; }
 
-    private bool FlagAllEnabled => Settings.Flag.All != Difficulty.None;
+    private bool FlagAllEnabled => Settings.Flag.All != FlagDifficulty.None;
+
+    private bool CountryAllEnabled => Settings.Country.All != CountryDifficulty.None;
 
     private string FlagAllEnabledCss => FlagAllEnabled ? "disabled" : string.Empty;
 
-    private void OnFlagAllDifficultyChange(Difficulty difficulty)
+    private string CountryAllEnabledCss => CountryAllEnabled ? "disabled" : string.Empty;
+
+    private void OnFlagAllDifficultyChange(FlagDifficulty difficulty)
     {
         Settings.Flag = Settings.Flag with
         {
             All = difficulty,
-            Daily = Difficulty.None,
-            Random = Difficulty.None
+            Daily = FlagDifficulty.None,
+            Random = FlagDifficulty.None
         };
     }
 
-    private void OnFlagDailyDifficultyChange(Difficulty difficulty)
+    private void OnFlagDailyDifficultyChange(FlagDifficulty difficulty)
     {
         Settings.Flag = Settings.Flag with
         {
@@ -32,9 +36,35 @@ public sealed partial class DifficultySettings
         };
     }
 
-    private void OnFlagRandomDifficultyChange(Difficulty difficulty)
+    private void OnFlagRandomDifficultyChange(FlagDifficulty difficulty)
     {
         Settings.Flag = Settings.Flag with
+        {
+            Random = difficulty
+        };
+    }
+
+    private void OnCountryAllDifficultyChange(CountryDifficulty difficulty)
+    {
+        Settings.Country = Settings.Country with
+        {
+            All = difficulty,
+            Daily = CountryDifficulty.None,
+            Random = CountryDifficulty.None
+        };
+    }
+
+    private void OnCountryDailyDifficultyChange(CountryDifficulty difficulty)
+    {
+        Settings.Country = Settings.Country with
+        {
+            Daily = difficulty
+        };
+    }
+
+    private void OnCountryRandomDifficultyChange(CountryDifficulty difficulty)
+    {
+        Settings.Country = Settings.Country with
         {
             Random = difficulty
         };
