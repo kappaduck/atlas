@@ -45,7 +45,7 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
         }
     }
 
-    public FlagDifficulty Flag
+    public FlagDifficultySettings Flag
     {
         get => _data.Flag;
         set
@@ -60,20 +60,52 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
         }
     }
 
-    public string DifficultyCss(Difficulty difficulty, int attempts)
+    public CountryDifficultySettings Country
     {
-        if (Flag.All != Difficulty.None)
+        get => _data.Country;
+        set
+        {
+            if (_data.Country == value)
+                return;
+
+            _data = _data with { Country = value };
+            storage.SetItem(LocalStorageKeys.Settings, _data);
+
+            StateHasChanged();
+        }
+    }
+
+    public string FlagDifficultyCss(FlagDifficulty difficulty, int attempts)
+    {
+        if (Flag.All != FlagDifficulty.None)
             return GetDifficulty(Flag.All);
 
         return GetDifficulty(difficulty);
 
-        string GetDifficulty(Difficulty difficulty) => difficulty switch
+        string GetDifficulty(FlagDifficulty difficulty) => difficulty switch
         {
-            Difficulty.Blur => $"blur-{attempts}",
-            Difficulty.Invert => "invert",
-            Difficulty.Shift => "shift",
-            Difficulty.Grayscale => "grayscale",
-            Difficulty.None => string.Empty
+            FlagDifficulty.Blur => $"blur-{attempts}",
+            FlagDifficulty.Invert => "invert",
+            FlagDifficulty.Shift => "shift",
+            FlagDifficulty.Grayscale => "grayscale",
+            FlagDifficulty.None => string.Empty
+        };
+    }
+
+    public string CountryDifficultyCss(CountryDifficulty difficulty, int attempts)
+    {
+        if (Country.All != CountryDifficulty.None)
+            return GetDifficulty(Country.All);
+
+        return GetDifficulty(difficulty);
+
+        string GetDifficulty(CountryDifficulty difficulty) => difficulty switch
+        {
+            CountryDifficulty.Rotated => "rotated",
+            CountryDifficulty.Mirrored => "mirrored",
+            CountryDifficulty.Hidden => "hidden",
+            CountryDifficulty.Blur => $"blur-{attempts}",
+            CountryDifficulty.None => string.Empty
         };
     }
 
@@ -93,6 +125,8 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
     {
         public General General { get; init; } = new();
 
-        public FlagDifficulty Flag { get; init; } = new();
+        public FlagDifficultySettings Flag { get; init; } = new();
+
+        public CountryDifficultySettings Country { get; init; } = new();
     }
 }

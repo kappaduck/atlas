@@ -8,10 +8,10 @@ namespace Web.App.Settings.Components;
 public sealed partial class InputDifficulty
 {
     [Parameter]
-    public Difficulty Value { get; init; }
+    public FlagDifficulty Value { get; init; }
 
     [Parameter]
-    public EventCallback<Difficulty> ValueChanged { get; init; }
+    public EventCallback<FlagDifficulty> ValueChanged { get; init; }
 
     [Parameter, EditorRequired]
     public required string GroupName { get; init; }
@@ -19,8 +19,8 @@ public sealed partial class InputDifficulty
     [Parameter]
     public bool Disabled { get; init; }
 
-    private static (Difficulty Difficulty, string Name)[] GetDifficulties()
-        => [.. Enum.GetValues<Difficulty>().Select(d => (d, d.ToString()))];
+    private static (FlagDifficulty Difficulty, string Name)[] GetDifficulties()
+        => [.. Enum.GetValues<FlagDifficulty>().Select(d => (d, d.ToString()))];
 
     private string GetRadioId(string difficultyName)
         => $"{GroupName}-{difficultyName}";

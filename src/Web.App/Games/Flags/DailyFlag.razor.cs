@@ -24,7 +24,7 @@ public sealed partial class DailyFlag(ILocalStorage storage, IGetDailyCountry da
     [CascadingParameter]
     public required ZoomModal ZoomModal { get; init; }
 
-    private string DifficultyCss => Settings.DifficultyCss(Settings.Flag.Daily, _gameState.Guesses.Count);
+    private string DifficultyCss => Settings.FlagDifficultyCss(Settings.Flag.Daily, _gameState.Guesses.Count);
 
     protected override async Task OnInitializedAsync()
     {

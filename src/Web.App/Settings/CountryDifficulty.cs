@@ -3,11 +3,11 @@
 
 namespace Web.App.Settings;
 
-public enum Difficulty
+public enum CountryDifficulty
 {
     None = 0,
-    Blur = 1,
-    Invert = 2,
-    Shift = 3,
-    Grayscale = 4,
+    Rotated = 1,
+    Mirrored = 2,
+    Hidden = 3,
+    Blur = 4
 }
