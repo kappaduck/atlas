@@ -26,6 +26,7 @@
   "resources": {
     "map": "https://goo.gl/maps/zix9qNFX69E9yZ2M6",
     "flag": "https://flagcdn.com/co.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/co.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/co.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/co/country.svg"
   }
 }

@@ -20,6 +20,7 @@
   "resources": {
     "map": "https://goo.gl/maps/4HhJ2jkPdSL9BPRcA",
     "flag": "https://flagcdn.com/lc.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/lc.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/lc.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/lc/country.svg"
   }
 }

@@ -22,6 +22,7 @@
   "resources": {
     "map": "https://goo.gl/maps/DTKvw5Bd1QZaDZmE8",
     "flag": "https://flagcdn.com/va.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/va.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/va.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/va/country.svg"
   }
 }

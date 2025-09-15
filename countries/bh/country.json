@@ -20,6 +20,7 @@
   "resources": {
     "map": "https://goo.gl/maps/5Zue99Zc6vFBHxzJ7",
     "flag": "https://flagcdn.com/bh.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/bh.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/bh.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/bh/country.svg"
   }
 }

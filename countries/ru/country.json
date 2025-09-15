@@ -35,6 +35,7 @@
   "resources": {
     "map": "https://goo.gl/maps/4F4PpDhGJgVvLby57",
     "flag": "https://flagcdn.com/ru.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ru.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ru.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/ru/country.svg"
   }
 }

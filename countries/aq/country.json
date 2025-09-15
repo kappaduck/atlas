@@ -12,6 +12,7 @@
   "resources": {
     "map": "https://goo.gl/maps/kyBuJriu4itiXank7",
     "flag": "https://flagcdn.com/aq.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/aq.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/aq.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/aq/country.svg"
   }
 }

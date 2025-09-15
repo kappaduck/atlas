@@ -20,6 +20,7 @@
   "resources": {
     "map": "https://goo.gl/maps/qiaVwcLVTXX3eoTNA",
     "flag": "https://flagcdn.com/kn.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/kn.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/kn.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/kn/country.svg"
   }
 }

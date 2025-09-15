@@ -22,6 +22,7 @@
   "resources": {
     "map": "https://goo.gl/maps/jmEVLugreeqiZXxbA",
     "flag": "https://flagcdn.com/ca.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ca.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ca.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/ca/country.svg"
   }
 }

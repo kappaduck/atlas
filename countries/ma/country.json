@@ -24,6 +24,7 @@
   "resources": {
     "map": "https://goo.gl/maps/6oMv3dyBZg3iaXQ5A",
     "flag": "https://flagcdn.com/ma.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ma.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ma.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/ma/country.svg"
   }
 }

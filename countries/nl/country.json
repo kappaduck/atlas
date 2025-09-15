@@ -23,6 +23,7 @@
   "resources": {
     "map": "https://goo.gl/maps/Hv6zQswGhFxoVVBm6",
     "flag": "https://flagcdn.com/nl.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/nl.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/nl.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/nl/country.svg"
   }
 }

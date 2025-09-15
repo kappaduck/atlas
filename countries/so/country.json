@@ -24,6 +24,7 @@
   "resources": {
     "map": "https://goo.gl/maps/8of8q7D1a8p7R6Fc9",
     "flag": "https://flagcdn.com/so.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/so.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/so.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/so/country.svg"
   }
 }

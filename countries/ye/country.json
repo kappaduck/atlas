@@ -23,6 +23,7 @@
   "resources": {
     "map": "https://goo.gl/maps/WCmE76HKcLideQQw7",
     "flag": "https://flagcdn.com/ye.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ye.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ye.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/ye/country.svg"
   }
 }

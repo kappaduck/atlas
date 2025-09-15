@@ -20,6 +20,7 @@
   "resources": {
     "map": "https://goo.gl/maps/P3ZVXX3LH63t91hL8",
     "flag": "https://flagcdn.com/ky.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ky.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ky.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/ky/country.svg"
   }
 }

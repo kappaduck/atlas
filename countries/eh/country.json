@@ -24,6 +24,7 @@
   "resources": {
     "map": "https://goo.gl/maps/7nU3mB69vP6zQp7A8",
     "flag": "https://flagcdn.com/eh.svg",
-    "coatOfArms": null
+    "coatOfArms": null,
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/eh/country.svg"
   }
 }

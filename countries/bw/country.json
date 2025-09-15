@@ -25,6 +25,7 @@
   "resources": {
     "map": "https://goo.gl/maps/E364KeLy6N4JwxwQ8",
     "flag": "https://flagcdn.com/bw.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/bw.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/bw.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/bw/country.svg"
   }
 }

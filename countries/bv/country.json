@@ -12,6 +12,7 @@
   "resources": {
     "map": "https://goo.gl/maps/7WRQAEKZb4uK36yi9",
     "flag": "https://flagcdn.com/bv.svg",
-    "coatOfArms": null
+    "coatOfArms": null,
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/bv/country.svg"
   }
 }

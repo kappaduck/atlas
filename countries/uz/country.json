@@ -26,6 +26,7 @@
   "resources": {
     "map": "https://goo.gl/maps/AJpo6MjMx23qSWCz8",
     "flag": "https://flagcdn.com/uz.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/uz.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/uz.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/uz/country.svg"
   }
 }

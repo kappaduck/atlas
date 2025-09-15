@@ -26,6 +26,7 @@
   "resources": {
     "map": "https://goo.gl/maps/9DfnyfbxNM2g5U9b9",
     "flag": "https://flagcdn.com/bo.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/bo.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/bo.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/bo/country.svg"
   }
 }
