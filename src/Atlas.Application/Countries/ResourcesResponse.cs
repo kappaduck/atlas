@@ -3,4 +3,4 @@
 
 namespace Atlas.Application.Countries;
 
-public sealed record ResourcesResponse(Uri Map, Uri Flag);
+public sealed record ResourcesResponse(Uri Map, Uri Flag, Uri Country);
