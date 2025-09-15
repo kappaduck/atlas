@@ -61,6 +61,6 @@ public sealed class GetDailyCountryTests
         Continent = Continent.NorthAmerica,
         Coordinate = new Coordinate(60, 95),
         Population = 38008005,
-        Resources = new Resources(new Uri("https://www.google.com/maps/place/Canada"), new Uri("https://www.countryflags.io/ca/flat/64.svg"), null)
+        Resources = new Resources(new Uri("https://www.google.com/maps/place/Canada"), new Uri("https://www.countryflags.io/ca/flat/64.svg"), null, new Uri("https://www.country.shape/ca.svg"))
     };
 }

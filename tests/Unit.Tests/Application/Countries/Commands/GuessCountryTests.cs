@@ -69,7 +69,7 @@ public sealed class GuessCountryTests
         Continent = Continent.NorthAmerica,
         Coordinate = new Coordinate(60, -95),
         Population = 38005238,
-        Resources = new Resources(new Uri("https://www.google.com/maps/place/Canada"), new Uri("https://www.countryflags.io/ca/flat/64.svg"), null)
+        Resources = new Resources(new Uri("https://www.google.com/maps/place/Canada"), new Uri("https://www.countryflags.io/ca/flat/64.svg"), null, new Uri("https://www.country.shape/ca.svg"))
     };
 
     private static Country CreateItaly() => new()
@@ -81,6 +81,6 @@ public sealed class GuessCountryTests
         Continent = Continent.Europe,
         Coordinate = new Coordinate(42.83333333, 12.83333333),
         Population = 59554023,
-        Resources = new Resources(new Uri("https://www.google.com/maps/place/Italy"), new Uri("https://www.countryflags.io/it/flat/64.svg"), null)
+        Resources = new Resources(new Uri("https://www.google.com/maps/place/Italy"), new Uri("https://www.countryflags.io/it/flat/64.svg"), null, new Uri("https://www.country.shape.it.svg"))
     };
 }
