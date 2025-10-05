@@ -6,13 +6,12 @@ using Atlas.Application.Countries.Commands;
 using Atlas.Application.Countries.Queries;
 using Microsoft.AspNetCore.Components;
 using Web.App.Components.Modals;
-using Web.App.Services;
 using Web.App.Settings;
 using Web.App.Storage;
 
 namespace Web.App.Games.Flags;
 
-public sealed partial class DailyFlag(ILocalStorage storage, IGetDailyCountry dailyHandler, IGuessCountry guessHandler, ITimeService timeService)
+public sealed partial class DailyFlag(IDailyLocalStorage storage, IGetDailyFlag dailyHandler, IGuessCountry guessHandler)
 {
     private const int MaxAttempts = 6;
 
@@ -30,22 +29,14 @@ public sealed partial class DailyFlag(ILocalStorage storage, IGetDailyCountry da
     {
         CountryResponse? country = await dailyHandler.HandleAsync(CancellationToken.None);
 
-        DateOnly today = timeService.Today;
-        DateOnly lastPlayed = storage.GetItem<DateOnly>(LocalStorageKeys.Today);
-
-        if (lastPlayed != today)
-        {
-            storage.RemoveItem(LocalStorageKeys.Guesses);
-            storage.RemoveItem(LocalStorageKeys.GiveUp);
-            storage.SetItem(LocalStorageKeys.Today, today);
-        }
+        (GuessedCountryResponse[] guesses, bool gaveUp) = storage.Get(LocalStorageKeys.Flag);
 
         _gameState.Reset(country);
 
-        if (storage.GetItem<bool>(LocalStorageKeys.GiveUp))
+        if (gaveUp)
             _gameState.GiveUp();
 
-        foreach (GuessedCountryResponse guess in storage.GetItem<GuessedCountryResponse[]>(LocalStorageKeys.Guesses) ?? [])
+        foreach (GuessedCountryResponse guess in guesses)
             _gameState.Guesses.Add(guess);
     }
 
@@ -54,12 +45,12 @@ public sealed partial class DailyFlag(ILocalStorage storage, IGetDailyCountry da
         GuessedCountryResponse guessedCountry = await guessHandler.HandleAsync(cca2, _gameState.Country!.Cca2, CancellationToken.None);
 
         _gameState.Guesses.Add(guessedCountry);
-        storage.SetItem(LocalStorageKeys.Guesses, _gameState.Guesses);
+        storage.Set(LocalStorageKeys.Flag, _gameState.Guesses);
     }
 
     private void GiveUp()
     {
         _gameState.GiveUp();
-        storage.SetItem(LocalStorageKeys.GiveUp, value: true);
+        storage.Set(LocalStorageKeys.Flag, giveUp: true);
     }
 }
