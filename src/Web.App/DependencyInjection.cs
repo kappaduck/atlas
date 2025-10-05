@@ -37,6 +37,7 @@ internal static class DependencyInjection
 
             builder.Services.AddTransient<ITimeService, TimeService>();
             builder.Services.AddSingleton<ILocalStorage, LocalStorage>();
+            builder.Services.AddSingleton<IDailyLocalStorage, DailyLocalStorage>();
         }
 
         internal void ConfigureLoggings()

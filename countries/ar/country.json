@@ -26,6 +26,7 @@
   "resources": {
     "map": "https://goo.gl/maps/Z9DXNxhf2o93kvyc6",
     "flag": "https://flagcdn.com/ar.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ar.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ar.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/ar/country.svg"
   }
 }

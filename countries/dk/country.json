@@ -22,6 +22,7 @@
   "resources": {
     "map": "https://goo.gl/maps/UddGPN7hAyrtpFiT6",
     "flag": "https://flagcdn.com/dk.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/dk.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/dk.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/dk/country.svg"
   }
 }

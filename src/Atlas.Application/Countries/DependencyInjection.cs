@@ -18,6 +18,7 @@ internal static class DependencyInjection
             services.AddSingleton<IGetAllCountries, GetAllCountries>();
             services.AddSingleton<IGetCountry, GetCountry>();
             services.AddSingleton<IGetDailyCountry, GetDailyCountry>();
+            services.AddSingleton<IGetDailyFlag, GetDailyFlag>();
             services.AddSingleton<ILookupCountries, LookupCountries>();
             services.AddSingleton<IRandomizeCountry, RandomizeCountry>();
             services.AddSingleton<IGuessCountry, GuessCountry>();

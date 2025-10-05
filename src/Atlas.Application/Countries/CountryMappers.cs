@@ -12,9 +12,9 @@ internal static class CountryMappers
     {
         internal CountryResponse ToResponse(IStringLocalizer<Resources> localizer)
         {
-            (Uri map, Uri flag, _) = country.Resources;
+            (Uri map, Uri flag, _, Uri countryShape) = country.Resources;
 
-            return new CountryResponse(country.Cca2, localizer[country.Cca2], new ResourcesResponse(map, flag));
+            return new CountryResponse(country.Cca2, localizer[country.Cca2], new ResourcesResponse(map, flag, countryShape));
         }
     }
 }

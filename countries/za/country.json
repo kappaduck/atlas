@@ -41,6 +41,7 @@
   "resources": {
     "map": "https://goo.gl/maps/CLCZ1R8Uz1KpYhRv6",
     "flag": "https://flagcdn.com/za.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/za.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/za.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/za/country.svg"
   }
 }

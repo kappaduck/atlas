@@ -40,6 +40,8 @@ internal sealed class Resources
 
     internal const string Display = nameof(Display);
 
+    internal const string FailedDisplayCountry = nameof(FailedDisplayCountry);
+
     internal const string FailedDisplayFlag = nameof(FailedDisplayFlag);
 
     internal const string Flags = nameof(Flags);

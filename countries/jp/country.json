@@ -20,6 +20,7 @@
   "resources": {
     "map": "https://goo.gl/maps/NGTLSCSrA8bMrvnX9",
     "flag": "https://flagcdn.com/jp.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/jp.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/jp.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/jp/country.svg"
   }
 }

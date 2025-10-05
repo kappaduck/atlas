@@ -1,0 +1,40 @@
+@using Web.App.Games.Components
+@using Web.App.Games.Countries.Components
+
+@page "/countries/daily"
+
+@inject IStringLocalizer<Resources> localizer
+
+<div class="game">
+	@if (_gameState.Country is null)
+	{
+		<div class="placeholder" aria-hidden="true"></div>
+	}
+	else
+	{
+		<picture class="country @DifficultyCss" style="@Rotation">
+			<source srcset="@_gameState.Country.Resources.Country" />
+			<img src="@_gameState.Country.Resources.Country" alt="@localizer[Resources.FailedDisplayCountry]" />
+		</picture>
+	}
+	<div class="content">
+		<CascadingValue Value="_gameState" IsFixed="false">
+			@if (!_gameState.GameFinished)
+			{
+				<CountryLookupInput Guess="GuessAsync" />
+			}
+			else
+			{
+				<GameOver />
+			}
+			<CountryGuesses />
+		</CascadingValue>
+	</div>
+	<div class="actions">
+		<a href="/" class="link">
+			<i class="@Icons.ArrowLeftCircle"></i>
+			<span>@localizer[Resources.GoBack]</span>
+		</a>
+		<button class="btn-give-up" disabled="@_gameState.GameFinished" @onclick="GiveUp">@localizer[Resources.GiveUp]</button>
+	</div>
+</div>

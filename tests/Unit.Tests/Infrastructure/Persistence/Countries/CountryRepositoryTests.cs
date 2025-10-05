@@ -148,6 +148,6 @@ public sealed class CountryRepositoryTests
         Borders = [new Cca2("US")],
         Continent = Continent.NorthAmerica,
         Coordinate = new Coordinate(0, 0),
-        Resources = new Resources(new Uri("https://www.google.com/maps/place/Canada"), new Uri("https://canada.svg"), new Uri("https://canada.coat-of-arms.svg"))
+        Resources = new Resources(new Uri("https://www.google.com/maps/place/Canada"), new Uri("https://www.countryflags.io/ca/flat/64.svg"), null, new Uri("https://www.country.shape/ca.svg"))
     };
 }

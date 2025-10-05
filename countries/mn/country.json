@@ -23,6 +23,7 @@
   "resources": {
     "map": "https://goo.gl/maps/A1X7bMCKThBDNjzH6",
     "flag": "https://flagcdn.com/mn.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/mn.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/mn.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/mn/country.svg"
   }
 }

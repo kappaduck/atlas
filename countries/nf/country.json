@@ -20,6 +20,7 @@
   "resources": {
     "map": "https://goo.gl/maps/pbvtm6XYd1iZbjky5",
     "flag": "https://flagcdn.com/nf.svg",
-    "coatOfArms": null
+    "coatOfArms": null,
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/nf/country.svg"
   }
 }

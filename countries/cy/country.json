@@ -20,6 +20,7 @@
   "resources": {
     "map": "https://goo.gl/maps/77hPBRdLid8yD5Bm7",
     "flag": "https://flagcdn.com/cy.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cy.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cy.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/cy/country.svg"
   }
 }

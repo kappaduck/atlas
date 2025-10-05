@@ -27,6 +27,7 @@
   "resources": {
     "map": "https://goo.gl/maps/BXBGw7yUUFknCfva9",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/af.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/af.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/af/country.svg"
   }
 }

@@ -69,4 +69,6 @@ internal sealed record Resources
     public required Uri Flag { get; init; }
 
     public Uri? CoatOfArms { get; init; }
+
+    public required Uri Country { get; set; }
 }

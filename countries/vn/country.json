@@ -24,6 +24,7 @@
   "resources": {
     "map": "https://goo.gl/maps/PCpVt9WzdJ9A9nEZ9",
     "flag": "https://flagcdn.com/vn.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/vn.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/vn.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/vn/country.svg"
   }
 }

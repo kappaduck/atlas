@@ -14,9 +14,11 @@ public interface IGetDailyCountry
 
 internal sealed class GetDailyCountry(ICountryRepository repository, IStringLocalizer<Resources> localizer) : IGetDailyCountry
 {
+    private const string HashKey = "country";
+
     public async ValueTask<CountryResponse?> HandleAsync(CancellationToken cancellationToken)
     {
-        uint hash = Hash();
+        uint hash = DateTime.Today.Hash(HashKey);
 
         ReadOnlySpan<Country> countries = await repository.GetAllAsync(cancellationToken).ConfigureAwait(false);
 
@@ -27,24 +29,5 @@ internal sealed class GetDailyCountry(ICountryRepository repository, IStringLoca
 
         repository.Save(country);
         return country.ToResponse(localizer);
-    }
-
-    /// <summary>
-    /// Hashes the given date. The hash is deterministic and will always return the same value for the same date. It is based on the FNV-1a algorithm.
-    /// https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function.
-    /// </summary>
-    /// <returns>The hashed value.</returns>
-    private static uint Hash()
-    {
-        const uint prime = 16777619;
-        uint hash = 2166136261;
-
-        foreach (char c in DateTime.Today.ToString("yyyyMMdd").AsSpan())
-        {
-            hash ^= c;
-            hash *= prime;
-        }
-
-        return hash;
     }
 }

@@ -8,6 +8,5 @@ public enum CountryDifficulty
     None = 0,
     Rotated = 1,
     Mirrored = 2,
-    Hidden = 3,
-    Blur = 4
+    Blur = 3
 }

@@ -3,4 +3,4 @@
 
 namespace Atlas.Domain.Countries;
 
-public sealed record Resources(Uri Map, Uri Flag, Uri? CoatOfArms);
+public sealed record Resources(Uri Map, Uri Flag, Uri? CoatOfArms, Uri Country);

@@ -23,6 +23,7 @@
   "resources": {
     "map": "https://goo.gl/maps/Sz5VCU8UFBqMyTdc9",
     "flag": "https://flagcdn.com/lb.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/lb.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/lb.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/lb/country.svg"
   }
 }

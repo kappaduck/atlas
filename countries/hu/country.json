@@ -28,6 +28,7 @@
   "resources": {
     "map": "https://goo.gl/maps/9gfPupm5bffixiFJ6",
     "flag": "https://flagcdn.com/hu.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/hu.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/hu.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/hu/country.svg"
   }
 }

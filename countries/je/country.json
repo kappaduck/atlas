@@ -20,6 +20,7 @@
   "resources": {
     "map": "https://goo.gl/maps/rXG8GZZtsqK92kTCA",
     "flag": "https://flagcdn.com/je.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/je.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/je.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/je/country.svg"
   }
 }

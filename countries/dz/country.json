@@ -28,6 +28,7 @@
   "resources": {
     "map": "https://goo.gl/maps/RsAyAfyaiNVb8DpW8",
     "flag": "https://flagcdn.com/dz.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/dz.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/dz.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/dz/country.svg"
   }
 }

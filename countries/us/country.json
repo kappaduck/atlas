@@ -23,6 +23,7 @@
   "resources": {
     "map": "https://goo.gl/maps/e8M246zY4BSjkjAv6",
     "flag": "https://flagcdn.com/us.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/us.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/us.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/us/country.svg"
   }
 }

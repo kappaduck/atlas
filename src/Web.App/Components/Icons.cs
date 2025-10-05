@@ -17,6 +17,8 @@ internal static class Icons
 
     internal const string Company = "bi bi-building";
 
+    internal const string Earth = "bi bi-globe-americas";
+
     internal const string Flag = "bi bi-flag";
 
     internal const string InfoCircle = "bi bi-info-circle";

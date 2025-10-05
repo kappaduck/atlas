@@ -37,6 +37,7 @@
   "resources": {
     "map": "https://goo.gl/maps/p9qC6vgiFRRXzvGi7",
     "flag": "https://flagcdn.com/cn.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cn.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/cn.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/cn/country.svg"
   }
 }

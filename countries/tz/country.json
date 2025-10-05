@@ -29,6 +29,7 @@
   "resources": {
     "map": "https://goo.gl/maps/NWYMqZYXte4zGZ2Q8",
     "flag": "https://flagcdn.com/tz.svg",
-    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/tz.svg"
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/tz.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/tz/country.svg"
   }
 }
