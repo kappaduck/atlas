@@ -11,6 +11,13 @@ In theses games, you will be shown a flag and you have to guess the country it b
 - [Daily](https://atlas.kappaduck.com/flags/daily)
 - [Random](https://atlas.kappaduck.com/flags/random)
 
+### Countries
+
+In theses games, you will be shown a country shape and you have to guess the country it belongs to.
+
+- [Daily](https://atlas.kappaduck.com/countries/daily)
+- [Random](https://atlas.kappaduck.com/countries/random)
+
 ## Mentions
 
 Thanks to the following projects for providing the data used in this app:
