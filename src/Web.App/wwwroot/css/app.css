@@ -10,18 +10,15 @@
   --color-background-accent: light-dark(hsl(218, 22%, 91%), hsl(218, 22%, 14%));
   --color-danger: light-dark(hsl(0, 100%, 50%), hsl(0, 100%, 27%));
   --color-success: light-dark(hsl(120, 100%, 27%), hsl(120, 100%, 40%));
-
   --color-dialog-primary: light-dark(hsl(176, 96%, 31%), hsl(43, 86%, 50%));
   --color-dialog-background: light-dark(hsl(228, 20%, 95%), hsl(213, 24%, 16%));
   --color-dialog-backdrop: light-dark(hsl(210, 2%, 22%), hsl(228, 20%, 8%));
-
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-md: 1rem;
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.25rem;
   --default-line-height: 1.5;
-
   --screen-sm: 576px;
   --screen-md: 768px;
   --screen-lg: 992px;
@@ -34,6 +31,18 @@
 
   &:has([data-theme="light" i]) {
     color-scheme: light;
+    --country-color: invert(0);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:has([data-theme="system" i]) {
+    --country-color: invert(1);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:has([data-theme="system" i]) {
     --country-color: invert(0);
   }
 }
@@ -266,7 +275,6 @@ body {
 @layer game {
   .game {
     --max-game-width: 320px;
-
     display: grid;
     gap: 2em;
     padding-block: 1.5rem;
@@ -338,7 +346,7 @@ body {
     filter: blur(10px);
 
     &.country {
-        filter: var(--country-color) blur(10px);
+      filter: var(--country-color) blur(10px);
     }
   }
 
@@ -346,7 +354,7 @@ body {
     filter: blur(15px);
 
     &.country {
-        filter: var(--country-color) blur(15px);
+      filter: var(--country-color) blur(15px);
     }
   }
 
@@ -354,7 +362,7 @@ body {
     filter: blur(20px);
 
     &.country {
-        filter: var(--country-color) blur(20px);
+      filter: var(--country-color) blur(20px);
     }
   }
 
@@ -362,7 +370,7 @@ body {
     filter: blur(25px);
 
     &.country {
-        filter: var(--country-color) blur(25px);
+      filter: var(--country-color) blur(25px);
     }
   }
 
@@ -370,7 +378,7 @@ body {
     filter: blur(30px);
 
     &.country {
-        filter: var(--country-color) blur(30px);
+      filter: var(--country-color) blur(30px);
     }
   }
 
