@@ -29,10 +29,12 @@
 
   &:has([data-theme="dark" i]) {
     color-scheme: dark;
+    --country-color: invert(1);
   }
 
   &:has([data-theme="light" i]) {
     color-scheme: light;
+    --country-color: invert(0);
   }
 }
 
@@ -279,6 +281,15 @@ body {
       aspect-ratio: 2 / 1;
       cursor: zoom-in;
 
+      &:is(picture.country) {
+        filter: var(--country-color);
+        cursor: default;
+
+        img {
+          border: none;
+        }
+      }
+
       img {
         border: 1px solid var(--color-text);
       }
@@ -309,30 +320,58 @@ body {
 @layer difficulties {
   .blur-6 {
     filter: blur(0);
+
+    &.country {
+      filter: var(--country-color) blur(0);
+    }
   }
 
   .blur-5 {
     filter: blur(5px);
+
+    &.country {
+      filter: var(--country-color) blur(5px);
+    }
   }
 
   .blur-4 {
     filter: blur(10px);
+
+    &.country {
+        filter: var(--country-color) blur(10px);
+    }
   }
 
   .blur-3 {
     filter: blur(15px);
+
+    &.country {
+        filter: var(--country-color) blur(15px);
+    }
   }
 
   .blur-2 {
     filter: blur(20px);
+
+    &.country {
+        filter: var(--country-color) blur(20px);
+    }
   }
 
   .blur-1 {
     filter: blur(25px);
+
+    &.country {
+        filter: var(--country-color) blur(25px);
+    }
   }
 
   .blur-0 {
     filter: blur(30px);
+
+    &.country {
+        filter: var(--country-color) blur(30px);
+    }
   }
 
   .grayscale {
@@ -349,10 +388,6 @@ body {
 
   .mirrored {
     transform: scaleX(-1);
-  }
-
-  .hidden {
-    visibility: hidden;
   }
 }
 

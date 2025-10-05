@@ -101,9 +101,8 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
 
         string GetDifficulty(CountryDifficulty difficulty) => difficulty switch
         {
-            CountryDifficulty.Rotated => "rotated",
+            CountryDifficulty.Rotated => string.Empty,
             CountryDifficulty.Mirrored => "mirrored",
-            CountryDifficulty.Hidden => "hidden",
             CountryDifficulty.Blur => $"blur-{attempts}",
             CountryDifficulty.None => string.Empty
         };
