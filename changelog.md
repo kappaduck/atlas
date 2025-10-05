@@ -4,6 +4,34 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 2025.10.05
+
+### Added
+
+- Added 2 new game mode: "Guess the country by its shape" ([#25], [#26])
+- Added difficulty section in the settings modal for countries ([#13])
+- Can zoom in the guessed flag in the game mode "Daily flag" and "Random flag" ([#109])
+
+### Changed
+
+- Added support to navigate through the lookup input using arrow keys and select a country using the `Enter` key ([#17])
+- Use our own country data instead of relying on an external API ([#86])
+
+### Fixed
+
+- Fixed the scrolling in settings modal which doesn't reset when changing the section ([#101])
+- Fixed the translation for countries which was not translated at all ([#85])
+
+<!-- 2025.10.05 -->
+[#13]: https://github.com/kappaduck/atlas/issues/13
+[#17]: https://github.com/kappaduck/atlas/issues/17
+[#25]: https://github.com/kappaduck/atlas/issues/25
+[#26]: https://github.com/kappaduck/atlas/issues/26
+[#85]: https://github.com/kappaduck/atlas/issues/85
+[#86]: https://github.com/kappaduck/atlas/issues/86
+[#101]: https://github.com/kappaduck/atlas/issues/101
+[#109]: https://github.com/kappaduck/atlas/issues/109
+
 ## 2025.07.31
 
 ### Fixed
