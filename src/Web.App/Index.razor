@@ -3,11 +3,18 @@
 @inject IStringLocalizer<Resources> localizer
 
 <div class="container">
-    <div class="game-list">
-        <h2><i class="@Icons.Flag"></i><span>@localizer[Resources.Flags]</span></h2>
-        <div class="games">
-            <a class="btn-link" href="/flags/daily">@localizer[Resources.Daily]</a>
-            <a class="btn-link" href="/flags/random">@localizer[Resources.Random]</a>
-        </div>
-    </div>
+	<div class="game-list">
+		<h2><i class="@Icons.Flag"></i><span>@localizer[Resources.Flags]</span></h2>
+		<div class="games">
+			<a class="btn-link" href="/flags/daily">@localizer[Resources.Daily]</a>
+			<a class="btn-link" href="/flags/random">@localizer[Resources.Random]</a>
+		</div>
+	</div>
+	<div class="game-list">
+		<h2><i class="@Icons.Earth"></i><span>@localizer[Resources.Countries]</span></h2>
+		<div class="games">
+			<a class="btn-link" href="/countries/daily">@localizer[Resources.Daily]</a>
+			<a class="btn-link" href="/countries/random">@localizer[Resources.Random]</a>
+		</div>
+	</div>
 </div>
