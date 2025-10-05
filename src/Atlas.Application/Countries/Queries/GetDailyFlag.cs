@@ -7,14 +7,14 @@ using Microsoft.Extensions.Localization;
 
 namespace Atlas.Application.Countries.Queries;
 
-public interface IGetDailyCountry
+public interface IGetDailyFlag
 {
     ValueTask<CountryResponse?> HandleAsync(CancellationToken cancellationToken);
 }
 
-internal sealed class GetDailyCountry(ICountryRepository repository, IStringLocalizer<Resources> localizer) : IGetDailyCountry
+internal sealed class GetDailyFlag(ICountryRepository repository, IStringLocalizer<Resources> localizer) : IGetDailyFlag
 {
-    private const string HashKey = "country";
+    private const string HashKey = "flag";
 
     public async ValueTask<CountryResponse?> HandleAsync(CancellationToken cancellationToken)
     {
