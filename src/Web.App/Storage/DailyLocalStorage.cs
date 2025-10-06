@@ -8,21 +8,20 @@ namespace Web.App.Storage;
 
 internal sealed class DailyLocalStorage(ILocalStorage storage, ITimeService timeService) : IDailyLocalStorage
 {
-    private const string Today = "today";
-
     public (GuessedCountryResponse[] Guesses, bool GiveUp) Get(string key)
     {
-        DateOnly today = timeService.Today;
-        DateOnly lastPlayed = storage.GetItem<DateOnly>(Today);
-
         string guessedKey = GuessedKey(key);
         string giveUpKey = GiveUpKey(key);
+        string todayKey = $"{key}:today";
+
+        DateOnly today = timeService.Today;
+        DateOnly lastPlayed = storage.GetItem<DateOnly>(todayKey);
 
         if (lastPlayed != today)
         {
             storage.RemoveItem(guessedKey);
             storage.RemoveItem(giveUpKey);
-            storage.SetItem(Today, today);
+            storage.SetItem(todayKey, today);
 
             return ([], false);
         }
