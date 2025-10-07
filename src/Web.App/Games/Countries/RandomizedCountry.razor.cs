@@ -37,7 +37,7 @@ public sealed partial class RandomizedCountry(IRandomizeCountry randomizeHandler
             }
 
             _rotation = null;
-            return Settings.CountryDifficultyCss(Settings.Country.Random, _gameState.Guesses.Count);
+            return Settings.CountryDifficultyCss(Settings.Country.Random, _gameState.GameFinished ? MaxAttempts : _gameState.Guesses.Count);
 
             bool HasRotation() => Settings.Country.All is CountryDifficulty.Rotated || Settings.Country.Random is CountryDifficulty.Rotated;
         }

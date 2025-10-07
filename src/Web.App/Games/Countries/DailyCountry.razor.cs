@@ -32,7 +32,7 @@ public partial class DailyCountry(IDailyLocalStorage storage, IGetDailyCountry d
             }
 
             _rotation = null;
-            return Settings.CountryDifficultyCss(Settings.Country.Random, _gameState.Guesses.Count);
+            return Settings.CountryDifficultyCss(Settings.Country.Random, _gameState.GameFinished ? MaxAttempts : _gameState.Guesses.Count);
 
             bool HasRotation() => Settings.Country.All is CountryDifficulty.Rotated || Settings.Country.Daily is CountryDifficulty.Rotated;
         }
