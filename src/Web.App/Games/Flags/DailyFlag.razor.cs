@@ -23,7 +23,7 @@ public sealed partial class DailyFlag(IDailyLocalStorage storage, IGetDailyFlag 
     [CascadingParameter]
     public required ZoomModal ZoomModal { get; init; }
 
-    private string DifficultyCss => Settings.FlagDifficultyCss(Settings.Flag.Daily, _gameState.Guesses.Count);
+    private string DifficultyCss => Settings.FlagDifficultyCss(Settings.Flag.Daily, _gameState.GameFinished ? MaxAttempts : _gameState.Guesses.Count);
 
     protected override async Task OnInitializedAsync()
     {
