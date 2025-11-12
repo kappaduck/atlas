@@ -1,9 +1,6 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
-using Atlas.Application;
-using Atlas.Application.Countries;
-
 namespace Atlas.Application.Countries;
 
 internal static class DateTimeExtensions

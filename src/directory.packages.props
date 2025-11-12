@@ -1,10 +1,10 @@
 <Project>
   <Import Project="$([MSBuild]::GetPathOfFileAbove('directory.packages.props', '$(MSBuildThisFileDirectory)../'))" />
   <PropertyGroup>
-    <NetVersion>10.0.0-rc.1.25451.107</NetVersion>
+    <NetVersion>10.0.0</NetVersion>
   </PropertyGroup>
   <ItemGroup Label="Common packages">
-    <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.2.25" />
+    <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.2.39" />
   </ItemGroup>
   <ItemGroup Label="Application packages">
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(NetVersion)" />
@@ -14,11 +14,11 @@
     <PackageVersion Include="Microsoft.Extensions.Http" Version="$(NetVersion)" />
   </ItemGroup>
   <ItemGroup Label="Web packages">
-    <PackageVersion Include="Markdig" Version="0.41.3" />
+    <PackageVersion Include="Markdig" Version="0.43.0" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="$(NetVersion)" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(NetVersion)" />
     <PackageVersion Include="Microsoft.Extensions.Localization" Version="$(NetVersion)" />
     <PackageVersion Include="Microsoft.Extensions.Localization.Abstractions" Version="$(NetVersion)" />
-    <PackageVersion Include="Microsoft.TypeScript.MSBuild" Version="5.9.2" />
+    <PackageVersion Include="Microsoft.TypeScript.MSBuild" Version="5.9.3" />
   </ItemGroup>
 </Project>
