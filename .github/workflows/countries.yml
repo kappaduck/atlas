@@ -28,7 +28,7 @@ jobs:
         run: dotnet .\merge.countries.cs
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           title: "Update all/lookup json files"
           base: main
