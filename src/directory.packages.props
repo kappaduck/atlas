@@ -1,10 +1,10 @@
 <Project>
   <Import Project="$([MSBuild]::GetPathOfFileAbove('directory.packages.props', '$(MSBuildThisFileDirectory)../'))" />
   <PropertyGroup>
-    <NetVersion>10.0.0</NetVersion>
+    <NetVersion>10.0.1</NetVersion>
   </PropertyGroup>
   <ItemGroup Label="Common packages">
-    <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.2.39" />
+    <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.2.39" PrivateAssets="all" IncludeAssets="$(IncludedAssets)" />
   </ItemGroup>
   <ItemGroup Label="Application packages">
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(NetVersion)" />
@@ -15,10 +15,10 @@
     <PackageVersion Include="Microsoft.Extensions.Http" Version="$(NetVersion)" />
   </ItemGroup>
   <ItemGroup Label="Web packages">
-    <PackageVersion Include="Markdig" Version="0.43.0" />
+    <PackageVersion Include="Markdig" Version="0.44.0" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="$(NetVersion)" />
-    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(NetVersion)" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(NetVersion)" PrivateAssets="all" IncludeAssets="$(IncludedAssets)" />
     <PackageVersion Include="Microsoft.Extensions.Localization" Version="$(NetVersion)" />
-    <PackageVersion Include="Microsoft.TypeScript.MSBuild" Version="5.9.3" />
+    <PackageVersion Include="Microsoft.TypeScript.MSBuild" Version="5.9.3" PrivateAssets="all" IncludeAssets="$(IncludedAssets)" />
   </ItemGroup>
 </Project>

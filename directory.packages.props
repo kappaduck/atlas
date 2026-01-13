@@ -8,9 +8,9 @@
   <!-- IncludeAssets="analyzers,build,contentfiles,native,runtime" and PrivateAssets="all" -->
   <!-- https://learn.microsoft.com/en-us/nuget/consume-packages/central-package-management#global-package-references -->
   <ItemGroup Label="Global analyzers">
-    <GlobalPackageReference Include="AsyncFixer" Version="1.6.0" />
+    <GlobalPackageReference Include="AsyncFixer" Version="2.1.0" />
     <GlobalPackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.14.15" />
-    <GlobalPackageReference Include="Roslynator.Analyzers" Version="4.14.1" />
-    <GlobalPackageReference Include="SonarAnalyzer.CSharp" Version="10.15.0.120848" />
+    <GlobalPackageReference Include="Roslynator.Analyzers" Version="4.15.0" />
+    <GlobalPackageReference Include="SonarAnalyzer.CSharp" Version="10.18.0.131500" />
   </ItemGroup>
 </Project>
