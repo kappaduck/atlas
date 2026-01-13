@@ -1,12 +1,12 @@
 ﻿@using Atlas.Application.Countries
 @using Atlas.Application.Countries.Queries
 
-@inject IStringLocalizer<Resources> localizer
-@inject IGetAllCountries handler
+@inject IStringLocalizer<Resources> Localizer
+@inject IGetAllCountries Handler
 
 @if (_countries.Length > 0)
 {
-    @foreach (var country in _countries.OrderBy(c => c.Name))
+    @foreach (CountryResponse country in _countries.OrderBy(c => c.Name))
     {
         <div class="country-card">
             <picture>
@@ -19,12 +19,12 @@
 }
 else
 {
-    <p>@localizer[Resources.NoCountriesAvailable]</p>
+    <p>@Localizer[Resources.NoCountriesAvailable]</p>
 }
 
 @code {
     private CountryResponse[] _countries = [];
 
     protected override async Task OnInitializedAsync()
-        => _countries = await handler.HandleAsync(CancellationToken.None);
+        => _countries = await Handler.HandleAsync(CancellationToken.None);
 }

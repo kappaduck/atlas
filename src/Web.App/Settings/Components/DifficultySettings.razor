@@ -1,32 +1,32 @@
-﻿@inject IStringLocalizer<Resources> localizer
+﻿@inject IStringLocalizer<Resources> Localizer
 
 <fieldset class="difficulty-settings">
-    <legend>@localizer[Resources.Flags]</legend>
+    <legend>@Localizer[Resources.Flags]</legend>
     <div class="settings">
-        <h4>@localizer[Resources.All]</h4>
+        <h4>@Localizer[Resources.All]</h4>
         <InputDifficulty GroupName="flag-all" @bind-Value:get="Settings.Flag.All" @bind-Value:set="OnFlagAllDifficultyChange" />
     </div>
     <div class="settings @FlagAllEnabledCss">
-        <h4>@localizer[Resources.Daily]</h4>
+        <h4>@Localizer[Resources.Daily]</h4>
         <InputDifficulty GroupName="flag-daily" @bind-Value:get="Settings.Flag.Daily" @bind-Value:set="OnFlagDailyDifficultyChange" Disabled="@FlagAllEnabled" />
     </div>
     <div class="settings @FlagAllEnabledCss">
-        <h4>@localizer[Resources.Random]</h4>
+        <h4>@Localizer[Resources.Random]</h4>
         <InputDifficulty GroupName="flag-random" @bind-Value:get="Settings.Flag.Random" @bind-Value:set="OnFlagRandomDifficultyChange" Disabled="@FlagAllEnabled" />
     </div>
 </fieldset>
 <fieldset class="difficulty-settings">
-    <legend>@localizer[Resources.Countries]</legend>
+    <legend>@Localizer[Resources.Countries]</legend>
     <div class="settings">
-        <h4>@localizer[Resources.All]</h4>
+        <h4>@Localizer[Resources.All]</h4>
         <InputDifficulty GroupName="country-all" @bind-Value:get="Settings.Country.All" @bind-Value:set="OnCountryAllDifficultyChange" />
     </div>
     <div class="settings @CountryAllEnabledCss">
-        <h4>@localizer[Resources.Daily]</h4>
+        <h4>@Localizer[Resources.Daily]</h4>
         <InputDifficulty GroupName="country-daily" @bind-Value:get="Settings.Country.Daily" @bind-Value:set="OnCountryDailyDifficultyChange" Disabled="@CountryAllEnabled" />
     </div>
     <div class="settings @CountryAllEnabledCss">
-        <h4>@localizer[Resources.Random]</h4>
+        <h4>@Localizer[Resources.Random]</h4>
         <InputDifficulty GroupName="country-random" @bind-Value:get="Settings.Country.Random" @bind-Value:set="OnCountryRandomDifficultyChange" Disabled="@CountryAllEnabled" />
     </div>
 </fieldset>

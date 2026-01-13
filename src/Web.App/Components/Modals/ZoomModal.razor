@@ -1,35 +1,34 @@
-﻿@using Atlas.Application.Countries
-
+@using System.Diagnostics.CodeAnalysis
 @inherits ModalBase
-@inject IStringLocalizer<Resources> localizer
+@inject IStringLocalizer<Resources> Localizer
 
 <CascadingValue Value="this" IsFixed="true">
-    <dialog @ref="_dialog" class="modal zoom" @onclick="Close">
-        <picture class="zoom @_css">
-            <source srcset="@_image" />
-            <img src="@_image" alt="@localizer[Resources.FailedDisplayFlag]" />
-        </picture>
-    </dialog>
-    @ChildContent
+	<dialog @ref="_dialog" class="modal zoom" @onclick="Close">
+		<picture class="zoom @_css">
+			<source srcset="@_image" />
+			<img src="@_image" alt="@Localizer[Resources.FailedDisplayFlag]" />
+		</picture>
+	</dialog>
+	@ChildContent
 </CascadingValue>
 
 @code {
-    private ElementReference _dialog;
-    private Uri _image = default!;
-    private string? _css;
+	private ElementReference _dialog;
+	private Uri? _image;
+	private string? _css;
 
-    [Parameter, EditorRequired]
-    public required RenderFragment ChildContent { get; init; }
+	[Parameter, EditorRequired]
+	public required RenderFragment ChildContent { get; init; }
 
-    public void Show(Uri image, string? css = null)
-    {
-        _image = image;
-        _css = css;
+	public void Show(Uri image, string? css = null)
+	{
+		_image = image;
+		_css = css;
 
-        StateHasChanged();
+		StateHasChanged();
 
-        Show(_dialog);
-    }
+		Show(_dialog);
+	}
 
-    public void Close() => Close(_dialog);
+	private void Close() => Close(_dialog);
 }

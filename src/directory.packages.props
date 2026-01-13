@@ -8,6 +8,7 @@
   </ItemGroup>
   <ItemGroup Label="Application packages">
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(NetVersion)" />
+    <PackageVersion Include="Microsoft.Extensions.Localization.Abstractions" Version="$(NetVersion)" />
   </ItemGroup>
   <ItemGroup Label="Infrastructure packages">
     <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="$(NetVersion)" />
@@ -18,7 +19,6 @@
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="$(NetVersion)" />
     <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="$(NetVersion)" />
     <PackageVersion Include="Microsoft.Extensions.Localization" Version="$(NetVersion)" />
-    <PackageVersion Include="Microsoft.Extensions.Localization.Abstractions" Version="$(NetVersion)" />
     <PackageVersion Include="Microsoft.TypeScript.MSBuild" Version="5.9.3" />
   </ItemGroup>
 </Project>

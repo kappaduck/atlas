@@ -18,15 +18,12 @@ public sealed partial class DifficultySettings
 
     private string CountryAllEnabledCss => CountryAllEnabled ? "disabled" : string.Empty;
 
-    private void OnFlagAllDifficultyChange(FlagDifficulty difficulty)
+    private void OnFlagAllDifficultyChange(FlagDifficulty difficulty) => Settings.Flag = new FlagDifficultySettings
     {
-        Settings.Flag = Settings.Flag with
-        {
-            All = difficulty,
-            Daily = FlagDifficulty.None,
-            Random = FlagDifficulty.None
-        };
-    }
+        All = difficulty,
+        Daily = FlagDifficulty.None,
+        Random = FlagDifficulty.None
+    };
 
     private void OnFlagDailyDifficultyChange(FlagDifficulty difficulty)
     {
@@ -44,15 +41,12 @@ public sealed partial class DifficultySettings
         };
     }
 
-    private void OnCountryAllDifficultyChange(CountryDifficulty difficulty)
+    private void OnCountryAllDifficultyChange(CountryDifficulty difficulty) => Settings.Country = new CountryDifficultySettings
     {
-        Settings.Country = Settings.Country with
-        {
-            All = difficulty,
-            Daily = CountryDifficulty.None,
-            Random = CountryDifficulty.None
-        };
-    }
+        All = difficulty,
+        Daily = CountryDifficulty.None,
+        Random = CountryDifficulty.None
+    };
 
     private void OnCountryDailyDifficultyChange(CountryDifficulty difficulty)
     {

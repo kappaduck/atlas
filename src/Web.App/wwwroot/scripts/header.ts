@@ -1,13 +1,13 @@
 export function responsiveExpand(): void {
-  const size = getComputedStyle(document.body).getPropertyValue('--screen-md');
-  const media = matchMedia(`(min-width: ${size})`);
+  const size: string = getComputedStyle(document.body).getPropertyValue('--screen-md');
+  const media: MediaQueryList = matchMedia(`(min-width: ${size})`);
 
   media.addEventListener('change', event => {
     if (!event.matches) {
       return;
     }
 
-    const elements = document.querySelectorAll('.expanded');
+    const elements: NodeListOf<Element> = document.querySelectorAll('.expanded');
     const popover: HTMLElement | null = document.querySelector('#feedback');
 
     elements.forEach(toggleExpand);
@@ -19,8 +19,8 @@ export function responsiveExpand(): void {
 }
 
 export function toggleMenu(): void {
-  const header = document.querySelector('header');
-  const hamburger = document.querySelector('.hamburger');
+  const header: HTMLElement | null = document.querySelector('header');
+  const hamburger: Element | null = document.querySelector('.hamburger');
 
   if (!header || !hamburger) {
     return;
@@ -31,7 +31,7 @@ export function toggleMenu(): void {
 }
 
 function toggleExpand(element: Element): void {
-  const expanded = Boolean(element.getAttribute('aria-expanded'));
+  const expanded: boolean = Boolean(element.getAttribute('aria-expanded'));
 
   element.classList.toggle('expanded');
   element.setAttribute('aria-expanded', String(!expanded));

@@ -1,16 +1,17 @@
 @page "/not-found"
+@layout MainLayout
 
-@inject IStringLocalizer<Resources> localizer
+@inject IStringLocalizer<Resources> Localizer
 
-<PageTitle>@localizer[Resources.NotFound]</PageTitle>
+<PageTitle>@Localizer[Resources.NotFound]</PageTitle>
 
 <div class="not-found">
     <h1>404</h1>
     <div class="message">
-        <p>@localizer[Resources.NotFoundMessage]</p>
+        <p>@Localizer[Resources.NotFoundMessage]</p>
         <a href="/" class="link">
             <i class="@Icons.ArrowLeftCircle"></i>
-            <span>@localizer[Resources.GoBack]</span>
+            <span>@Localizer[Resources.GoBack]</span>
         </a>
     </div>
 </div>

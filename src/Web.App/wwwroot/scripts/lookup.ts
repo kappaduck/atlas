@@ -5,7 +5,7 @@ type DotNet = {
 let eventCallback: (this: Document, ev: MouseEvent) => any;
 
 export function scrollToLookup() {
-  const element = document.querySelector('.container');
+  const element: Element | null = document.querySelector('.container');
 
   if (!element) {
     return;
@@ -17,7 +17,7 @@ export function scrollToLookup() {
 }
 
 export function scrollToCountry(id: string) {
-  const element = document.getElementById(id);
+  const element: HTMLElement | null = document.getElementById(id);
 
   if (!element) {
     return;
@@ -28,7 +28,7 @@ export function scrollToCountry(id: string) {
 
 export function init(dotnet: DotNet) {
   eventCallback = (event: MouseEvent) => {
-    const lookup = document.querySelector('.container');
+    const lookup: Element | null = document.querySelector('.container');
 
     if (!event || !event.target || !(event.target instanceof Element)) {
       return;

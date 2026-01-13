@@ -1,22 +1,21 @@
 ﻿@using Web.App.Components.Modals
 @using Web.App.Options
-@using Web.App.Services
 
-@inject ProjectOptions project
-@inject CompanyOptions company
+@inject ProjectOptions Project
+@inject CompanyOptions Company
 
 <footer>
     <ul role="list">
         <li>&copy; @DateTime.Today.Year</li>
         <li>
-            <a class="link" target="_blank" href="@company.Url">
+            <a class="link" target="_blank" href="@Company.Url">
                 <i class="@Icons.Company"></i>
-                <span>@company.Name</span>
+                <span>@Company.Name</span>
             </a>
         </li>
         <li>
             <a class="link" @onclick="Modal.ShowChangelog">
-                <span>@project.Version</span>
+                <span>@Project.Version</span>
             </a>
         </li>
     </ul>
