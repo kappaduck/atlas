@@ -1,4 +1,4 @@
-﻿@inject IStringLocalizer<Resources> localizer
+﻿@inject IStringLocalizer<Resources> Localizer
 
 <div class="game-over">
     @if (!GameState.Guesses.Any(g => g.Success))
@@ -11,16 +11,16 @@
     else
     {
         <div class="congratulations">
-            <span>@localizer[Resources.Congratulations]</span>
+            <span>@Localizer[Resources.Congratulations]</span>
             <a class="link" target="_blank" href="@GameState.Country?.Resources.Map">
                 <i class="@Icons.GeoAlt"></i>
-                <span class="answer">@localizer[Resources.SeeOnMap]</span>
+                <span class="answer">@Localizer[Resources.SeeOnMap]</span>
             </a>
         </div>
     }
     @if (OnPlayAgain.HasDelegate)
     {
-        <button type="button" @onclick="OnPlayAgain">@localizer[Resources.PlayAgain]</button>
+        <button type="button" @onclick="OnPlayAgain">@Localizer[Resources.PlayAgain]</button>
     }
 </div>
 

@@ -77,12 +77,9 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
 
     public string FlagDifficultyCss(FlagDifficulty difficulty, int attempts)
     {
-        if (Flag.All != FlagDifficulty.None)
-            return GetDifficulty(Flag.All);
+        return GetDifficulty(Flag.All != FlagDifficulty.None ? Flag.All : difficulty);
 
-        return GetDifficulty(difficulty);
-
-        string GetDifficulty(FlagDifficulty difficulty) => difficulty switch
+        string GetDifficulty(FlagDifficulty flagDifficulty) => flagDifficulty switch
         {
             FlagDifficulty.Blur => $"blur-{attempts}",
             FlagDifficulty.Invert => "invert",
@@ -94,12 +91,9 @@ public sealed partial class AppSettings(ILocalStorage storage, NavigationManager
 
     public string CountryDifficultyCss(CountryDifficulty difficulty, int attempts)
     {
-        if (Country.All != CountryDifficulty.None)
-            return GetDifficulty(Country.All);
+        return GetDifficulty(Country.All != CountryDifficulty.None ? Country.All : difficulty);
 
-        return GetDifficulty(difficulty);
-
-        string GetDifficulty(CountryDifficulty difficulty) => difficulty switch
+        string GetDifficulty(CountryDifficulty countryDifficulty) => countryDifficulty switch
         {
             CountryDifficulty.Rotated => string.Empty,
             CountryDifficulty.Mirrored => "mirrored",

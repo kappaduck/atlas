@@ -1,7 +1,7 @@
-@inject IStringLocalizer<Resources> localizer
+@inject IStringLocalizer<Resources> Localizer
 
 <div class="container">
-    <input type="text" aria-label="@localizer[Resources.LookupCountry]" placeholder="@localizer[Resources.LookupPlaceholder]"
+    <input type="text" aria-label="@Localizer[Resources.LookupCountry]" placeholder="@Localizer[Resources.LookupPlaceholder]"
            @bind="_input"
            @oninput="Lookup"
            @onfocus="Focus"

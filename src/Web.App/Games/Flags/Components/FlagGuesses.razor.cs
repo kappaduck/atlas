@@ -27,5 +27,5 @@ public sealed partial class FlagGuesses
 
     private static string DirectionCss(bool isFound) => isFound ? $"found {Icons.Check}" : Icons.ArrowUp;
 
-    private static string IsSameContinentCss(bool IsSameContinent) => IsSameContinent ? $"found {Icons.Check}" : Icons.Times;
+    private static string IsSameContinentCss(bool isSameContinent) => isSameContinent ? $"found {Icons.Check}" : Icons.Times;
 }

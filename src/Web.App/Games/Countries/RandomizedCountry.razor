@@ -3,7 +3,7 @@
 
 @page "/countries/random"
 
-@inject IStringLocalizer<Resources> localizer
+@inject IStringLocalizer<Resources> Localizer
 
 <div class="game">
 	@if (_gameState.Country is null)
@@ -14,7 +14,7 @@
 	{
 		<picture class="country @DifficultyCss" style="@Rotation">
 			<source srcset="@_gameState.Country.Resources.Country" />
-			<img src="@_gameState.Country.Resources.Country" alt="@localizer[Resources.FailedDisplayCountry]" />
+			<img src="@_gameState.Country.Resources.Country" alt="@Localizer[Resources.FailedDisplayCountry]" />
 		</picture>
 	}
 	<div class="content">
@@ -33,8 +33,8 @@
 	<div class="actions">
 		<a href="/" class="link">
 			<i class="@Icons.ArrowLeftCircle"></i>
-			<span>@localizer[Resources.GoBack]</span>
+			<span>@Localizer[Resources.GoBack]</span>
 		</a>
-		<button class="btn-give-up" disabled="@_gameState.GameFinished" @onclick="GiveUp">@localizer[Resources.GiveUp]</button>
+		<button class="btn-give-up" disabled="@_gameState.GameFinished" @onclick="GiveUp">@Localizer[Resources.GiveUp]</button>
 	</div>
 </div>

@@ -112,7 +112,7 @@ public sealed partial class CountryLookupInput(ILookupCountries handler, IJSInPr
         _filteredCountries = LookupCountries();
 
         StateHasChanged();
-        _module?.InvokeVoid("scrollToCountry", $"country-{0}");
+        _module?.InvokeVoid("scrollToCountry", "country-0");
     }
 
     private Task SelectCountryAsync(string cca2)
@@ -133,7 +133,6 @@ public sealed partial class CountryLookupInput(ILookupCountries handler, IJSInPr
 
         if (_selectedIndex != -1)
         {
-            Console.WriteLine(_selectedIndex);
             cca2 = _filteredCountries[_selectedIndex].Cca2;
             return true;
         }
@@ -142,7 +141,7 @@ public sealed partial class CountryLookupInput(ILookupCountries handler, IJSInPr
         {
             string input = RemoveDiacritics(_input.Trim());
 
-            CountryLookupResponse? country = Array.Find(_filteredCountries, c => Lookup(c.Name, input));
+            CountryLookupResponse? country = Array.Find(_filteredCountries, c => Compare(c.Name, input));
 
             cca2 = country?.Cca2;
             return cca2 is not null;
@@ -150,7 +149,7 @@ public sealed partial class CountryLookupInput(ILookupCountries handler, IJSInPr
 
         return false;
 
-        static bool Lookup(string name, ReadOnlySpan<char> input)
+        static bool Compare(string name, ReadOnlySpan<char> input)
         {
             ReadOnlySpan<char> normalized = RemoveDiacritics(name);
 
@@ -169,9 +168,9 @@ public sealed partial class CountryLookupInput(ILookupCountries handler, IJSInPr
         string input = RemoveDiacritics(_input.Trim());
         CountryLookupResponse[] availableCountries = [.. _countries.ExceptBy(GameState.Guesses.Select(g => g.Cca2), c => c.Cca2)];
 
-        return Array.FindAll(availableCountries, c => Lookup(c.Name, input));
+        return Array.FindAll(availableCountries, c => Compare(c.Name, input));
 
-        static bool Lookup(string name, ReadOnlySpan<char> input)
+        static bool Compare(string name, ReadOnlySpan<char> input)
         {
             ReadOnlySpan<char> normalized = RemoveDiacritics(name);
 

@@ -1,18 +1,18 @@
 @using Web.App.Options
 
-@inject IStringLocalizer<Resources> localizer
-@inject ProjectOptions project
+@inject IStringLocalizer<Resources> Localizer
+@inject ProjectOptions Project
 
 <header aria-expanded="false">
     <div class="logo">
         <picture>
             <source type="image/webp" srcset="assets/images/atlas.webp 2x" media="(min-width: 960px)" />
             <source type="image/webp" srcset="assets/images/atlas.webp" />
-            <img src="assets/images/atlas.webp" alt="@localizer[Resources.AtlasLogo]" />
+            <img src="assets/images/atlas.webp" alt="@Localizer[Resources.AtlasLogo]" />
         </picture>
-        <h2><a href="/" class="link">@localizer[Resources.Atlas]</a></h2>
+        <h2><a href="/" class="link">@Localizer[Resources.Atlas]</a></h2>
     </div>
-    <button @onclick="ToggleMenu" class="hamburger" aria-controls="primary-navigation" aria-expanded="false" aria-label="@localizer[Resources.Navigation]">
+    <button @onclick="ToggleMenu" class="hamburger" aria-controls="primary-navigation" aria-expanded="false" aria-label="@Localizer[Resources.Navigation]">
         <svg fill="var(--color-primary)" viewBox="0 0 100 100" width="32" aria-label="hamburger">
             <rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect>
             <rect class="line middle" width="80" height="10" x="10" y="45" rx="5"></rect>
@@ -22,40 +22,40 @@
     <nav class="navbar">
         <ul class="navigation" role="list">
             <li class="nav-item">
-                <a class="nav-link" target="_blank" href="@project.Url">
+                <a class="nav-link" target="_blank" href="@Project.Url">
                     <i class="@Icons.Github"></i>
-                    <span>@localizer[Resources.Project]</span>
+                    <span>@Localizer[Resources.Project]</span>
                 </a>
             </li>
             <button popovertarget="feedback" class="nav-item btn-feedback"><i class="@Icons.ChatDots"></i></button>
             <li class="nav-item feedback-item">
-                <a class="nav-link" target="_blank" href="@project.BugUrl">
+                <a class="nav-link" target="_blank" href="@Project.BugUrl">
                     <i class="@Icons.Bug"></i>
-                    <span>@localizer[Resources.ReportBug]</span>
+                    <span>@Localizer[Resources.ReportBug]</span>
                 </a>
             </li>
             <li class="nav-item feedback-item">
-                <a class="nav-link" target="_blank" href="@project.FeatureUrl">
+                <a class="nav-link" target="_blank" href="@Project.FeatureUrl">
                     <i class="@Icons.Lightbulb"></i>
-                    <span>@localizer[Resources.RequestFeature]</span>
+                    <span>@Localizer[Resources.RequestFeature]</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" @onclick="SettingsModal.ShowGeneral">
                     <i class="@Icons.Sliders"></i>
-                    <span>@localizer[Resources.Settings]</span>
+                    <span>@Localizer[Resources.Settings]</span>
                 </a>
             </li>
         </ul>
     </nav>
 </header>
 <div id="feedback" class="feedback-popover" popover>
-    <a class="link" target="_blank" href="@project.BugUrl">
+    <a class="link" target="_blank" href="@Project.BugUrl">
         <i class="@Icons.Bug"></i>
-        <span>@localizer[Resources.ReportBug]</span>
+        <span>@Localizer[Resources.ReportBug]</span>
     </a>
-    <a class="link" target="_blank" href="@project.FeatureUrl">
+    <a class="link" target="_blank" href="@Project.FeatureUrl">
         <i class="@Icons.Lightbulb"></i>
-        <span>@localizer[Resources.RequestFeature]</span>
+        <span>@Localizer[Resources.RequestFeature]</span>
     </a>
 </div>

@@ -3,7 +3,7 @@
 
 @page "/flags/daily"
 
-@inject IStringLocalizer<Resources> localizer
+@inject IStringLocalizer<Resources> Localizer
 
 <div class="game">
     @if (_gameState.Country is null)
@@ -15,7 +15,7 @@
     {
         <picture class="@DifficultyCss" @onclick="() => ZoomModal.Show(_gameState.Country.Resources.Flag, DifficultyCss)">
             <source srcset="@_gameState.Country.Resources.Flag" />
-            <img src="@_gameState.Country.Resources.Flag" alt="@localizer[Resources.FailedDisplayFlag]" />
+            <img src="@_gameState.Country.Resources.Flag" alt="@Localizer[Resources.FailedDisplayFlag]" />
         </picture>
     }
     <div class="content">
@@ -34,8 +34,8 @@
     <div class="actions">
         <a href="/" class="link">
             <i class="@Icons.ArrowLeftCircle"></i>
-            <span>@localizer[Resources.GoBack]</span>
+            <span>@Localizer[Resources.GoBack]</span>
         </a>
-        <button class="btn-give-up" disabled="@_gameState.GameFinished" @onclick="GiveUp">@localizer[Resources.GiveUp]</button>
+        <button class="btn-give-up" disabled="@_gameState.GameFinished" @onclick="GiveUp">@Localizer[Resources.GiveUp]</button>
     </div>
 </div>

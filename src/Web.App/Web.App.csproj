@@ -4,14 +4,27 @@
     <EnableConfigurationBindingGenerator>true</EnableConfigurationBindingGenerator>
     <OverrideHtmlAssetPlaceholders>true</OverrideHtmlAssetPlaceholders>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <NoWarn>CA2007</NoWarn>
   </PropertyGroup>
+
+  <PropertyGroup Label="Configure typescript">
+    <TypeScriptTarget>ES2024</TypeScriptTarget>
+    <TypeScriptModule>ES2022</TypeScriptModule>
+    <TypeScriptModuleInterop>true</TypeScriptModuleInterop>
+    <TypeScriptForceConsistentCasingInFileNames>true</TypeScriptForceConsistentCasingInFileNames>
+    <TypeScriptStrict>true</TypeScriptStrict>
+    <TypeScriptSkipLibCheck>true</TypeScriptSkipLibCheck>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Markdig" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" PrivateAssets="all" />
     <PackageReference Include="Microsoft.Extensions.Localization" />
-    <PackageReference Include="Microsoft.TypeScript.MSBuild" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" PrivateAssets="all" IncludeAssets="$(IncludedAssets)" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure.Persistence\Infrastructure.Persistence.csproj" />

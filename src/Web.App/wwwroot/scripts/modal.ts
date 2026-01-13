@@ -15,7 +15,7 @@ export function closeModalOnClickOutside(dialog: HTMLDialogElement): void {
 }
 
 export function scrollContentToTop(dialog: HTMLDialogElement): void {
-  const content = dialog.querySelector('.content');
+  const content: Element | null = dialog.querySelector('.content');
 
   content?.scrollTo({ top: 0, behavior: 'instant' });
 }

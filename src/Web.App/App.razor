@@ -1,20 +1,13 @@
 @using Web.App.Components.Modals
 @using Web.App.Settings
 
-@inject IStringLocalizer<Resources> localizer
-
 <AppSettings>
     <ZoomModal>
         <SettingsModal>
-            <Router AppAssembly="@typeof(App).Assembly">
+            <Router AppAssembly="@typeof(App).Assembly" NotFoundPage="typeof(NotFound)">
                 <Found Context="route">
                     <RouteView RouteData="route" DefaultLayout="typeof(MainLayout)" />
                 </Found>
-                <NotFound>
-                    <LayoutView Layout="typeof(MainLayout)">
-                        <NotFound />
-                    </LayoutView>
-                </NotFound>
             </Router>
         </SettingsModal>
     </ZoomModal>
