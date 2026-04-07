@@ -1,0 +1,26 @@
+{
+  "cca2": "nc",
+  "capitals": [
+    {
+      "name": "Noum\u00E9a",
+      "coordinate": {
+        "latitude": -22.27,
+        "longitude": 166.45
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -21.5,
+    "longitude": 165.5
+  },
+  "area": 18575,
+  "population": 271960,
+  "resources": {
+    "map": "https://goo.gl/maps/cBhtCeMdob4U7FRU9",
+    "flag": "https://flagcdn.com/nc.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/nc.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/nc/country.svg"
+  }
+}

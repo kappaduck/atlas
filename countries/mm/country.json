@@ -1,0 +1,32 @@
+{
+  "cca2": "mm",
+  "capitals": [
+    {
+      "name": "Naypyidaw",
+      "coordinate": {
+        "latitude": 19.76,
+        "longitude": 96.07
+      }
+    }
+  ],
+  "borders": [
+    "bd",
+    "cn",
+    "in",
+    "la",
+    "th"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 22,
+    "longitude": 98
+  },
+  "area": 676578,
+  "population": 54409794,
+  "resources": {
+    "map": "https://goo.gl/maps/4jrZyJkDERUfHyp26",
+    "flag": "https://flagcdn.com/mm.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/mm.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/mm/country.svg"
+  }
+}

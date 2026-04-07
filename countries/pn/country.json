@@ -1,0 +1,26 @@
+{
+  "cca2": "pn",
+  "capitals": [
+    {
+      "name": "Adamstown",
+      "coordinate": {
+        "latitude": -25.07,
+        "longitude": -130.08
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": -25.06666666,
+    "longitude": -130.1
+  },
+  "area": 47,
+  "population": 56,
+  "resources": {
+    "map": "https://goo.gl/maps/XGJMnMAigXjXcxSa7",
+    "flag": "https://flagcdn.com/pn.svg",
+    "coatOfArms": null,
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/pn/country.svg"
+  }
+}

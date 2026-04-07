@@ -1,0 +1,26 @@
+{
+  "cca2": "gs",
+  "capitals": [
+    {
+      "name": "King Edward Point",
+      "coordinate": {
+        "latitude": -54.28,
+        "longitude": -36.5
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Antarctica",
+  "coordinate": {
+    "latitude": -54.5,
+    "longitude": -37
+  },
+  "area": 3903,
+  "population": 30,
+  "resources": {
+    "map": "https://goo.gl/maps/mJzdaBwKBbm2B81q9",
+    "flag": "https://flagcdn.com/gs.svg",
+    "coatOfArms": null,
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/gs/country.svg"
+  }
+}

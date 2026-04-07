@@ -1,0 +1,26 @@
+{
+  "cca2": "pm",
+  "capitals": [
+    {
+      "name": "Saint-Pierre",
+      "coordinate": {
+        "latitude": 46.77,
+        "longitude": -56.18
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "NorthAmerica",
+  "coordinate": {
+    "latitude": 46.83333333,
+    "longitude": -56.33333333
+  },
+  "area": 242,
+  "population": 6069,
+  "resources": {
+    "map": "https://goo.gl/maps/bUM8Yc8pA8ghyhmt6",
+    "flag": "https://flagcdn.com/pm.svg",
+    "coatOfArms": null,
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/pm/country.svg"
+  }
+}

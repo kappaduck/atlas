@@ -1,0 +1,34 @@
+{
+  "cca2": "dz",
+  "capitals": [
+    {
+      "name": "Algiers",
+      "coordinate": {
+        "latitude": 36.75,
+        "longitude": 3.05
+      }
+    }
+  ],
+  "borders": [
+    "tn",
+    "ly",
+    "ne",
+    "eh",
+    "mr",
+    "ml",
+    "ma"
+  ],
+  "continent": "Africa",
+  "coordinate": {
+    "latitude": 28,
+    "longitude": 3
+  },
+  "area": 2381741,
+  "population": 44700000,
+  "resources": {
+    "map": "https://goo.gl/maps/RsAyAfyaiNVb8DpW8",
+    "flag": "https://flagcdn.com/dz.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/dz.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/dz/country.svg"
+  }
+}

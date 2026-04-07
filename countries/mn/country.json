@@ -1,0 +1,29 @@
+{
+  "cca2": "mn",
+  "capitals": [
+    {
+      "name": "Ulan Bator",
+      "coordinate": {
+        "latitude": 47.92,
+        "longitude": 106.91
+      }
+    }
+  ],
+  "borders": [
+    "cn",
+    "ru"
+  ],
+  "continent": "Asia",
+  "coordinate": {
+    "latitude": 46,
+    "longitude": 105
+  },
+  "area": 1564110,
+  "population": 3278292,
+  "resources": {
+    "map": "https://goo.gl/maps/A1X7bMCKThBDNjzH6",
+    "flag": "https://flagcdn.com/mn.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/mn.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/mn/country.svg"
+  }
+}

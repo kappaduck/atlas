@@ -1,0 +1,26 @@
+{
+  "cca2": "tc",
+  "capitals": [
+    {
+      "name": "Cockburn Town",
+      "coordinate": {
+        "latitude": 21.46,
+        "longitude": -71.14
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 21.75,
+    "longitude": -71.58333333
+  },
+  "area": 948,
+  "population": 38718,
+  "resources": {
+    "map": "https://goo.gl/maps/R8VUDQfwZiFtvmyn8",
+    "flag": "https://flagcdn.com/tc.svg",
+    "coatOfArms": null,
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/tc/country.svg"
+  }
+}

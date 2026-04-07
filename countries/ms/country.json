@@ -1,0 +1,26 @@
+{
+  "cca2": "ms",
+  "capitals": [
+    {
+      "name": "Plymouth",
+      "coordinate": {
+        "latitude": 16.7,
+        "longitude": -62.22
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "CentralAmerica",
+  "coordinate": {
+    "latitude": 16.75,
+    "longitude": -62.2
+  },
+  "area": 102,
+  "population": 4922,
+  "resources": {
+    "map": "https://goo.gl/maps/CSbe7UmxPmiwQB7GA",
+    "flag": "https://flagcdn.com/ms.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/ms.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/ms/country.svg"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "cca2": "al",
+  "capitals": [
+    {
+      "name": "Tirana",
+      "coordinate": {
+        "latitude": 41.32,
+        "longitude": 19.82
+      }
+    }
+  ],
+  "borders": [
+    "me",
+    "gr",
+    "mk",
+    "xk"
+  ],
+  "continent": "Europe",
+  "coordinate": {
+    "latitude": 41,
+    "longitude": 20
+  },
+  "area": 28748,
+  "population": 2837743,
+  "resources": {
+    "map": "https://goo.gl/maps/BzN9cTuj68ZA8SyZ8",
+    "flag": "https://flagcdn.com/al.svg",
+    "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/al.svg",
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/al/country.svg"
+  }
+}

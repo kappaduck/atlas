@@ -1,0 +1,26 @@
+{
+  "cca2": "um",
+  "capitals": [
+    {
+      "name": "Washington DC",
+      "coordinate": {
+        "latitude": 19.3,
+        "longitude": 166.633333
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "NorthAmerica",
+  "coordinate": {
+    "latitude": 19.3,
+    "longitude": 166.633333
+  },
+  "area": 34.2,
+  "population": 300,
+  "resources": {
+    "map": "https://goo.gl/maps/hZKnrzgeK69dDyPF8",
+    "flag": "https://flagcdn.com/um.svg",
+    "coatOfArms": null,
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/um/country.svg"
+  }
+}

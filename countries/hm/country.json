@@ -1,0 +1,18 @@
+{
+  "cca2": "hm",
+  "capitals": [],
+  "borders": [],
+  "continent": "Antarctica",
+  "coordinate": {
+    "latitude": -53.0818,
+    "longitude": 73.5042
+  },
+  "area": 412,
+  "population": 0,
+  "resources": {
+    "map": "https://goo.gl/maps/k5FBAiVaVyozuYeA7",
+    "flag": "https://flagcdn.com/hm.svg",
+    "coatOfArms": null,
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/hm/country.svg"
+  }
+}

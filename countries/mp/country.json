@@ -1,0 +1,26 @@
+{
+  "cca2": "mp",
+  "capitals": [
+    {
+      "name": "Saipan",
+      "coordinate": {
+        "latitude": 15.2,
+        "longitude": 145.75
+      }
+    }
+  ],
+  "borders": [],
+  "continent": "Oceania",
+  "coordinate": {
+    "latitude": 15.2,
+    "longitude": 145.75
+  },
+  "area": 464,
+  "population": 57557,
+  "resources": {
+    "map": "https://goo.gl/maps/cpZ67knoRAcfu1417",
+    "flag": "https://flagcdn.com/mp.svg",
+    "coatOfArms": null,
+    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/mp/country.svg"
+  }
+}
