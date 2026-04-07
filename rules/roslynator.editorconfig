@@ -1,0 +1,6 @@
+is_global = true
+
+# RCS1036: Declare type inside namespace
+# This rule does not apply to file-based code
+# https://josefpihrt.github.io/docs/roslynator/analyzers/RCS1110/
+dotnet_diagnostic.RCS1110.severity = none

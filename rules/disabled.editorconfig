@@ -1,0 +1,21 @@
+is_global = true
+
+# CA1305: The behavior of 'ToString()' could vary based on the current user's locale settings.
+# Some string does not need to be localized
+# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1305
+dotnet_diagnostic.CA1305.severity = none
+
+# CA1308: replace the call to 'ToLowerInvariant' with ToUpperInvariant
+# Can use whatever case
+# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1308
+dotnet_diagnostic.CA1308.severity = none
+
+# CA1716: Identifiers should not match keywords
+# Can use keywords as identifiers like event
+# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1716
+dotnet_diagnostic.CA1716.severity = none
+
+# CA1812: Avoid uninstantiated internal classes
+# Theses classes are used by the DI container
+# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1812
+dotnet_diagnostic.CA1812.severity = none

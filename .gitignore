@@ -1,0 +1,31 @@
+# Generated javascript files
+
+*.js
+*.js.map
+
+# build outputs
+
+[Aa]rtifacts/
+[Bb]uild/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+[Bb]in/
+[Oo]bj/
+[Tt]est[Rr]esults/
+
+# Visual studio files
+
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+## Coverlet
+
+coverage*.json
+coverage*.xml
+coverage*.info
