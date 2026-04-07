@@ -1,0 +1,43 @@
+version: 2
+
+updates:
+  - package-ecosystem: nuget
+    target-branch: main
+    directory: /
+    schedule:
+      interval: weekly
+      day: wednesday
+    commit-message:
+      prefix: NuGet packages
+    labels: [dependencies]
+    assignees: [beauchama]
+    groups:
+      nugets:
+        patterns:
+          - '*'
+
+  - package-ecosystem: dotnet-sdk
+    target-branch: main
+    directory: /
+    schedule:
+      interval: weekly
+      day: wednesday
+    commit-message:
+      prefix: .NET SDK
+    labels: [dependencies]
+    assignees: [beauchama]
+
+  - package-ecosystem: github-actions
+    target-branch: main
+    directory: /
+    schedule:
+      interval: weekly
+      day: wednesday
+    commit-message:
+      prefix: GitHub Actions
+    labels: [dependencies]
+    assignees: [beauchama]
+    groups:
+      actions:
+        patterns:
+          - '*'

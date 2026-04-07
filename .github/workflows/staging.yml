@@ -1,0 +1,20 @@
+name: Staging
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['src/**', '**.props', .github/workflows/build.yml, .github/workflows/staging.yml]
+
+jobs:
+  staging:
+    name: Staging environment
+
+    permissions:
+      contents: read
+      deployments: write
+
+    uses: kappaduck/atlas/.github/workflows/build.yml@main
+    with:
+      environment: staging
+    secrets: inherit

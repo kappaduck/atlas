@@ -1,0 +1,42 @@
+name: Pull Request
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths: ['src/**', 'tests/**', '**.props', .github/workflows/pull-request.yml]
+
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
+jobs:
+  build:
+    name: Build/Unit Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: ./global.json
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration release --no-restore
+
+      - name: Test
+        continue-on-error: true
+        run: dotnet test --configuration release --no-build --report-trx --coverage
+
+      - name: Publish test results
+        if: (!cancelled())
+        uses: EnricoMi/publish-unit-test-result-action/windows@v2
+        with:
+          files: '**/TestResults/*.trx'
