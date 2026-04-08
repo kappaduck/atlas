@@ -22,6 +22,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.lscache
 .vs/
 
 ## Coverlet

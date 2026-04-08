@@ -33,10 +33,28 @@ jobs:
 
       - name: Test
         continue-on-error: true
-        run: dotnet test --configuration release --no-build --report-trx --coverage
+        run: dotnet test --configuration release --no-build --report-trx --coverage --coverage-output-format cobertura
 
       - name: Publish test results
         if: (!cancelled())
         uses: EnricoMi/publish-unit-test-result-action@v2
         with:
           files: '**/TestResults/*.trx'
+
+      - name: Code Coverage Summary Report
+        uses: irongut/CodeCoverageSummary@v1.3.0
+        with:
+          filename: '**/TestResults/*.covertura.xml'
+          badge: true
+          fail_below_min: true
+          format: markdown
+          hide_complexity: true
+          indicators: true
+          output: both
+          thresholds: '90 100'
+
+      - name: Add Coverage PR Comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          recreate: true
+          path: code-coverage-results.md
