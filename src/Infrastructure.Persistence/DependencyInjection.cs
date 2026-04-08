@@ -2,6 +2,7 @@
 // The source code is licensed under MIT License.
 
 using Infrastructure.Persistence.Caching;
+using Infrastructure.Persistence.Changelog;
 using Infrastructure.Persistence.Countries;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +19,7 @@ public static class DependencyInjection
         public void AddPersistence(IConfiguration configuration)
         {
             services.AddCaching(configuration);
+            services.AddChangelog(configuration);
             services.AddCountries(configuration);
         }
 
@@ -30,6 +32,16 @@ public static class DependencyInjection
 
             services.AddMemoryCache()
                     .AddSingleton<ICache, Cache>();
+        }
+
+        private void AddChangelog(IConfiguration configuration)
+        {
+            services.Configure<ChangelogEndpointOptions>(configuration.GetSection(ChangelogEndpointOptions.Section))
+                    .AddSingleton<IValidateOptions<ChangelogEndpointOptions>, ChangelogEndpointOptions.Validator>()
+                    .AddSingleton(sp => sp.GetRequiredService<IOptions<ChangelogEndpointOptions>>().Value)
+                    .AddOptionsWithValidateOnStart<ChangelogEndpointOptions>();
+
+            services.AddHttpClient<IChangelogClient, ChangelogClient>();
         }
 
         private void AddCountries(IConfiguration configuration)
