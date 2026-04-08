@@ -2,6 +2,7 @@
 // The source code is licensed under MIT License.
 
 using Infrastructure.Persistence.Caching;
+using Infrastructure.Persistence.Countries;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -14,7 +15,11 @@ public static class DependencyInjection
 {
     extension(IServiceCollection services)
     {
-        public void AddPersistence(IConfiguration configuration) => services.AddCaching(configuration);
+        public void AddPersistence(IConfiguration configuration)
+        {
+            services.AddCaching(configuration);
+            services.AddCountries(configuration);
+        }
 
         private void AddCaching(IConfiguration configuration)
         {
@@ -25,6 +30,16 @@ public static class DependencyInjection
 
             services.AddMemoryCache()
                     .AddSingleton<ICache, Cache>();
+        }
+
+        private void AddCountries(IConfiguration configuration)
+        {
+            services.Configure<CountryEndpointOptions>(configuration.GetSection(CountryEndpointOptions.Section))
+                    .AddSingleton<IValidateOptions<CountryEndpointOptions>, CountryEndpointOptions.Validator>()
+                    .AddSingleton(sp => sp.GetRequiredService<IOptions<CountryEndpointOptions>>().Value)
+                    .AddOptionsWithValidateOnStart<CountryEndpointOptions>();
+
+            services.AddHttpClient<ICountryClient, CountryClient>();
         }
     }
 }
