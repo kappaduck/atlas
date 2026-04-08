@@ -37,6 +37,6 @@ jobs:
 
       - name: Publish test results
         if: (!cancelled())
-        uses: EnricoMi/publish-unit-test-result-action/windows@v2
+        uses: EnricoMi/publish-unit-test-result-action@v2
         with:
           files: '**/TestResults/*.trx'

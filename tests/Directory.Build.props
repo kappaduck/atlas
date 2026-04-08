@@ -1,0 +1,26 @@
+<Project>
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+  <PropertyGroup Label="Configure .csproj">
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup Label="Exclude tests project from code coverage">
+    <AssemblyAttribute Include="System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute" />
+  </ItemGroup>
+
+  <ItemGroup Label="Global usings">
+    <Using Include="NSubstitute" />
+    <Using Include="TUnit.Core" />
+    <Using Include="TUnit.Assertions" />
+    <Using Include="TUnit.Assertions.Extensions" />
+    <Using Include="TUnit.Mocks" />
+  </ItemGroup>
+
+  <ItemGroup Label="Common test NuGets">
+    <PackageReference Include="NSubstitute" />
+    <PackageReference Include="TUnit" />
+    <PackageReference Include="TUnit.Mocks" />
+    <PackageReference Include="TUnit.Mocks.Http" />
+  </ItemGroup>
+</Project>

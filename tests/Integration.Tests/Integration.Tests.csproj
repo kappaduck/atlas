@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Web.App\Web.App.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Label="Global usings">
+    <Using Include="Bunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bunit" />
+  </ItemGroup>
+</Project>
