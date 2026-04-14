@@ -1,6 +1,7 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
+using Atlas.Application.Changelog;
 using Atlas.Application.Countries;
 using Infrastructure.Persistence.Caching;
 using Infrastructure.Persistence.Changelog;
@@ -43,6 +44,7 @@ public static class DependencyInjection
                     .AddOptionsWithValidateOnStart<ChangelogEndpointOptions>();
 
             services.AddHttpClient<IChangelogClient, ChangelogClient>();
+            services.AddSingleton<IChangelogRepository, ChangelogRepository>();
         }
 
         private void AddCountries(IConfiguration configuration)
