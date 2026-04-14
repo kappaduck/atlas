@@ -49,7 +49,7 @@ public class CountryRepositoryTests
     public async Task GetAllAsyncShouldCacheAllCountries()
     {
         await _repository.GetAllAsync(CancellationToken.None);
-        _cache.Received(1).Save(ExpectedCountriesKey, NSubstitute.Arg.Is<IEnumerable<Country>>(c => c.Contains(_countries.Canada)));
+        _cache.Received(1).Save(ExpectedCountriesKey, NSubstitute.Arg.Is<IEnumerable<Country>>(c => c!.Contains(_countries.Canada)));
     }
 
     [Test]
@@ -85,7 +85,7 @@ public class CountryRepositoryTests
     public async Task GetAsyncShouldCacheAllCountries()
     {
         await _repository.GetAsync(_countries.Canada.Cca2, CancellationToken.None);
-        _cache.Received(1).Save(ExpectedCountriesKey, NSubstitute.Arg.Is<IEnumerable<Country>>(c => c.Contains(_countries.Canada)));
+        _cache.Received(1).Save(ExpectedCountriesKey, NSubstitute.Arg.Is<IEnumerable<Country>>(c => c!.Contains(_countries.Canada)));
     }
 
     [Test]
@@ -181,7 +181,7 @@ public class CountryRepositoryTests
     public async Task LookupAsyncShouldCacheAllCountries()
     {
         await _repository.LookupAsync(CancellationToken.None);
-        _cache.Received(1).Save(ExpectedLookupKey, NSubstitute.Arg.Is<IEnumerable<Cca2>>(c => c.Contains(_countries.Canada.Cca2)));
+        _cache.Received(1).Save(ExpectedLookupKey, NSubstitute.Arg.Is<IEnumerable<Cca2>>(c => c!.Contains(_countries.Canada.Cca2)));
     }
 
     [Test]

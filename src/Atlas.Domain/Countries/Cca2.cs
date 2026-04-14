@@ -5,6 +5,8 @@ namespace Atlas.Domain.Countries;
 
 public readonly record struct Cca2(string Code)
 {
+    public static implicit operator string(Cca2 cca2) => cca2.ToString();
+
     public bool Equals(Cca2 other) => Code.Equals(other.Code, StringComparison.OrdinalIgnoreCase);
 
     public override int GetHashCode() => Code.GetHashCode(StringComparison.OrdinalIgnoreCase);

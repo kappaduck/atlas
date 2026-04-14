@@ -16,8 +16,11 @@ public sealed class CountryData
         All = File.ReadAllText(Path.Combine(path, "all.json"));
         Lookup = File.ReadAllText(Path.Combine(path, "lookup.json"));
 
-        string json = File.ReadAllText(Path.Combine(path, "ca/country.json"));
-        Canada = JsonSerializer.Deserialize(json, CountryJsonContext.Default.Country)!;
+        string canadaJson = File.ReadAllText(Path.Combine(path, "ca/country.json"));
+        Canada = JsonSerializer.Deserialize(canadaJson, CountryJsonContext.Default.Country)!;
+
+        string italyJson = File.ReadAllText(Path.Combine(path, "it/country.json"));
+        Italy = JsonSerializer.Deserialize(italyJson, CountryJsonContext.Default.Country)!;
     }
 
     public string All { get; }
@@ -25,4 +28,6 @@ public sealed class CountryData
     public string Lookup { get; }
 
     public Country Canada { get; }
+
+    public Country Italy { get; }
 }

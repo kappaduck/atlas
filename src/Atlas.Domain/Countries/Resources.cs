@@ -12,4 +12,6 @@ public sealed record Resources
     public Uri? CoatOfArms { get; init; }
 
     public required Uri Country { get; init; }
+
+    public void Deconstruct(out Uri map, out Uri flag, out Uri? coatOfArms, out Uri country) => (map, flag, coatOfArms, country) = (Map, Flag, CoatOfArms, Country);
 }
