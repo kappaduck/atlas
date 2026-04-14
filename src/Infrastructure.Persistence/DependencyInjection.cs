@@ -1,6 +1,7 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
+using Atlas.Application.Countries;
 using Infrastructure.Persistence.Caching;
 using Infrastructure.Persistence.Changelog;
 using Infrastructure.Persistence.Countries;
@@ -52,6 +53,7 @@ public static class DependencyInjection
                     .AddOptionsWithValidateOnStart<CountryEndpointOptions>();
 
             services.AddHttpClient<ICountryClient, CountryClient>();
+            services.AddSingleton<ICountryRepository, CountryRepository>();
         }
     }
 }
