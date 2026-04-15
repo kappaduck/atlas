@@ -1,0 +1,9 @@
+// Copyright (c) KappaDuck. All rights reserved.
+// The source code is licensed under MIT License.
+
+namespace Atlas.Application.Changelog;
+
+public interface IChangelogService
+{
+    ValueTask<string?> GetAsync(CancellationToken cancellationToken);
+}
