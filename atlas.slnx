@@ -35,7 +35,6 @@
     <File Path="tests/Directory.Build.props" />
     <File Path="tests/Directory.Packages.props" />
     <Project Path="tests/Unit.Tests/Unit.Tests.csproj" />
-    <Project Path="tests/Integration.Tests/Integration.Tests.csproj" />
   </Folder>
   <Folder Name="/workflows/">
     <File Path=".github/workflows/build.yml" />
