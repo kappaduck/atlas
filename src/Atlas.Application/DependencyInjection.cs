@@ -1,6 +1,7 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
+using Atlas.Application.Changelog;
 using Atlas.Application.Countries.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics.CodeAnalysis;
@@ -15,6 +16,9 @@ public static class DependencyInjection
         public void AddApplication()
         {
             services.AddSingleton<ICountryLookupService, CountryLookupService>();
+            services.AddSingleton<ICountryService, CountryService>();
+
+            services.AddSingleton<IChangelogService, ChangelogService>();
         }
     }
 }
