@@ -11,6 +11,9 @@ WebAssemblyHostBuilder builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
+builder.ConfigureLoggings();
+builder.AddServices();
+
 builder.Services.AddApplication();
 builder.Services.AddPersistence(builder.Configuration);
 
