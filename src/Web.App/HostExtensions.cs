@@ -47,10 +47,6 @@ internal static class HostExtensions
                             .AddSingleton<IValidateOptions<ProjectOptions>, ProjectOptions.Validator>()
                             .AddSingleton(sp => sp.GetRequiredService<IOptions<ProjectOptions>>().Value);
 
-            builder.Services.Configure<CompanyOptions>(builder.Configuration.GetRequiredSection(CompanyOptions.Section))
-                            .AddSingleton<IValidateOptions<CompanyOptions>, CompanyOptions.Validator>()
-                            .AddSingleton(sp => sp.GetRequiredService<IOptions<CompanyOptions>>().Value);
-
             builder.Services.Configure<DevOptions>(builder.Configuration.GetRequiredSection(DevOptions.Section))
                             .AddSingleton(sp => sp.GetRequiredService<IOptions<DevOptions>>().Value);
         }

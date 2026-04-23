@@ -24,6 +24,9 @@ public sealed partial class ProjectOptions
     [Required, Url]
     public required string FeatureUrl { get; set; }
 
+    [Required, Url]
+    public required string CompanyUrl { get; set; }
+
     [OptionsValidator]
     internal sealed partial class Validator : IValidateOptions<ProjectOptions>;
 }
