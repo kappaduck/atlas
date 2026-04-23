@@ -159,4 +159,13 @@
   <data name="EndlessCountryGuessing" xml:space="preserve">
     <value>Deviner le pays à l'infini</value>
   </data>
+  <data name="PageNotFoundMessage" xml:space="preserve">
+    <value>Cette page n'existe pas ou a été déplacée. Le globe lui-même ne sait plus où elle est passée.</value>
+  </data>
+  <data name="BackToGames" xml:space="preserve">
+    <value>Retour aux jeux</value>
+  </data>
+  <data name="PageNotFound" xml:space="preserve">
+    <value>Page &lt;span class="highlight"&gt;introuvable&lt;/span&gt;</value>
+  </data>
 </root>

@@ -1,13 +1,15 @@
 @page "/not-found"
 @layout MainLayout
 
-<PageTitle>404 &mdash; Atlas</PageTitle>
+@inject IStringLocalizer<Translations> Localizer
+
+<PageTitle>404 &mdash; @Localizer.Atlas</PageTitle>
 
 <main class="not-found">
 	<div class="background-404">404</div>
 	<div class="content-404">
-		<h1>Page not <span class="highlight">found</span></h1>
-		<p class="subtext">This page doesn't exist or was moved. The globe doesn't know where it went either.</p>
-		<a href="/" class="btn-primary">Back to games</a>
+		<h1>@Localizer.PageNotFound</h1>
+		<p class="subtext">@Localizer.PageNotFoundMessage</p>
+		<a href="/" class="btn-primary">@Localizer.BackToGames</a>
 	</div>
 </main>

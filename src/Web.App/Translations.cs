@@ -18,6 +18,8 @@ internal sealed class Translations
 
     internal const string AtlasLogo = nameof(AtlasLogo);
 
+    internal const string BackToGames = nameof(BackToGames);
+
     internal const string Country = nameof(Country);
 
     internal const string Daily = nameof(Daily);
@@ -33,6 +35,10 @@ internal sealed class Translations
     internal const string GuessMysteryCountry = nameof(GuessMysteryCountry);
 
     internal const string GuessMysteryFlag = nameof(GuessMysteryFlag);
+
+    internal const string PageNotFound = nameof(PageNotFound);
+
+    internal const string PageNotFoundMessage = nameof(PageNotFoundMessage);
 
     internal const string PickYourChallenge = nameof(PickYourChallenge);
 
@@ -51,6 +57,8 @@ internal static class TranslationsExtensions
 
         internal string AtlasLogo => localizer[Translations.AtlasLogo];
 
+        internal string BackToGames => localizer[Translations.BackToGames];
+
         internal string Country => localizer[Translations.Country];
 
         internal string Daily => localizer[Translations.Daily];
@@ -66,6 +74,10 @@ internal static class TranslationsExtensions
         internal string GuessMysteryCountry => localizer[Translations.GuessMysteryCountry];
 
         internal string GuessMysteryFlag => localizer[Translations.GuessMysteryFlag];
+
+        internal MarkupString PageNotFound => new(localizer[Translations.PageNotFound]);
+
+        internal string PageNotFoundMessage => localizer[Translations.PageNotFoundMessage];
 
         internal MarkupString PickYourChallenge => new(localizer[Translations.PickYourChallenge]);
 
