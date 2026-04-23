@@ -1,0 +1,36 @@
+@page "/"
+
+@inject IStringLocalizer<Translations> Localizer
+
+<div class="index">
+	<section class="intro">
+		<h2 class="intro-title">@Localizer.PickYourChallenge</h2>
+		<span class="intro-sub">@Localizer.DailyPuzzleRandomPuzzle</span>
+	</section>
+	<div class="list">
+		<h4>@Localizer.Flag</h4>
+		<div class="games">
+			<a class="game-card" href="/flags/daily">
+				<span class="game-title">@Localizer.Daily</span>
+				<span class="game-description">@Localizer.GuessMysteryFlag</span>
+			</a>
+			<a class="game-card" href="/flags/random">
+				<span class="game-title">@Localizer.Random</span>
+				<span class="game-description">@Localizer.EndlessFlagGuessing</span>
+			</a>
+		</div>
+	</div>
+	<div class="list">
+		<h4>@Localizer.Country</h4>
+		<div class="games">
+			<a class="game-card" href="/countries/daily">
+				<span class="game-title">@Localizer.Daily</span>
+				<span class="game-description">@Localizer.GuessMysteryCountry</span>
+			</a>
+			<a class="game-card" href="/countries/random">
+				<span class="game-title">@Localizer.Random</span>
+				<span class="game-description">@Localizer.EndlessCountryGuessing</span>
+			</a>
+		</div>
+	</div>
+</div>

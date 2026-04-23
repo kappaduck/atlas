@@ -1,6 +1,8 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
+using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Localization;
 using System.Diagnostics.CodeAnalysis;
 
 namespace Web.App;
@@ -12,79 +14,65 @@ internal sealed class Translations
     {
     }
 
-    internal const string All = nameof(All);
-
     internal const string Atlas = nameof(Atlas);
 
     internal const string AtlasLogo = nameof(AtlasLogo);
 
-    internal const string Blur = nameof(Blur);
-
-    internal const string Changelog = nameof(Changelog);
-
-    internal const string ChangingLanguageWarning = nameof(ChangingLanguageWarning);
-
-    internal const string Congratulations = nameof(Congratulations);
-
-    internal const string Continent = nameof(Continent);
-
-    internal const string Countries = nameof(Countries);
-
-    internal const string CountryList = nameof(CountryList);
+    internal const string Country = nameof(Country);
 
     internal const string Daily = nameof(Daily);
 
-    internal const string Difficulty = nameof(Difficulty);
+    internal const string DailyPuzzleRandomPuzzle = nameof(DailyPuzzleRandomPuzzle);
 
-    internal const string Direction = nameof(Direction);
+    internal const string EndlessCountryGuessing = nameof(EndlessCountryGuessing);
 
-    internal const string Display = nameof(Display);
+    internal const string EndlessFlagGuessing = nameof(EndlessFlagGuessing);
 
-    internal const string FailedDisplayCountry = nameof(FailedDisplayCountry);
+    internal const string Flag = nameof(Flag);
 
-    internal const string FailedDisplayFlag = nameof(FailedDisplayFlag);
+    internal const string GuessMysteryCountry = nameof(GuessMysteryCountry);
 
-    internal const string Flags = nameof(Flags);
+    internal const string GuessMysteryFlag = nameof(GuessMysteryFlag);
 
-    internal const string GiveUp = nameof(GiveUp);
+    internal const string PickYourChallenge = nameof(PickYourChallenge);
 
-    internal const string GoBack = nameof(GoBack);
-
-    internal const string Grayscale = nameof(Grayscale);
-
-    internal const string Invert = nameof(Invert);
-
-    internal const string Language = nameof(Language);
-
-    internal const string LookupCountry = nameof(LookupCountry);
-
-    internal const string LookupPlaceholder = nameof(LookupPlaceholder);
-
-    internal const string Navigation = nameof(Navigation);
-
-    internal const string NoCountriesAvailable = nameof(NoCountriesAvailable);
-
-    internal const string None = nameof(None);
-
-    internal const string NotFound = nameof(NotFound);
-
-    internal const string NotFoundMessage = nameof(NotFoundMessage);
-
-    internal const string PlayAgain = nameof(PlayAgain);
-
-    internal const string Project = nameof(Project);
+    internal const string Random = nameof(Random);
 
     internal const string ReportBug = nameof(ReportBug);
 
     internal const string RequestFeature = nameof(RequestFeature);
+}
 
-    internal const string SeeOnMap = nameof(SeeOnMap);
+internal static class TranslationsExtensions
+{
+    extension(IStringLocalizer<Translations> localizer)
+    {
+        internal string Atlas => localizer[Translations.Atlas];
 
-    internal const string Settings = nameof(Settings);
+        internal string AtlasLogo => localizer[Translations.AtlasLogo];
 
-    internal const string Shift = nameof(Shift);
+        internal string Country => localizer[Translations.Country];
 
-    internal const string Random = nameof(Random);
+        internal string Daily => localizer[Translations.Daily];
 
-    internal const string Theme = nameof(Theme);
+        internal MarkupString DailyPuzzleRandomPuzzle => new(localizer[Translations.DailyPuzzleRandomPuzzle]);
+
+        internal string EndlessCountryGuessing => localizer[Translations.EndlessCountryGuessing];
+
+        internal string EndlessFlagGuessing => localizer[Translations.EndlessFlagGuessing];
+
+        internal string Flag => localizer[Translations.Flag];
+
+        internal string GuessMysteryCountry => localizer[Translations.GuessMysteryCountry];
+
+        internal string GuessMysteryFlag => localizer[Translations.GuessMysteryFlag];
+
+        internal MarkupString PickYourChallenge => new(localizer[Translations.PickYourChallenge]);
+
+        internal string Random => localizer[Translations.Random];
+
+        internal string ReportBug => localizer[Translations.ReportBug];
+
+        internal string RequestFeature => localizer[Translations.RequestFeature];
+    }
 }

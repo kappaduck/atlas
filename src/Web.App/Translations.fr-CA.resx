@@ -117,98 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NotFoundMessage" xml:space="preserve">
-    <value>Oh non, la page n'est nulle part sur les cartes!</value>
-  </data>
-  <data name="GoBack" xml:space="preserve">
-    <value>Retourner</value>
-  </data>
-  <data name="NotFound" xml:space="preserve">
-    <value>Page non trouvée</value>
-  </data>
   <data name="Atlas" xml:space="preserve">
     <value>Atlas</value>
   </data>
   <data name="AtlasLogo" xml:space="preserve">
     <value>Logo de Atlas</value>
   </data>
-  <data name="Navigation" xml:space="preserve">
-    <value>Navigation</value>
-  </data>
-  <data name="Project" xml:space="preserve">
-    <value>Projet</value>
-  </data>
-  <data name="Settings" xml:space="preserve">
-    <value>Paramètres</value>
-  </data>
-  <data name="Dark" xml:space="preserve">
-    <value>Noir</value>
-  </data>
-  <data name="ChangingLanguageWarning" xml:space="preserve">
-    <value>Changer la langue entraînera le rechargement de la page.</value>
-  </data>
-  <data name="Display" xml:space="preserve">
-    <value>Affichage</value>
-  </data>
-  <data name="Light" xml:space="preserve">
-    <value>Blanc</value>
-  </data>
-  <data name="Language" xml:space="preserve">
-    <value>Langue</value>
-  </data>
-  <data name="Theme" xml:space="preserve">
-    <value>Thème</value>
-  </data>
-  <data name="System" xml:space="preserve">
-    <value>Système</value>
-  </data>
-  <data name="French" xml:space="preserve">
-    <value>Français</value>
-  </data>
-  <data name="English" xml:space="preserve">
-    <value>Anglais</value>
-  </data>
-  <data name="General" xml:space="preserve">
-    <value>Général</value>
-  </data>
-  <data name="Changelog" xml:space="preserve">
-    <value>Changelog</value>
-  </data>
-  <data name="Countries" xml:space="preserve">
+  <data name="Country" xml:space="preserve">
     <value>Pays</value>
   </data>
-  <data name="NoCountriesAvailable" xml:space="preserve">
-    <value>Aucun pays disponible</value>
-  </data>
-  <data name="LookupPlaceholder" xml:space="preserve">
-    <value>Canada, Italie...</value>
-  </data>
-  <data name="LookupCountry" xml:space="preserve">
-    <value>Chercher un pays</value>
-  </data>
-  <data name="FailedDisplayFlag" xml:space="preserve">
-    <value>Impossible d'afficher le drapeau</value>
-  </data>
-  <data name="GiveUp" xml:space="preserve">
-    <value>Abandonner</value>
-  </data>
-  <data name="Congratulations" xml:space="preserve">
-    <value>Félicitations!</value>
-  </data>
-  <data name="PlayAgain" xml:space="preserve">
-    <value>Recommencer</value>
-  </data>
-  <data name="SeeOnMap" xml:space="preserve">
-    <value>Voir sur la carte</value>
-  </data>
-  <data name="Continent" xml:space="preserve">
-    <value>Continent</value>
-  </data>
-  <data name="Direction" xml:space="preserve">
-    <value>Direction</value>
-  </data>
-  <data name="Flags" xml:space="preserve">
-    <value>Drapeaux</value>
+  <data name="Flag" xml:space="preserve">
+    <value>Drapeau</value>
   </data>
   <data name="Daily" xml:space="preserve">
     <value>Quotidien</value>
@@ -216,34 +135,28 @@
   <data name="Random" xml:space="preserve">
     <value>Aléatoire</value>
   </data>
-  <data name="Difficulty" xml:space="preserve">
-    <value>Difficulté</value>
-  </data>
-  <data name="Shift" xml:space="preserve">
-    <value>Décalage</value>
-  </data>
-  <data name="Invert" xml:space="preserve">
-    <value>Inversé</value>
-  </data>
-  <data name="Blur" xml:space="preserve">
-    <value>Brouillé</value>
-  </data>
-  <data name="None" xml:space="preserve">
-    <value>Aucun</value>
-  </data>
-  <data name="Grayscale" xml:space="preserve">
-    <value>Gris</value>
-  </data>
-  <data name="All" xml:space="preserve">
-    <value>Tous</value>
-  </data>
   <data name="ReportBug" xml:space="preserve">
     <value>Signaler un bug</value>
   </data>
   <data name="RequestFeature" xml:space="preserve">
     <value>Demander une fonctionnalité</value>
   </data>
-  <data name="FailedDisplayCountry" xml:space="preserve">
-    <value>Impossible d'afficher le pays</value>
+  <data name="PickYourChallenge" xml:space="preserve">
+    <value>Choisissez votre &lt;span class="highlight"&gt;défi&lt;/span&gt;</value>
+  </data>
+  <data name="DailyPuzzleRandomPuzzle" xml:space="preserve">
+    <value>Les jeux quotidiens sont réinitialisés à minuit &amp;middot; Les jeux aléatoires sont infinis</value>
+  </data>
+  <data name="GuessMysteryFlag" xml:space="preserve">
+    <value>Devinez le drapeau mystère d'aujourd'hui</value>
+  </data>
+  <data name="EndlessFlagGuessing" xml:space="preserve">
+    <value>Deviner le drapeau à l'infini</value>
+  </data>
+  <data name="GuessMysteryCountry" xml:space="preserve">
+    <value>Devinez le pays mystère d'aujourd'hui</value>
+  </data>
+  <data name="EndlessCountryGuessing" xml:space="preserve">
+    <value>Deviner le pays à l'infini</value>
   </data>
 </root>

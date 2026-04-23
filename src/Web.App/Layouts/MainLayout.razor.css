@@ -22,7 +22,7 @@ header {
       font-size: var(--quack-text-md);
       font-weight: 500;
       letter-spacing: .01em;
-      color: var(--quack-accent-text);
+      color: var(--quack-primary-text);
     }
   }
 
