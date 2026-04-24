@@ -15,12 +15,12 @@ public sealed class ChangelogClientTests
     private readonly ChangelogClient _client;
     private readonly ChangelogEndpointOptions _options = new()
     {
-        Changelog = "/changelog"
+        Url = "/changelog"
     };
 
     public ChangelogClientTests()
     {
-        _http.Handler.OnGet(_options.Changelog).RespondWithJson(Content);
+        _http.Handler.OnGet(_options.Url).RespondWithJson(Content);
         _client = new ChangelogClient(_http, _options);
     }
 
@@ -28,13 +28,13 @@ public sealed class ChangelogClientTests
     public async Task GetAsyncShouldCallChangelog()
     {
         await _client.GetAsync(CancellationToken.None);
-        _http.Handler.Verify(r => r.Method(HttpMethod.Get).Path(_options.Changelog), Times.Once);
+        _http.Handler.Verify(r => r.Method(HttpMethod.Get).Path(_options.Url), Times.Once);
     }
 
     [Test]
     public async Task GetAsyncShouldGiveNullWhenStatusCodeIsNotOK200()
     {
-        _http.Handler.OnGet(_options.Changelog).Respond(HttpStatusCode.InternalServerError);
+        _http.Handler.OnGet(_options.Url).Respond(HttpStatusCode.InternalServerError);
 
         string? content = await _client.GetAsync(CancellationToken.None);
         await Assert.That(content).IsNull();
@@ -50,7 +50,7 @@ public sealed class ChangelogClientTests
     [Test]
     public async Task GetAsyncShouldGiveNullWhenThereIsNoContent()
     {
-        _http.Handler.OnGet(_options.Changelog).RespondWith(new HttpResponseMessage(HttpStatusCode.OK)
+        _http.Handler.OnGet(_options.Url).RespondWith(new HttpResponseMessage(HttpStatusCode.OK)
         {
             Content = new StringContent(string.Empty)
         });

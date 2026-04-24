@@ -13,7 +13,7 @@ public sealed partial class ChangelogEndpointOptions
     internal const string Section = "project:changelog";
 
     [Required, Url]
-    public required string Changelog { get; set; }
+    public required string Url { get; set; }
 
     [OptionsValidator]
     internal sealed partial class Validator : IValidateOptions<ChangelogEndpointOptions>;
