@@ -4,13 +4,11 @@
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.JSInterop;
-using System.Diagnostics.CodeAnalysis;
 using Web.App.Options;
 using Web.App.Storage;
 
 namespace Web.App;
 
-[ExcludeFromCodeCoverage]
 internal static class HostExtensions
 {
     extension(WebAssemblyHostBuilder builder)

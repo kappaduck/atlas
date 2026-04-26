@@ -1,12 +1,10 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
-using System.Diagnostics.CodeAnalysis;
 using Web.App.Games;
 
 namespace Web.App.Storage;
 
-[ExcludeFromCodeCoverage]
 internal abstract class DailyLocalStorage(string key, ILocalStorage storage) : IDailyLocalStorage
 {
     private readonly string _key = $"daily:{key}";

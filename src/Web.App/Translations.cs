@@ -3,11 +3,9 @@
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Web.App;
 
-[ExcludeFromCodeCoverage]
 internal sealed class Translations
 {
     private Translations()

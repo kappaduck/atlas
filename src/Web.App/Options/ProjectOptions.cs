@@ -3,11 +3,9 @@
 
 using Microsoft.Extensions.Options;
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Web.App.Options;
 
-[ExcludeFromCodeCoverage]
 public sealed partial class ProjectOptions
 {
     internal const string Section = "project";
