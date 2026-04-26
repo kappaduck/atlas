@@ -168,4 +168,13 @@
   <data name="PageNotFound" xml:space="preserve">
     <value>Page &lt;span class="highlight"&gt;introuvable&lt;/span&gt;</value>
   </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="SearchCountries" xml:space="preserve">
+    <value>Rechercher des pays...</value>
+  </data>
+  <data name="CountriesAvailable" xml:space="preserve">
+    <value>{0} pays disponibles</value>
+  </data>
 </root>

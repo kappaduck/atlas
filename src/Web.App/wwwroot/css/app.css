@@ -19,6 +19,21 @@ select {
   cursor: pointer;
 }
 
+input[type=search] {
+  font-size: var(--quack-text-sm);
+  background: light-dark(white, var(--quack-base-800));
+  color: var(--quack-primary-text);
+  border: 1px solid var(--quack-border-400);
+  border-radius: var(--quack-radius-md);
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color .15s;
+
+  &:focus {
+    border-color: var(--quack-accent);
+  }
+}
+
 .spinner {
   display: inline-block;
   width: 48px;

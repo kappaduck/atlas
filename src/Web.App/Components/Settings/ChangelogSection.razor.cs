@@ -10,23 +10,19 @@ using Microsoft.AspNetCore.Components;
 
 namespace Web.App.Components.Settings;
 
-public sealed partial class ChangelogSection(IChangelogService service) : IDisposable
+public sealed partial class ChangelogSection(IChangelogService service)
 {
-    private readonly CancellationTokenSource _cts = new();
     private MarkupString _changelog;
     private bool _isLoading;
 
-    public void Dispose()
-    {
-        _cts.Cancel();
-        _cts.Dispose();
-    }
+    [Parameter, EditorRequired]
+    public required CancellationToken CancellationToken { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
         _isLoading = true;
 
-        string? content = await service.GetAsync(_cts.Token);
+        string? content = await service.GetAsync(CancellationToken);
         _changelog = GenerateChangelog(content);
 
         _isLoading = false;

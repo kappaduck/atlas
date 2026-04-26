@@ -20,6 +20,8 @@ internal sealed class Translations
 
     internal const string BackToGames = nameof(BackToGames);
 
+    internal const string CountriesAvailable = nameof(CountriesAvailable);
+
     internal const string Country = nameof(Country);
 
     internal const string Daily = nameof(Daily);
@@ -47,6 +49,10 @@ internal sealed class Translations
     internal const string ReportBug = nameof(ReportBug);
 
     internal const string RequestFeature = nameof(RequestFeature);
+
+    internal const string SearchCountries = nameof(SearchCountries);
+
+    internal const string Settings = nameof(Settings);
 }
 
 internal static class TranslationsExtensions
@@ -58,6 +64,8 @@ internal static class TranslationsExtensions
         internal string AtlasLogo => localizer[Translations.AtlasLogo];
 
         internal string BackToGames => localizer[Translations.BackToGames];
+
+        internal string CountriesAvailable(int count) => localizer[Translations.CountriesAvailable, count];
 
         internal string Country => localizer[Translations.Country];
 
@@ -86,5 +94,9 @@ internal static class TranslationsExtensions
         internal string ReportBug => localizer[Translations.ReportBug];
 
         internal string RequestFeature => localizer[Translations.RequestFeature];
+
+        internal string SearchCountries => localizer[Translations.SearchCountries];
+
+        internal string Settings => localizer[Translations.Settings];
     }
 }
