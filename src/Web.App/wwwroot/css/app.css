@@ -1,12 +1,19 @@
+html {
+  &:has([data-theme="dark" i]) {
+    color-scheme: dark;
+    --country-color: 1;
+  }
+
+  &:has([data-theme="light" i]) {
+    color-scheme: light;
+    --country-color: 0;
+  }
+}
+
 #app {
-  --country-color: 1;
   display: flex;
   flex-direction: column;
   min-height: 100svh;
-
-  &[data-theme='light'] {
-    --country-color: 0;
-  }
 }
 
 .highlight {
