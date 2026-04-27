@@ -5,7 +5,7 @@ using Atlas.Application.Countries.Responses;
 using Atlas.Application.Countries.Services;
 using Microsoft.AspNetCore.Components;
 
-namespace Web.App.Components.Settings;
+namespace Web.App.Settings.Components;
 
 public sealed partial class CountriesSection(ICountryService service)
 {

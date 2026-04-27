@@ -8,7 +8,7 @@ using Markdig.Syntax;
 using Markdig.Syntax.Inlines;
 using Microsoft.AspNetCore.Components;
 
-namespace Web.App.Components.Settings;
+namespace Web.App.Settings.Components;
 
 public sealed partial class ChangelogSection(IChangelogService service)
 {
