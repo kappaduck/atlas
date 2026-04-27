@@ -213,4 +213,67 @@
   <data name="Mirror" xml:space="preserve">
     <value>Mirror</value>
   </data>
+  <data name="ChooseTheme" xml:space="preserve">
+    <value>Choose your theme</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="Appearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="ChooseDisplayLanguage" xml:space="preserve">
+    <value>Choose your display language</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="French" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Distance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="ChooseDistanceUnit" xml:space="preserve">
+    <value>Choose your distance unit</value>
+  </data>
+  <data name="Kilometers" xml:space="preserve">
+    <value>Kilometers</value>
+  </data>
+  <data name="Miles" xml:space="preserve">
+    <value>Miles</value>
+  </data>
+  <data name="ShowContinentHint" xml:space="preserve">
+    <value>Show continent hint</value>
+  </data>
+  <data name="ColourCodeContinentMatch" xml:space="preserve">
+    <value>Display colour-code continent match in guess rows</value>
+  </data>
+  <data name="ShowDistance" xml:space="preserve">
+    <value>Show distance</value>
+  </data>
+  <data name="ShowDirectionArrow" xml:space="preserve">
+    <value>Show direction arrow</value>
+  </data>
+  <data name="DisplayDistance" xml:space="preserve">
+    <value>Display distance in guess rows</value>
+  </data>
+  <data name="DisplayDirectionalArrow" xml:space="preserve">
+    <value>Display directional arrow in guess rows</value>
+  </data>
+  <data name="Hints" xml:space="preserve">
+    <value>Hints</value>
+  </data>
 </root>

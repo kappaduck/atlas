@@ -12,6 +12,8 @@ internal sealed class Translations
     {
     }
 
+    internal const string Appearance = nameof(Appearance);
+
     internal const string Atlas = nameof(Atlas);
 
     internal const string AtlasLogo = nameof(AtlasLogo);
@@ -19,6 +21,14 @@ internal sealed class Translations
     internal const string BackToGames = nameof(BackToGames);
 
     internal const string Blur = nameof(Blur);
+
+    internal const string ChooseDisplayLanguage = nameof(ChooseDisplayLanguage);
+
+    internal const string ChooseDistanceUnit = nameof(ChooseDistanceUnit);
+
+    internal const string ChooseTheme = nameof(ChooseTheme);
+
+    internal const string ColourCodeContinentMatch = nameof(ColourCodeContinentMatch);
 
     internal const string CountriesAvailable = nameof(CountriesAvailable);
 
@@ -31,6 +41,12 @@ internal sealed class Translations
     internal const string Daily = nameof(Daily);
 
     internal const string DailyPuzzleRandomPuzzle = nameof(DailyPuzzleRandomPuzzle);
+
+    internal const string DisplayDirectionalArrow = nameof(DisplayDirectionalArrow);
+
+    internal const string DisplayDistance = nameof(DisplayDistance);
+
+    internal const string Distance = nameof(Distance);
 
     internal const string EndlessCountryGuessing = nameof(EndlessCountryGuessing);
 
@@ -48,9 +64,13 @@ internal sealed class Translations
 
     internal const string GuessMysteryFlag = nameof(GuessMysteryFlag);
 
+    internal const string Hints = nameof(Hints);
+
     internal const string HueShift = nameof(HueShift);
 
     internal const string Invert = nameof(Invert);
+
+    internal const string Language = nameof(Language);
 
     internal const string Mirror = nameof(Mirror);
 
@@ -75,12 +95,22 @@ internal sealed class Translations
     internal const string SearchCountries = nameof(SearchCountries);
 
     internal const string Settings = nameof(Settings);
+
+    internal const string ShowContinentHint = nameof(ShowContinentHint);
+
+    internal const string ShowDistance = nameof(ShowDistance);
+
+    internal const string ShowDirectionArrow = nameof(ShowDirectionArrow);
+
+    internal const string Theme = nameof(Theme);
 }
 
 internal static class TranslationsExtensions
 {
     extension(IStringLocalizer<Translations> localizer)
     {
+        internal string Appearance => localizer[Translations.Appearance];
+
         internal string Atlas => localizer[Translations.Atlas];
 
         internal string AtlasLogo => localizer[Translations.AtlasLogo];
@@ -88,6 +118,14 @@ internal static class TranslationsExtensions
         internal string BackToGames => localizer[Translations.BackToGames];
 
         internal string Blur => localizer[Translations.Blur];
+
+        internal string ChooseDisplayLanguage => localizer[Translations.ChooseDisplayLanguage];
+
+        internal string ChooseDistanceUnit => localizer[Translations.ChooseDistanceUnit];
+
+        internal string ChooseTheme => localizer[Translations.ChooseTheme];
+
+        internal string ColourCodeContinentMatch => localizer[Translations.ColourCodeContinentMatch];
 
         internal string CountriesAvailable(int count) => localizer[Translations.CountriesAvailable, count];
 
@@ -100,6 +138,12 @@ internal static class TranslationsExtensions
         internal string Daily => localizer[Translations.Daily];
 
         internal MarkupString DailyPuzzleRandomPuzzle => new(localizer[Translations.DailyPuzzleRandomPuzzle]);
+
+        internal string DisplayDirectionalArrow => localizer[Translations.DisplayDirectionalArrow];
+
+        internal string DisplayDistance => localizer[Translations.DisplayDistance];
+
+        internal string Distance => localizer[Translations.Distance];
 
         internal string EndlessCountryGuessing => localizer[Translations.EndlessCountryGuessing];
 
@@ -119,7 +163,11 @@ internal static class TranslationsExtensions
 
         internal string Invert => localizer[Translations.Invert];
 
+        internal string Hints => localizer[Translations.Hints];
+
         internal string HueShift => localizer[Translations.HueShift];
+
+        internal string Language => localizer[Translations.Language];
 
         internal string Mirror => localizer[Translations.Mirror];
 
@@ -144,5 +192,13 @@ internal static class TranslationsExtensions
         internal string SearchCountries => localizer[Translations.SearchCountries];
 
         internal string Settings => localizer[Translations.Settings];
+
+        internal string ShowContinentHint => localizer[Translations.ShowContinentHint];
+
+        internal string ShowDistance => localizer[Translations.ShowDistance];
+
+        internal string ShowDirectionArrow => localizer[Translations.ShowDirectionArrow];
+
+        internal string Theme => localizer[Translations.Theme];
     }
 }

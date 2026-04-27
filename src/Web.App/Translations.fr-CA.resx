@@ -213,4 +213,67 @@
   <data name="Mirror" xml:space="preserve">
     <value>Mirroir</value>
   </data>
+  <data name="ChooseTheme" xml:space="preserve">
+    <value>Choisissez votre thème</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Thème</value>
+  </data>
+  <data name="Appearance" xml:space="preserve">
+    <value>Apparence</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Sombre</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Blanc</value>
+  </data>
+  <data name="System" xml:space="preserve">
+    <value>Système</value>
+  </data>
+  <data name="ChooseDisplayLanguage" xml:space="preserve">
+    <value>Choisissez votre langue d'affichage</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="French" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="Distance" xml:space="preserve">
+    <value>Distance</value>
+  </data>
+  <data name="ChooseDistanceUnit" xml:space="preserve">
+    <value>Choisissez votre unité de distance</value>
+  </data>
+  <data name="Kilometers" xml:space="preserve">
+    <value>Kilomètres</value>
+  </data>
+  <data name="Miles" xml:space="preserve">
+    <value>Milles</value>
+  </data>
+  <data name="ShowContinentHint" xml:space="preserve">
+    <value>Afficher l'indice du continent</value>
+  </data>
+  <data name="ColourCodeContinentMatch" xml:space="preserve">
+    <value>Afficher la correspondance du continent par code couleur dans les essaies</value>
+  </data>
+  <data name="ShowDistance" xml:space="preserve">
+    <value>Afficher la distance</value>
+  </data>
+  <data name="ShowDirectionArrow" xml:space="preserve">
+    <value>Afficher la flèche de direction</value>
+  </data>
+  <data name="DisplayDistance" xml:space="preserve">
+    <value>Afficher la distance dans les essaies</value>
+  </data>
+  <data name="DisplayDirectionalArrow" xml:space="preserve">
+    <value>Afficher une flèche directionnelle dans les essaies</value>
+  </data>
+  <data name="Hints" xml:space="preserve">
+    <value>Indices</value>
+  </data>
 </root>

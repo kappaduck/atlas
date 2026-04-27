@@ -1,0 +1,64 @@
+<div class="appearance">
+	<h6>@Localizer.Appearance</h6>
+	<div class="row">
+		<div class="row-info">
+			<h5>@Localizer.Theme</h5>
+			<span>@Localizer.ChooseTheme</span>
+		</div>
+		<select @bind="State.Theme">
+			@foreach ((Theme theme, string label) in Themes)
+			{
+				<option value="@theme">@label</option>
+			}
+		</select>
+	</div>
+	<div class="row">
+		<div class="row-info">
+			<h5>@Localizer.Language</h5>
+			<span>@Localizer.ChooseDisplayLanguage</span>
+		</div>
+		<select @bind="State.Language">
+			@foreach ((Language language, string label) in Languages)
+			{
+				<option value="@language">@label</option>
+			}
+		</select>
+	</div>
+	<div class="row">
+		<div class="row-info">
+			<h5>@Localizer.Distance</h5>
+			<span>@Localizer.ChooseDistanceUnit</span>
+		</div>
+		<select @bind="State.Unit">
+			@foreach ((DistanceUnit unit, string label) in Units)
+			{
+				<option value="@unit">@label</option>
+			}
+		</select>
+	</div>
+</div>
+<div class="seperator"></div>
+<div class="hints">
+	<h6>@Localizer.Hints</h6>
+	<div class="row">
+		<div class="row-info">
+			<h5>@Localizer.ShowContinentHint</h5>
+			<span>@Localizer.ColourCodeContinentMatch</span>
+		</div>
+		<InputSwitch @bind-Value="State.ContinentHint" />
+	</div>
+	<div class="row">
+		<div class="row-info">
+			<h5>@Localizer.ShowDistance</h5>
+			<span>@Localizer.DisplayDistance</span>
+		</div>
+		<InputSwitch @bind-Value="State.DistanceHint" />
+	</div>
+	<div class="row">
+		<div class="row-info">
+			<h5>@Localizer.ShowDirectionArrow</h5>
+			<span>@Localizer.DisplayDirectionalArrow</span>
+		</div>
+		<InputSwitch @bind-Value="State.ArrowHint" />
+	</div>
+</div>
