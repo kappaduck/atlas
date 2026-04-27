@@ -22,6 +22,8 @@ internal sealed class Translations
 
     internal const string Blur = nameof(Blur);
 
+    internal const string Changelog = nameof(Changelog);
+
     internal const string ChooseDisplayLanguage = nameof(ChooseDisplayLanguage);
 
     internal const string ChooseDistanceUnit = nameof(ChooseDistanceUnit);
@@ -29,6 +31,8 @@ internal sealed class Translations
     internal const string ChooseTheme = nameof(ChooseTheme);
 
     internal const string ColourCodeContinentMatch = nameof(ColourCodeContinentMatch);
+
+    internal const string Countries = nameof(Countries);
 
     internal const string CountriesAvailable = nameof(CountriesAvailable);
 
@@ -41,6 +45,8 @@ internal sealed class Translations
     internal const string Daily = nameof(Daily);
 
     internal const string DailyPuzzleRandomPuzzle = nameof(DailyPuzzleRandomPuzzle);
+
+    internal const string Difficulty = nameof(Difficulty);
 
     internal const string DisplayDirectionalArrow = nameof(DisplayDirectionalArrow);
 
@@ -57,6 +63,8 @@ internal sealed class Translations
     internal const string FlagGame = nameof(FlagGame);
 
     internal const string FlagModifiersMutuallyExclusive = nameof(FlagModifiersMutuallyExclusive);
+
+    internal const string General = nameof(General);
 
     internal const string Grayscale = nameof(Grayscale);
 
@@ -119,6 +127,8 @@ internal static class TranslationsExtensions
 
         internal string Blur => localizer[Translations.Blur];
 
+        internal string Changelog => localizer[Translations.Changelog];
+
         internal string ChooseDisplayLanguage => localizer[Translations.ChooseDisplayLanguage];
 
         internal string ChooseDistanceUnit => localizer[Translations.ChooseDistanceUnit];
@@ -126,6 +136,8 @@ internal static class TranslationsExtensions
         internal string ChooseTheme => localizer[Translations.ChooseTheme];
 
         internal string ColourCodeContinentMatch => localizer[Translations.ColourCodeContinentMatch];
+
+        internal string Countries => localizer[Translations.Countries];
 
         internal string CountriesAvailable(int count) => localizer[Translations.CountriesAvailable, count];
 
@@ -138,6 +150,8 @@ internal static class TranslationsExtensions
         internal string Daily => localizer[Translations.Daily];
 
         internal MarkupString DailyPuzzleRandomPuzzle => new(localizer[Translations.DailyPuzzleRandomPuzzle]);
+
+        internal string Difficulty => localizer[Translations.Difficulty];
 
         internal string DisplayDirectionalArrow => localizer[Translations.DisplayDirectionalArrow];
 
@@ -154,6 +168,8 @@ internal static class TranslationsExtensions
         internal string FlagGame => localizer[Translations.FlagGame];
 
         internal string FlagModifiersMutuallyExclusive => localizer[Translations.FlagModifiersMutuallyExclusive];
+
+        internal string General => localizer[Translations.General];
 
         internal string Grayscale => localizer[Translations.Grayscale];
 

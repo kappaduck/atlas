@@ -1,0 +1,102 @@
+dialog {
+  width: 520px;
+  height: 65vh;
+  margin-block-start: 6rem;
+  margin-inline: auto;
+  border-radius: var(--quack-radius-lg);
+  outline: 0;
+  border: 1px solid var(--quack-border-400);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, .35);
+  background: var(--quack-surface);
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, .55);
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+
+    .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--quack-border-400);
+      padding: .875rem 1.125rem;
+
+      .title {
+        font-weight: 500;
+      }
+
+      .close-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--quack-muted-text);
+        border: 1px solid var(--quack-border-400);
+        border-radius: var(--quack-radius-sm);
+        font-size: var(--quack-text-xxl);
+        background: transparent;
+        transition: background .15s, color .15s, border-color .15s;
+        cursor: pointer;
+
+        &:hover {
+          background: var(--quack-elevated);
+          color: var(--quack-accent);
+          border-color: var(--quack-accent);
+        }
+
+        i {
+          display: flex;
+        }
+      }
+    }
+
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid var(--quack-border-400);
+      padding-inline: 1rem;
+
+      .tab {
+        cursor: pointer;
+        padding: .625rem .75rem;
+        font-size: var(--quack-text-xs);
+        border: none;
+        background: none;
+        color: var(--quack-muted-text);
+        transition: color .15s, border-color .15s;
+
+        &:hover {
+          color: var(--quack-purple-200);
+        }
+
+        &.active {
+          color: var(--quack-purple-200);
+          border-bottom: 1px solid var(--quack-purple-400);
+        }
+      }
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem 1.125rem;
+    gap: .875rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+
+    &:has(.spinner) {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

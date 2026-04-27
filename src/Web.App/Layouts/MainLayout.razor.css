@@ -46,7 +46,7 @@ header {
       &:hover {
         background: var(--quack-elevated);
         color: var(--quack-accent-text);
-        border-color: var(--quack-accent-text);
+        border-color: var(--quack-accent);
       }
     }
   }
@@ -84,7 +84,7 @@ footer {
     }
   }
 
-  .version {
+  .date {
     border: none;
     background: transparent;
     color: currentColor;
