@@ -18,4 +18,6 @@ builder.Services.AddApplication();
 builder.Services.AddPersistence(builder.Configuration);
 
 WebAssemblyHost host = builder.Build();
+
+host.UseLocalization();
 await host.RunAsync();

@@ -74,7 +74,7 @@
     aspect-ratio: 3 / 2;
 
     &.country {
-      width: 72px;
+      width: 64px;
       filter: invert(var(--country-color));
     }
   }

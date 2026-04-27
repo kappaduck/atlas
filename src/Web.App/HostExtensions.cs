@@ -4,7 +4,9 @@
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.JSInterop;
+using System.Globalization;
 using Web.App.Options;
+using Web.App.Settings;
 using Web.App.Storage;
 
 namespace Web.App;
@@ -47,6 +49,25 @@ internal static class HostExtensions
 
             builder.Services.Configure<DevOptions>(builder.Configuration.GetRequiredSection(DevOptions.Section))
                             .AddSingleton(sp => sp.GetRequiredService<IOptions<DevOptions>>().Value);
+        }
+    }
+
+    extension(WebAssemblyHost host)
+    {
+        internal void UseLocalization()
+        {
+            ILocalStorage storage = host.Services.GetRequiredService<ILocalStorage>();
+            Language? language = AppState.GetLanguage(storage);
+
+            CultureInfo culture = language switch
+            {
+                Language.French => new CultureInfo("fr-CA"),
+                Language.English => new CultureInfo("en"),
+                _ => new CultureInfo("en")
+            };
+
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
         }
     }
 }

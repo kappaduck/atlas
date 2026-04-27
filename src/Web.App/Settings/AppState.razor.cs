@@ -149,6 +149,12 @@ public sealed partial class AppState(IJSInProcessRuntime jsRuntime, ILocalStorag
         ChangeTheme(_data.General.Theme);
     }
 
+    internal static Language? GetLanguage(ILocalStorage storage)
+    {
+        Data? data = storage.GetItem<Data>(StorageKey);
+        return data?.General.Language;
+    }
+
     private void ChangeTheme(Theme theme) => jsRuntime.InvokeVoid("changeTheme", theme.ToString());
 
     internal sealed record Data

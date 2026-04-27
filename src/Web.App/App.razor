@@ -1,5 +1,12 @@
-<Router AppAssembly="@typeof(App).Assembly" NotFoundPage="typeof(NotFound)">
-	<Found Context="route">
-		<RouteView RouteData="route" DefaultLayout="typeof(MainLayout)" />
-	</Found>
-</Router>
+@using Web.App.Dialogs
+@using Web.App.Settings
+
+<AppState>
+	<SettingsDialog>
+		<Router AppAssembly="@typeof(App).Assembly" NotFoundPage="typeof(NotFound)">
+			<Found Context="route">
+				<RouteView RouteData="route" DefaultLayout="typeof(MainLayout)" />
+			</Found>
+		</Router>
+	</SettingsDialog>
+</AppState>
