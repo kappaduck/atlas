@@ -1,0 +1,127 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+
+  .game-title {
+    font-size: var(--quack-text-xs);
+    color: var(--quack-muted-text);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: .125rem;
+  }
+}
+
+.difficulty {
+  background: var(--quack-base-700);
+  border: 1px solid var(--quack-border-400);
+  border-radius: var(--quack-radius-md);
+  overflow: hidden;
+
+  .head {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding: .625rem .875rem;
+    border-bottom: 1px solid var(--quack-border-400);
+
+    .title {
+      font-size: var(--quack-text-sm);
+      font-weight: 500;
+      color: var(--quack-primary-text);
+    }
+
+    .subtext {
+      font-size: var(--quack-text-xs);
+      color: var(--quack-muted-text);
+    }
+  }
+
+  .default-row {
+    display: flex;
+    padding: .5rem .875rem;
+    border-bottom: .5px solid var(--quack-border-400);
+
+    .default {
+      padding: .375rem .625rem;
+      font-size: var(--quack-text-xs);
+      flex: unset;
+    }
+  }
+}
+
+.modifier {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex: 1;
+  padding: .5rem .75rem;
+  border-radius: var(--quack-radius-md);
+  background: light-dark(white, #13111e);
+  border: 1px solid var(--quack-border-200);
+  cursor: pointer;
+  font-size: var(--quack-text-sm);
+  color: var(--quack-muted-text);
+  transition: border-color .15s, color .15s, background .15s;
+
+  input[type=checkbox], input[type=radio] {
+    appearance: none;
+    display: none;
+  }
+
+  img {
+    width: 40px;
+    aspect-ratio: 3 / 2;
+
+    &.country {
+      width: 72px;
+      filter: invert(var(--country-color));
+    }
+  }
+
+  &:hover {
+    border-color: var(--quack-border-400);
+    background: var(--quack-elevated);
+  }
+
+  &:has(input:checked) {
+    border-color: #0F6E56;
+    color: #5DCaa5;
+    background: #04201a;
+  }
+}
+
+.modifiers {
+  display: flex;
+  gap: .375rem;
+  padding: .625rem .875rem;
+  border-bottom: 1px solid var(--quack-border-400);
+}
+
+.blur {
+  filter: blur(3px);
+
+  &.country {
+    filter: blur(3px) invert(var(--country-color)) !important;
+  }
+}
+
+.grayscale {
+  filter: grayscale(1);
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.hue {
+  filter: hue-rotate(90deg);
+}
+
+.rotate {
+  transform: rotate(90deg)
+}
+
+.mirror {
+  transform: scaleX(-1)
+}

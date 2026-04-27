@@ -177,4 +177,40 @@
   <data name="CountriesAvailable" xml:space="preserve">
     <value>{0} pays disponibles</value>
   </data>
+  <data name="PickPreferedVisualModifier" xml:space="preserve">
+    <value>Choisissez votre modificateur visuel préféré</value>
+  </data>
+  <data name="FlagGame" xml:space="preserve">
+    <value>Jeu de drapeau</value>
+  </data>
+  <data name="FlagModifiersMutuallyExclusive" xml:space="preserve">
+    <value>Les modificateurs de drapeau sont mutuellement exclusifs.</value>
+  </data>
+  <data name="NoneDefault" xml:space="preserve">
+    <value>Aucun (par défaut)</value>
+  </data>
+  <data name="Blur" xml:space="preserve">
+    <value>Brouillé</value>
+  </data>
+  <data name="Grayscale" xml:space="preserve">
+    <value>Niveau de gris</value>
+  </data>
+  <data name="Invert" xml:space="preserve">
+    <value>Inversé</value>
+  </data>
+  <data name="HueShift" xml:space="preserve">
+    <value>Décalage de teinte</value>
+  </data>
+  <data name="CountryGame" xml:space="preserve">
+    <value>Jeu de pays</value>
+  </data>
+  <data name="CountryModifiersCombined" xml:space="preserve">
+    <value>Les modificateurs de pays peuvent être combinés.</value>
+  </data>
+  <data name="Rotate" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="Mirror" xml:space="preserve">
+    <value>Mirroir</value>
+  </data>
 </root>

@@ -1,0 +1,78 @@
+@inject IStringLocalizer<Translations> Localizer
+
+<div class="section">
+	<h6 class="game-title">@Localizer.FlagGame</h6>
+	<div class="difficulty">
+		<div class="head">
+			<span class="title">@Localizer.PickPreferedVisualModifier</span>
+			<span class="subtext">@Localizer.FlagModifiersMutuallyExclusive</span>
+		</div>
+		<div class="default-row">
+			<label for="flag-none" class="modifier default">
+				<span class="none">@Localizer.NoneDefault</span>
+				<input name="flag" id="flag-none" type="radio" checked>
+			</label>
+		</div>
+		<div class="modifiers">
+			<label for="flag-blur" class="modifier">
+				<input name="flag" id="flag-blur" type="radio">
+				<img src="@Flag" class="blur" />
+				<span>@Localizer.Blur</span>
+			</label>
+			<label for="flag-grayscale" class="modifier">
+				<input name="flag" id="flag-grayscale" type="radio">
+				<img src="@Flag" class="grayscale" />
+				<span>@Localizer.Grayscale</span>
+			</label>
+		</div>
+		<div class="modifiers">
+			<label for="flag-invert" class="modifier">
+				<input name="flag" id="flag-invert" type="radio">
+				<img src="@Flag" class="invert" />
+				<span>@Localizer.Invert</span>
+			</label>
+			<label for="flag-hue" class="modifier">
+				<input name="flag" id="flag-hue" type="radio">
+				<img src="@Flag" class="hue" />
+				<span>@Localizer.HueShift</span>
+			</label>
+		</div>
+	</div>
+</div>
+<div class="section">
+	<h6 class="game-title">@Localizer.CountryGame</h6>
+	<div class="difficulty">
+		<div class="head">
+			<span class="title">@Localizer.PickPreferedVisualModifier</span>
+			<span class="subtext">@Localizer.CountryModifiersCombined</span>
+		</div>
+		<div class="default-row">
+			<label for="country-none" class="modifier default">
+				<span class="none">@Localizer.NoneDefault</span>
+				<input name="country" id="country-none" type="checkbox" checked>
+			</label>
+		</div>
+		<div class="modifiers">
+			<label for="country-blur" class="modifier">
+				<input name="country" id="country-blur" type="checkbox">
+				<img src="@Country" class="blur country" />
+				<span>@Localizer.Blur</span>
+			</label>
+			<label for="country-rotation" class="modifier">
+				<input name="country" id="country-rotation" type="checkbox">
+				<img src="@Country" class="rotate country" />
+				<span>@Localizer.Rotate</span>
+			</label>
+			<label for="country-mirror" class="modifier">
+				<input name="country" id="country-mirror" type="checkbox">
+				<img src="@Country" class="mirror country" />
+				<span>@Localizer.Mirror</span>
+			</label>
+		</div>
+	</div>
+</div>
+
+@code {
+	private const string Flag = "https://flagcdn.com/ca.svg";
+	private const string Country = "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/ca/country.svg";
+}

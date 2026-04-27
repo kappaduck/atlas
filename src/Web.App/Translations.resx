@@ -177,4 +177,40 @@
   <data name="CountriesAvailable" xml:space="preserve">
     <value>{0} countries available</value>
   </data>
+  <data name="PickPreferedVisualModifier" xml:space="preserve">
+    <value>Pick your prefered visual modifier</value>
+  </data>
+  <data name="FlagGame" xml:space="preserve">
+    <value>Flag game</value>
+  </data>
+  <data name="FlagModifiersMutuallyExclusive" xml:space="preserve">
+    <value>Flag modifiers are mutually exclusive</value>
+  </data>
+  <data name="NoneDefault" xml:space="preserve">
+    <value>None (default)</value>
+  </data>
+  <data name="Blur" xml:space="preserve">
+    <value>Blur</value>
+  </data>
+  <data name="Grayscale" xml:space="preserve">
+    <value>Grayscale</value>
+  </data>
+  <data name="Invert" xml:space="preserve">
+    <value>Invert</value>
+  </data>
+  <data name="HueShift" xml:space="preserve">
+    <value>Hue shift</value>
+  </data>
+  <data name="CountryGame" xml:space="preserve">
+    <value>Country game</value>
+  </data>
+  <data name="CountryModifiersCombined" xml:space="preserve">
+    <value>Country modifiers can be combined</value>
+  </data>
+  <data name="Rotate" xml:space="preserve">
+    <value>Rotate</value>
+  </data>
+  <data name="Mirror" xml:space="preserve">
+    <value>Mirror</value>
+  </data>
 </root>
