@@ -288,4 +288,13 @@
   <data name="Changelog" xml:space="preserve">
     <value>Changelog</value>
   </data>
+  <data name="LookupPlaceholder" xml:space="preserve">
+    <value>Canada, Italie...</value>
+  </data>
+  <data name="Navigate" xml:space="preserve">
+    <value>Naviguer</value>
+  </data>
+  <data name="AlternateFlagImage" xml:space="preserve">
+    <value>Impossible d'afficher le drapeau</value>
+  </data>
 </root>

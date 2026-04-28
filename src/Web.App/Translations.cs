@@ -12,6 +12,8 @@ internal sealed class Translations
     {
     }
 
+    internal const string AlternateFlagImage = nameof(AlternateFlagImage);
+
     internal const string Appearance = nameof(Appearance);
 
     internal const string Atlas = nameof(Atlas);
@@ -80,7 +82,11 @@ internal sealed class Translations
 
     internal const string Language = nameof(Language);
 
+    internal const string LookupPlaceholder = nameof(LookupPlaceholder);
+
     internal const string Mirror = nameof(Mirror);
+
+    internal const string Navigate = nameof(Navigate);
 
     internal const string NoneDefault = nameof(NoneDefault);
 
@@ -117,6 +123,8 @@ internal static class TranslationsExtensions
 {
     extension(IStringLocalizer<Translations> localizer)
     {
+        internal string AlternateFlagImage => localizer[Translations.AlternateFlagImage];
+
         internal string Appearance => localizer[Translations.Appearance];
 
         internal string Atlas => localizer[Translations.Atlas];
@@ -185,7 +193,11 @@ internal static class TranslationsExtensions
 
         internal string Language => localizer[Translations.Language];
 
+        internal string LookupPlaceholder => localizer[Translations.LookupPlaceholder];
+
         internal string Mirror => localizer[Translations.Mirror];
+
+        internal string Navigate => localizer[Translations.Navigate];
 
         internal string NoneDefault => localizer[Translations.NoneDefault];
 

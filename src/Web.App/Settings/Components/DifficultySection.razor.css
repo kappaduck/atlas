@@ -57,7 +57,7 @@
   flex: 1;
   padding: .5rem .75rem;
   border-radius: var(--quack-radius-md);
-  background: light-dark(white, #13111e);
+  background: light-dark(white, var(--quack-base-800));
   border: 1px solid var(--quack-border-200);
   cursor: pointer;
   font-size: var(--quack-text-sm);

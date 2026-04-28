@@ -4,6 +4,7 @@
 using Atlas.Application.Countries.Responses;
 using Atlas.Application.Countries.Services;
 using Microsoft.AspNetCore.Components;
+using Web.App.Extensions;
 
 namespace Web.App.Settings.Components;
 
@@ -29,6 +30,6 @@ public sealed partial class CountriesSection(ICountryService service)
         if (string.IsNullOrEmpty(_search))
             return _countries;
 
-        return _countries.Where(c => c.Name.Contains(_search, StringComparison.OrdinalIgnoreCase)).ToArray();
+        return _countries.Where(c => string.Lookup(c.Name, _search)).ToArray();
     }
 }

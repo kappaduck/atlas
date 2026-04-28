@@ -9,7 +9,7 @@
 else
 {
 	<span class="count">@Localizer.CountriesAvailable(_countries.Length)</span>
-	<input @bind-value="_search" @bind-value:event="oninput" type="search" placeholder="@Localizer.SearchCountries" />
+	<input @bind="_search" @bind:event="oninput" type="search" placeholder="@Localizer.SearchCountries" />
 	<div class="countries">
 		@foreach (CountryResponse country in GetFilteredCountries())
 		{

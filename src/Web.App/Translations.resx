@@ -288,4 +288,13 @@
   <data name="Changelog" xml:space="preserve">
     <value>Changelog</value>
   </data>
+  <data name="LookupPlaceholder" xml:space="preserve">
+    <value>Canada, Italy...</value>
+  </data>
+  <data name="Navigate" xml:space="preserve">
+    <value>Navigate</value>
+  </data>
+  <data name="AlternateFlagImage" xml:space="preserve">
+    <value>Can't display the flag</value>
+  </data>
 </root>

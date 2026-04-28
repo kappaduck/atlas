@@ -1,5 +1,5 @@
 input:where([type="checkbox"][role="switch"]) {
-  --toggle-bg: light-dark(#e0dfe8, #1a1a1a);
+  --toggle-bg: light-dark(#e0dfe8, var(--quack-gray-900));
   --toggle-border: light-dark(#C8C6D8, #444441);
   width: 36px;
   height: 20px;
