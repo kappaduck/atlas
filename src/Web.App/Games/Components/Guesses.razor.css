@@ -1,0 +1,91 @@
+.guesses {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+
+  .guess {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .625rem .875rem;
+    background: var(--quack-surface);
+    border: 1px solid var(--quack-border-400);
+    border-radius: var(--quack-radius-md);
+    min-height: 48px;
+
+    &.empty {
+      display: flex;
+      justify-content: center;
+      opacity: 0.3;
+      color: var(--quack-muted-text);
+      font-size: var(--quack-text-sm);
+      font-weight: 500;
+    }
+
+    &.wrong {
+      border-color: var(--danger-color);
+      background: var(--danger-background);
+    }
+
+    &.success {
+      border-color: var(--success-color);
+      background: var(--success-background);
+    }
+
+    img {
+      width: 64px;
+      aspect-ratio: 3 / 2;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+
+      h4 {
+        font-weight: 500;
+        color: var(--quack-primary-text);
+      }
+
+      .hints {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &:empty {
+          display: none;
+        }
+
+        .hint {
+          --border-color: var(--quack-border-400);
+          --color: var(--quack-primary-text);
+          --background: var(--quack-elevated);
+          padding: 4px 8px;
+          color: var(--color);
+          background: var(--background);
+          font-size: var(--quack-text-xs);
+          font-weight: 500;
+          border: 1px solid var(--border-color);
+          border-radius: var(--quack-radius-sm);
+
+          &.same {
+            --border-color: light-dark(var(--quack-teal-100), var(--quack-teal-600));
+            --color: light-dark(var(--quack-teal-600), var(--quack-teal-200));
+            --background: light-dark(var(--quack-teal-50), var(--quack-teal-900));
+          }
+
+          &.distance {
+            --border-color: light-dark(var(--quack-blue-200), var(--quack-blue-600));
+            --color: light-dark(var(--quack-blue-800), var(--quack-blue-200));
+            --background: light-dark(var(--quack-blue-50), var(--quack-blue-900));
+          }
+
+          &.direction i {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

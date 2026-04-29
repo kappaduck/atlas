@@ -1,0 +1,44 @@
+@using Atlas.Application.Countries.Responses
+@using Web.App.Settings
+
+<ul class="guesses" role="list">
+	@foreach (GuessedCountryResponse guess in GameState.Guesses)
+	{
+		<li class="guess @SuccessCss(guess.Success)">
+			@if (State.FlagHint && FlagHint)
+			{
+				<img src="@guess.Flag" />
+			}
+			<div class="info">
+				<h4>@guess.Name</h4>
+				<div class="hints">
+					@if (State.ContinentHint)
+					{
+						<span class="hint @SameContinentCss(guess.IsSameContinent)">@guess.Continent</span>
+					}
+					@if (State.DistanceHint)
+					{
+						if (State.Unit == DistanceUnit.Kilometers)
+						{
+							<span class="hint distance">@guess.Kilometers.ToString("N0", _numberFormat) km</span>
+						}
+						else
+						{
+							<span class="hint distance">@guess.Miles.ToString("N0", _numberFormat) mi</span>
+						}
+					}
+					@if (State.ArrowHint)
+					{
+						<span class="hint direction"><i style="transform: rotate(@(guess.Direction)deg);" class="@Icons.ArrowUp"></i></span>
+					}
+				</div>
+			</div>
+		</li>
+	}
+	@for (int attempts = GameState.Guesses.Count; attempts < GameState.MaxAttempts; attempts++)
+	{
+		<li class="guess empty">
+			<span>@(attempts + 1) / @GameState.MaxAttempts</span>
+		</li>
+	}
+</ul>
