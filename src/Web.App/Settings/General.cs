@@ -16,4 +16,6 @@ public sealed record General
     public bool DistanceHint { get; init; } = true;
 
     public bool ArrowHint { get; init; } = true;
+
+    public bool FlagHint { get; init; } = true;
 }

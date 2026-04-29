@@ -58,12 +58,16 @@ internal sealed class CountryService(ICountryRepository repository, IStringLocal
         if (country is null || guessed is null)
             return null;
 
+        Distance distance = Distance.Calculate(guessed.Coordinate, country.Coordinate);
+
         return new()
         {
             Cca2 = guessed.Cca2,
             Name = localizer[guessedCode],
             Direction = Direction.Calculate(guessed.Coordinate, country.Coordinate),
-            Kilometers = (int)Math.Round(Distance.Calculate(guessed.Coordinate, country.Coordinate).Kilometers),
+            Kilometers = (int)Math.Round(distance.Kilometers),
+            Miles = (int)Math.Round(distance.Miles),
+            Continent = localizer[guessed.Continent.ToString()],
             IsSameContinent = guessed.Continent == country.Continent,
             Success = guessedCode == code,
             Flag = guessed.Resources.Flag

@@ -9,9 +9,13 @@ public sealed record GuessedCountryResponse
 
     public required string Name { get; init; }
 
+    public required string Continent { get; init; }
+
     public required bool IsSameContinent { get; init; }
 
     public required int Kilometers { get; init; }
+
+    public required int Miles { get; init; }
 
     public required double Direction { get; init; }
 

@@ -297,4 +297,10 @@
   <data name="AlternateFlagImage" xml:space="preserve">
     <value>Impossible d'afficher le drapeau</value>
   </data>
+  <data name="ShowFlagHint" xml:space="preserve">
+    <value>Afficher l'indice de drapeau</value>
+  </data>
+  <data name="DisplayFlag" xml:space="preserve">
+    <value>Afficher le drapeau dans les essaies du jeu de drapeau</value>
+  </data>
 </root>

@@ -28,6 +28,8 @@ public sealed class CountryServiceTests
 
         localizer.Application[countries.Canada.Cca2].Returns(new LocalizedString(countries.Canada.Cca2, "Canada"));
         localizer.Application[countries.Italy.Cca2].Returns(new LocalizedString(countries.Italy.Cca2, "Italy"));
+        localizer.Application[countries.Canada.Continent.ToString()].Returns(new LocalizedString(countries.Canada.Continent.ToString(), "North America"));
+        localizer.Application[countries.Italy.Continent.ToString()].Returns(new LocalizedString(countries.Italy.Continent.ToString(), "Europe"));
 
         _service = new CountryService(_repository.Object, localizer.Application);
     }
@@ -164,9 +166,11 @@ public sealed class CountryServiceTests
         await Assert.That(country!.Cca2).IsEqualTo(_countries.Canada.Cca2);
         await Assert.That(country.Name).IsEqualTo("Canada");
         await Assert.That(country.Success).IsFalse();
+        await Assert.That(country.Continent).IsEqualTo("North America");
         await Assert.That(country.IsSameContinent).IsFalse();
         await Assert.That(country.Direction).IsEqualTo(104);
         await Assert.That(country.Kilometers).IsEqualTo(6843);
+        await Assert.That(country.Miles).IsEqualTo(4252);
         await Assert.That(country.Flag).IsEqualTo(_countries.Canada.Resources.Flag);
     }
 
@@ -178,9 +182,11 @@ public sealed class CountryServiceTests
         await Assert.That(guessedCountry!.Cca2).IsEqualTo(_countries.Italy.Cca2);
         await Assert.That(guessedCountry.Name).IsEqualTo("Italy");
         await Assert.That(guessedCountry.Success).IsTrue();
+        await Assert.That(guessedCountry.Continent).IsEqualTo("Europe");
         await Assert.That(guessedCountry.IsSameContinent).IsTrue();
         await Assert.That(guessedCountry.Direction).IsEqualTo(0);
         await Assert.That(guessedCountry.Kilometers).IsEqualTo(0);
+        await Assert.That(guessedCountry.Miles).IsEqualTo(0);
         await Assert.That(guessedCountry.Flag).IsEqualTo(_countries.Italy.Resources.Flag);
     }
 

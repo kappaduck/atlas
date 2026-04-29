@@ -1,6 +1,6 @@
 dialog {
   width: 520px;
-  height: 65vh;
+  max-height: 70vh;
   margin-block-start: 6rem;
   margin-inline: auto;
   border-radius: var(--quack-radius-lg);

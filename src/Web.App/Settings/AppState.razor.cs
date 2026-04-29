@@ -105,6 +105,21 @@ public sealed partial class AppState(IJSInProcessRuntime jsRuntime, ILocalStorag
         }
     }
 
+    public bool FlagHint
+    {
+        get => _data.General.FlagHint;
+        set
+        {
+            if (_data.General.FlagHint == value)
+                return;
+
+            _data = _data with { General = _data.General with { FlagHint = value } };
+            storage.SetItem(StorageKey, _data);
+
+            StateHasChanged();
+        }
+    }
+
     public FlagDifficulty Flag
     {
         get => _data.Flag;

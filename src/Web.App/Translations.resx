@@ -297,4 +297,10 @@
   <data name="AlternateFlagImage" xml:space="preserve">
     <value>Can't display the flag</value>
   </data>
+  <data name="ShowFlagHint" xml:space="preserve">
+    <value>Show flag hint</value>
+  </data>
+  <data name="DisplayFlag" xml:space="preserve">
+    <value>Display flag in the flag game guess rows</value>
+  </data>
 </root>

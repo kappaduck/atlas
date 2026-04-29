@@ -54,6 +54,8 @@ internal sealed class Translations
 
     internal const string DisplayDistance = nameof(DisplayDistance);
 
+    internal const string DisplayFlag = nameof(DisplayFlag);
+
     internal const string Distance = nameof(Distance);
 
     internal const string EndlessCountryGuessing = nameof(EndlessCountryGuessing);
@@ -116,6 +118,8 @@ internal sealed class Translations
 
     internal const string ShowDirectionArrow = nameof(ShowDirectionArrow);
 
+    internal const string ShowFlagHint = nameof(ShowFlagHint);
+
     internal const string Theme = nameof(Theme);
 }
 
@@ -164,6 +168,8 @@ internal static class TranslationsExtensions
         internal string DisplayDirectionalArrow => localizer[Translations.DisplayDirectionalArrow];
 
         internal string DisplayDistance => localizer[Translations.DisplayDistance];
+
+        internal string DisplayFlag => localizer[Translations.DisplayFlag];
 
         internal string Distance => localizer[Translations.Distance];
 
@@ -226,6 +232,8 @@ internal static class TranslationsExtensions
         internal string ShowDistance => localizer[Translations.ShowDistance];
 
         internal string ShowDirectionArrow => localizer[Translations.ShowDirectionArrow];
+
+        internal string ShowFlagHint => localizer[Translations.ShowFlagHint];
 
         internal string Theme => localizer[Translations.Theme];
     }
