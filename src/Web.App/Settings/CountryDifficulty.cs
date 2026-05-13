@@ -7,7 +7,7 @@ namespace Web.App.Settings;
 public enum CountryDifficulty
 {
     None = 0,
-    Rotated = 1,
-    Mirrored = 2,
-    Blur = 4
+    Rotated = 2,
+    Mirrored = 4,
+    Blur = 8
 }

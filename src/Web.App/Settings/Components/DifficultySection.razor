@@ -46,12 +46,6 @@
 			<span class="title">@Localizer.PickPreferedVisualModifier</span>
 			<span class="subtext">@Localizer.CountryModifiersCombined</span>
 		</div>
-		<div class="default-row">
-			<label for="country-none" class="modifier default">
-				<span class="none">@Localizer.NoneDefault</span>
-				<input name="country" id="country-none" type="checkbox" checked="@(State.Country == CountryDifficulty.None)" @onchange="() => State.Country = CountryDifficulty.None">
-			</label>
-		</div>
 		<div class="modifiers">
 			<label for="country-blur" class="modifier">
 				<input name="country" id="country-blur" type="checkbox" checked="@HasCountryDifficulty(CountryDifficulty.Blur)" @onchange="() => SetCountryDifficulty(CountryDifficulty.Blur)">

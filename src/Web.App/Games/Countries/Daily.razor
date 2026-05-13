@@ -1,7 +1,7 @@
 @using Web.App.Games.Components
 @using Web.App.Settings
 
-@page "/flags/daily"
+@page "/countries/daily"
 @inject IStringLocalizer<Translations> Localizer
 
 <CascadingValue Value="_gameState" IsFixed="false">
@@ -15,23 +15,23 @@
 			{
 				if (!_gameState.GameFinished)
 				{
-					<picture class="flag">
-						<source srcset="@_gameState.Country.Resources.Flag" />
-						<img src="@_gameState.Country.Resources.Flag" alt="@Localizer.AlternateFlagImage" style="@State.Flag.Css(_gameState.Guesses.Count)" />
+					<picture class="country">
+						<source srcset="@_gameState.Country.Resources.Country" />
+						<img src="@_gameState.Country.Resources.Country" alt="@Localizer.AlternateCountryImage" style="@State.Country.Css(_gameState.Guesses.Count, _rotation)" />
 					</picture>
 				}
 				else
 				{
 					<GameOver SecondaryActionLabel="@Localizer.PlayRandom" OnSecondaryActionClick="NavigateToRandom">
-						<picture class="flag">
-							<source srcset="@_gameState.Country.Resources.Flag" />
-							<img src="@_gameState.Country.Resources.Flag" />
+						<picture class="country">
+							<source srcset="@_gameState.Country.Resources.Country" />
+							<img src="@_gameState.Country.Resources.Country" />
 						</picture>
 					</GameOver>
 				}
 			}
 		</div>
 		<LookupInput OnLookup="GuessAsync" />
-		<Guesses FlagHint="true" />
+		<Guesses />
 	</div>
 </CascadingValue>

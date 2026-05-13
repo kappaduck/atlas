@@ -11,8 +11,11 @@ public sealed partial class GameOver
     public required GameState GameState { get; init; }
 
     [Parameter, EditorRequired]
-    public required string SecondaryActionLabel { get; set; }
+    public required string SecondaryActionLabel { get; init; }
 
     [Parameter, EditorRequired]
-    public required EventCallback OnSecondaryActionClick { get; set; }
+    public required EventCallback OnSecondaryActionClick { get; init; }
+
+    [Parameter, EditorRequired]
+    public required RenderFragment ChildContent { get; init; }
 }

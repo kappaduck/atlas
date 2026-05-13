@@ -1,15 +1,22 @@
 .game-over {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 
-  .flag {
-    width: 96px;
+  .flag, .country {
+    width: 200px;
+  }
+
+  .country {
+    filter: invert(var(--country-color));
   }
 
   .message {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    color: var(--quack-primary-text);
   }
 }
 

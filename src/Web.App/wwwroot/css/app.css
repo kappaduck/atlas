@@ -252,6 +252,11 @@ dialog {
       background: var(--danger-background);
       border-color: var(--danger-color);
     }
+
+    .country {
+      filter: invert(var(--country-color));
+      width: 90%;
+    }
   }
 }
 

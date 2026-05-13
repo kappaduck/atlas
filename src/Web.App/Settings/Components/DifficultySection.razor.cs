@@ -17,5 +17,13 @@ public sealed partial class DifficultySection
         => (State.Country & difficulty) == difficulty;
 
     private void SetCountryDifficulty(CountryDifficulty difficulty)
-        => State.Country |= difficulty;
+    {
+        if (HasCountryDifficulty(difficulty))
+        {
+            State.Country &= ~difficulty;
+            return;
+        }
+
+        State.Country |= difficulty;
+    }
 }

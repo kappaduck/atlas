@@ -26,6 +26,7 @@
     overflow-y: scroll;
     max-height: calc((((var(--item-padding-block) * 2) + var(--quack-text-sm) * 1.6) * var(--max-item-count)) + var(--hint-height));
     scroll-padding: var(--hint-height);
+    overscroll-behavior: contain;
 
     &:has(.item) {
       display: unset;

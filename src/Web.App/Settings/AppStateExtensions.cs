@@ -27,7 +27,7 @@ internal static class AppStateExtensions
 
     extension(CountryDifficulty difficulty)
     {
-        internal string Css(int guesses)
+        internal string Css(int guesses, int? rotation)
         {
             if (difficulty == CountryDifficulty.None)
                 return string.Empty;
@@ -42,8 +42,8 @@ internal static class AppStateExtensions
             if ((difficulty & CountryDifficulty.Mirrored) != 0)
                 transforms.Add("scaleX(-1)");
 
-            if ((difficulty & CountryDifficulty.Rotated) != 0)
-                transforms.Add($"rotate({Random.Shared.Next(0, 360)})");
+            if ((difficulty & CountryDifficulty.Rotated) != 0 && rotation.HasValue)
+                transforms.Add($"rotate({rotation.Value}deg)");
 
             if (transforms.Count > 0)
                 builder.Append($"transform: {string.Join(' ', transforms)};");

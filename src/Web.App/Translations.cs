@@ -12,6 +12,8 @@ internal sealed class Translations
     {
     }
 
+    internal const string AlternateCountryImage = nameof(AlternateCountryImage);
+
     internal const string AlternateFlagImage = nameof(AlternateFlagImage);
 
     internal const string Appearance = nameof(Appearance);
@@ -137,6 +139,8 @@ internal static class TranslationsExtensions
 {
     extension(IStringLocalizer<Translations> localizer)
     {
+        internal string AlternateCountryImage => localizer[Translations.AlternateCountryImage];
+
         internal string AlternateFlagImage => localizer[Translations.AlternateFlagImage];
 
         internal string Appearance => localizer[Translations.Appearance];
