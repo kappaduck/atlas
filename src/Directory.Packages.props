@@ -5,11 +5,11 @@
   </ItemGroup>
   <ItemGroup Label="Application packages">
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="11.0.0-preview.3.26207.106" />
-    <PackageVersion Include="Microsoft.Extensions.Localization.Abstractions" Version="11.0.0-preview.3.26207.106" />
+    <PackageVersion Include="Microsoft.Extensions.Localization.Abstractions" Version="11.0.0-preview.4.26230.115" />
   </ItemGroup>
   <ItemGroup Label="Infrastructure packages">
-    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="11.0.0-preview.3.26207.106" />
-    <PackageVersion Include="Microsoft.Extensions.Http" Version="11.0.0-preview.3.26207.106" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="11.0.0-preview.4.26230.115" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="11.0.0-preview.4.26230.115" />
   </ItemGroup>
   <ItemGroup Label="Web packages">
     <PackageVersion Include="Markdig" Version="1.1.2" />
