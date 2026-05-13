@@ -104,6 +104,8 @@ internal sealed class Translations
 
     internal const string PlayAgain = nameof(PlayAgain);
 
+    internal const string PlayRandom = nameof(PlayRandom);
+
     internal const string Random = nameof(Random);
 
     internal const string ReportBug = nameof(ReportBug);
@@ -226,6 +228,8 @@ internal static class TranslationsExtensions
         internal MarkupString PickYourChallenge => new(localizer[Translations.PickYourChallenge]);
 
         internal string PlayAgain => localizer[Translations.PlayAgain];
+
+        internal string PlayRandom => localizer[Translations.PlayRandom];
 
         internal string Random => localizer[Translations.Random];
 

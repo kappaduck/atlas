@@ -2,7 +2,6 @@
 // The source code is licensed under MIT License.
 
 using Atlas.Application.Countries.Responses;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Web.App.Games;
 
@@ -18,13 +17,19 @@ public sealed class GameState(int maxAttempts)
 
     public bool Found => Guesses.Any(g => g.Success);
 
-    [MemberNotNull(nameof(Country))]
     public void Reset(CountryResponse country)
     {
         Guesses.Clear();
         Country = country;
     }
 
-    [MemberNotNull(nameof(Country))]
     public void Start(CountryResponse country) => Country = country;
+
+    public void Start(CountryResponse country, IEnumerable<GuessedCountryResponse> guesses)
+    {
+        Country = country;
+
+        foreach (GuessedCountryResponse guess in guesses)
+            Guesses.Add(guess);
+    }
 }

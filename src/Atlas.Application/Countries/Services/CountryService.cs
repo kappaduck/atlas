@@ -29,8 +29,8 @@ internal sealed class CountryService(ICountryRepository repository, IStringLocal
         if (countries.IsEmpty)
             return null;
 
-        int hash = DateTime.Today.Hash("flag");
-        Country country = countries[hash % countries.Length];
+        int index = DateTime.Today.HashedIndex("country", countries.Length);
+        Country country = countries[index];
 
         repository.Save(country);
         return country.ToResponse(localizer);
@@ -43,8 +43,8 @@ internal sealed class CountryService(ICountryRepository repository, IStringLocal
         if (countries.IsEmpty)
             return null;
 
-        int hash = DateTime.Today.Hash("country");
-        Country country = countries[hash % countries.Length];
+        int index = DateTime.Today.HashedIndex("flag", countries.Length);
+        Country country = countries[index];
 
         repository.Save(country);
         return country.ToResponse(localizer);

@@ -4,26 +4,20 @@
 using Atlas.Application.Countries.Responses;
 using Atlas.Application.Countries.Services;
 using Microsoft.AspNetCore.Components;
-using Web.App.Games.Components;
-using Web.App.Options;
 using Web.App.Settings;
+using Web.App.Storage;
 
 namespace Web.App.Games.Flags;
 
-public sealed partial class Random(ICountryService service, DevOptions options) : IDisposable
+public sealed partial class Daily(ICountryService service, NavigationManager navigation, [FromKeyedServices(DailyFlagStorage.Key)] IDailyLocalStorage storage) : IDisposable
 {
     private const int MaxAttempts = 6;
 
     private readonly CancellationTokenSource _cts = new();
     private readonly GameState _gameState = new(MaxAttempts);
 
-    private LookupInput _input = default!;
-
     [CascadingParameter]
     public required AppState State { get; init; }
-
-    [Parameter]
-    public string? Cca2 { get; init; }
 
     private string FoundCss
     {
@@ -44,29 +38,19 @@ public sealed partial class Random(ICountryService service, DevOptions options) 
 
     protected override async Task OnInitializedAsync()
     {
-        CountryResponse? country = await GetAsync(_cts.Token) ?? throw new InvalidOperationException();
-        _gameState.Start(country);
+        CountryResponse? country = await service.GetDailyFlagAsync(_cts.Token) ?? throw new InvalidOperationException();
+        IEnumerable<GuessedCountryResponse> guesses = storage.Get();
 
-        Task<CountryResponse?> GetAsync(CancellationToken cancellationToken)
-        {
-            if (options.Debug && !string.IsNullOrEmpty(Cca2))
-                return service.GetAsync(Cca2, cancellationToken);
-
-            return service.RandomizeAsync(cancellationToken);
-        }
+        _gameState.Start(country, guesses);
     }
 
     private async Task GuessAsync(string cca2)
     {
         GuessedCountryResponse? guessedCountry = await service.GuessAsync(cca2, _gameState.Country!.Cca2, _cts.Token) ?? throw new InvalidOperationException();
+
         _gameState.Guesses.Add(guessedCountry);
+        storage.Set(_gameState.Guesses);
     }
 
-    private async Task PlayAgainAsync()
-    {
-        _input.Reset();
-
-        CountryResponse? country = await service.RandomizeAsync(_cts.Token) ?? throw new InvalidOperationException();
-        _gameState.Reset(country);
-    }
+    private void NavigateToRandom() => navigation.NavigateTo("/flags/random");
 }

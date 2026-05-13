@@ -315,4 +315,7 @@
   <data name="PlayAgain" xml:space="preserve">
     <value>Play again</value>
   </data>
+  <data name="PlayRandom" xml:space="preserve">
+    <value>Play random</value>
+  </data>
 </root>

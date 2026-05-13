@@ -10,6 +10,4 @@ public sealed record DailyGame
     public DateOnly Today { get; init; }
 
     public GuessedCountryResponse[] Guesses { get; init; } = [];
-
-    public bool Abandon { get; init; }
 }

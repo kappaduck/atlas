@@ -15,8 +15,9 @@ internal static class DateTimeExtensions
         /// https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function.
         /// </summary>
         /// <param name="key">The key to hash with the date.</param>
-        /// <returns>The hashed value.</returns>
-        internal int Hash(string key)
+        /// <param name="length">The length.</param>
+        /// <returns>The hashed index.</returns>
+        internal int HashedIndex(string key, int length)
         {
             const uint prime = 16777619;
             uint hash = 2166136261;
@@ -27,7 +28,7 @@ internal static class DateTimeExtensions
                 hash *= prime;
             }
 
-            return (int)hash;
+            return (int)(hash % length);
         }
     }
 }

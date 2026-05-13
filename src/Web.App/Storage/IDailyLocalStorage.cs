@@ -1,13 +1,13 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
-using Web.App.Games;
+using Atlas.Application.Countries.Responses;
 
 namespace Web.App.Storage;
 
 public interface IDailyLocalStorage
 {
-    DailyGame Get();
+    IEnumerable<GuessedCountryResponse> Get();
 
-    void Set(DailyGame game);
+    void Set(IEnumerable<GuessedCountryResponse> guesses);
 }
