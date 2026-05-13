@@ -1,0 +1,37 @@
+@using Web.App.Games.Components
+@using Web.App.Settings
+
+@page "/countries/daily"
+@inject IStringLocalizer<Translations> Localizer
+
+<CascadingValue Value="_gameState" IsFixed="false">
+	<div class="game">
+		<div class="challenge-card @FoundCss">
+			@if (_gameState.Country is null)
+			{
+				<span class="spinner"></span>
+			}
+			else
+			{
+				if (!_gameState.GameFinished)
+				{
+					<picture class="country">
+						<source srcset="@_gameState.Country.Resources.Country" />
+						<img src="@_gameState.Country.Resources.Country" alt="@Localizer.AlternateCountryImage" style="@State.Country.Css(_gameState.Guesses.Count, _rotation)" />
+					</picture>
+				}
+				else
+				{
+					<GameOver SecondaryActionLabel="@Localizer.PlayRandom" OnSecondaryActionClick="NavigateToRandom">
+						<picture class="country">
+							<source srcset="@_gameState.Country.Resources.Country" />
+							<img src="@_gameState.Country.Resources.Country" />
+						</picture>
+					</GameOver>
+				}
+			}
+		</div>
+		<LookupInput OnLookup="GuessAsync" />
+		<Guesses />
+	</div>
+</CascadingValue>

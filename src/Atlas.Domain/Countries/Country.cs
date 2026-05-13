@@ -17,7 +17,7 @@ public sealed record Country
 
     public required Coordinate Coordinate { get; init; }
 
-    public required Area Area { get; init; }
+    public required double Area { get; init; }
 
     public required int Population { get; init; }
 

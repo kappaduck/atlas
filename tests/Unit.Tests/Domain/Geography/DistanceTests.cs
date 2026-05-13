@@ -11,7 +11,7 @@ public sealed class DistanceTests
     private readonly Coordinate _italy = new(42.83333333, 12.83333333);
 
     [Test]
-    public async Task CalculateShouldReturnTheDistanceBetweenTwoCoordinates()
+    public async Task CalculateShouldHaveTheDistanceBetweenTwoCoordinates()
     {
         Distance distance = Distance.Calculate(_canada, _italy);
 
@@ -20,7 +20,7 @@ public sealed class DistanceTests
     }
 
     [Test]
-    public async Task CalculateShouldReturnZeroGivenSameCoordinates()
+    public async Task CalculateShouldHaveZeroGivenSameCoordinates()
     {
         Distance distance = Distance.Calculate(_canada, _canada);
 

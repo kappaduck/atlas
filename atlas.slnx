@@ -1,16 +1,11 @@
 <Solution>
-  <Folder Name="/backend/">
-    <Project Path="src/Atlas.Application/Atlas.Application.csproj" />
-    <Project Path="src/Atlas.Domain/Atlas.Domain.csproj" />
-    <Project Path="src/Infrastructure.Persistence/Infrastructure.Persistence.csproj" />
-  </Folder>
   <Folder Name="/configurations/">
     <File Path=".editorconfig" />
     <File Path=".gitattributes" />
     <File Path=".gitignore" />
-    <File Path="directory.build.props" />
-    <File Path="directory.packages.props" />
-    <File Path="dotnet.config" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
     <File Path="nuget.config" />
   </Folder>
   <Folder Name="/configurations/.github/">
@@ -20,10 +15,6 @@
     <File Path=".github/codeowners" />
     <File Path=".github/dependabot.yml" />
   </Folder>
-  <Folder Name="/configurations/src/">
-    <File Path="src/directory.build.props" />
-    <File Path="src/directory.packages.props" />
-  </Folder>
   <Folder Name="/configurations/rules/">
     <File Path="rules/code.style.editorconfig" />
     <File Path="rules/disabled.editorconfig" />
@@ -32,15 +23,17 @@
     <File Path="rules/underscore.editorconfig" />
     <File Path="rules/vsthrd.editorconfig" />
   </Folder>
-  <Folder Name="/docs/">
-    <File Path="changelog.md" />
-    <File Path="license" />
-    <File Path="readme.md" />
+  <Folder Name="/src/">
+    <File Path="src/Directory.Build.props" />
+    <File Path="src/Directory.Packages.props" />
+    <Project Path="src/Atlas.Application/Atlas.Application.csproj" />
+    <Project Path="src/Atlas.Domain/Atlas.Domain.csproj" />
+    <Project Path="src/Infrastructure.Persistence/Infrastructure.Persistence.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <File Path="tests/.editorconfig" />
-    <File Path="tests/directory.build.props" />
-    <File Path="tests/directory.packages.props" />
+    <File Path="tests/Directory.Build.props" />
+    <File Path="tests/Directory.Packages.props" />
     <Project Path="tests/Unit.Tests/Unit.Tests.csproj" />
   </Folder>
   <Folder Name="/workflows/">

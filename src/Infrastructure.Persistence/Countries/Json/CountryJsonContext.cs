@@ -10,7 +10,7 @@ namespace Infrastructure.Persistence.Countries.Json;
 [JsonSerializable(typeof(Country[]))]
 [JsonSerializable(typeof(Cca2[]))]
 [JsonSourceGenerationOptions(
-    Converters = [typeof(AreaJsonConverter), typeof(Cca2JsonConverter)],
+    Converters = [typeof(Cca2JsonConverter)],
     PropertyNameCaseInsensitive = true,
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase,
     UseStringEnumConverter = true)]

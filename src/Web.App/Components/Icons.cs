@@ -11,7 +11,7 @@ internal static class Icons
 
     internal const string Bug = "bi bi-bug";
 
-    internal const string ChatDots = "bi bi-chat-dots";
+    internal const string ChatLeft = "bi bi-chat-left";
 
     internal const string Check = "bi bi-check";
 
@@ -23,13 +23,13 @@ internal static class Icons
 
     internal const string InfoCircle = "bi bi-info-circle";
 
+    internal const string Gear = "bi bi-gear";
+
     internal const string GeoAlt = "bi bi-geo-alt";
 
     internal const string Github = "bi bi-github";
 
     internal const string Lightbulb = "bi bi-lightbulb";
-
-    internal const string Sliders = "bi bi-sliders2";
 
     internal const string Times = "bi bi-x";
 }

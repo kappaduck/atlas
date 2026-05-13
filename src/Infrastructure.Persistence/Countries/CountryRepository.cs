@@ -1,47 +1,55 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
-using Atlas.Application.Countries.Repositories;
+using Atlas.Application.Countries;
 using Atlas.Domain.Countries;
 using Infrastructure.Persistence.Caching;
-using Infrastructure.Persistence.Countries.Options;
-using Infrastructure.Persistence.Countries.Sources;
 
 namespace Infrastructure.Persistence.Countries;
 
-internal sealed class CountryRepository(IDataSource<Country> source, ICache cache, ExcludedCountriesOptions options) : ICountryRepository
+internal sealed class CountryRepository(ICountryClient client, ICache cache) : ICountryRepository
 {
     private const string Key = "countries";
+    private const string LookupKey = $"{Key}:lookup";
 
-    public async ValueTask<Country[]> GetAllAsync(CancellationToken cancellationToken)
+    public async ValueTask<IEnumerable<Country>> GetAllAsync(CancellationToken cancellationToken)
     {
-        if (cache.TryGet(Key, out Country[]? cachedCountries))
+        if (cache.TryGet(Key, out IEnumerable<Country>? cachedCountries))
             return cachedCountries;
 
-        Country[] allCountries = await source.QueryAllAsync(cancellationToken).ConfigureAwait(false);
-
-        Country[] countries = [.. allCountries.Where(c => !options.Excluded.Contains(c.Cca2))];
-
+        IEnumerable<Country> countries = await client.GetAsync(cancellationToken);
         cache.Save(Key, countries);
+
         return countries;
     }
 
     public async ValueTask<Country?> GetAsync(Cca2 cca2, CancellationToken cancellationToken)
     {
-        string countryKey = AsKey(cca2);
+        string key = AsKey(cca2);
 
-        if (cache.TryGet(countryKey, out Country? cachedCountry))
+        if (cache.TryGet(key, out Country? cachedCountry))
             return cachedCountry;
 
-        Country[] countries = await GetAllAsync(cancellationToken).ConfigureAwait(false);
+        Country[] countries = [.. await GetAllAsync(cancellationToken)];
 
         Country? country = Array.Find(countries, c => c.Cca2 == cca2);
 
         if (country is null)
             return null;
 
-        cache.Save(countryKey, country);
+        cache.Save(key, country);
         return country;
+    }
+
+    public async ValueTask<IEnumerable<Cca2>> LookupAsync(CancellationToken cancellationToken)
+    {
+        if (cache.TryGet(LookupKey, out IEnumerable<Cca2>? cachedCodes))
+            return cachedCodes;
+
+        IEnumerable<Cca2> codes = await client.LookupAsync(cancellationToken);
+        cache.Save(LookupKey, codes);
+
+        return codes;
     }
 
     public void Save(Country country) => cache.Save(AsKey(country.Cca2), country);

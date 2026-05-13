@@ -1,20 +1,31 @@
 .game-over {
   display: flex;
-  position: absolute;
-  gap: 1em;
+  flex-direction: column;
   align-items: center;
+  gap: 0.5rem;
 
-  .answer {
-    font-weight: bold;
+  .flag, .country {
+    width: 200px;
   }
 
-  .congratulations {
+  .country {
+    filter: invert(var(--country-color));
+  }
+
+  .message {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--quack-primary-text);
+  }
+}
 
-    .answer {
-      font-size: var(--font-size-xs);
-    }
+.map {
+  color: var(--quack-muted-text);
+  font-size: var(--quack-text-sm);
+  transition: color .15s;
+
+  &:hover {
+    color: var(--quack-accent-text);
   }
 }

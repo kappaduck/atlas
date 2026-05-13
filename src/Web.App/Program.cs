@@ -15,7 +15,7 @@ builder.ConfigureLoggings();
 builder.AddServices();
 
 builder.Services.AddApplication();
-builder.Services.AddInfrastructure(builder.Configuration, c => c.BaseAddress = new Uri(builder.HostEnvironment.BaseAddress));
+builder.Services.AddPersistence(builder.Configuration);
 
 WebAssemblyHost host = builder.Build();
 

@@ -1,33 +1,21 @@
-﻿@inject IStringLocalizer<Resources> Localizer
+@inject IStringLocalizer<Translations> Localizer
 
 <div class="game-over">
-    @if (!GameState.Guesses.Any(g => g.Success))
-    {
-        <a class="link" target="_blank" href="@GameState.Country?.Resources.Map">
-            <i class="@Icons.GeoAlt"></i>
-            <span class="answer">@GameState.Country?.Name</span>
-        </a>
-    }
-    else
-    {
-        <div class="congratulations">
-            <span>@Localizer[Resources.Congratulations]</span>
-            <a class="link" target="_blank" href="@GameState.Country?.Resources.Map">
-                <i class="@Icons.GeoAlt"></i>
-                <span class="answer">@Localizer[Resources.SeeOnMap]</span>
-            </a>
-        </div>
-    }
-    @if (OnPlayAgain.HasDelegate)
-    {
-        <button type="button" @onclick="OnPlayAgain">@Localizer[Resources.PlayAgain]</button>
-    }
+	@ChildContent
+	<div class="message">
+		@if (GameState.Found)
+		{
+			<span>@Localizer.Congratulations &#127881;</span>
+		}
+		else
+		{
+			<span>@Localizer.YouFailed &#128532;</span>
+		}
+		<span>@GameState.Country!.Name</span>
+	</div>
 </div>
-
-@code {
-    [CascadingParameter]
-    public required GameState GameState { get; init; }
-
-    [Parameter]
-    public EventCallback OnPlayAgain { get; init; }
-}
+<div class="actions">
+	<a class="btn btn-primary" href="/">@Localizer.BackToGames</a>
+	<button class="btn btn-secondary" @onclick="OnSecondaryActionClick">@SecondaryActionLabel</button>
+</div>
+<a href="@GameState.Country.Resources.Map" target="_blank" class="map"><i class="@Icons.GeoAlt"></i> @Localizer.SeeOnMap</a>

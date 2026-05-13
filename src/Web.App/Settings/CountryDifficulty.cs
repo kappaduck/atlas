@@ -3,10 +3,11 @@
 
 namespace Web.App.Settings;
 
+[Flags]
 public enum CountryDifficulty
 {
     None = 0,
-    Rotated = 1,
-    Mirrored = 2,
-    Blur = 3
+    Rotated = 2,
+    Mirrored = 4,
+    Blur = 8
 }

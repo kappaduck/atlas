@@ -4,16 +4,13 @@
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.JSInterop;
-using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using Web.App.Options;
-using Web.App.Services;
 using Web.App.Settings;
 using Web.App.Storage;
 
 namespace Web.App;
 
-[ExcludeFromCodeCoverage]
 internal static class HostExtensions
 {
     extension(WebAssemblyHostBuilder builder)
@@ -31,9 +28,9 @@ internal static class HostExtensions
             builder.Services.AddSingleton(sp => (IJSInProcessRuntime)sp.GetRequiredService<IJSRuntime>());
             builder.Services.AddLocalization();
 
-            builder.Services.AddTransient<ITimeService, TimeService>();
             builder.Services.AddSingleton<ILocalStorage, LocalStorage>();
-            builder.Services.AddSingleton<IDailyLocalStorage, DailyLocalStorage>();
+            builder.Services.AddKeyedSingleton<IDailyLocalStorage, DailyFlagStorage>(DailyFlagStorage.Key);
+            builder.Services.AddKeyedSingleton<IDailyLocalStorage, DailyCountryStorage>(DailyCountryStorage.Key);
         }
 
         internal void ConfigureLoggings()
@@ -50,12 +47,8 @@ internal static class HostExtensions
                             .AddSingleton<IValidateOptions<ProjectOptions>, ProjectOptions.Validator>()
                             .AddSingleton(sp => sp.GetRequiredService<IOptions<ProjectOptions>>().Value);
 
-            builder.Services.Configure<CompanyOptions>(builder.Configuration.GetRequiredSection(CompanyOptions.Section))
-                            .AddSingleton<IValidateOptions<CompanyOptions>, CompanyOptions.Validator>()
-                            .AddSingleton(sp => sp.GetRequiredService<IOptions<CompanyOptions>>().Value);
-
-            builder.Services.Configure<FeatureOptions>(builder.Configuration.GetRequiredSection(FeatureOptions.Section))
-                            .AddSingleton(sp => sp.GetRequiredService<IOptions<FeatureOptions>>().Value);
+            builder.Services.Configure<DevOptions>(builder.Configuration.GetRequiredSection(DevOptions.Section))
+                            .AddSingleton(sp => sp.GetRequiredService<IOptions<DevOptions>>().Value);
         }
     }
 
@@ -64,15 +57,12 @@ internal static class HostExtensions
         internal void UseLocalization()
         {
             ILocalStorage storage = host.Services.GetRequiredService<ILocalStorage>();
-            AppSettings.Data? data = storage.GetItem<AppSettings.Data>(LocalStorageKeys.Settings);
+            Language? language = AppState.GetLanguage(storage);
 
-            if (data is null)
-                return;
-
-            CultureInfo culture = data.General.Language switch
+            CultureInfo culture = language switch
             {
-                Language.English => new CultureInfo("en"),
                 Language.French => new CultureInfo("fr-CA"),
+                Language.English => new CultureInfo("en"),
                 _ => new CultureInfo("en")
             };
 

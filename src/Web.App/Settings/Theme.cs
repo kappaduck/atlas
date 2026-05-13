@@ -5,7 +5,7 @@ namespace Web.App.Settings;
 
 public enum Theme
 {
-    System = 0,
-    Dark = 1,
-    Light = 2
+    Dark = 0,
+    Light = 1,
+    System = 2
 }

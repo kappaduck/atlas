@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   pull_request:
     branches: [main]
-    paths: ['src/**', 'tests/**', .github/workflows/pull-request.yml]
+    paths: ['src/**', 'tests/**', '**.props', .github/workflows/pull-request.yml]
 
 permissions:
   contents: read
@@ -14,7 +14,7 @@ permissions:
 jobs:
   build:
     name: Build/Unit Test
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -23,7 +23,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 10.0.x
+          global-json-file: ./global.json
 
       - name: Restore dependencies
         run: dotnet restore
@@ -33,10 +33,29 @@ jobs:
 
       - name: Test
         continue-on-error: true
-        run: dotnet run --project .\tests\Unit.Tests\Unit.Tests.csproj --configuration release --no-build --report-trx
+        run: dotnet test --configuration release --no-build --report-trx --coverage --coverage-output-format cobertura
 
       - name: Publish test results
         if: (!cancelled())
-        uses: EnricoMi/publish-unit-test-result-action/windows@v2
+        uses: EnricoMi/publish-unit-test-result-action@v2
         with:
           files: '**/TestResults/*.trx'
+          job_summary: false
+
+      - name: Code Coverage Summary Report
+        uses: irongut/CodeCoverageSummary@v1.3.0
+        with:
+          filename: '**/TestResults/*.covertura.xml'
+          badge: true
+          fail_below_min: true
+          format: markdown
+          hide_complexity: true
+          indicators: true
+          output: both
+          thresholds: '90 100'
+
+      - name: Add Coverage PR Comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          recreate: true
+          path: code-coverage-results.md

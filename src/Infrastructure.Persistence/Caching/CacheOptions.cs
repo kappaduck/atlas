@@ -3,11 +3,9 @@
 
 using Microsoft.Extensions.Options;
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Infrastructure.Persistence.Caching;
 
-[ExcludeFromCodeCoverage]
 internal sealed partial class CacheOptions
 {
     internal const string Section = "cache";

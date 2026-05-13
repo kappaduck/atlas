@@ -1,8 +1,6 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
-using Atlas.Domain.Extensions;
-
 namespace Atlas.Domain.Geography;
 
 public sealed class Distance
@@ -25,10 +23,10 @@ public sealed class Distance
         if (from == to)
             return new(0.0, 0.0);
 
-        double deltaLatitude = Math.ToRadians(to.Latitude - from.Latitude);
-        double deltaLongitude = Math.ToRadians(to.Longitude - from.Longitude);
-        double fromLatitude = Math.ToRadians(from.Latitude);
-        double toLatitude = Math.ToRadians(to.Latitude);
+        double deltaLatitude = double.DegreesToRadians(to.Latitude - from.Latitude);
+        double deltaLongitude = double.DegreesToRadians(to.Longitude - from.Longitude);
+        double fromLatitude = double.DegreesToRadians(from.Latitude);
+        double toLatitude = double.DegreesToRadians(to.Latitude);
 
         double sinLatitude = Math.Sin(deltaLatitude / 2);
         double sinLongitude = Math.Sin(deltaLongitude / 2);

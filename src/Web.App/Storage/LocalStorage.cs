@@ -1,14 +1,12 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
-using System.Diagnostics.CodeAnalysis;
 using System.Runtime.InteropServices.JavaScript;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace Web.App.Storage;
 
-[ExcludeFromCodeCoverage]
 internal sealed partial class LocalStorage : ILocalStorage
 {
     private readonly JsonSerializerOptions _options = new()

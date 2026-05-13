@@ -1,0 +1,15 @@
+<input type="checkbox" role="switch" value="@Value.ToString()" @onclick="OnChangeAsync" />
+
+@code {
+	[Parameter, EditorRequired]
+	public required bool Value { get; set; }
+
+	[Parameter, EditorRequired]
+	public required EventCallback<bool> ValueChanged { get; set; }
+
+	private Task OnChangeAsync()
+	{
+		Value = !Value;
+		return ValueChanged.InvokeAsync(Value);
+	}
+}

@@ -1,25 +1,20 @@
 name: CodeQL
 
 on:
-  schedule:
-    - cron: '0 2 * * 2' # Every Tuesday at 2 AM UTC
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - '.github/workflows/**'
+
+permissions:
+  security-events: write
 
 jobs:
-  analyze:
-    name: Analyze (${{ matrix.language }})
-    runs-on: windows-latest
-
-    permissions:
-      security-events: write
-
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-        - language: actions
-          build-mode: none
-        - language: csharp
-          build-mode: manual
+  analyze-actions:
+    name: Analyze Github actions
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -28,24 +23,40 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v4
         with:
-          languages: ${{ matrix.language }}
-          build-mode: ${{ matrix.build-mode }}
+          languages: actions
+          build-mode: none
+
+      - name: Perform CodeQL analysis
+        uses: github/codeql-action/analyze@v4
+        with:
+          category: "/language:actions"
+
+  analyze-csharp:
+    name: Analyze C#
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v4
+        with:
+          languages: csharp
+          build-mode: none
 
       - name: Setup .NET
-        if: matrix.language == 'csharp'
         uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 10.0.x
+          global-json-file: ./global.json
 
       - name: Restore dependencies
-        if: matrix.language == 'csharp'
         run: dotnet restore
 
       - name: Build
-        if: matrix.language == 'csharp'
         run: dotnet build --configuration release --no-restore
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v4
         with:
-          category: "/language:${{matrix.language}}"
+          category: "/language:csharp"

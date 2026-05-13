@@ -1,14 +1,12 @@
-@using Web.App.Components.Modals
+@using Web.App.Dialogs
 @using Web.App.Settings
 
-<AppSettings>
-    <ZoomModal>
-        <SettingsModal>
-            <Router AppAssembly="@typeof(App).Assembly" NotFoundPage="typeof(NotFound)">
-                <Found Context="route">
-                    <RouteView RouteData="route" DefaultLayout="typeof(MainLayout)" />
-                </Found>
-            </Router>
-        </SettingsModal>
-    </ZoomModal>
-</AppSettings>
+<AppState>
+	<SettingsDialog>
+		<Router AppAssembly="@typeof(App).Assembly" NotFoundPage="typeof(NotFound)">
+			<Found Context="route">
+				<RouteView RouteData="route" DefaultLayout="typeof(MainLayout)" />
+			</Found>
+		</Router>
+	</SettingsDialog>
+</AppState>

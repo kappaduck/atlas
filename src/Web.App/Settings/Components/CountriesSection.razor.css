@@ -1,0 +1,29 @@
+.count {
+  font-size: var(--quack-text-xs);
+  color: var(--quack-muted-text);
+}
+
+.countries {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .25rem;
+  overflow-y: auto;
+  margin-block-start: 0.5rem;
+  padding-inline-end: 12px;
+
+  .country {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--quack-text-sm);
+    color: var(--quack-muted-text);
+    padding: 5px 8px;
+    background: var(--quack-elevated);
+    border-radius: var(--quack-radius-md);
+
+    img {
+      width: 40px;
+      aspect-ratio: 3 / 2;
+    }
+  }
+}

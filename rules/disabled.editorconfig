@@ -1,15 +1,5 @@
 is_global = true
 
-# CA1034: Do not nest type
-# Can nest type for group records/classes (flxuor)
-# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1034
-dotnet_diagnostic.CA1034.severity = none
-
-# CA1062: Validate arguments of public methods
-# No need to validate because of nullable reference types
-# https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1062
-dotnet_diagnostic.CA1062.severity = none
-
 # CA1305: The behavior of 'ToString()' could vary based on the current user's locale settings.
 # Some string does not need to be localized
 # https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1305

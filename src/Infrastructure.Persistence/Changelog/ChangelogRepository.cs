@@ -1,9 +1,8 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
-using Atlas.Application.Changelog.Repositories;
+using Atlas.Application.Changelog;
 using Infrastructure.Persistence.Caching;
-using Infrastructure.Persistence.Changelog.Sources;
 
 namespace Infrastructure.Persistence.Changelog;
 
@@ -16,7 +15,7 @@ internal sealed class ChangelogRepository(IChangelogClient client, ICache cache)
         if (cache.TryGet(Key, out string? cachedChangelog))
             return cachedChangelog;
 
-        string? changelog = await client.GetAsync(cancellationToken).ConfigureAwait(false);
+        string? changelog = await client.GetAsync(cancellationToken);
 
         if (string.IsNullOrEmpty(changelog))
             return null;

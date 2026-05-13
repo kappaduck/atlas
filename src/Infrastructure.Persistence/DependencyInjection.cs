@@ -1,15 +1,11 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
-using Atlas.Application.Changelog.Repositories;
-using Atlas.Application.Countries.Repositories;
-using Atlas.Domain.Countries;
+using Atlas.Application.Changelog;
+using Atlas.Application.Countries;
 using Infrastructure.Persistence.Caching;
 using Infrastructure.Persistence.Changelog;
-using Infrastructure.Persistence.Changelog.Sources;
 using Infrastructure.Persistence.Countries;
-using Infrastructure.Persistence.Countries.Options;
-using Infrastructure.Persistence.Countries.Sources;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -22,11 +18,11 @@ public static class DependencyInjection
 {
     extension(IServiceCollection services)
     {
-        public void AddInfrastructure(IConfiguration configuration, Action<HttpClient> configure)
+        public void AddPersistence(IConfiguration configuration)
         {
             services.AddCaching(configuration);
-            services.AddCountries(configure, configuration);
             services.AddChangelog(configuration);
+            services.AddCountries(configuration);
         }
 
         private void AddCaching(IConfiguration configuration)
@@ -42,32 +38,24 @@ public static class DependencyInjection
 
         private void AddChangelog(IConfiguration configuration)
         {
-            services.Configure<ChangelogOptions>(configuration.GetSection(ChangelogOptions.Section))
-                    .AddSingleton<IValidateOptions<ChangelogOptions>, ChangelogOptions.Validator>()
-                    .AddSingleton(sp => sp.GetRequiredService<IOptions<ChangelogOptions>>().Value)
-                    .AddOptionsWithValidateOnStart<ChangelogOptions>();
+            services.Configure<ChangelogEndpointOptions>(configuration.GetSection(ChangelogEndpointOptions.Section))
+                    .AddSingleton<IValidateOptions<ChangelogEndpointOptions>, ChangelogEndpointOptions.Validator>()
+                    .AddSingleton(sp => sp.GetRequiredService<IOptions<ChangelogEndpointOptions>>().Value)
+                    .AddOptionsWithValidateOnStart<ChangelogEndpointOptions>();
 
             services.AddHttpClient<IChangelogClient, ChangelogClient>();
             services.AddSingleton<IChangelogRepository, ChangelogRepository>();
         }
 
-        private void AddCountries(Action<HttpClient> configure, IConfiguration configuration)
+        private void AddCountries(IConfiguration configuration)
         {
             services.Configure<CountryEndpointOptions>(configuration.GetSection(CountryEndpointOptions.Section))
                     .AddSingleton<IValidateOptions<CountryEndpointOptions>, CountryEndpointOptions.Validator>()
                     .AddSingleton(sp => sp.GetRequiredService<IOptions<CountryEndpointOptions>>().Value)
                     .AddOptionsWithValidateOnStart<CountryEndpointOptions>();
 
-            services.Configure<ExcludedCountriesOptions>(configuration.GetSection(ExcludedCountriesOptions.Section))
-                    .AddSingleton<IValidateOptions<ExcludedCountriesOptions>, ExcludedCountriesOptions.Validator>()
-                    .AddSingleton(sp => sp.GetRequiredService<IOptions<ExcludedCountriesOptions>>().Value)
-                    .AddOptionsWithValidateOnStart<ExcludedCountriesOptions>();
-
-            services.AddHttpClient<IDataSource<Country>, CountryDataSource>(configure);
-            services.AddHttpClient<IDataSource<Cca2>, CountryLookupDataSource>(configure);
-
+            services.AddHttpClient<ICountryClient, CountryClient>();
             services.AddSingleton<ICountryRepository, CountryRepository>();
-            services.AddSingleton<ICountryLookupRepository, CountryLookupRepository>();
         }
     }
 }

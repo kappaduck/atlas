@@ -3,12 +3,10 @@
 
 using Microsoft.Extensions.Options;
 using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Web.App.Options;
 
-[ExcludeFromCodeCoverage]
-internal sealed partial class ProjectOptions
+public sealed partial class ProjectOptions
 {
     internal const string Section = "project";
 
@@ -23,6 +21,9 @@ internal sealed partial class ProjectOptions
 
     [Required, Url]
     public required string FeatureUrl { get; set; }
+
+    [Required, Url]
+    public required string CompanyUrl { get; set; }
 
     [OptionsValidator]
     internal sealed partial class Validator : IValidateOptions<ProjectOptions>;

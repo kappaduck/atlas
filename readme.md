@@ -1,15 +1,8 @@
 # [Atlas](https://atlas.kappaduck.com)
 
-Atlas is a web app which learn about the geography (countries, flags, etc...) in a fun and interactive way. It is built with Blazor and using the latest .NET version.
+Atlas is a web game with minigames to guess the country or the flag.
 
 ## Games
-
-### Flags
-
-In theses games, you will be shown a flag and you have to guess the country it belongs to.
-
-- [Daily](https://atlas.kappaduck.com/flags/daily)
-- [Random](https://atlas.kappaduck.com/flags/random)
 
 ### Countries
 
@@ -17,6 +10,13 @@ In theses games, you will be shown a country shape and you have to guess the cou
 
 - [Daily](https://atlas.kappaduck.com/countries/daily)
 - [Random](https://atlas.kappaduck.com/countries/random)
+
+### Flags
+
+In theses games, you will be shown a flag and you have to guess the country it belongs to.
+
+- [Daily](https://atlas.kappaduck.com/flags/daily)
+- [Random](https://atlas.kappaduck.com/flags/random)
 
 ## Mentions
 

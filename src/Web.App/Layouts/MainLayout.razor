@@ -1,5 +1,55 @@
-﻿@inherits LayoutComponentBase
+@using Web.App.Dialogs
+@using Web.App.Options
+@inherits LayoutComponentBase
 
-<Header />
-<main>@Body</main>
-<Footer />
+@inject IStringLocalizer<Translations> Localizer
+@inject ProjectOptions Project
+
+<header>
+	<a class="nav-logo" href="/">
+		<picture>
+			<source type="image/webp" srcset="assets/atlas.webp 2x" media="(min-width: 960px)" />
+			<source type="image/webp" srcset="assets/atlas.webp" />
+			<img src="assets/images/atlas.webp" alt="@Localizer.AtlasLogo" />
+		</picture>
+		<h2 class="nav-title">@Localizer.Atlas</h2>
+	</a>
+	<nav class="navbar">
+		<a class="nav-item" target="_blank" href="@Project.Url">
+			<i class="@Icons.Github"></i>
+		</a>
+		<button id="feedback-btn" popovertarget="feedback" class="nav-item">
+			<i class="@Icons.ChatLeft"></i>
+		</button>
+		<button class="nav-item" @onclick="Dialog.ShowGeneralSection">
+			<i class="@Icons.Gear"></i>
+		</button>
+	</nav>
+</header>
+@Body
+<footer>
+	<div class="copyright">
+		<span>&copy; @DateTime.Now.Year</span>
+		<a class="company" target="_blank" href="@Project.CompanyUrl">
+			<Duck Size="24" />
+			<strong><span class="kappa">Kappa</span><span class="duck">Duck</span></strong>
+		</a>
+	</div>
+	<button class="date" @onclick="Dialog.ShowChangelogSection">@Project.Version</button>
+</footer>
+
+<div id="feedback" popover>
+	<a class="feedback-item" target="_blank" href="@Project.BugUrl">
+		<i class="@Icons.Bug"></i>
+		<span>@Localizer.ReportBug</span>
+	</a>
+	<a class="feedback-item" target="_blank" href="@Project.FeatureUrl">
+		<i class="@Icons.Lightbulb"></i>
+		<span>@Localizer.RequestFeature</span>
+	</a>
+</div>
+
+@code {
+	[CascadingParameter, EditorRequired]
+	public required SettingsDialog Dialog { get; init; }
+}

@@ -1,43 +1,40 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
-using Atlas.Application.Countries;
-using Web.App.Services;
+using Atlas.Application.Countries.Responses;
+using Web.App.Games;
 
 namespace Web.App.Storage;
 
-internal sealed class DailyLocalStorage(ILocalStorage storage, ITimeService timeService) : IDailyLocalStorage
+internal abstract class DailyLocalStorage(string key, ILocalStorage storage) : IDailyLocalStorage
 {
-    public (GuessedCountryResponse[] Guesses, bool GiveUp) Get(string key)
+    private readonly string _key = $"daily:{key}";
+    private DailyGame _daily = default!;
+
+    public IEnumerable<GuessedCountryResponse> Get()
     {
-        string guessedKey = GuessedKey(key);
-        string giveUpKey = GiveUpKey(key);
-        string todayKey = $"{key}:today";
+        DateOnly today = DateOnly.FromDateTime(DateTime.Now);
+        _daily = storage.GetItem<DailyGame>(_key) ?? new DailyGame();
 
-        DateOnly today = timeService.Today;
-        DateOnly lastPlayed = storage.GetItem<DateOnly>(todayKey);
-
-        if (lastPlayed != today)
+        if (today != _daily.Today)
         {
-            storage.RemoveItem(guessedKey);
-            storage.RemoveItem(giveUpKey);
-            storage.SetItem(todayKey, today);
+            _daily = _daily with
+            {
+                Today = today,
+                Guesses = []
+            };
 
-            return ([], false);
+            storage.SetItem(_key, _daily);
         }
 
-        GuessedCountryResponse[] guesses = storage.GetItem<GuessedCountryResponse[]>(guessedKey) ?? [];
-        bool giveUp = storage.GetItem<bool>(giveUpKey);
-
-        return (guesses, giveUp);
+        return _daily.Guesses;
     }
 
-    public void Set(string key, ICollection<GuessedCountryResponse> guesses)
-        => storage.SetItem(GuessedKey(key), guesses);
-
-    public void Set(string key, bool giveUp) => storage.SetItem(GiveUpKey(key), giveUp);
-
-    private static string GuessedKey(string key) => $"{key}:guesses";
-
-    private static string GiveUpKey(string key) => $"{key}:giveup";
+    public void Set(IEnumerable<GuessedCountryResponse> guesses)
+    {
+        storage.SetItem(_key, _daily with
+        {
+            Guesses = [.. guesses]
+        });
+    }
 }

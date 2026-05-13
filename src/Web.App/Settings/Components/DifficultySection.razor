@@ -1,0 +1,67 @@
+@inject IStringLocalizer<Translations> Localizer
+
+<div class="section">
+	<h6 class="game-title">@Localizer.FlagGame</h6>
+	<div class="difficulty">
+		<div class="head">
+			<span class="title">@Localizer.PickPreferedVisualModifier</span>
+			<span class="subtext">@Localizer.FlagModifiersMutuallyExclusive</span>
+		</div>
+		<div class="default-row">
+			<label for="flag-none" class="modifier default">
+				<span class="none">@Localizer.NoneDefault</span>
+				<input name="flag" id="flag-none" type="radio" checked="@(State.Flag == FlagDifficulty.None)" @onchange="() => State.Flag = FlagDifficulty.None">
+			</label>
+		</div>
+		<div class="modifiers">
+			<label for="flag-blur" class="modifier">
+				<input name="flag" id="flag-blur" type="radio" checked="@(State.Flag == FlagDifficulty.Blur)" @onchange="() => State.Flag = FlagDifficulty.Blur">
+				<img src="@Flag" class="blur" />
+				<span>@Localizer.Blur</span>
+			</label>
+			<label for="flag-grayscale" class="modifier">
+				<input name="flag" id="flag-grayscale" type="radio" checked="@(State.Flag == FlagDifficulty.Grayscale)" @onchange="() => State.Flag = FlagDifficulty.Grayscale">
+				<img src="@Flag" class="grayscale" />
+				<span>@Localizer.Grayscale</span>
+			</label>
+		</div>
+		<div class="modifiers">
+			<label for="flag-invert" class="modifier">
+				<input name="flag" id="flag-invert" type="radio" checked="@(State.Flag == FlagDifficulty.Invert)" @onchange="() => State.Flag = FlagDifficulty.Invert">
+				<img src="@Flag" class="invert" />
+				<span>@Localizer.Invert</span>
+			</label>
+			<label for="flag-hue" class="modifier">
+				<input name="flag" id="flag-hue" type="radio" checked="@(State.Flag == FlagDifficulty.Shift)" @onchange="() => State.Flag = FlagDifficulty.Shift">
+				<img src="@Flag" class="hue" />
+				<span>@Localizer.HueShift</span>
+			</label>
+		</div>
+	</div>
+</div>
+<div class="section">
+	<h6 class="game-title">@Localizer.CountryGame</h6>
+	<div class="difficulty">
+		<div class="head">
+			<span class="title">@Localizer.PickPreferedVisualModifier</span>
+			<span class="subtext">@Localizer.CountryModifiersCombined</span>
+		</div>
+		<div class="modifiers">
+			<label for="country-blur" class="modifier">
+				<input name="country" id="country-blur" type="checkbox" checked="@HasCountryDifficulty(CountryDifficulty.Blur)" @onchange="() => SetCountryDifficulty(CountryDifficulty.Blur)">
+				<img src="@Country" class="blur country" />
+				<span>@Localizer.Blur</span>
+			</label>
+			<label for="country-rotation" class="modifier">
+				<input name="country" id="country-rotation" type="checkbox" checked="@HasCountryDifficulty(CountryDifficulty.Rotated)" @onchange="() => SetCountryDifficulty(CountryDifficulty.Rotated)">
+				<img src="@Country" class="rotate country" />
+				<span>@Localizer.Rotate</span>
+			</label>
+			<label for="country-mirror" class="modifier">
+				<input name="country" id="country-mirror" type="checkbox" checked="@HasCountryDifficulty(CountryDifficulty.Mirrored)" @onchange="() => SetCountryDifficulty(CountryDifficulty.Mirrored)">
+				<img src="@Country" class="mirror country" />
+				<span>@Localizer.Mirror</span>
+			</label>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,39 @@
+@using Web.App.Settings.Components
+
+@inherits DialogBase
+
+<CascadingValue Value="this" IsFixed="true">
+	@ChildContent
+	<dialog @ref="Element" closedBy="any" @onclose="() => _cts?.Cancel()">
+		<div class="header">
+			<div class="head">
+				<span class="title">@Localizer.Settings</span>
+				<button class="close-btn" @onclick="Close"><i class="@Icons.Times"></i></button>
+			</div>
+			<div class="tabs">
+				@foreach ((TabItem item, string label) in Tabs)
+				{
+					<button class="tab @IsActive(item)" @onclick="() => SelectTab(item)">@label</button>
+				}
+			</div>
+		</div>
+		<div class="body">
+			@if (_selectedTab == TabItem.General)
+			{
+				<GeneralSection />
+			}
+			@if (_selectedTab == TabItem.Difficulty)
+			{
+				<DifficultySection />
+			}
+			@if (_selectedTab == TabItem.Changelog)
+			{
+				<ChangelogSection CancellationToken="_cts!.Token" />
+			}
+			@if (_selectedTab == TabItem.Countries)
+			{
+				<CountriesSection CancellationToken="_cts!.Token" />
+			}
+		</div>
+	</dialog>
+</CascadingValue>

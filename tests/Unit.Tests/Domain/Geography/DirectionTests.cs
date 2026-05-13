@@ -12,45 +12,40 @@ public sealed class DirectionTests
     private readonly Coordinate _fiji = new(-18, 175);
 
     [Test]
-    public async Task CalculateShouldReturnTheDirectionInAngleBetweenTwoCoordinates()
+    public async Task CalculateShouldGHaveZeroGivenSameCoordinates()
+    {
+        double direction = Direction.Calculate(_canada, _canada);
+        await Assert.That(direction).IsZero();
+    }
+
+    [Test]
+    public async Task CalculateShouldHaveTheDirectionInDegreesBetweenTwoCoordinates()
     {
         double direction = Direction.Calculate(_canada, _italy);
-
         await Assert.That(direction).IsEqualTo(104.0);
     }
 
     [Test]
-    public async Task CalculateShouldReturnZeroGivenSameCoordinates()
-    {
-        double direction = Direction.Calculate(_canada, _canada);
-
-        await Assert.That(direction).IsEqualTo(0);
-    }
-
-    [Test]
-    public async Task DirectionShouldGiveTheAngleInTheThirdQuadrantGivenCanadaToFiji()
+    public async Task CalculateShouldHaveTheAngleInTheThirdQuadrantGivenCanadaToFiji()
     {
         double direction = Direction.Calculate(_canada, _fiji);
-
         await Assert.That(direction).IsEqualTo(223);
     }
 
     [Test]
-    public async Task DirectionShouldGiveTheAngleInTheFirstQuadrantGivenCanadaToFiji()
+    public async Task CalculateShouldHaveTheAngleInTheFirstQuadrantGivenCanadaToFiji()
     {
         double direction = Direction.Calculate(_fiji, _canada);
-
         await Assert.That(direction).IsEqualTo(43);
     }
 
     [Test]
-    public async Task DirectionShouldGiveTheAngleInTheFirstQuadrantGivenLongitudeFor180Degrees()
+    public async Task CalculateShouldHaveTheAngleInTheFirstQuadrantGivenLongitudeFor180Degrees()
     {
         Coordinate from = new(0, 0);
         Coordinate to = new(0, 180);
 
         double direction = Direction.Calculate(from, to);
-
         await Assert.That(direction).IsEqualTo(90);
     }
 }

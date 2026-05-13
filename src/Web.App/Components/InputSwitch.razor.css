@@ -1,0 +1,36 @@
+input:where([type="checkbox"][role="switch"]) {
+  --toggle-bg: light-dark(#e0dfe8, var(--quack-gray-900));
+  --toggle-border: light-dark(#C8C6D8, #444441);
+  width: 36px;
+  height: 20px;
+  background: var(--toggle-bg);
+  border-radius: 99px;
+  border: .5px solid var(--toggle-border);
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background .2s;
+  appearance: none;
+
+  &::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--quack-secondary-text);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all .2s;
+  }
+
+  &[value="true" i] {
+    background: #1D9E75;
+    border-color: #0F6E56;
+
+    &::after {
+      background: white;
+      left: 18px;
+    }
+  }
+}

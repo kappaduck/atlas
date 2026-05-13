@@ -7,11 +7,6 @@ on:
         description: 'The environment to deploy'
         required: true
         type: string
-      bumpVersion:
-        description: 'Whether to bump the version for production deployment'
-        required: false
-        type: boolean
-        default: false
     secrets:
       CLOUDFLARE_API_TOKEN:
         required: true
@@ -20,7 +15,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     env:
       webApp: ./src/Web.App/Web.App.csproj
 
@@ -32,11 +27,11 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 10.0.x
+          global-json-file: ./global.json
 
       - name: Bump version
-        if: ${{ inputs.bumpVersion }}
-        run: dotnet .\bump.version.cs
+        if: ${{ inputs.environment == 'production' }}
+        run: dotnet ./bump.cs
 
       - name: Restore dependencies
         run: dotnet restore ${{ env.webApp }}

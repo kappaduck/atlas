@@ -1,0 +1,27 @@
+@inject IStringLocalizer<Translations> Localizer
+
+<div class="lookup">
+	<input class="search"
+		   type="search"
+		   placeholder="@Localizer.LookupPlaceholder"
+		   autocomplete="off"
+		   disabled="@GameState.GameFinished"
+		   @bind="_input"
+		   @oninput="Lookup"
+		   @onfocus="Focus"
+		   @onkeydown="HandleKeyboardAsync" />
+	<ul role="list" class="items">
+		<li class="hint">
+			<span>@Localizer.Navigate</span>
+			<span>
+				<kbd>&uarr;</kbd>
+				<kbd>&darr;</kbd>
+				<kbd>&crarr;</kbd>
+			</span>
+		</li>
+		@foreach ((int index, (string code, string name)) in _filteredCountries.Index())
+		{
+			<li id="country-@index" class="item @IsActive(index)" @onclick="async () => await SelectCountryAsync(code)">@name</li>
+		}
+	</ul>
+</div>

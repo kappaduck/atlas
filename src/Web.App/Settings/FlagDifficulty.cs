@@ -9,5 +9,5 @@ public enum FlagDifficulty
     Blur = 1,
     Invert = 2,
     Shift = 3,
-    Grayscale = 4,
+    Grayscale = 4
 }

@@ -1,0 +1,21 @@
+<Project>
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Packages.props', '$(MSBuildThisFileDirectory)../'))" />
+  <ItemGroup Label="Common packages">
+    <PackageVersion Include="DotNet.ReproducibleBuilds" Version="2.0.2" PrivateAssets="all" IncludeAssets="$(IncludedAssets)" />
+  </ItemGroup>
+  <ItemGroup Label="Application packages">
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="11.0.0-preview.3.26207.106" />
+    <PackageVersion Include="Microsoft.Extensions.Localization.Abstractions" Version="11.0.0-preview.3.26207.106" />
+  </ItemGroup>
+  <ItemGroup Label="Infrastructure packages">
+    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="11.0.0-preview.3.26207.106" />
+    <PackageVersion Include="Microsoft.Extensions.Http" Version="11.0.0-preview.3.26207.106" />
+  </ItemGroup>
+  <ItemGroup Label="Web packages">
+    <PackageVersion Include="Markdig" Version="1.1.2" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="11.0.0-preview.3.26207.106" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="11.0.0-preview.3.26207.106" PrivateAssets="all" IncludeAssets="$(IncludedAssets)" />
+    <PackageVersion Include="Microsoft.Extensions.Localization" Version="11.0.0-preview.3.26207.106" />
+    <PackageVersion Include="Microsoft.TypeScript.MSBuild" Version="6.0.3" PrivateAssets="all" IncludeAssets="$(IncludedAssets)" />
+  </ItemGroup>
+</Project>

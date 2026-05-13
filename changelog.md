@@ -4,13 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
 ## 2025.10.07
 
 ### Fixed
 
 - Fixed games where the blur difficulty was still applied even when the game was over ([#135])
 
-<!-- 2025.10.06 -->
+<!-- 2025.10.07 -->
 [#135]: https://github.com/kappaduck/atlas/issues/135
 
 ## 2025.10.06
@@ -106,7 +108,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
-- Improve pipelines to deploy the application 
+- Improve pipelines to deploy the application
 - Improve the performance to lookup countries by initials
 - Update Atlas and Prometheus to .NET 9.0
 - Update tests project using XUnit 3

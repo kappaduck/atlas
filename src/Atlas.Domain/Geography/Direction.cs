@@ -1,8 +1,6 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
-using Atlas.Domain.Extensions;
-
 namespace Atlas.Domain.Geography;
 
 public static class Direction
@@ -10,14 +8,15 @@ public static class Direction
     public static double Calculate(Coordinate from, Coordinate to)
     {
         if (from == to)
-            return 0;
+            return 0.0;
 
         double deltaLatitude = CalculateDeltaLatitude(from.Latitude, to.Latitude);
         double deltaLongitude = CalculateDeltaLongitude(from.Longitude, to.Longitude);
 
-        double bearing = Math.Floor(Math.ToDegrees(Math.Atan2(deltaLongitude, deltaLatitude)));
+        double bearing = Math.Floor(double.RadiansToDegrees(Math.Atan2(deltaLongitude, deltaLatitude)));
+        return Normalize(bearing);
 
-        return Math.Normalize(bearing);
+        static double Normalize(double angle) => (angle + 360) % 360;
     }
 
     /// <summary>
@@ -32,8 +31,8 @@ public static class Direction
     {
         const double auxiliaryLatitude = Math.PI / 4;
 
-        double fromTangent = Math.Tan(auxiliaryLatitude + (Math.ToRadians(fromLatitude) / 2));
-        double toTangent = Math.Tan(auxiliaryLatitude + (Math.ToRadians(toLatitude) / 2));
+        double fromTangent = Math.Tan(auxiliaryLatitude + (double.DegreesToRadians(fromLatitude) / 2));
+        double toTangent = Math.Tan(auxiliaryLatitude + (double.DegreesToRadians(toLatitude) / 2));
 
         return Math.Log(toTangent / fromTangent);
     }
@@ -47,7 +46,7 @@ public static class Direction
     /// <returns>the calculated Δ longitude.</returns>
     private static double CalculateDeltaLongitude(double fromLongitude, double toLongitude)
     {
-        double deltaLongitude = Math.ToRadians(toLongitude - fromLongitude);
+        double deltaLongitude = double.DegreesToRadians(toLongitude - fromLongitude);
 
         return Math.Abs(deltaLongitude) > Math.PI
             ? GetShorterRhumbLine(deltaLongitude)

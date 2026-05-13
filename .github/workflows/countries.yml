@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['countries/**', '!countries/all.json', '!countries/lookup.json', .github/workflows/countries.yml]
+    paths: ['countries/**', '!countries/all.json', '!countries/lookup.json', '.github/workflows/countries.yml']
 
 permissions:
   contents: write
@@ -13,7 +13,7 @@ permissions:
 jobs:
   build:
     name: Update countries
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -22,10 +22,10 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: 10.0.x
+          global-json-file: ./global.json
 
       - name: Merge countries
-        run: dotnet .\merge.countries.cs
+        run: dotnet ./merge.countries.cs
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v8
