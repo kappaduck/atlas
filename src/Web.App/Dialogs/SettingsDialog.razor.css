@@ -1,6 +1,6 @@
 dialog {
   width: 520px;
-  max-height: 70vh;
+  height: 70vh;
   margin-block-start: 6rem;
   margin-inline: auto;
   border-radius: var(--quack-radius-lg);
@@ -8,6 +8,7 @@ dialog {
   border: 1px solid var(--quack-border-400);
   box-shadow: 0 8px 40px rgba(0, 0, 0, .35);
   background: var(--quack-surface);
+  overflow-x: hidden;
 
   &[open] {
     display: flex;

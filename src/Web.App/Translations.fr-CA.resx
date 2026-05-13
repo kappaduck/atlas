@@ -303,4 +303,16 @@
   <data name="DisplayFlag" xml:space="preserve">
     <value>Afficher le drapeau dans les essaies du jeu de drapeau</value>
   </data>
+  <data name="SeeOnMap" xml:space="preserve">
+    <value>Voir sur la carte</value>
+  </data>
+  <data name="YouFailed" xml:space="preserve">
+    <value>Tu as échoué</value>
+  </data>
+  <data name="Congratulations" xml:space="preserve">
+    <value>Félicitations!</value>
+  </data>
+  <data name="PlayAgain" xml:space="preserve">
+    <value>Rejouer</value>
+  </data>
 </root>

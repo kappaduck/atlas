@@ -48,12 +48,6 @@
 
     .btn-primary {
       display: inline-block;
-      font-size: var(--quack-text-sm);
-      font-weight: 500;
-      color: white;
-      background: var(--quack-purple-400);
-      border-radius: 8px;
-      padding: 10px 22px;
     }
   }
 }

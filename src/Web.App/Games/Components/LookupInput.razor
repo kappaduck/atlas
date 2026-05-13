@@ -1,7 +1,15 @@
 @inject IStringLocalizer<Translations> Localizer
 
 <div class="lookup">
-	<input class="search" type="search" placeholder="@Localizer.LookupPlaceholder" autocomplete="off" @bind="_input" @oninput="Lookup" @onfocus="Focus" @onkeydown="HandleKeyboardAsync" />
+	<input class="search"
+		   type="search"
+		   placeholder="@Localizer.LookupPlaceholder"
+		   autocomplete="off"
+		   disabled="@GameState.GameFinished"
+		   @bind="_input"
+		   @oninput="Lookup"
+		   @onfocus="Focus"
+		   @onkeydown="HandleKeyboardAsync" />
 	<ul role="list" class="items">
 		<li class="hint">
 			<span>@Localizer.Navigate</span>

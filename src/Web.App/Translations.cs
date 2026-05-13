@@ -34,6 +34,8 @@ internal sealed class Translations
 
     internal const string ColourCodeContinentMatch = nameof(ColourCodeContinentMatch);
 
+    internal const string Congratulations = nameof(Congratulations);
+
     internal const string Countries = nameof(Countries);
 
     internal const string CountriesAvailable = nameof(CountriesAvailable);
@@ -100,6 +102,8 @@ internal sealed class Translations
 
     internal const string PickYourChallenge = nameof(PickYourChallenge);
 
+    internal const string PlayAgain = nameof(PlayAgain);
+
     internal const string Random = nameof(Random);
 
     internal const string ReportBug = nameof(ReportBug);
@@ -109,6 +113,8 @@ internal sealed class Translations
     internal const string Rotate = nameof(Rotate);
 
     internal const string SearchCountries = nameof(SearchCountries);
+
+    internal const string SeeOnMap = nameof(SeeOnMap);
 
     internal const string Settings = nameof(Settings);
 
@@ -121,6 +127,8 @@ internal sealed class Translations
     internal const string ShowFlagHint = nameof(ShowFlagHint);
 
     internal const string Theme = nameof(Theme);
+
+    internal const string YouFailed = nameof(YouFailed);
 }
 
 internal static class TranslationsExtensions
@@ -148,6 +156,8 @@ internal static class TranslationsExtensions
         internal string ChooseTheme => localizer[Translations.ChooseTheme];
 
         internal string ColourCodeContinentMatch => localizer[Translations.ColourCodeContinentMatch];
+
+        internal string Congratulations => localizer[Translations.Congratulations];
 
         internal string Countries => localizer[Translations.Countries];
 
@@ -215,6 +225,8 @@ internal static class TranslationsExtensions
 
         internal MarkupString PickYourChallenge => new(localizer[Translations.PickYourChallenge]);
 
+        internal string PlayAgain => localizer[Translations.PlayAgain];
+
         internal string Random => localizer[Translations.Random];
 
         internal string ReportBug => localizer[Translations.ReportBug];
@@ -222,6 +234,8 @@ internal static class TranslationsExtensions
         internal string RequestFeature => localizer[Translations.RequestFeature];
 
         internal string Rotate => localizer[Translations.Rotate];
+
+        internal string SeeOnMap => localizer[Translations.SeeOnMap];
 
         internal string SearchCountries => localizer[Translations.SearchCountries];
 
@@ -236,5 +250,7 @@ internal static class TranslationsExtensions
         internal string ShowFlagHint => localizer[Translations.ShowFlagHint];
 
         internal string Theme => localizer[Translations.Theme];
+
+        internal string YouFailed => localizer[Translations.YouFailed];
     }
 }

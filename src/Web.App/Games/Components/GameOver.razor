@@ -1,0 +1,24 @@
+@inject IStringLocalizer<Translations> Localizer
+
+<div class="game-over">
+	<picture class="flag">
+		<source srcset="@GameState.Country!.Resources.Flag" />
+		<img src="@GameState.Country.Resources.Flag" />
+	</picture>
+	<div class="message">
+		@if (GameState.Found)
+		{
+			<span>@Localizer.Congratulations &#127881;</span>
+		}
+		else
+		{
+			<span>@Localizer.YouFailed &#128532;</span>
+		}
+		<span class="country">@GameState.Country.Name</span>
+	</div>
+</div>
+<div class="actions">
+	<a class="btn btn-primary" href="/">@Localizer.BackToGames</a>
+	<button class="btn btn-secondary" @onclick="OnSecondaryActionClick">@SecondaryActionLabel</button>
+</div>
+<a href="@GameState.Country.Resources.Map" target="_blank" class="map"><i class="@Icons.GeoAlt"></i> @Localizer.SeeOnMap</a>

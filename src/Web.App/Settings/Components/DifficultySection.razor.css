@@ -96,6 +96,7 @@
   gap: .375rem;
   padding: .625rem .875rem;
   border-bottom: 1px solid var(--quack-border-400);
+  container: modifier / inline-size;
 }
 
 .blur {
@@ -124,4 +125,10 @@
 
 .mirror {
   transform: scaleX(-1)
+}
+
+@container modifier (width < 430px) {
+  .modifier {
+    flex-direction: column;
+  }
 }

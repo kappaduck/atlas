@@ -1,3 +1,10 @@
+:root {
+  --danger-background: light-dark(#FCEBEB, #200a0a);
+  --danger-color: light-dark(rgba(200,80,80,.3), rgba(240,149,149,.3));
+  --success-background: light-dark(var(--quack-teal-400), var(--quack-teal-900));
+  --success-color: light-dark(var(--quack-teal-800), var(--quack-teal-400));
+}
+
 html {
   &:has([data-theme="dark" i]) {
     color-scheme: dark;
@@ -43,6 +50,36 @@ input[type=search] {
 
   &:focus {
     border-color: var(--quack-accent);
+  }
+}
+
+.btn {
+  font-size: var(--quack-text-sm);
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px 22px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+
+  &.btn-primary {
+    color: white;
+    background: var(--quack-purple-400);
+    border: none;
+
+    &:hover {
+      background: var(--quack-purple-600);
+    }
+  }
+
+  &.btn-secondary {
+    background: transparent;
+    color: light-dark(var(--quack-purple-600), var(--quack-purple-200));
+    border: 1px solid var(--quack-border-400);
+
+    &:hover {
+      background: light-dark(#EEEDFE, #1a1825);
+      border-color: var(--quack-purple-400);
+    }
   }
 }
 
@@ -178,5 +215,52 @@ dialog {
         }
       }
     }
+  }
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  gap: .875rem;
+  width: 480px;
+  margin: 0 auto;
+  padding: 1.25rem;
+
+  .challenge-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 4 / 3;
+    background: var(--quack-surface);
+    border: 1px solid var(--quack-border-400);
+    border-radius: var(--quack-radius-lg);
+    padding: 1.25rem 1.25rem 1rem;
+
+    &.success, &.wrong {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .75rem;
+    }
+
+    &.success {
+      background: var(--success-background);
+      border-color: var(--success-color);
+    }
+
+    &.wrong {
+      background: var(--danger-background);
+      border-color: var(--danger-color);
+    }
+  }
+}
+
+.blur-6 {
+  filter: blur(0);
+}
+
+@media only screen and (max-width: 500px) {
+  .game {
+    width: 360px;
   }
 }

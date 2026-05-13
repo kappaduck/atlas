@@ -1,0 +1,24 @@
+.game-over {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .flag {
+    width: 96px;
+  }
+
+  .message {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.map {
+  color: var(--quack-muted-text);
+  font-size: var(--quack-text-sm);
+  transition: color .15s;
+
+  &:hover {
+    color: var(--quack-accent-text);
+  }
+}
