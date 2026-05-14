@@ -2,19 +2,18 @@
 // The source code is licensed under MIT License.
 
 using Atlas.Application.Countries.Responses;
-using Web.App.Games;
 
 namespace Web.App.Storage;
 
 internal abstract class DailyLocalStorage(string key, ILocalStorage storage) : IDailyLocalStorage
 {
     private readonly string _key = $"daily:{key}";
-    private DailyGame _daily = default!;
+    private Data _daily = new();
 
     public IEnumerable<GuessedCountryResponse> Get()
     {
         DateOnly today = DateOnly.FromDateTime(DateTime.Now);
-        _daily = storage.GetItem<DailyGame>(_key) ?? new DailyGame();
+        _daily = storage.GetItem<Data>(_key) ?? _daily;
 
         if (today != _daily.Today)
         {
@@ -36,5 +35,12 @@ internal abstract class DailyLocalStorage(string key, ILocalStorage storage) : I
         {
             Guesses = [.. guesses]
         });
+    }
+
+    private sealed record Data
+    {
+        public DateOnly Today { get; init; }
+
+        public GuessedCountryResponse[] Guesses { get; init; } = [];
     }
 }

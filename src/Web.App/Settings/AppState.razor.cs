@@ -172,7 +172,7 @@ public sealed partial class AppState(IJSInProcessRuntime jsRuntime, ILocalStorag
 
     private void ChangeTheme(Theme theme) => jsRuntime.InvokeVoid("changeTheme", theme.ToString());
 
-    internal sealed record Data
+    private sealed record Data
     {
         public General General { get; init; } = new();
 

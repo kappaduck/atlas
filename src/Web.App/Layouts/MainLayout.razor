@@ -1,4 +1,3 @@
-@using Web.App.Dialogs
 @using Web.App.Options
 @inherits LayoutComponentBase
 
@@ -21,7 +20,7 @@
 		<button id="feedback-btn" popovertarget="feedback" class="nav-item">
 			<i class="@Icons.ChatLeft"></i>
 		</button>
-		<button class="nav-item" @onclick="Dialog.ShowGeneralSection">
+		<button class="nav-item" commandfor="settings" command="--general">
 			<i class="@Icons.Gear"></i>
 		</button>
 	</nav>
@@ -35,7 +34,7 @@
 			<strong><span class="kappa">Kappa</span><span class="duck">Duck</span></strong>
 		</a>
 	</div>
-	<button class="date" @onclick="Dialog.ShowChangelogSection">@Project.Version</button>
+	<button class="date" commandfor="settings" command="--changelog">@Project.Version</button>
 </footer>
 
 <div id="feedback" popover>
@@ -48,8 +47,3 @@
 		<span>@Localizer.RequestFeature</span>
 	</a>
 </div>
-
-@code {
-	[CascadingParameter, EditorRequired]
-	public required SettingsDialog Dialog { get; init; }
-}
