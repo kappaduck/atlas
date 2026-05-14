@@ -1,3 +1,7 @@
+type DotNet = {
+  invokeMethod: (method: string) => void;
+}
+
 function changeTheme(theme: string): void {
   const app: Element | null = document.querySelector('#app');
 

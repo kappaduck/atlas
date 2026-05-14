@@ -1,3 +1,7 @@
+type DotNet = {
+  invokeMethod: (method: string) => void;
+}
+
 let eventCallback: (this: Document, ev: MouseEvent) => any;
 
 export function scrollToLookup() {
