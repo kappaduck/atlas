@@ -3,16 +3,16 @@
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
+using Microsoft.JSInterop;
 
-namespace Web.App.Dialogs;
+namespace Web.App.Settings;
 
-public sealed partial class SettingsDialog : IDisposable
+public sealed partial class SettingsDialog(IJSInProcessRuntime jsRuntime) : IDisposable
 {
+    private ElementReference _dialog;
     private TabItem? _selectedTab;
     private CancellationTokenSource? _cts;
-
-    [Parameter, EditorRequired]
-    public required RenderFragment ChildContent { get; init; }
+    private DotNetObjectReference<SettingsDialog>? _reference;
 
     [Inject]
     private IStringLocalizer<Translations> Localizer { get; set; } = default!;
@@ -26,25 +26,42 @@ public sealed partial class SettingsDialog : IDisposable
         }
     }
 
-    public void Dispose() => ResetToken();
+    public void Dispose()
+    {
+        ResetToken();
+        _reference?.Dispose();
+    }
 
-    public void ShowGeneralSection() => Show(TabItem.General);
+    [JSInvokable]
+    public void ShowGeneralSection()
+    {
+        Show(TabItem.General);
+        StateHasChanged();
+    }
 
-    public void ShowChangelogSection() => Show(TabItem.Changelog);
+    [JSInvokable]
+    public void ShowChangelogSection()
+    {
+        Show(TabItem.Changelog);
+        StateHasChanged();
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (!firstRender)
+            return;
+
+        _reference = DotNetObjectReference.Create(this);
+        jsRuntime.InvokeVoid("initSettings", _dialog, _reference);
+    }
 
     private void Show(TabItem tab)
     {
         _cts = new CancellationTokenSource();
-
         SelectTab(tab);
-        Show();
     }
 
-    private void SelectTab(TabItem tab)
-    {
-        _selectedTab = tab;
-        ScrollContentToTop(".body");
-    }
+    private void SelectTab(TabItem tab) => _selectedTab = tab;
 
     private string IsActive(TabItem tab) => _selectedTab == tab ? "active" : string.Empty;
 

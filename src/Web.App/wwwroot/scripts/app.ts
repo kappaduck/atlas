@@ -4,15 +4,18 @@ function changeTheme(theme: string): void {
   app?.setAttribute('data-theme', theme);
 }
 
-function close(dialog: HTMLDialogElement): void {
-  dialog.close();
-}
+function initSettings(dialog: HTMLDialogElement, dotnet: DotNet): void {
+  dialog.addEventListener('command', (event) => {
+    const ev: CommandEvent = event as CommandEvent;
 
-function show(dialog: HTMLDialogElement): void {
-  dialog.showModal();
-}
+    if (ev.command === '--general') {
+      dotnet.invokeMethod('ShowGeneralSection');
+    }
 
-function scrollContentToTop(dialog: HTMLDialogElement, css: string): void {
-  const content: Element | null = dialog.querySelector(css);
-  content?.scrollTo({ top: 0, behavior: 'instant' });
+    if (ev.command === '--changelog') {
+      dotnet.invokeMethod('ShowChangelogSection');
+    }
+
+    dialog.showModal();
+  });
 }
