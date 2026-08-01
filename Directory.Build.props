@@ -8,13 +8,11 @@
     <UseArtifactsOutput>true</UseArtifactsOutput>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
 
-    <!-- Configure packages which are only Development dependency -->
-    <!-- https://github.com/NuGet/Home/wiki/DevelopmentDependency-support-for-PackageReference -->
     <IncludedAssets>runtime;build;native;contentfiles;analyzers</IncludedAssets>
     <AtlasRoot>$(MSBuildThisFileDirectory)</AtlasRoot>
   </PropertyGroup>
 
   <ItemGroup Label="Configure analyzer rules">
-    <GlobalAnalyzerConfigFiles Include="$(AtlasRoot)\rules\*.editorconfig" />
+    <GlobalAnalyzerConfigFiles Include="$(AtlasRoot)\analyzers\*.editorconfig" />
   </ItemGroup>
 </Project>
