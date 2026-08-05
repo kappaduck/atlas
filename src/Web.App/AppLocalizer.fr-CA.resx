@@ -231,4 +231,16 @@
   <data name="PixelatedFlagDescription" xml:space="preserve">
     <value>Commencez avec un écran noir. Chaque tentative peint les couleurs qui correspondent au drapeau caché.</value>
   </data>
+  <data name="LostAtSea" xml:space="preserve">
+    <value>Perdu dans l'océan</value>
+  </data>
+  <data name="PlaceNotOnMap" xml:space="preserve">
+    <value>Cet endroit n'est pas sur la carte.</value>
+  </data>
+  <data name="NotFoundMessage" xml:space="preserve">
+    <value>Cette page n'existe pas ou a été déplacée. Le globe ne sait pas non plus où elle est allée.</value>
+  </data>
+  <data name="BackToHome" xml:space="preserve">
+    <value>Retour vers la maison</value>
+  </data>
 </root>

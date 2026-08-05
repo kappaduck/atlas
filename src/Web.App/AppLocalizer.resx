@@ -231,4 +231,16 @@
   <data name="PixelatedFlagDescription" xml:space="preserve">
     <value>Start with a black screen. Each guess paints in the colors that match the hidden flag.</value>
   </data>
+  <data name="LostAtSea" xml:space="preserve">
+    <value>Lost at sea</value>
+  </data>
+  <data name="PlaceNotOnMap" xml:space="preserve">
+    <value>This place isn't on the map.</value>
+  </data>
+  <data name="NotFoundMessage" xml:space="preserve">
+    <value>This page doesn't exist or was moved. The globe doesn't know where it went either.</value>
+  </data>
+  <data name="BackToHome" xml:space="preserve">
+    <value>Back to home</value>
+  </data>
 </root>

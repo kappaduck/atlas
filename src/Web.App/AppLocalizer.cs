@@ -13,6 +13,8 @@ internal sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string AtlasGitHub { get; } = localizer[nameof(AtlasGitHub)];
 
+    internal string BackToHome { get; } = localizer[nameof(BackToHome)];
+
     internal string BrowseIssues { get; } = localizer[nameof(BrowseIssues)];
 
     internal string BrowseModes { get; } = localizer[nameof(BrowseModes)];
@@ -49,13 +51,19 @@ internal sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string Logo { get; } = localizer[nameof(Logo)];
 
+    internal string LostAtSea { get; } = localizer[nameof(LostAtSea)];
+
     internal string ModeDescription { get; } = localizer[nameof(ModeDescription)];
+
+    internal string NotFoundMessage { get; } = localizer[nameof(NotFoundMessage)];
 
     internal string OpenIssue { get; } = localizer[nameof(OpenIssue)];
 
     internal string PixelatedFlag { get; } = localizer[nameof(PixelatedFlag)];
 
     internal string PixelatedFlagDescription { get; } = localizer[nameof(PixelatedFlagDescription)];
+
+    internal string PlaceNotOnMap { get; } = localizer[nameof(PlaceNotOnMap)];
 
     internal string Play { get; } = localizer[nameof(Play)];
 
