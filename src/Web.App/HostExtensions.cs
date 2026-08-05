@@ -23,14 +23,15 @@ internal static class HostExtensions
                 options.ValidateScopes = env.IsDevelopment();
             });
 
-            builder.ConfigureOptions();
+            ConfigureOptions(builder);
 
             builder.Services.AddSingleton(sp => (IJSInProcessRuntime)sp.GetRequiredService<IJSRuntime>());
             builder.Services.AddLocalization();
 
             builder.Services.AddSingleton<ILocalStorage, LocalStorage>();
-            builder.Services.AddKeyedSingleton<IDailyLocalStorage, DailyFlagStorage>(DailyFlagStorage.Key);
-            builder.Services.AddKeyedSingleton<IDailyLocalStorage, DailyCountryStorage>(DailyCountryStorage.Key);
+            builder.Services.AddKeyedSingleton<IDailyLocalStorage, DailyLocalStorage>(DailyLocalStorage.Flag, (sp, _) => new DailyLocalStorage(DailyLocalStorage.Flag, sp.GetRequiredService<ILocalStorage>()));
+            builder.Services.AddKeyedSingleton<IDailyLocalStorage, DailyLocalStorage>(DailyLocalStorage.Country, (sp, _) => new DailyLocalStorage(DailyLocalStorage.Country, sp.GetRequiredService<ILocalStorage>()));
+            builder.Services.AddSingleton<AppLocalizer>();
         }
 
         internal void ConfigureLoggings()

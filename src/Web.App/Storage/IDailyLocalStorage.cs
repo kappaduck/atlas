@@ -9,5 +9,5 @@ public interface IDailyLocalStorage
 {
     IEnumerable<GuessedCountryResponse> Get();
 
-    void Set(IEnumerable<GuessedCountryResponse> guesses);
+    void Add(GuessedCountryResponse guess);
 }

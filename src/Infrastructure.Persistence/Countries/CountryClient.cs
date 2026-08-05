@@ -3,7 +3,6 @@
 
 using Atlas.Domain.Countries;
 using Infrastructure.Persistence.Countries.Json;
-using System.Net.Http.Json;
 
 namespace Infrastructure.Persistence.Countries;
 

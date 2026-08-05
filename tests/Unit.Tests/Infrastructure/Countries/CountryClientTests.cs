@@ -4,7 +4,6 @@
 using Atlas.Domain.Countries;
 using Infrastructure.Persistence.Countries;
 using System.Net;
-using System.Net.Http.Json;
 using TUnit.Mocks.Http;
 using Unit.Tests.Data;
 

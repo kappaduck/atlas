@@ -19,7 +19,6 @@ internal sealed partial class LocalStorage : ILocalStorage
     public T? GetItem<T>(string key)
     {
         string? json = Get(key);
-
         return string.IsNullOrEmpty(json) ? default : JsonSerializer.Deserialize<T>(json, _options);
     }
 
@@ -28,7 +27,6 @@ internal sealed partial class LocalStorage : ILocalStorage
     public void SetItem<T>(string key, T value)
     {
         string json = JsonSerializer.Serialize(value, _options);
-
         Set(key, json);
     }
 

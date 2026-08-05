@@ -5,10 +5,15 @@ using Atlas.Application.Countries.Responses;
 
 namespace Web.App.Storage;
 
-internal abstract class DailyLocalStorage(string key, ILocalStorage storage) : IDailyLocalStorage
+internal class DailyLocalStorage(string key, ILocalStorage storage) : IDailyLocalStorage
 {
+    internal const string Flag = "flag";
+    internal const string Country = "country";
+
     private readonly string _key = $"daily:{key}";
     private Data _daily = new();
+
+    public void Add(GuessedCountryResponse guess) => storage.SetItem(_key, _daily with { Guesses = [.. _daily.Guesses, guess] });
 
     public IEnumerable<GuessedCountryResponse> Get()
     {
@@ -27,14 +32,6 @@ internal abstract class DailyLocalStorage(string key, ILocalStorage storage) : I
         }
 
         return _daily.Guesses;
-    }
-
-    public void Set(IEnumerable<GuessedCountryResponse> guesses)
-    {
-        storage.SetItem(_key, _daily with
-        {
-            Guesses = [.. guesses]
-        });
     }
 
     private sealed record Data

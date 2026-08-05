@@ -117,205 +117,118 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="FlagQuiz" xml:space="preserve">
+    <value>Quiz du drapeau</value>
+  </data>
   <data name="Atlas" xml:space="preserve">
     <value>Atlas</value>
   </data>
-  <data name="AtlasLogo" xml:space="preserve">
-    <value>Atlas logo</value>
+  <data name="AtlasDescription" xml:space="preserve">
+    <value>Un petit casse-tête quotidien pour toi. Une forme, un drapeau, quelques suppositions. Jusqu'où peux-tu t'approcher?</value>
   </data>
-  <data name="Country" xml:space="preserve">
-    <value>Country</value>
+  <data name="AtlasGitHub" xml:space="preserve">
+    <value>Atlas sur GitHub</value>
   </data>
-  <data name="Flag" xml:space="preserve">
-    <value>Flag</value>
+  <data name="BrowseIssues" xml:space="preserve">
+    <value>Parcourez les tickets existants</value>
+  </data>
+  <data name="BrowseModes" xml:space="preserve">
+    <value>Parcourir les modes</value>
+  </data>
+  <data name="ChooseGame" xml:space="preserve">
+    <value>Choisi ton jeu</value>
+  </data>
+  <data name="ComingSoon" xml:space="preserve">
+    <value>À venir bientôt</value>
   </data>
   <data name="Daily" xml:space="preserve">
-    <value>Daily</value>
+    <value>Quotidien</value>
   </data>
-  <data name="Random" xml:space="preserve">
-    <value>Random</value>
+  <data name="DailyCountry" xml:space="preserve">
+    <value>Pays quotidien</value>
+  </data>
+  <data name="DailyCountryDescription" xml:space="preserve">
+    <value>Devine la forme du pays. Une nouvelle forme chaque jour.</value>
+  </data>
+  <data name="DailyFlag" xml:space="preserve">
+    <value>Drapeau quotidien</value>
+  </data>
+  <data name="DailyFlagDescription" xml:space="preserve">
+    <value>Devine le drapeau. Un drapeau neuf chaque jour.</value>
+  </data>
+  <data name="DailyGeographyGame" xml:space="preserve">
+    <value>Jeu quotidien de géographie</value>
+  </data>
+  <data name="Endless" xml:space="preserve">
+    <value>Infini</value>
+  </data>
+  <data name="FlagQuizDescription" xml:space="preserve">
+    <value>Repérez le drapeau. Choisissez le bon pays parmi les quatre réponses. Gardez votre série vivante aussi longtemps que possible.</value>
+  </data>
+  <data name="GuessCountry" xml:space="preserve">
+    <value>Devine le pays!</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>Logo</value>
+  </data>
+  <data name="ModeDescription" xml:space="preserve">
+    <value>Plusieurs façons de jouer. Ajuste la difficulté à tout moment depuis les réglages.</value>
+  </data>
+  <data name="OpenIssue" xml:space="preserve">
+    <value>Ouvrez un ticket sur GitHub et nous allons y jeter un œil.</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Jouer</value>
+  </data>
+  <data name="PlayTodayFlag" xml:space="preserve">
+    <value>Jouez le drapeau d'aujourd'hui</value>
   </data>
   <data name="ReportBug" xml:space="preserve">
-    <value>Report a bug</value>
+    <value>Signaler un bogue</value>
   </data>
   <data name="RequestFeature" xml:space="preserve">
-    <value>Request a feature</value>
+    <value>Demandez une fonctionnalité</value>
   </data>
-  <data name="PickYourChallenge" xml:space="preserve">
-    <value>Pick your &lt;span class="highlight"&gt;challenge&lt;/span&gt;</value>
+  <data name="ReverseCountry" xml:space="preserve">
+    <value>Pays inversé</value>
   </data>
-  <data name="DailyPuzzleRandomPuzzle" xml:space="preserve">
-    <value>Daily puzzles reset at midnight &amp;middot; Random games are endless</value>
+  <data name="ReverseCountryDescription" xml:space="preserve">
+    <value>Nous montrons des faits comme la capitale, la région, la population et plus encore. Vous nommez le pays.</value>
   </data>
-  <data name="GuessMysteryFlag" xml:space="preserve">
-    <value>Guess today's mystery flag</value>
-  </data>
-  <data name="EndlessFlagGuessing" xml:space="preserve">
-    <value>Endless flag guessing</value>
-  </data>
-  <data name="GuessMysteryCountry" xml:space="preserve">
-    <value>Guess today's mystery country</value>
-  </data>
-  <data name="EndlessCountryGuessing" xml:space="preserve">
-    <value>Endless country guessing</value>
-  </data>
-  <data name="PageNotFoundMessage" xml:space="preserve">
-    <value>This page doesn't exist or was moved. The globe doesn't know where it went either.</value>
-  </data>
-  <data name="BackToGames" xml:space="preserve">
-    <value>Back to games</value>
-  </data>
-  <data name="PageNotFound" xml:space="preserve">
-    <value>Page not &lt;span class="highlight"&gt;found&lt;/span&gt;</value>
+  <data name="SendFeedback" xml:space="preserve">
+    <value>Envoyer des commentaires</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>Paramètres</value>
   </data>
-  <data name="SearchCountries" xml:space="preserve">
-    <value>Search countries...</value>
+  <data name="UnlimitedCountry" xml:space="preserve">
+    <value>Pays sans fin</value>
   </data>
-  <data name="CountriesAvailable" xml:space="preserve">
-    <value>{0} countries available</value>
+  <data name="UnlimitedCountryDescription" xml:space="preserve">
+    <value>Des formes de pays sans fin jusqu'à ce que tu fasses une erreur.</value>
   </data>
-  <data name="PickPreferedVisualModifier" xml:space="preserve">
-    <value>Pick your prefered visual modifier</value>
+  <data name="UnlimitedFlag" xml:space="preserve">
+    <value>Drapeau sans fin</value>
   </data>
-  <data name="FlagGame" xml:space="preserve">
-    <value>Flag game</value>
+  <data name="UnlimitedFlagDescription" xml:space="preserve">
+    <value>Des drapeaux sans fin jusqu'à ce que tu fasses enfin une erreur.</value>
   </data>
-  <data name="FlagModifiersMutuallyExclusive" xml:space="preserve">
-    <value>Flag modifiers are mutually exclusive</value>
+  <data name="ViewChangelog" xml:space="preserve">
+    <value>Voir le journal des modifications</value>
   </data>
-  <data name="NoneDefault" xml:space="preserve">
-    <value>None (default)</value>
+  <data name="HideSeek" xml:space="preserve">
+    <value>Cache-cache</value>
   </data>
-  <data name="Blur" xml:space="preserve">
-    <value>Blur</value>
+  <data name="HideSeekDescription" xml:space="preserve">
+    <value>Un drapeau se cache derrière six tuiles. Devine-le en le moins de révélations possible.</value>
   </data>
-  <data name="Grayscale" xml:space="preserve">
-    <value>Grayscale</value>
+  <data name="PixelatedFlag" xml:space="preserve">
+    <value>Drapeau pixelisé</value>
   </data>
-  <data name="Invert" xml:space="preserve">
-    <value>Invert</value>
-  </data>
-  <data name="HueShift" xml:space="preserve">
-    <value>Hue shift</value>
-  </data>
-  <data name="CountryGame" xml:space="preserve">
-    <value>Country game</value>
-  </data>
-  <data name="CountryModifiersCombined" xml:space="preserve">
-    <value>Country modifiers can be combined</value>
-  </data>
-  <data name="Rotate" xml:space="preserve">
-    <value>Rotate</value>
-  </data>
-  <data name="Mirror" xml:space="preserve">
-    <value>Mirror</value>
-  </data>
-  <data name="ChooseTheme" xml:space="preserve">
-    <value>Choose your theme</value>
-  </data>
-  <data name="Theme" xml:space="preserve">
-    <value>Theme</value>
-  </data>
-  <data name="Appearance" xml:space="preserve">
-    <value>Appearance</value>
-  </data>
-  <data name="Dark" xml:space="preserve">
-    <value>Dark</value>
-  </data>
-  <data name="Light" xml:space="preserve">
-    <value>Light</value>
-  </data>
-  <data name="System" xml:space="preserve">
-    <value>System</value>
-  </data>
-  <data name="ChooseDisplayLanguage" xml:space="preserve">
-    <value>Choose your display language</value>
-  </data>
-  <data name="Language" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="French" xml:space="preserve">
-    <value>French</value>
-  </data>
-  <data name="English" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="Distance" xml:space="preserve">
-    <value>Distance</value>
-  </data>
-  <data name="ChooseDistanceUnit" xml:space="preserve">
-    <value>Choose your distance unit</value>
-  </data>
-  <data name="Kilometers" xml:space="preserve">
-    <value>Kilometers</value>
-  </data>
-  <data name="Miles" xml:space="preserve">
-    <value>Miles</value>
-  </data>
-  <data name="ShowContinentHint" xml:space="preserve">
-    <value>Show continent hint</value>
-  </data>
-  <data name="ColourCodeContinentMatch" xml:space="preserve">
-    <value>Display colour-code continent match in guess rows</value>
-  </data>
-  <data name="ShowDistance" xml:space="preserve">
-    <value>Show distance</value>
-  </data>
-  <data name="ShowDirectionArrow" xml:space="preserve">
-    <value>Show direction arrow</value>
-  </data>
-  <data name="DisplayDistance" xml:space="preserve">
-    <value>Display distance in guess rows</value>
-  </data>
-  <data name="DisplayDirectionalArrow" xml:space="preserve">
-    <value>Display directional arrow in guess rows</value>
-  </data>
-  <data name="Hints" xml:space="preserve">
-    <value>Hints</value>
-  </data>
-  <data name="Countries" xml:space="preserve">
-    <value>Countries</value>
-  </data>
-  <data name="General" xml:space="preserve">
-    <value>General</value>
-  </data>
-  <data name="Difficulty" xml:space="preserve">
-    <value>Difficulty</value>
-  </data>
-  <data name="Changelog" xml:space="preserve">
-    <value>Changelog</value>
-  </data>
-  <data name="LookupPlaceholder" xml:space="preserve">
-    <value>Canada, Italy...</value>
-  </data>
-  <data name="Navigate" xml:space="preserve">
-    <value>Navigate</value>
-  </data>
-  <data name="AlternateFlagImage" xml:space="preserve">
-    <value>Can't display the flag</value>
-  </data>
-  <data name="ShowFlagHint" xml:space="preserve">
-    <value>Show flag hint</value>
-  </data>
-  <data name="DisplayFlag" xml:space="preserve">
-    <value>Display flag in the flag game guess rows</value>
-  </data>
-  <data name="SeeOnMap" xml:space="preserve">
-    <value>See on map</value>
-  </data>
-  <data name="YouFailed" xml:space="preserve">
-    <value>You failed</value>
-  </data>
-  <data name="Congratulations" xml:space="preserve">
-    <value>Congratulations!</value>
-  </data>
-  <data name="PlayAgain" xml:space="preserve">
-    <value>Play again</value>
-  </data>
-  <data name="PlayRandom" xml:space="preserve">
-    <value>Play random</value>
+  <data name="PixelatedFlagDescription" xml:space="preserve">
+    <value>Commencez avec un écran noir. Chaque tentative peint les couleurs qui correspondent au drapeau caché.</value>
   </data>
 </root>

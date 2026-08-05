@@ -1,36 +1,121 @@
 @page "/"
 
-@inject IStringLocalizer<Translations> Localizer
+@inject AppLocalizer Localizer
 
-<main class="index">
-	<section class="intro">
-		<h2 class="intro-title">@Localizer.PickYourChallenge</h2>
-		<span class="intro-sub">@Localizer.DailyPuzzleRandomPuzzle</span>
-	</section>
-	<div class="list">
-		<h4>@Localizer.Flag</h4>
-		<div class="games">
-			<a class="game-card" href="/flags/daily">
-				<span class="game-title">@Localizer.Daily</span>
-				<span class="game-description">@Localizer.GuessMysteryFlag</span>
-			</a>
-			<a class="game-card" href="/flags/random">
-				<span class="game-title">@Localizer.Random</span>
-				<span class="game-description">@Localizer.EndlessFlagGuessing</span>
-			</a>
+<main>
+	<section class="header">
+		<div class="description">
+			<span class="title-accent">@Localizer.DailyGeographyGame</span>
+			<h1 class="title">@Localizer.GuessCountry</h1>
+			<p class="subtitle">@Localizer.AtlasDescription</p>
+			<div class="actions">
+				<a href="/flags/daily" class="quack-btn quack-btn-primary quack-btn-lg quack-btn-pill">
+					@Localizer.PlayTodayFlag
+				</a>
+				<a href="#modes" class="quack-btn quack-btn-secondary quack-btn-lg quack-btn-pill">
+					@Localizer.BrowseModes
+				</a>
+			</div>
 		</div>
+		<div class="wall">
+			@foreach (string code in _wallCodes)
+			{
+				<span class="wall-flag">
+					<img src="@($"https://flagcdn.com/w160/{code}.png")" loading="lazy" />
+				</span>
+			}
+		</div>
+	</section>
+
+	<div id="modes" class="modes-header">
+		<h2 class="title">@Localizer.ChooseGame</h2>
+		<p class="subtitle">@Localizer.ModeDescription</p>
 	</div>
-	<div class="list">
-		<h4>@Localizer.Country</h4>
-		<div class="games">
-			<a class="game-card" href="/countries/daily">
-				<span class="game-title">@Localizer.Daily</span>
-				<span class="game-description">@Localizer.GuessMysteryCountry</span>
-			</a>
-			<a class="game-card" href="/countries/random">
-				<span class="game-title">@Localizer.Random</span>
-				<span class="game-description">@Localizer.EndlessCountryGuessing</span>
-			</a>
+	<div class="modes">
+		<a href="/flags/daily" class="mode-card">
+			<div class="header">
+				<span class="icon"><i class="bi bi-flag"></i></span>
+				<span class="quack-badge quack-badge-primary">@Localizer.Daily</span>
+			</div>
+			<span class="title">@Localizer.DailyFlag</span>
+			<span class="body">@Localizer.DailyFlagDescription</span>
+			<span class="footer">@Localizer.Play <i class="bi bi-arrow-right"></i></span>
+		</a>
+		<a href="/countries/daily" class="mode-card">
+			<div class="header">
+				<span class="icon"><i class="bi bi-globe-americas"></i></span>
+				<span class="quack-badge quack-badge-primary">@Localizer.Daily</span>
+			</div>
+			<span class="title">@Localizer.DailyCountry</span>
+			<span class="body">@Localizer.DailyCountryDescription</span>
+			<span class="footer">@Localizer.Play <i class="bi bi-arrow-right"></i></span>
+		</a>
+		<a href="/flags/random" class="mode-card">
+			<div class="header">
+				<span class="icon"><i class="bi bi-infinity"></i></span>
+				<span class="quack-badge quack-badge-primary">@Localizer.Endless</span>
+			</div>
+			<span class="title">@Localizer.UnlimitedFlag</span>
+			<span class="body">@Localizer.UnlimitedFlagDescription</span>
+			<span class="footer">@Localizer.Play <i class="bi bi-arrow-right"></i></span>
+		</a>
+		<a href="/countries/random" class="mode-card">
+			<div class="header">
+				<span class="icon"><i class="bi bi-infinity"></i></span>
+				<span class="quack-badge quack-badge-primary">@Localizer.Endless</span>
+			</div>
+			<span class="title">@Localizer.UnlimitedCountry</span>
+			<span class="body">@Localizer.UnlimitedCountryDescription</span>
+			<span class="footer">@Localizer.Play <i class="bi bi-arrow-right"></i></span>
+		</a>
+	</div>
+	<div class="coming-soon-header">
+		<h2 class="title">@Localizer.ComingSoon</h2>
+	</div>
+	<div class="coming-soon">
+		<div class="coming-soon-card">
+			<span class="icon"><i class="bi bi-arrow-repeat"></i></span>
+			<div class="content">
+				<div class="header">
+					<span class="title">@Localizer.ReverseCountry</span>
+					<i class="bi bi-lock-fill"></i>
+				</div>
+				<span class="body">@Localizer.ReverseCountryDescription</span>
+			</div>
+		</div>
+		<div class="coming-soon-card">
+			<span class="icon"><i class="bi bi-question-circle-fill"></i></span>
+			<div class="content">
+				<div class="header">
+					<span class="title">@Localizer.FlagQuiz</span>
+					<i class="bi bi-lock-fill"></i>
+				</div>
+				<span class="body">@Localizer.FlagQuizDescription</span>
+			</div>
+		</div>
+		<div class="coming-soon-card">
+			<span class="icon"><i class="bi bi-search"></i></span>
+			<div class="content">
+				<div class="header">
+					<span class="title">@Localizer.HideSeek</span>
+					<i class="bi bi-lock-fill"></i>
+				</div>
+				<span class="body">@Localizer.HideSeekDescription</span>
+			</div>
+		</div>
+		<div class="coming-soon-card">
+			<span class="icon"><i class="bi bi-palette-fill"></i></span>
+			<div class="content">
+				<div class="header">
+					<span class="title">@Localizer.PixelatedFlag</span>
+					<i class="bi bi-lock-fill"></i>
+				</div>
+				<span class="body">@Localizer.PixelatedFlagDescription</span>
+			</div>
 		</div>
 	</div>
 </main>
+
+@code {
+	private string[] _wallCodes = ["jp", "pe", "ca", "ke", "it", "se", "za", "ar", "pt", "au", "gr", "es"];
+}
