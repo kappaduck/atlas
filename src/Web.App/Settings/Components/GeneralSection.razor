@@ -1,0 +1,81 @@
+@inject AppLocalizer Localizer
+
+<div class="general">
+	<h3>@Localizer.Appearance</h3>
+	<div class="settings-container">
+		<div class="settings-label">
+			<span class="title">@Localizer.Theme</span>
+			<span class="subtitle">@Localizer.ThemeDescription</span>
+		</div>
+		<div class="quack-segmented">
+			<input id="light" type="radio" name="theme" checked="@(State.Theme == Theme.Light)" @onchange="() => State.Theme = Theme.Light" />
+			<label for="light" class="quack-segmented-seg"><i class="bi bi-sun"></i></label>
+			<input id="dark" type="radio" name="theme" checked="@(State.Theme == Theme.Dark)" @onchange="() => State.Theme = Theme.Dark" />
+			<label for="dark" class="quack-segmented-seg"><i class="bi bi-moon"></i></label>
+			<input id="auto" type="radio" name="theme" checked="@(State.Theme == Theme.System)" @onchange="() => State.Theme = Theme.System" />
+			<label for="auto" class="quack-segmented-seg">@Localizer.Auto</label>
+		</div>
+	</div>
+	<div class="settings-container">
+		<div class="settings-label">
+			<span class="title">@Localizer.Language</span>
+			<span class="subtitle">@Localizer.LanguageDescription</span>
+		</div>
+		<select class="quack-select" @bind="State.Language">
+			@foreach ((Language language, string label) in Languages)
+			{
+				<option value="@language">@label</option>
+			}
+		</select>
+	</div>
+	<div class="settings-container">
+		<div class="settings-label">
+			<span class="title">@Localizer.DistanceUnit</span>
+			<span class="subtitle">@Localizer.DistanceUnitDescription</span>
+		</div>
+		<div class="quack-segmented">
+			@foreach ((DistanceUnit unit, string label) in Units)
+			{
+				<input id="@unit" type="radio" name="unit" checked="@(State.Unit == unit)" @onchange="() => State.Unit = unit" />
+				<label for="@unit" class="quack-segmented-seg">@label</label>
+			}
+		</div>
+	</div>
+	<hr class="quack-divider" />
+	<h3>@Localizer.Hints</h3>
+	<div class="hints">
+		<label class="quack-switch">
+			<span><i class="bi bi-rulers"></i> @Localizer.DistanceHint</span>
+			<input type="checkbox" role="switch" checked="@State.DistanceHint" @onclick="() => State.DistanceHint = !State.DistanceHint" />
+		</label>
+		<label class="quack-switch">
+			<span><i class="bi bi-compass"></i> @Localizer.DirectionHint</span>
+			<input type="checkbox" role="switch" checked="@State.ArrowHint" @onclick="() => State.ArrowHint = !State.ArrowHint" />
+		</label>
+		<label class="quack-switch">
+			<span><i class="bi bi-globe-americas"></i> @Localizer.ContinentHint</span>
+			<input type="checkbox" role="switch" checked="@State.ContinentHint" @onclick="() => State.ContinentHint = !State.ContinentHint" />
+		</label>
+		<label class="quack-switch">
+			<span><i class="bi bi-reception-4"></i> @Localizer.ProximityBarHint</span>
+			<input type="checkbox" role="switch" checked="@State.ProximityBarHint" @onclick="() => State.ProximityBarHint = !State.ProximityBarHint" />
+		</label>
+		<label class="quack-switch">
+			<span><i class="bi bi-flag"></i> @Localizer.GuessFlagHint <span class="description">&mdash; @Localizer.GuessFlagHintDescription</span></span>
+			<input type="checkbox" role="switch" checked="@State.GuessFlagHint" @onclick="() => State.GuessFlagHint = !State.GuessFlagHint" />
+		</label>
+		<label class="quack-switch">
+			<span><i class="bi bi-flag-fill"></i> @Localizer.FlagHint <span class="description">&mdash; @Localizer.FlagHintDescription</span></span>
+			<input type="checkbox" role="switch" checked="@State.FlagHint" @onclick="() => State.FlagHint = !State.FlagHint" />
+		</label>
+	</div>
+	<hr class="quack-divider" />
+	<h3>@Localizer.Data</h3>
+	<div class="settings-container">
+		<div class="settings-label">
+			<span class="title">@Localizer.ResetAtlas</span>
+			<span class="subtitle">@Localizer.ClearPreferences</span>
+		</div>
+		<button type="button" class="quack-btn quack-btn-secondary quack-btn-danger quack-btn-sm" @onclick="ClearStorage"><i class="bi bi-trash3"></i> @Localizer.ClearData</button>
+	</div>
+</div>

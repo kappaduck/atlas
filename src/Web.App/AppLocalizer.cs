@@ -5,13 +5,17 @@ using Microsoft.Extensions.Localization;
 
 namespace Web.App;
 
-internal sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
+public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 {
+    internal string Appearance { get; } = localizer[nameof(Appearance)];
+
     internal string Atlas { get; } = localizer[nameof(Atlas)];
 
     internal string AtlasDescription { get; } = localizer[nameof(AtlasDescription)];
 
     internal string AtlasGitHub { get; } = localizer[nameof(AtlasGitHub)];
+
+    internal string Auto { get; } = localizer[nameof(Auto)];
 
     internal string BackToHome { get; } = localizer[nameof(BackToHome)];
 
@@ -19,9 +23,23 @@ internal sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string BrowseModes { get; } = localizer[nameof(BrowseModes)];
 
+    internal string Changelog { get; } = localizer[nameof(Changelog)];
+
     internal string ChooseGame { get; } = localizer[nameof(ChooseGame)];
 
+    internal string ClearData { get; } = localizer[nameof(ClearData)];
+
+    internal string ClearPreferences { get; } = localizer[nameof(ClearPreferences)];
+
+    internal string Close { get; } = localizer[nameof(Close)];
+
     internal string ComingSoon { get; } = localizer[nameof(ComingSoon)];
+
+    public string ConfirmClearData { get; } = localizer[nameof(ConfirmClearData)];
+
+    internal string ContinentHint { get; } = localizer[nameof(ContinentHint)];
+
+    internal string Countries { get; } = localizer[nameof(Countries)];
 
     internal string Daily { get; } = localizer[nameof(Daily)];
 
@@ -35,23 +53,55 @@ internal sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string DailyGeographyGame { get; } = localizer[nameof(DailyGeographyGame)];
 
+    internal string Data { get; } = localizer[nameof(Data)];
+
+    internal string Difficulty { get; } = localizer[nameof(Difficulty)];
+
+    internal string DirectionHint { get; } = localizer[nameof(DirectionHint)];
+
+    internal string DistanceHint { get; } = localizer[nameof(DistanceHint)];
+
+    internal string DistanceUnit { get; } = localizer[nameof(DistanceUnit)];
+
+    internal string DistanceUnitDescription { get; } = localizer[nameof(DistanceUnitDescription)];
+
     internal string Endless { get; } = localizer[nameof(Endless)];
+
+    internal string FlagHint { get; } = localizer[nameof(FlagHint)];
+
+    internal string FlagHintDescription { get; } = localizer[nameof(FlagHintDescription)];
 
     internal string FlagQuiz { get; } = localizer[nameof(FlagQuiz)];
 
     internal string FlagQuizDescription { get; } = localizer[nameof(FlagQuizDescription)];
 
+    internal string General { get; } = localizer[nameof(General)];
+
     internal string GuessCountry { get; } = localizer[nameof(GuessCountry)];
+
+    internal string GuessFlagHint { get; } = localizer[nameof(GuessFlagHint)];
+
+    internal string GuessFlagHintDescription { get; } = localizer[nameof(GuessFlagHintDescription)];
 
     internal string HideSeek { get; } = localizer[nameof(HideSeek)];
 
     internal string HideSeekDescription { get; } = localizer[nameof(HideSeekDescription)];
 
+    internal string Hints { get; } = localizer[nameof(Hints)];
+
     internal string Home { get; } = localizer[nameof(Home)];
+
+    internal string Kilometers { get; } = localizer[nameof(Kilometers)];
+
+    internal string Language { get; } = localizer[nameof(Language)];
+
+    internal string LanguageDescription { get; } = localizer[nameof(LanguageDescription)];
 
     internal string Logo { get; } = localizer[nameof(Logo)];
 
     internal string LostAtSea { get; } = localizer[nameof(LostAtSea)];
+
+    internal string Miles { get; } = localizer[nameof(Miles)];
 
     internal string ModeDescription { get; } = localizer[nameof(ModeDescription)];
 
@@ -69,9 +119,13 @@ internal sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string PlayTodayFlag { get; } = localizer[nameof(PlayTodayFlag)];
 
+    internal string ProximityBarHint { get; } = localizer[nameof(ProximityBarHint)];
+
     internal string ReportBug { get; } = localizer[nameof(ReportBug)];
 
     internal string RequestFeature { get; } = localizer[nameof(RequestFeature)];
+
+    internal string ResetAtlas { get; } = localizer[nameof(ResetAtlas)];
 
     internal string ReverseCountry { get; } = localizer[nameof(ReverseCountry)];
 
@@ -80,6 +134,10 @@ internal sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
     internal string SendFeedback { get; } = localizer[nameof(SendFeedback)];
 
     internal string Settings { get; } = localizer[nameof(Settings)];
+
+    internal string Theme { get; } = localizer[nameof(Theme)];
+
+    internal string ThemeDescription { get; } = localizer[nameof(ThemeDescription)];
 
     internal string UnlimitedCountry { get; } = localizer[nameof(UnlimitedCountry)];
 

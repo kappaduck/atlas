@@ -15,13 +15,13 @@
     <File Path=".github/codeowners" />
     <File Path=".github/dependabot.yml" />
   </Folder>
-  <Folder Name="/configurations/rules/">
-    <File Path="rules/code.style.editorconfig" />
-    <File Path="rules/disabled.editorconfig" />
-    <File Path="rules/roslynator.editorconfig" />
-    <File Path="rules/sonar.editorconfig" />
-    <File Path="rules/underscore.editorconfig" />
-    <File Path="rules/vsthrd.editorconfig" />
+  <Folder Name="/configurations/analyzers/">
+    <File Path="analyzers/code.style.editorconfig" />
+    <File Path="analyzers/disabled.editorconfig" />
+    <File Path="analyzers/roslynator.editorconfig" />
+    <File Path="analyzers/sonar.editorconfig" />
+    <File Path="analyzers/underscore.editorconfig" />
+    <File Path="analyzers/vsthrd.editorconfig" />
   </Folder>
   <Folder Name="/src/">
     <File Path="src/Directory.Build.props" />

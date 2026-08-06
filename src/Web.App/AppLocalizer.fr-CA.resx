@@ -217,7 +217,7 @@
     <value>Des drapeaux sans fin jusqu'à ce que tu fasses enfin une erreur.</value>
   </data>
   <data name="ViewChangelog" xml:space="preserve">
-    <value>Voir le journal des modifications</value>
+    <value>Voir le changelog</value>
   </data>
   <data name="HideSeek" xml:space="preserve">
     <value>Cache-cache</value>
@@ -242,5 +242,98 @@
   </data>
   <data name="BackToHome" xml:space="preserve">
     <value>Retour vers la maison</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Général</value>
+  </data>
+  <data name="Difficulty" xml:space="preserve">
+    <value>Difficulté</value>
+  </data>
+  <data name="Changelog" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
+  <data name="Countries" xml:space="preserve">
+    <value>Pays</value>
+  </data>
+  <data name="Appearance" xml:space="preserve">
+    <value>Apparence</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Thème</value>
+  </data>
+  <data name="ThemeDescription" xml:space="preserve">
+    <value>Clair, sombre ou correspond à ton système.</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="LanguageDescription" xml:space="preserve">
+    <value>Langage d'interface.</value>
+  </data>
+  <data name="DistanceUnit" xml:space="preserve">
+    <value>Unité de distance</value>
+  </data>
+  <data name="DistanceUnitDescription" xml:space="preserve">
+    <value>Comment les distances d'essaie sont montrées.</value>
+  </data>
+  <data name="Kilometers" xml:space="preserve">
+    <value>Kilomètres</value>
+  </data>
+  <data name="Miles" xml:space="preserve">
+    <value>Miles</value>
+  </data>
+  <data name="Hints" xml:space="preserve">
+    <value>Indices</value>
+  </data>
+  <data name="DistanceHint" xml:space="preserve">
+    <value>Distance jusqu'à la réponse</value>
+  </data>
+  <data name="DirectionHint" xml:space="preserve">
+    <value>Flèche de direction</value>
+  </data>
+  <data name="ContinentHint" xml:space="preserve">
+    <value>Match du continent</value>
+  </data>
+  <data name="ProximityBarHint" xml:space="preserve">
+    <value>Bar de proximité</value>
+  </data>
+  <data name="GuessFlagHint" xml:space="preserve">
+    <value>Indice d'essaie de drapeau</value>
+  </data>
+  <data name="GuessFlagHintDescription" xml:space="preserve">
+    <value>drapeau sur chaque ligne devinée (jeux de drapeau)</value>
+  </data>
+  <data name="FlagHint" xml:space="preserve">
+    <value>Indice de drapeau</value>
+  </data>
+  <data name="FlagHintDescription" xml:space="preserve">
+    <value>bouton de révélation pour jeter un coup d'œil au drapeau (Jeux du pays)</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Données</value>
+  </data>
+  <data name="ResetAtlas" xml:space="preserve">
+    <value>Réinitialiser Atlas</value>
+  </data>
+  <data name="ClearPreferences" xml:space="preserve">
+    <value>Supprimer les préférences sauvegardées et la progression du jeu depuis ce navigateur.</value>
+  </data>
+  <data name="ClearData" xml:space="preserve">
+    <value>Supprimer les données</value>
+  </data>
+  <data name="French" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="ConfirmClearData" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir effacer vos préférences et la progression du jeu?</value>
   </data>
 </root>

@@ -21,5 +21,5 @@ public sealed record General
 
     public bool FlagHint { get; init; } = true;
 
-    public bool CountryFlagHint { get; init; } = true;
+    public bool GuessFlagHint { get; init; } = true;
 }

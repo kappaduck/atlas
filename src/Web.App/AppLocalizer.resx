@@ -243,4 +243,97 @@
   <data name="BackToHome" xml:space="preserve">
     <value>Back to home</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Difficulty" xml:space="preserve">
+    <value>Difficulty</value>
+  </data>
+  <data name="Changelog" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
+  <data name="Countries" xml:space="preserve">
+    <value>Countries</value>
+  </data>
+  <data name="Appearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="ThemeDescription" xml:space="preserve">
+    <value>Light, dark or match your system.</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LanguageDescription" xml:space="preserve">
+    <value>Interface language.</value>
+  </data>
+  <data name="DistanceUnit" xml:space="preserve">
+    <value>Distance unit</value>
+  </data>
+  <data name="DistanceUnitDescription" xml:space="preserve">
+    <value>How guess distances are shown.</value>
+  </data>
+  <data name="Kilometers" xml:space="preserve">
+    <value>Kilometers</value>
+  </data>
+  <data name="Miles" xml:space="preserve">
+    <value>Miles</value>
+  </data>
+  <data name="Hints" xml:space="preserve">
+    <value>Hints</value>
+  </data>
+  <data name="DistanceHint" xml:space="preserve">
+    <value>Distance to the answer</value>
+  </data>
+  <data name="DirectionHint" xml:space="preserve">
+    <value>Direction arrow</value>
+  </data>
+  <data name="ContinentHint" xml:space="preserve">
+    <value>Continent match</value>
+  </data>
+  <data name="ProximityBarHint" xml:space="preserve">
+    <value>Proximity bar</value>
+  </data>
+  <data name="GuessFlagHint" xml:space="preserve">
+    <value>Guess flag hint</value>
+  </data>
+  <data name="GuessFlagHintDescription" xml:space="preserve">
+    <value>flag on each guessed row (Flag games)</value>
+  </data>
+  <data name="FlagHint" xml:space="preserve">
+    <value>Flag hint</value>
+  </data>
+  <data name="FlagHintDescription" xml:space="preserve">
+    <value>reveal button to peek at the flag (Country games)</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="ResetAtlas" xml:space="preserve">
+    <value>Reset Atlas</value>
+  </data>
+  <data name="ClearPreferences" xml:space="preserve">
+    <value>Clear saved preferences and game progress from this browser.</value>
+  </data>
+  <data name="ClearData" xml:space="preserve">
+    <value>Clear data</value>
+  </data>
+  <data name="French" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="ConfirmClearData" xml:space="preserve">
+    <value>Are you sure you want to clear your preferences and game progress?</value>
+  </data>
 </root>

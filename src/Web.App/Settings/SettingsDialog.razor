@@ -1,0 +1,27 @@
+@using Web.App.Settings.Components
+
+@inject AppLocalizer Localizer
+
+<dialog id="settings" class="quack-dialog" @ref="_dialog" closedBy="any" @onclose="() => _cts?.Cancel()">
+	<div class="quack-dialog-header">
+		<span class="title">
+			<i class="bi bi-gear"></i> @Localizer.Settings
+		</span>
+		<button type="button" class="quack-icon-btn quack-btn-ghost quack-icon-btn-sm" commandfor="settings" command="close" aria-label="@Localizer.Close"><i class="bi bi-x-lg"></i></button>
+	</div>
+	<div class="quack-tabs">
+		<div class="quack-tabs-list">
+			@foreach ((TabItem tab, string icon, string label) in Tabs)
+			{
+				<input id="@tab" type="radio" name="tabs" checked="@(_selectedTab == tab)" @onchange="() => SelectTab(tab)" />
+				<label for="@tab" class="quack-tabs-tab"><i class="bi bi-@icon"></i> @label</label>
+			}
+		</div>
+	</div>
+	<div class="quack-dialog-body">
+		@if (_selectedTab == TabItem.General)
+		{
+			<GeneralSection />
+		}
+	</div>
+</dialog>

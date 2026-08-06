@@ -1,0 +1,61 @@
+.general {
+  display: flex;
+  flex-direction: column;
+  gap: var(--quack-space-6);
+
+  h3 {
+    font-size: var(--quack-text-xs);
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--quack-text-muted);
+  }
+
+  .settings-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--quack-space-4);
+
+    .settings-label {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      .title {
+        font-size: var(--quack-text-sm);
+        font-weight: 600;
+        color: var(--quack-text-primary);
+      }
+
+      .subtitle {
+        font-size: var(--quack-text-xs);
+        color: var(--quack-text-muted);
+      }
+    }
+
+    .quack-select {
+      width: 180px;
+    }
+  }
+
+  .quack-divider {
+    margin: 0;
+  }
+
+  .hints {
+    display: flex;
+    flex-direction: column;
+    gap: var(--quack-space-4);
+
+    .quack-switch {
+      justify-content: space-between;
+      width: 100%;
+
+      .description {
+        color: var(--quack-text-muted);
+        font-weight: 400;
+      }
+    }
+  }
+}

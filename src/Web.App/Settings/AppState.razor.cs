@@ -3,6 +3,7 @@
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
+using System.Runtime.InteropServices.JavaScript;
 using Web.App.Storage;
 
 namespace Web.App.Settings;
@@ -135,15 +136,15 @@ public sealed partial class AppState(ILocalStorage storage, IJSInProcessRuntime 
         }
     }
 
-    public bool CountryFlagHint
+    public bool GuessFlagHint
     {
-        get => _data.General.CountryFlagHint;
+        get => _data.General.GuessFlagHint;
         set
         {
-            if (_data.General.CountryFlagHint == value)
+            if (_data.General.GuessFlagHint == value)
                 return;
 
-            _data = _data with { General = _data.General with { CountryFlagHint = value } };
+            _data = _data with { General = _data.General with { GuessFlagHint = value } };
             storage.SetItem(StorageKey, _data);
 
             StateHasChanged();
@@ -180,6 +181,21 @@ public sealed partial class AppState(ILocalStorage storage, IJSInProcessRuntime 
         }
     }
 
+    public void Reset()
+    {
+        Language oldLanguage = Language;
+
+        Clear();
+        _data = new Data();
+
+        storage.SetItem(StorageKey, _data);
+
+        if (oldLanguage != _data.General.Language)
+            navigation.Refresh();
+        else
+            StateHasChanged();
+    }
+
     protected override void OnInitialized()
     {
         try
@@ -201,6 +217,9 @@ public sealed partial class AppState(ILocalStorage storage, IJSInProcessRuntime 
     }
 
     private void ChangeTheme(Theme theme) => jsRuntime.InvokeVoid("changeTheme", theme.ToString());
+
+    [JSImport("globalThis.localStorage.clear")]
+    private static partial void Clear();
 
     private sealed record Data
     {

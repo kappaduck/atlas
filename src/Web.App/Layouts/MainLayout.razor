@@ -39,7 +39,7 @@
 				&copy; @DateTime.Now.Year <a href="@Project.CompanyUrl" target="_blank" class="company">Kappa<span class="duck">Duck</span></a>
 			</span>
 		</div>
-		<button type="button" class="changelog" data-tooltip="@Localizer.ViewChangelog">@Project.Version</button>
+		<button type="button" class="changelog" commandfor="settings" command="--changelog" data-tooltip="@Localizer.ViewChangelog">@Project.Version</button>
 	</div>
 </footer>
 
