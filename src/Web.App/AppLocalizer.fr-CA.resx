@@ -336,4 +336,64 @@
   <data name="ConfirmClearData" xml:space="preserve">
     <value>Êtes-vous sûr de vouloir effacer vos préférences et la progression du jeu?</value>
   </data>
+  <data name="FlagDifficulty" xml:space="preserve">
+    <value>Difficulté du drapeau</value>
+  </data>
+  <data name="FlagDifficultyDescription" xml:space="preserve">
+    <value>Choisis un effet appliqué au drapeau que tu devines.</value>
+  </data>
+  <data name="CountryDifficulty" xml:space="preserve">
+    <value>Difficulté du pays</value>
+  </data>
+  <data name="CountryDifficultyDescription" xml:space="preserve">
+    <value>Combinez n'importe lequel de ces éléments sur la silhouette.</value>
+  </data>
+  <data name="Blur" xml:space="preserve">
+    <value>Flou</value>
+  </data>
+  <data name="CountryBlurDescription" xml:space="preserve">
+    <value>Adoucir le contour</value>
+  </data>
+  <data name="Rotate" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="RotationDescription" xml:space="preserve">
+    <value>Tourne la sihoulette d'un angle aléatoire</value>
+  </data>
+  <data name="Mirror" xml:space="preserve">
+    <value>Miroir</value>
+  </data>
+  <data name="MirrorDescription" xml:space="preserve">
+    <value>Retourner horizontalement</value>
+  </data>
+  <data name="RotationRandomisedDescription" xml:space="preserve">
+    <value>L'angle de rotation est aléatoire à chaque manche.</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>Aucun</value>
+  </data>
+  <data name="Grayscale" xml:space="preserve">
+    <value>Niveaux de gris</value>
+  </data>
+  <data name="Invert" xml:space="preserve">
+    <value>Inverser</value>
+  </data>
+  <data name="HueShift" xml:space="preserve">
+    <value>Changement de teinte</value>
+  </data>
+  <data name="NoneDescription" xml:space="preserve">
+    <value>Drapeau simple.</value>
+  </data>
+  <data name="BlurDescription" xml:space="preserve">
+    <value>Des bords adoucis.</value>
+  </data>
+  <data name="GrayscaleDescription" xml:space="preserve">
+    <value>Aucun indice de couleur.</value>
+  </data>
+  <data name="InvertDescription" xml:space="preserve">
+    <value>Couleurs inversées</value>
+  </data>
+  <data name="HueShiftDescription" xml:space="preserve">
+    <value>Couleurs tournées</value>
+  </data>
 </root>

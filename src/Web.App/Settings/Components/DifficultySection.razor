@@ -1,0 +1,79 @@
+@inject AppLocalizer Localizer
+
+<div class="difficulty">
+	<div class="flag">
+		<h3><i class="bi bi-flag"></i> @Localizer.FlagDifficulty</h3>
+		<p class="subtitle">@Localizer.FlagDifficultyDescription</p>
+		<div class="difficulties">
+			<label for="flag-none" class="flag-card">
+				<input id="flag-none" type="radio" name="flag" checked="@(State.Flag == FlagDifficulty.None)" @onchange="() => State.Flag = FlagDifficulty.None" />
+				<img src="https://flagcdn.com/w160/ca.png" />
+				<span class="label">@Localizer.None</span>
+				<span class="description">@Localizer.NoneDescription</span>
+			</label>
+			<label class="flag-card">
+				<input id="flag-blur" type="radio" name="flag" checked="@(State.Flag == FlagDifficulty.Blur)" @onchange="() => State.Flag = FlagDifficulty.Blur" />
+				<img src="https://flagcdn.com/w160/ca.png" class="blur" />
+				<span class="label">@Localizer.Blur</span>
+				<span class="description">@Localizer.BlurDescription</span>
+			</label>
+			<label for="flag-grayscale" class="flag-card">
+				<input id="flag-grayscale" type="radio" name="flag" checked="@(State.Flag == FlagDifficulty.Grayscale)" @onchange="() => State.Flag = FlagDifficulty.Grayscale" />
+				<img src="https://flagcdn.com/w160/ca.png" class="grayscale" />
+				<span class="label">@Localizer.Grayscale</span>
+				<span class="description">@Localizer.GrayscaleDescription</span>
+			</label>
+			<label for="flag-invert" class="flag-card">
+				<input id="flag-invert" type="radio" name="flag" checked="@(State.Flag == FlagDifficulty.Invert)" @onchange="() => State.Flag = FlagDifficulty.Invert" />
+				<img src="https://flagcdn.com/w160/ca.png" class="invert" />
+				<span class="label">@Localizer.Invert</span>
+				<span class="description">@Localizer.InvertDescription</span>
+			</label>
+			<label for="flag-shift" class="flag-card">
+				<input id="flag-shift" type="radio" name="flag" checked="@(State.Flag == FlagDifficulty.Shift)" @onchange="() => State.Flag = FlagDifficulty.Shift" />
+				<img src="https://flagcdn.com/w160/ca.png" class="shift" />
+				<span class="label">@Localizer.HueShift</span>
+				<span class="description">@Localizer.HueShiftDescription</span>
+			</label>
+		</div>
+	</div>
+	<hr class="quack-divider" />
+	<div class="country">
+		<h3><i class="bi bi-globe-americas"></i> @Localizer.CountryDifficulty</h3>
+		<p class="subtitle">@Localizer.CountryDifficultyDescription</p>
+		<div class="difficulties">
+			<div class="shape">
+				<svg viewBox="0 0 200 150" width="120" style="@CountryCss">
+					<polygon points="30,58 62,30 104,26 150,44 176,78 160,112 118,128 74,120 44,96 22,80" fill="var(--quack-primary)"></polygon>
+				</svg>
+			</div>
+			<div class="modifiers">
+				<label class="modifier">
+					<span class="wrapper">
+						<i class="bi bi-circle-half"></i>
+						<span class="label">@Localizer.Blur <span class="description">&mdash; @Localizer.CountryBlurDescription</span></span>
+					</span>
+					<input type="checkbox" checked="@HasCountryDifficulty(CountryDifficulty.Blur)" @onchange="() => SetCountryDifficulty(CountryDifficulty.Blur)" />
+				</label>
+				<label class="modifier">
+					<span class="wrapper">
+						<i class="bi bi-arrow-clockwise"></i>
+						<span class="label">@Localizer.Rotate <span class="description">&mdash; @Localizer.RotationDescription</span></span>
+					</span>
+					<input type="checkbox" checked="@HasCountryDifficulty(CountryDifficulty.Rotated)" @onchange="() => SetCountryDifficulty(CountryDifficulty.Rotated)" />
+				</label>
+				<label class="modifier">
+					<span class="wrapper">
+						<i class="bi bi-symmetry-vertical"></i>
+						<span class="label">@Localizer.Mirror <span class="description">&mdash; @Localizer.MirrorDescription</span></span>
+					</span>
+					<input type="checkbox" checked="@HasCountryDifficulty(CountryDifficulty.Mirrored)" @onchange="() => SetCountryDifficulty(CountryDifficulty.Mirrored)" />
+				</label>
+				@if (HasCountryDifficulty(CountryDifficulty.Rotated))
+				{
+					<p class="rotation-description"><i class="bi bi-shuffle"></i> @Localizer.RotationRandomisedDescription</p>
+				}
+			</div>
+		</div>
+	</div>
+</div>

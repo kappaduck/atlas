@@ -19,6 +19,10 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string BackToHome { get; } = localizer[nameof(BackToHome)];
 
+    internal string Blur { get; } = localizer[nameof(Blur)];
+
+    internal string BlurDescription { get; } = localizer[nameof(BlurDescription)];
+
     internal string BrowseIssues { get; } = localizer[nameof(BrowseIssues)];
 
     internal string BrowseModes { get; } = localizer[nameof(BrowseModes)];
@@ -40,6 +44,12 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
     internal string ContinentHint { get; } = localizer[nameof(ContinentHint)];
 
     internal string Countries { get; } = localizer[nameof(Countries)];
+
+    internal string CountryBlurDescription { get; } = localizer[nameof(CountryBlurDescription)];
+
+    internal string CountryDifficulty { get; } = localizer[nameof(CountryDifficulty)];
+
+    internal string CountryDifficultyDescription { get; } = localizer[nameof(CountryDifficultyDescription)];
 
     internal string Daily { get; } = localizer[nameof(Daily)];
 
@@ -67,6 +77,10 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string Endless { get; } = localizer[nameof(Endless)];
 
+    internal string FlagDifficulty { get; } = localizer[nameof(FlagDifficulty)];
+
+    internal string FlagDifficultyDescription { get; } = localizer[nameof(FlagDifficultyDescription)];
+
     internal string FlagHint { get; } = localizer[nameof(FlagHint)];
 
     internal string FlagHintDescription { get; } = localizer[nameof(FlagHintDescription)];
@@ -76,6 +90,10 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
     internal string FlagQuizDescription { get; } = localizer[nameof(FlagQuizDescription)];
 
     internal string General { get; } = localizer[nameof(General)];
+
+    internal string Grayscale { get; } = localizer[nameof(Grayscale)];
+
+    internal string GrayscaleDescription { get; } = localizer[nameof(GrayscaleDescription)];
 
     internal string GuessCountry { get; } = localizer[nameof(GuessCountry)];
 
@@ -91,6 +109,14 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string Home { get; } = localizer[nameof(Home)];
 
+    internal string HueShift { get; } = localizer[nameof(HueShift)];
+
+    internal string HueShiftDescription { get; } = localizer[nameof(HueShiftDescription)];
+
+    internal string Invert { get; } = localizer[nameof(Invert)];
+
+    internal string InvertDescription { get; } = localizer[nameof(InvertDescription)];
+
     internal string Kilometers { get; } = localizer[nameof(Kilometers)];
 
     internal string Language { get; } = localizer[nameof(Language)];
@@ -103,7 +129,15 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string Miles { get; } = localizer[nameof(Miles)];
 
+    internal string Mirror { get; } = localizer[nameof(Mirror)];
+
+    internal string MirrorDescription { get; } = localizer[nameof(MirrorDescription)];
+
     internal string ModeDescription { get; } = localizer[nameof(ModeDescription)];
+
+    internal string None { get; } = localizer[nameof(None)];
+
+    internal string NoneDescription { get; } = localizer[nameof(NoneDescription)];
 
     internal string NotFoundMessage { get; } = localizer[nameof(NotFoundMessage)];
 
@@ -130,6 +164,12 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
     internal string ReverseCountry { get; } = localizer[nameof(ReverseCountry)];
 
     internal string ReverseCountryDescription { get; } = localizer[nameof(ReverseCountryDescription)];
+
+    internal string Rotate { get; } = localizer[nameof(Rotate)];
+
+    internal string RotationDescription { get; } = localizer[nameof(RotationDescription)];
+
+    internal string RotationRandomisedDescription { get; } = localizer[nameof(RotationRandomisedDescription)];
 
     internal string SendFeedback { get; } = localizer[nameof(SendFeedback)];
 
