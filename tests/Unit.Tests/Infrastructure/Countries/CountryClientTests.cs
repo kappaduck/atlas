@@ -36,12 +36,12 @@ public sealed class CountryClientTests
     }
 
     [Test]
-    public async Task GetAsyncShouldGiveEmptyWhenStatusCodeIsNotOK200()
+    public async Task GetAsyncShouldThrowWhenStatusCodeIsNotOK200()
     {
         _http.Handler.OnGet(_options.All).Respond(HttpStatusCode.InternalServerError);
 
-        IEnumerable<Country> countries = await _client.GetAsync(CancellationToken.None);
-        await Assert.That(countries).IsEmpty();
+        await Assert.That(async () => await _client.GetAsync(CancellationToken.None))
+                    .ThrowsExactly<HttpRequestException>();
     }
 
     [Test]
@@ -71,12 +71,12 @@ public sealed class CountryClientTests
     }
 
     [Test]
-    public async Task LookupAsyncShouldGiveEmptyWhenStatusCodeIsNotOK200()
+    public async Task LookupAsyncShouldThrowWhenStatusCodeIsNotOK200()
     {
         _http.Handler.OnGet(_options.Lookup).Respond(HttpStatusCode.InternalServerError);
 
-        IEnumerable<Cca2> codes = await _client.LookupAsync(CancellationToken.None);
-        await Assert.That(codes).IsEmpty();
+        await Assert.That(async () => await _client.LookupAsync(CancellationToken.None))
+            .ThrowsExactly<HttpRequestException>();
     }
 
     [Test]

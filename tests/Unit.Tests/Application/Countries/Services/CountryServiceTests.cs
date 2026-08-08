@@ -44,10 +44,10 @@ public sealed class CountryServiceTests
     [Test]
     public async Task GetAllAsyncShouldReturnCountries()
     {
-        CountryResponse[] countries = [.. await _service.GetAllAsync(CancellationToken.None)];
-        CountryResponse country = countries[0];
+        CountryListItem[] countries = [.. await _service.GetAllAsync(CancellationToken.None)];
+        CountryListItem country = countries[0];
 
-        await Assert.That(country.Cca2).IsEqualTo(_countries.Canada.Cca2);
+        await Assert.That(country.Name).IsEqualTo("Canada");
     }
 
     [Test]

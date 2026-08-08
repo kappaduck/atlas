@@ -402,10 +402,28 @@
   <data name="CouldNotLoadChangelog" xml:space="preserve">
     <value>Impossible de charger les notes de mise à jour</value>
   </data>
-  <data name="GitHubDidntRespond" xml:space="preserve">
-    <value>GitHub n'a pas répondu. Réessayer à nouveau.</value>
+  <data name="ChangelogFailedToLoad" xml:space="preserve">
+    <value>Les notes de mise à jour ne s'est pas chargé. Réessayer à nouveau.</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Réessayer</value>
+  </data>
+  <data name="CountriesFailedToLoad" xml:space="preserve">
+    <value>La liste des pays n'a pas chargé. Réessayer à nouveau.</value>
+  </data>
+  <data name="FetchingCountries" xml:space="preserve">
+    <value>Chargement de la liste de pays...</value>
+  </data>
+  <data name="CouldNotLoadCountries" xml:space="preserve">
+    <value>Impossible de charger la liste des pays</value>
+  </data>
+  <data name="SearchCountries" xml:space="preserve">
+    <value>Chercher des pays...</value>
+  </data>
+  <data name="CountriesFound" xml:space="preserve">
+    <value>{0} sur {1}</value>
+  </data>
+  <data name="OpenCountryOnMap" xml:space="preserve">
+    <value>Ouvrir {0} sur Google Maps</value>
   </data>
 </root>

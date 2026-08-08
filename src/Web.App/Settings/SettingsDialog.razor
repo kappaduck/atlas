@@ -31,5 +31,9 @@
 		{
 			<ChangelogSection CancellationToken="_cts!.Token" />
 		}
+		@if (_selectedTab == TabItem.Countries)
+		{
+			<CountriesSection CancellationToken="_cts!.Token" />
+		}
 	</div>
 </dialog>

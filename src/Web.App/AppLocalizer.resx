@@ -402,10 +402,28 @@
   <data name="CouldNotLoadChangelog" xml:space="preserve">
     <value>Couldn't load the changelog</value>
   </data>
-  <data name="GitHubDidntRespond" xml:space="preserve">
-    <value>GitHub didn't respond. Give it another try.</value>
+  <data name="ChangelogFailedToLoad" xml:space="preserve">
+    <value>The changelog failed to load. Give it another try.</value>
   </data>
   <data name="Retry" xml:space="preserve">
     <value>Retry</value>
+  </data>
+  <data name="CountriesFailedToLoad" xml:space="preserve">
+    <value>The country list failed to load. Give it another try.</value>
+  </data>
+  <data name="FetchingCountries" xml:space="preserve">
+    <value>Fetching countries...</value>
+  </data>
+  <data name="CouldNotLoadCountries" xml:space="preserve">
+    <value>Couldn't load the countries list</value>
+  </data>
+  <data name="SearchCountries" xml:space="preserve">
+    <value>Search countries...</value>
+  </data>
+  <data name="CountriesFound" xml:space="preserve">
+    <value>{0} of {1}</value>
+  </data>
+  <data name="OpenCountryOnMap" xml:space="preserve">
+    <value>Open {0} in Google Maps</value>
   </data>
 </root>
