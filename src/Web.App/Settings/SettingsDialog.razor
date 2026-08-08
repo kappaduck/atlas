@@ -27,5 +27,9 @@
 		{
 			<DifficultySection />
 		}
+		@if (_selectedTab == TabItem.Changelog)
+		{
+			<ChangelogSection CancellationToken="_cts!.Token" />
+		}
 	</div>
 </dialog>

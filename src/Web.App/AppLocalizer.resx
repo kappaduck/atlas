@@ -396,4 +396,16 @@
   <data name="HueShiftDescription" xml:space="preserve">
     <value>Colours rotated.</value>
   </data>
+  <data name="FetchingChangelog" xml:space="preserve">
+    <value>Fetching changelog...</value>
+  </data>
+  <data name="CouldNotLoadChangelog" xml:space="preserve">
+    <value>Couldn't load the changelog</value>
+  </data>
+  <data name="GitHubDidntRespond" xml:space="preserve">
+    <value>GitHub didn't respond. Give it another try.</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
 </root>

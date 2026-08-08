@@ -5,14 +5,11 @@ namespace Infrastructure.Persistence.Changelog;
 
 internal sealed class ChangelogClient(HttpClient http, ChangelogEndpointOptions options) : IChangelogClient
 {
-    public async Task<string?> GetAsync(CancellationToken cancellationToken)
+    public async Task<string> GetAsync(CancellationToken cancellationToken)
     {
         using HttpResponseMessage response = await http.GetAsync(options.Url, cancellationToken);
+        response.EnsureSuccessStatusCode();
 
-        if (!response.IsSuccessStatusCode)
-            return null;
-
-        string content = await response.Content.ReadAsStringAsync(cancellationToken);
-        return string.IsNullOrEmpty(content) ? null : content;
+        return await response.Content.ReadAsStringAsync(cancellationToken);
     }
 }

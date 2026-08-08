@@ -217,7 +217,7 @@
     <value>Des drapeaux sans fin jusqu'à ce que tu fasses enfin une erreur.</value>
   </data>
   <data name="ViewChangelog" xml:space="preserve">
-    <value>Voir le changelog</value>
+    <value>Voir les mises à jour</value>
   </data>
   <data name="HideSeek" xml:space="preserve">
     <value>Cache-cache</value>
@@ -253,7 +253,7 @@
     <value>Difficulté</value>
   </data>
   <data name="Changelog" xml:space="preserve">
-    <value>Changelog</value>
+    <value>Mise à jour</value>
   </data>
   <data name="Countries" xml:space="preserve">
     <value>Pays</value>
@@ -395,5 +395,17 @@
   </data>
   <data name="HueShiftDescription" xml:space="preserve">
     <value>Couleurs tournées</value>
+  </data>
+  <data name="FetchingChangelog" xml:space="preserve">
+    <value>Chargement des notes de mise à jour...</value>
+  </data>
+  <data name="CouldNotLoadChangelog" xml:space="preserve">
+    <value>Impossible de charger les notes de mise à jour</value>
+  </data>
+  <data name="GitHubDidntRespond" xml:space="preserve">
+    <value>GitHub n'a pas répondu. Réessayer à nouveau.</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Réessayer</value>
   </data>
 </root>

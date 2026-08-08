@@ -43,6 +43,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string ContinentHint { get; } = localizer[nameof(ContinentHint)];
 
+    internal string CouldNotLoadChangelog { get; } = localizer[nameof(CouldNotLoadChangelog)];
+
     internal string Countries { get; } = localizer[nameof(Countries)];
 
     internal string CountryBlurDescription { get; } = localizer[nameof(CountryBlurDescription)];
@@ -77,6 +79,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string Endless { get; } = localizer[nameof(Endless)];
 
+    internal string FetchingChangelog { get; } = localizer[nameof(FetchingChangelog)];
+
     internal string FlagDifficulty { get; } = localizer[nameof(FlagDifficulty)];
 
     internal string FlagDifficultyDescription { get; } = localizer[nameof(FlagDifficultyDescription)];
@@ -90,6 +94,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
     internal string FlagQuizDescription { get; } = localizer[nameof(FlagQuizDescription)];
 
     internal string General { get; } = localizer[nameof(General)];
+
+    internal string GitHubDidntRespond { get; } = localizer[nameof(GitHubDidntRespond)];
 
     internal string Grayscale { get; } = localizer[nameof(Grayscale)];
 
@@ -160,6 +166,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
     internal string RequestFeature { get; } = localizer[nameof(RequestFeature)];
 
     internal string ResetAtlas { get; } = localizer[nameof(ResetAtlas)];
+
+    internal string Retry { get; } = localizer[nameof(Retry)];
 
     internal string ReverseCountry { get; } = localizer[nameof(ReverseCountry)];
 
