@@ -1,6 +1,11 @@
 is_global = true
 
+# VSTHRD103: Call async methods when in an async method
+# In blazor wasm we uses sync call for javascript instead of async
+# https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD103.md
+dotnet_diagnostic.VSTHRD103.severity = none
+
 # VSTHRD111: Consider calling ConfigureAwait on the awaited task
-# Is a duplicate of MA0004: https://github.com/meziantou/Meziantou.Analyzer/blob/main/docs/Rules/MA0004.md
+# There is no ConfigureAwait for a Blazor wasm app
 # https://github.com/Microsoft/vs-threading/blob/main/doc/analyzers/VSTHRD111.md
 dotnet_diagnostic.VSTHRD111.severity = none

@@ -426,4 +426,43 @@
   <data name="OpenCountryOnMap" xml:space="preserve">
     <value>Ouvrir {0} sur Google Maps</value>
   </data>
+  <data name="YourGuesses" xml:space="preserve">
+    <value>Vos essaies</value>
+  </data>
+  <data name="GiveUp" xml:space="preserve">
+    <value>Abandonne</value>
+  </data>
+  <data name="GuessLeft" xml:space="preserve">
+    <value>{0} restants</value>
+  </data>
+  <data name="WhichCountryFliesFlag" xml:space="preserve">
+    <value>Quel pays arbore ce drapeau?</value>
+  </data>
+  <data name="Best" xml:space="preserve">
+    <value>Meilleur</value>
+  </data>
+  <data name="Streak" xml:space="preserve">
+    <value>Série</value>
+  </data>
+  <data name="SameForEveryone" xml:space="preserve">
+    <value>Pareil pour tout le monde</value>
+  </data>
+  <data name="OneDay" xml:space="preserve">
+    <value>Un par jour</value>
+  </data>
+  <data name="BackToModes" xml:space="preserve">
+    <value>Retour vers les modes</value>
+  </data>
+  <data name="Navigate" xml:space="preserve">
+    <value>Naviguer</value>
+  </data>
+  <data name="GuessCountryPlaceholder" xml:space="preserve">
+    <value>Devine le pays...</value>
+  </data>
+  <data name="Here" xml:space="preserve">
+    <value>Ici!</value>
+  </data>
+  <data name="OpenInGoogleMaps" xml:space="preserve">
+    <value>Ouvrir sur Google Maps</value>
+  </data>
 </root>

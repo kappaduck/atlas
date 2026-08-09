@@ -1,0 +1,43 @@
+.quack-input {
+  font-size: var(--quack-text-md);
+  padding: var(--quack-space-3) var(--quack-space-4);
+}
+
+.quack-combobox-list {
+  display: none;
+
+  &:has(.quack-combobox-option) {
+    display: unset;
+  }
+
+  .hint {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--quack-space-3);
+    padding: var(--quack-space-2) var(--quack-space-3);
+    border-bottom: 1px solid var(--quack-border-200);
+    font-size: var(--quack-text-xs);
+    color: var(--quack-text-muted);
+
+    .keyboard {
+      display: flex;
+      align-items: center;
+      gap: var(--quack-space-1);
+
+      kbd {
+        display: inline-grid;
+        place-items: center;
+        min-width: 22px;
+        height: 22px;
+        padding: 0 5px;
+        border: 1px solid var(--quack-border-400);
+        border-bottom-width: 2px;
+        border-radius: var(--quack-radius-sm);
+        background: var(--quack-surface);
+        color: var(--quack-text-secondary);
+        font-family: inherit;
+      }
+    }
+  }
+}

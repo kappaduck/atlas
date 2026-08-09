@@ -19,6 +19,10 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string BackToHome { get; } = localizer[nameof(BackToHome)];
 
+    internal string BackToModes { get; } = localizer[nameof(BackToModes)];
+
+    internal string Best { get; } = localizer[nameof(Best)];
+
     internal string Blur { get; } = localizer[nameof(Blur)];
 
     internal string BlurDescription { get; } = localizer[nameof(BlurDescription)];
@@ -105,15 +109,23 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string General { get; } = localizer[nameof(General)];
 
+    internal string GiveUp { get; } = localizer[nameof(GiveUp)];
+
     internal string Grayscale { get; } = localizer[nameof(Grayscale)];
 
     internal string GrayscaleDescription { get; } = localizer[nameof(GrayscaleDescription)];
 
     internal string GuessCountry { get; } = localizer[nameof(GuessCountry)];
 
+    internal string GuessCountryPlaceholder { get; } = localizer[nameof(GuessCountryPlaceholder)];
+
     internal string GuessFlagHint { get; } = localizer[nameof(GuessFlagHint)];
 
     internal string GuessFlagHintDescription { get; } = localizer[nameof(GuessFlagHintDescription)];
+
+    internal string GuessLeft(int left) => localizer[nameof(GuessLeft), left];
+
+    internal string Here { get; } = localizer[nameof(Here)];
 
     internal string HideSeek { get; } = localizer[nameof(HideSeek)];
 
@@ -149,13 +161,19 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string ModeDescription { get; } = localizer[nameof(ModeDescription)];
 
+    internal string Navigate { get; } = localizer[nameof(Navigate)];
+
     internal string None { get; } = localizer[nameof(None)];
 
     internal string NoneDescription { get; } = localizer[nameof(NoneDescription)];
 
     internal string NotFoundMessage { get; } = localizer[nameof(NotFoundMessage)];
 
+    internal string OneDay { get; } = localizer[nameof(OneDay)];
+
     internal string OpenCountryOnMap(string country) => localizer[nameof(OpenCountryOnMap), country];
+
+    internal string OpenInGoogleMaps { get; } = localizer[nameof(OpenInGoogleMaps)];
 
     internal string OpenIssue { get; } = localizer[nameof(OpenIssue)];
 
@@ -189,11 +207,15 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string RotationRandomisedDescription { get; } = localizer[nameof(RotationRandomisedDescription)];
 
+    internal string SameForEveryone { get; } = localizer[nameof(SameForEveryone)];
+
     internal string SearchCountries { get; } = localizer[nameof(SearchCountries)];
 
     internal string SendFeedback { get; } = localizer[nameof(SendFeedback)];
 
     internal string Settings { get; } = localizer[nameof(Settings)];
+
+    internal string Streak { get; } = localizer[nameof(Streak)];
 
     internal string Theme { get; } = localizer[nameof(Theme)];
 
@@ -208,4 +230,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
     internal string UnlimitedFlagDescription { get; } = localizer[nameof(UnlimitedFlagDescription)];
 
     internal string ViewChangelog { get; } = localizer[nameof(ViewChangelog)];
+
+    internal string WhichCountryFliesFlag { get; } = localizer[nameof(WhichCountryFliesFlag)];
+
+    internal string YourGuesses { get; } = localizer[nameof(YourGuesses)];
 }

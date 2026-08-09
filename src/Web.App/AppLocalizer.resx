@@ -426,4 +426,43 @@
   <data name="OpenCountryOnMap" xml:space="preserve">
     <value>Open {0} in Google Maps</value>
   </data>
+  <data name="YourGuesses" xml:space="preserve">
+    <value>Your guesses</value>
+  </data>
+  <data name="GiveUp" xml:space="preserve">
+    <value>Give up</value>
+  </data>
+  <data name="GuessLeft" xml:space="preserve">
+    <value>{0} left</value>
+  </data>
+  <data name="WhichCountryFliesFlag" xml:space="preserve">
+    <value>Which country flies this flag?</value>
+  </data>
+  <data name="Best" xml:space="preserve">
+    <value>Best</value>
+  </data>
+  <data name="Streak" xml:space="preserve">
+    <value>Streak</value>
+  </data>
+  <data name="SameForEveryone" xml:space="preserve">
+    <value>Same for everyone</value>
+  </data>
+  <data name="OneDay" xml:space="preserve">
+    <value>One a day</value>
+  </data>
+  <data name="BackToModes" xml:space="preserve">
+    <value>Back to modes</value>
+  </data>
+  <data name="Navigate" xml:space="preserve">
+    <value>Navigate</value>
+  </data>
+  <data name="GuessCountryPlaceholder" xml:space="preserve">
+    <value>Guess the country...</value>
+  </data>
+  <data name="Here" xml:space="preserve">
+    <value>Here!</value>
+  </data>
+  <data name="OpenInGoogleMaps" xml:space="preserve">
+    <value>Open in Google Maps</value>
+  </data>
 </root>
