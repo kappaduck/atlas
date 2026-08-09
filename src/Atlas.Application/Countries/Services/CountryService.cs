@@ -68,12 +68,14 @@ internal sealed class CountryService(ICountryRepository repository, IStringLocal
             Cca2 = guessed.Cca2,
             Name = localizer[guessedCode],
             Direction = Direction.Calculate(guessed.Coordinate, country.Coordinate),
+            Proximity = Proximity.Calculate(guessed.Coordinate, country.Coordinate),
             Kilometers = (int)Math.Round(distance.Kilometers),
             Miles = (int)Math.Round(distance.Miles),
             Continent = localizer[guessed.Continent.ToString()],
             IsSameContinent = guessed.Continent == country.Continent,
             Success = guessedCode == code,
-            Flag = guessed.Resources.Flag
+            Flag = guessed.Resources.Flag,
+            Map = guessed.Resources.Map
         };
     }
 

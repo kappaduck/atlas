@@ -171,6 +171,7 @@ public sealed class CountryServiceTests
         await Assert.That(country.Direction).IsEqualTo(104);
         await Assert.That(country.Kilometers).IsEqualTo(6843);
         await Assert.That(country.Miles).IsEqualTo(4252);
+        await Assert.That(country.Proximity).IsEqualTo(66);
         await Assert.That(country.Flag).IsEqualTo(_countries.Canada.Resources.Flag);
     }
 
@@ -187,7 +188,9 @@ public sealed class CountryServiceTests
         await Assert.That(guessedCountry.Direction).IsEqualTo(0);
         await Assert.That(guessedCountry.Kilometers).IsEqualTo(0);
         await Assert.That(guessedCountry.Miles).IsEqualTo(0);
+        await Assert.That(guessedCountry.Proximity).IsEqualTo(100);
         await Assert.That(guessedCountry.Flag).IsEqualTo(_countries.Italy.Resources.Flag);
+        await Assert.That(guessedCountry.Map).IsEqualTo(_countries.Italy.Resources.Map);
     }
 
     [Test]

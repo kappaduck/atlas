@@ -15,6 +15,7 @@ public sealed class DistanceTests
     {
         Distance distance = Distance.Calculate(_canada, _italy);
 
+        await Assert.That(distance.CentralAngle).IsEqualTo(1.0741).Within(0.0001);
         await Assert.That(distance.Kilometers).IsEqualTo(6843.3).Within(0.1);
         await Assert.That(distance.Miles).IsEqualTo(4252.2).Within(0.1);
     }
@@ -24,6 +25,7 @@ public sealed class DistanceTests
     {
         Distance distance = Distance.Calculate(_canada, _canada);
 
+        await Assert.That(distance.CentralAngle).IsEqualTo(0);
         await Assert.That(distance.Kilometers).IsEqualTo(0);
         await Assert.That(distance.Miles).IsEqualTo(0);
     }

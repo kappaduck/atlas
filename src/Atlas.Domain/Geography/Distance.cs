@@ -8,11 +8,19 @@ public sealed class Distance
     private const double EarthRadiusKilometers = 6371.0;
     private const double EarthRadiusMiles = 3958.8;
 
-    private Distance(double kilometers, double miles)
+    private Distance(double centralAngle, double kilometers, double miles)
     {
+        CentralAngle = centralAngle;
         Kilometers = kilometers;
         Miles = miles;
     }
+
+    /// <summary>
+    /// The central angle between the two coordinates, in radians (0 to π).
+    /// This is the great-circle arc as seen from Earth's center and is the
+    /// unit-independent basis for both <see cref="Kilometers"/> and <see cref="Miles"/>.
+    /// </summary>
+    internal double CentralAngle { get; }
 
     public double Kilometers { get; }
 
@@ -21,7 +29,7 @@ public sealed class Distance
     public static Distance Calculate(Coordinate from, Coordinate to)
     {
         if (from == to)
-            return new(0.0, 0.0);
+            return new(0.0, 0.0, 0.0);
 
         double deltaLatitude = double.DegreesToRadians(to.Latitude - from.Latitude);
         double deltaLongitude = double.DegreesToRadians(to.Longitude - from.Longitude);
@@ -34,6 +42,6 @@ public sealed class Distance
         double a = (sinLatitude * sinLatitude) + (sinLongitude * sinLongitude * Math.Cos(fromLatitude) * Math.Cos(toLatitude));
         double c = 2 * Math.Asin(Math.Sqrt(a));
 
-        return new(c * EarthRadiusKilometers, c * EarthRadiusMiles);
+        return new(c, c * EarthRadiusKilometers, c * EarthRadiusMiles);
     }
 }
