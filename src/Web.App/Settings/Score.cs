@@ -3,4 +3,18 @@
 
 namespace Web.App.Settings;
 
-public sealed record Score(string Key, int Streak, int Best);
+public sealed record Score(string Key)
+{
+    public int Streak { get; private set; }
+    public int Best { get; private set; }
+
+    public void Increment()
+    {
+        Streak++;
+
+        if (Streak > Best)
+            Best++;
+    }
+
+    public void Reset() => Streak = 0;
+}

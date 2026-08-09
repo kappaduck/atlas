@@ -1,0 +1,40 @@
+@using Web.App.Settings
+@inject AppLocalizer Localizer
+
+<div class="scoreboard">
+	<div class="description">
+		<a href="/" class="quack-icon-btn quack-icon-btn-pill quack-icon-btn-sm" aria-label="@Localizer.BackToModes">
+			<i class="bi bi-arrow-left"></i>
+		</a>
+		<span class="icon">
+			<i class="bi bi-flag-fill"></i>
+		</span>
+		<div class="name">
+			<span class="title">@Title</span>
+			<span class="subtitle">@Subtitle &middot; @Label</span>
+		</div>
+	</div>
+	<div class="score">
+		<span class="score-item">
+			<i class="bi bi-fire"></i> @Score.Streak <small>@Localizer.Streak</small>
+		</span>
+		<span class="seperator"></span>
+		<span class="score-item">
+			<i class="bi bi-trophy"></i> @Score.Best <small>@Localizer.Best</small>
+		</span>
+	</div>
+</div>
+
+@code {
+	[Parameter, EditorRequired]
+	public required Score Score { get; init; }
+
+	[Parameter, EditorRequired]
+	public required string Title { get; init; }
+
+	[Parameter, EditorRequired]
+	public required string Subtitle { get; init; }
+
+	[Parameter, EditorRequired]
+	public required string Label { get; init; }
+}
