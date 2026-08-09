@@ -1,0 +1,33 @@
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--quack-space-3);
+  margin-top: -6px;
+
+  .guesses {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .guess {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      flex: none;
+      background: transparent;
+      border: 1.5px solid var(--quack-border-400);
+
+      &.guessed {
+        background: var(--quack-primary);
+        border: none;
+      }
+    }
+
+    .guess-left {
+      font-size: var(--quack-text-xs);
+      color: var(--quack-text-muted);
+      margin-left: 4px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@inject AppLocalizer Localizer
+
+<div class="actions">
+	<div class="guesses">
+		@for (int i = 0; i < GameState.Guesses.Count; i++)
+		{
+			<span class="guess guessed"></span>
+		}
+		@for (int i = GameState.Guesses.Count; i < GameState.MaxAttempts; i++)
+		{
+			<span class="guess"></span>
+		}
+		<span class="guess-left">@Localizer.GuessLeft(GameState.MaxAttempts - GameState.Guesses.Count)</span>
+	</div>
+	<button type="button" class="quack-btn quack-btn-ghost quack-btn-sm" @onclick="OnGiveUp">@Localizer.GiveUp</button>
+</div>
+
+@code {
+	[CascadingParameter]
+	public required GameState GameState { get; init; }
+
+	[Parameter, EditorRequired]
+	public required EventCallback OnGiveUp { get; init; }
+}
