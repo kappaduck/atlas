@@ -501,4 +501,10 @@
   <data name="FlagFailed" xml:space="preserve">
     <value>Le drapeau n'a pas réussi à se charger</value>
   </data>
+  <data name="PlayAgain" xml:space="preserve">
+    <value>Jouer à nouveau</value>
+  </data>
+  <data name="ChaseYourStreak" xml:space="preserve">
+    <value>Poursuis ta série</value>
+  </data>
 </root>

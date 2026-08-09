@@ -4,19 +4,21 @@
 using Atlas.Application.Countries.Responses;
 using Atlas.Application.Countries.Services;
 using Microsoft.AspNetCore.Components;
+using Web.App.Games.Components;
 using Web.App.Settings;
 using Web.App.Storage;
 
 namespace Web.App.Games.Flags;
 
-public sealed partial class Daily(ICountryService service, [FromKeyedServices(DailyLocalStorage.Flag)] IDailyLocalStorage daily, ILocalStorage storage) : IDisposable
+public sealed partial class Random(ICountryService service, ILocalStorage storage) : IDisposable
 {
     private const int MaxAttempts = 6;
 
     private readonly CancellationTokenSource _cts = new();
     private readonly GameState _gameState = new(MaxAttempts);
 
-    private Score _score = new("daily:flag:streak");
+    private Score _score = new("random:flag:streak");
+    private CountryInput _input = default!;
 
     private bool _hasError;
     private bool _isLoading;
@@ -56,7 +58,6 @@ public sealed partial class Daily(ICountryService service, [FromKeyedServices(Da
         GuessedCountryResponse? guessedCountry = await service.GuessAsync(cca2, _gameState.Country!.Cca2, _cts.Token);
 
         _gameState.Guesses.Add(guessedCountry!);
-        daily.Add(guessedCountry!);
 
         if (_gameState.GameFinished)
         {
@@ -72,7 +73,6 @@ public sealed partial class Daily(ICountryService service, [FromKeyedServices(Da
     private void GiveUp()
     {
         _gameState.GiveUp();
-        daily.Abandon();
 
         _score.Reset();
         storage.SetItem(_score.Key, _score);
@@ -83,15 +83,37 @@ public sealed partial class Daily(ICountryService service, [FromKeyedServices(Da
         try
         {
             _isLoading = true;
-            CountryResponse? country = await service.GetDailyFlagAsync(_cts.Token);
+            CountryResponse? country = await service.RandomizeAsync(_cts.Token);
 
             if (country is null)
                 return;
 
             _score = storage.GetItem<Score>(_score.Key) ?? _score;
+            _gameState.Start(country);
+        }
+        catch (Exception)
+        {
+            _hasError = true;
+        }
+        finally
+        {
+            _isLoading = false;
+        }
+    }
 
-            (IEnumerable<GuessedCountryResponse> guesses, bool abandon) = daily.Get();
-            _gameState.Start(country, guesses, abandon);
+    private async Task PlayAgainAsync()
+    {
+        _input.Reset();
+
+        try
+        {
+            _isLoading = true;
+            CountryResponse? country = await service.RandomizeAsync(_cts.Token);
+
+            if (country is null)
+                return;
+
+            _gameState.Reset(country);
         }
         catch (Exception)
         {

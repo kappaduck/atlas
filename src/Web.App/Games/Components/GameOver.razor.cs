@@ -10,7 +10,7 @@ public partial class GameOver
     private bool _previewEnabled;
 
     [CascadingParameter]
-    public GameState GameState { get; init; }
+    public required GameState GameState { get; init; }
 
     [Parameter, EditorRequired]
     public required RenderFragment ChildContent { get; init; }

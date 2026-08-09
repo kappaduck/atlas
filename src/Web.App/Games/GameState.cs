@@ -24,6 +24,8 @@ public sealed class GameState(int maxAttempts)
     public void Reset(CountryResponse country)
     {
         Guesses.Clear();
+
+        Abandon = false;
         Country = country;
     }
 

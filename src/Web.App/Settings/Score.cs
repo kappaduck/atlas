@@ -5,8 +5,8 @@ namespace Web.App.Settings;
 
 public sealed record Score(string Key)
 {
-    public int Streak { get; private set; }
-    public int Best { get; private set; }
+    public int Streak { get; set; }
+    public int Best { get; set; }
 
     public void Increment()
     {

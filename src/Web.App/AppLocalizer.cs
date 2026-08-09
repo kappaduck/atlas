@@ -35,6 +35,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string ChangelogFailedToLoad { get; } = localizer[nameof(ChangelogFailedToLoad)];
 
+    internal string ChaseYourStreak { get; } = localizer[nameof(ChaseYourStreak)];
+
     internal string ChooseGame { get; } = localizer[nameof(ChooseGame)];
 
     internal string ClearData { get; } = localizer[nameof(ClearData)];
@@ -198,6 +200,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
     internal string PlaceNotOnMap { get; } = localizer[nameof(PlaceNotOnMap)];
 
     internal string Play { get; } = localizer[nameof(Play)];
+
+    internal string PlayAgain { get; } = localizer[nameof(PlayAgain)];
 
     internal string PlayTodayFlag { get; } = localizer[nameof(PlayTodayFlag)];
 
