@@ -13,9 +13,11 @@ internal class DailyLocalStorage(string key, ILocalStorage storage) : IDailyLoca
     private readonly string _key = $"daily:{key}";
     private Data _daily = new();
 
+    public void Abandon() => storage.SetItem(_key, _daily with { Abandon = true });
+
     public void Add(GuessedCountryResponse guess) => storage.SetItem(_key, _daily with { Guesses = [.. _daily.Guesses, guess] });
 
-    public IEnumerable<GuessedCountryResponse> Get()
+    public (IEnumerable<GuessedCountryResponse> Guesses, bool Abandon) Get()
     {
         DateOnly today = DateOnly.FromDateTime(DateTime.Now);
         _daily = storage.GetItem<Data>(_key) ?? _daily;
@@ -31,12 +33,14 @@ internal class DailyLocalStorage(string key, ILocalStorage storage) : IDailyLoca
             storage.SetItem(_key, _daily);
         }
 
-        return _daily.Guesses;
+        return (_daily.Guesses, _daily.Abandon);
     }
 
     private sealed record Data
     {
         public DateOnly Today { get; init; }
+
+        public bool Abandon { get; init; }
 
         public GuessedCountryResponse[] Guesses { get; init; } = [];
     }

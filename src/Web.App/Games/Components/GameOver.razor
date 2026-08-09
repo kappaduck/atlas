@@ -1,0 +1,42 @@
+@inject AppLocalizer Localizer
+
+<div class="game-over">
+	@if (GameState.Found)
+	{
+		<div class="quack-alert quack-alert-accent">
+			<i class="bi bi-check-circle-fill"></i>
+			<div class="content">
+				<strong>@Localizer.NailedIt(GameState.Country!.Name)</strong>
+				<span>@Localizer.SolvedIn(GameState.Guesses.Count)</span>
+			</div>
+		</div>
+	}
+	else
+	{
+		<div class="quack-alert quack-alert-danger">
+			<i class="bi bi-flag-fill"></i>
+			<div class="content">
+				<strong>@Localizer.OutOfGuesses(GameState.Country!.Name)</strong>
+				<span>@Localizer.GiveNextTry</span>
+			</div>
+		</div>
+	}
+	@if (Preview)
+	{
+		<label class="quack-switch">
+			<input type="checkbox" @onchange="PreviewClickAsync" checked="@(_previewEnabled)" />
+			@Localizer.PreviewWithDifficultyEffect
+		</label>
+	}
+	<div class="actions">
+		<a href="@GameState.Country!.Resources.Map" target="_blank" class="quack-btn quack-btn-secondary quack-btn-lg">
+			<i class="bi bi-geo-alt"></i>
+			@Localizer.ViewOnGoogleMaps
+		</a>
+		@ChildContent
+	</div>
+	@if (!string.IsNullOrEmpty(Message))
+	{
+		<p class="message">@Message</p>
+	}
+</div>

@@ -1,0 +1,32 @@
+.game-over {
+  display: flex;
+  flex-direction: column;
+  gap: var(--quack-space-4);
+
+  .quack-alert {
+    align-items: center;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .quack-switch {
+    justify-content: center;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--quack-space-3);
+    flex-wrap: wrap;
+  }
+
+  .message {
+    text-align: center;
+    font-size: var(--quack-text-sm);
+    color: var(--quack-text-muted);
+    margin: 0;
+  }
+}

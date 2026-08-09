@@ -462,7 +462,43 @@
   <data name="Here" xml:space="preserve">
     <value>Here!</value>
   </data>
-  <data name="OpenInGoogleMaps" xml:space="preserve">
-    <value>Open in Google Maps</value>
+  <data name="ViewOnGoogleMaps" xml:space="preserve">
+    <value>View on Google Maps</value>
+  </data>
+  <data name="NailedIt" xml:space="preserve">
+    <value>Nailed it! It's {0}!</value>
+  </data>
+  <data name="SolvedInGuess" xml:space="preserve">
+    <value>Solved in 1 guess.</value>
+  </data>
+  <data name="SolvedInGuesses" xml:space="preserve">
+    <value>Solved in {0} guesses.</value>
+  </data>
+  <data name="OutOfGuesses" xml:space="preserve">
+    <value>Out of guesses. It was {0}.</value>
+  </data>
+  <data name="GiveNextTry" xml:space="preserve">
+    <value>Give the next one a try.</value>
+  </data>
+  <data name="PreviewWithDifficultyEffect" xml:space="preserve">
+    <value>Preview with difficulty effect</value>
+  </data>
+  <data name="KeepPlayingUnlimited" xml:space="preserve">
+    <value>Keep playing unlimited</value>
+  </data>
+  <data name="TodayFlag" xml:space="preserve">
+    <value>That's today's flag! A new one drops tomorrow.</value>
+  </data>
+  <data name="LoadingGame" xml:space="preserve">
+    <value>Loading the game...</value>
+  </data>
+  <data name="CouldNotLoadGame" xml:space="preserve">
+    <value>Couldn't load the game</value>
+  </data>
+  <data name="FailedFetchingGame" xml:space="preserve">
+    <value>We hit a snag fetching country data. Check your connection and try again.</value>
+  </data>
+  <data name="FlagFailed" xml:space="preserve">
+    <value>Flag failed to load</value>
   </data>
 </root>

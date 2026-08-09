@@ -183,17 +183,11 @@ public sealed partial class AppState(ILocalStorage storage, IJSInProcessRuntime 
 
     public void Reset()
     {
-        Language oldLanguage = Language;
-
         Clear();
         _data = new Data();
 
         storage.SetItem(StorageKey, _data);
-
-        if (oldLanguage != _data.General.Language)
-            navigation.Refresh();
-        else
-            StateHasChanged();
+        navigation.Refresh();
     }
 
     protected override void OnInitialized()

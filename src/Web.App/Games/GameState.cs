@@ -7,15 +7,19 @@ namespace Web.App.Games;
 
 public sealed class GameState(int maxAttempts)
 {
+    public bool Abandon { get; private set; }
+
     public CountryResponse? Country { get; private set; }
 
     public int MaxAttempts { get; } = maxAttempts;
 
-    public ICollection<GuessedCountryResponse> Guesses { get; } = [with(maxAttempts)];
+    public ICollection<GuessedCountryResponse> Guesses { get; private set; } = [with(maxAttempts)];
 
-    public bool GameFinished => Guesses.Count == MaxAttempts || Guesses.Any(g => g.Success);
+    public bool GameFinished => Abandon || Guesses.Count == MaxAttempts || Guesses.Any(g => g.Success);
 
     public bool Found => Guesses.Any(g => g.Success);
+
+    public void GiveUp() => Abandon = true;
 
     public void Reset(CountryResponse country)
     {
@@ -25,11 +29,10 @@ public sealed class GameState(int maxAttempts)
 
     public void Start(CountryResponse country) => Country = country;
 
-    public void Start(CountryResponse country, IEnumerable<GuessedCountryResponse> guesses)
+    public void Start(CountryResponse country, IEnumerable<GuessedCountryResponse> guesses, bool abandon = false)
     {
         Country = country;
-
-        foreach (GuessedCountryResponse guess in guesses)
-            Guesses.Add(guess);
+        Guesses = [.. guesses];
+        Abandon = abandon;
     }
 }

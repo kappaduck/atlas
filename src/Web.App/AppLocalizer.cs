@@ -53,6 +53,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string CouldNotLoadCountries { get; } = localizer[nameof(CouldNotLoadCountries)];
 
+    internal string CouldNotLoadGame { get; } = localizer[nameof(CouldNotLoadGame)];
+
     internal string Countries { get; } = localizer[nameof(Countries)];
 
     internal string CountriesFailedToLoad { get; } = localizer[nameof(CountriesFailedToLoad)];
@@ -91,6 +93,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string Endless { get; } = localizer[nameof(Endless)];
 
+    internal string FailedFetchingGame { get; } = localizer[nameof(FailedFetchingGame)];
+
     internal string FetchingChangelog { get; } = localizer[nameof(FetchingChangelog)];
 
     internal string FetchingCountries { get; } = localizer[nameof(FetchingCountries)];
@@ -98,6 +102,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
     internal string FlagDifficulty { get; } = localizer[nameof(FlagDifficulty)];
 
     internal string FlagDifficultyDescription { get; } = localizer[nameof(FlagDifficultyDescription)];
+
+    internal string FlagFailed { get; } = localizer[nameof(FlagFailed)];
 
     internal string FlagHint { get; } = localizer[nameof(FlagHint)];
 
@@ -108,6 +114,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
     internal string FlagQuizDescription { get; } = localizer[nameof(FlagQuizDescription)];
 
     internal string General { get; } = localizer[nameof(General)];
+
+    internal string GiveNextTry { get; } = localizer[nameof(GiveNextTry)];
 
     internal string GiveUp { get; } = localizer[nameof(GiveUp)];
 
@@ -143,11 +151,15 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string InvertDescription { get; } = localizer[nameof(InvertDescription)];
 
+    internal string KeepPlayingUnlimited { get; } = localizer[nameof(KeepPlayingUnlimited)];
+
     internal string Kilometers { get; } = localizer[nameof(Kilometers)];
 
     internal string Language { get; } = localizer[nameof(Language)];
 
     internal string LanguageDescription { get; } = localizer[nameof(LanguageDescription)];
+
+    internal string LoadingGame { get; } = localizer[nameof(LoadingGame)];
 
     internal string Logo { get; } = localizer[nameof(Logo)];
 
@@ -161,6 +173,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string ModeDescription { get; } = localizer[nameof(ModeDescription)];
 
+    internal string NailedIt(string country) => localizer[nameof(NailedIt), country];
+
     internal string Navigate { get; } = localizer[nameof(Navigate)];
 
     internal string None { get; } = localizer[nameof(None)];
@@ -173,9 +187,9 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string OpenCountryOnMap(string country) => localizer[nameof(OpenCountryOnMap), country];
 
-    internal string OpenInGoogleMaps { get; } = localizer[nameof(OpenInGoogleMaps)];
-
     internal string OpenIssue { get; } = localizer[nameof(OpenIssue)];
+
+    internal string OutOfGuesses(string country) => localizer[nameof(OutOfGuesses), country];
 
     internal string PixelatedFlag { get; } = localizer[nameof(PixelatedFlag)];
 
@@ -186,6 +200,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
     internal string Play { get; } = localizer[nameof(Play)];
 
     internal string PlayTodayFlag { get; } = localizer[nameof(PlayTodayFlag)];
+
+    internal string PreviewWithDifficultyEffect { get; } = localizer[nameof(PreviewWithDifficultyEffect)];
 
     internal string ProximityBarHint { get; } = localizer[nameof(ProximityBarHint)];
 
@@ -215,11 +231,21 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string Settings { get; } = localizer[nameof(Settings)];
 
+    internal string SolvedIn(int count)
+    {
+        if (count == 1)
+            return localizer["SolvedInGuess"];
+
+        return localizer["SolvedInGuesses", count];
+    }
+
     internal string Streak { get; } = localizer[nameof(Streak)];
 
     internal string Theme { get; } = localizer[nameof(Theme)];
 
     internal string ThemeDescription { get; } = localizer[nameof(ThemeDescription)];
+
+    internal string TodayFlag { get; } = localizer[nameof(TodayFlag)];
 
     internal string UnlimitedCountry { get; } = localizer[nameof(UnlimitedCountry)];
 
@@ -230,6 +256,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
     internal string UnlimitedFlagDescription { get; } = localizer[nameof(UnlimitedFlagDescription)];
 
     internal string ViewChangelog { get; } = localizer[nameof(ViewChangelog)];
+
+    internal string ViewOnGoogleMaps { get; } = localizer[nameof(ViewOnGoogleMaps)];
 
     internal string WhichCountryFliesFlag { get; } = localizer[nameof(WhichCountryFliesFlag)];
 

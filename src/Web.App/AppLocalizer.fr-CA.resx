@@ -462,7 +462,43 @@
   <data name="Here" xml:space="preserve">
     <value>Ici!</value>
   </data>
-  <data name="OpenInGoogleMaps" xml:space="preserve">
-    <value>Ouvrir sur Google Maps</value>
+  <data name="ViewOnGoogleMaps" xml:space="preserve">
+    <value>Voir sur Google Maps</value>
+  </data>
+  <data name="NailedIt" xml:space="preserve">
+    <value>Parfait! C'est {0}!</value>
+  </data>
+  <data name="SolvedInGuess" xml:space="preserve">
+    <value>Résolu en une seule tentative.</value>
+  </data>
+  <data name="SolvedInGuesses" xml:space="preserve">
+    <value>Résolu en {0} tentatives.</value>
+  </data>
+  <data name="OutOfGuesses" xml:space="preserve">
+    <value>À court d'essais. C'était {0}.</value>
+  </data>
+  <data name="GiveNextTry" xml:space="preserve">
+    <value>Essaie le prochain.</value>
+  </data>
+  <data name="PreviewWithDifficultyEffect" xml:space="preserve">
+    <value>Aperçu avec effet de difficulté</value>
+  </data>
+  <data name="KeepPlayingUnlimited" xml:space="preserve">
+    <value>Continue à jouer en infini</value>
+  </data>
+  <data name="TodayFlag" xml:space="preserve">
+    <value>C'est le drapeau d'aujourd'hui! Un nouveau sort demain.</value>
+  </data>
+  <data name="LoadingGame" xml:space="preserve">
+    <value>Chargement du jeu...</value>
+  </data>
+  <data name="CouldNotLoadGame" xml:space="preserve">
+    <value>Impossible de charger le jeu</value>
+  </data>
+  <data name="FailedFetchingGame" xml:space="preserve">
+    <value>On a eu un problème en récupérant des données de pays. Vérifie ta connexion et réessaie.</value>
+  </data>
+  <data name="FlagFailed" xml:space="preserve">
+    <value>Le drapeau n'a pas réussi à se charger</value>
   </data>
 </root>

@@ -7,7 +7,9 @@ namespace Web.App.Storage;
 
 public interface IDailyLocalStorage
 {
-    IEnumerable<GuessedCountryResponse> Get();
+    void Abandon();
 
     void Add(GuessedCountryResponse guess);
+
+    (IEnumerable<GuessedCountryResponse> Guesses, bool Abandon) Get();
 }
