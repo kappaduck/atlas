@@ -1,0 +1,60 @@
+@using Atlas.Application.Countries.Responses
+@using Web.App.Settings
+
+@inject AppLocalizer Localizer
+
+@if (GameState.Guesses.Any())
+{
+	<div class="guesses">
+		<h4>@Localizer.YourGuesses</h4>
+		@foreach (GuessedCountryResponse guess in GameState.Guesses)
+		{
+			<div class="guess @SuccessCss(guess.Success)">
+				<div class="name">
+					@if (State.GuessFlagHint && Flag)
+					{
+						<img src="@guess.Flag" />
+					}
+					@if (guess.Success)
+					{
+						<i class="bi bi-check-circle-fill"></i>
+					}
+					@guess.Name
+					@if (State.ContinentHint)
+					{
+						<span class="quack-badge @SameContinentCss(guess.IsSameContinent)">@guess.Continent</span>
+					}
+					<a href="@guess.Map" target="_blank" data-tooltip="@Localizer.OpenInGoogleMaps" aria-label="@Localizer.OpenInGoogleMaps"><i class="bi bi-geo-alt"></i></a>
+				</div>
+				@if (guess.Success)
+				{
+					<span class="here">@Localizer.Here</span>
+				}
+				else
+				{
+					if (State.DistanceHint)
+					{
+						if (State.Unit == DistanceUnit.Kilometers)
+						{
+							<span class="distance">@guess.Kilometers.ToString("N0", _numberFormat) Km</span>
+						}
+						else
+						{
+							<span class="distance">@guess.Miles.ToString("N0", _numberFormat) mi</span>
+						}
+					}
+					@if (State.ArrowHint)
+					{
+						<span class="direction"><i style="transform: rotate(@(guess.Direction)deg);" class="bi bi-arrow-up"></i></span>
+					}
+				}
+				@if (State.ProximityBarHint)
+				{
+					<div class="proximity">
+						<span style="width:@guess.Proximity%"></span>
+					</div>
+				}
+			</div>
+		}
+	</div>
+}
