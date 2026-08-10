@@ -507,4 +507,13 @@
   <data name="ChaseYourStreak" xml:space="preserve">
     <value>Chase your streak</value>
   </data>
+  <data name="WhichCountryHasThisShape" xml:space="preserve">
+    <value>Which country has this shape?</value>
+  </data>
+  <data name="ShowFlagHint" xml:space="preserve">
+    <value>Show flag hint</value>
+  </data>
+  <data name="Rotated" xml:space="preserve">
+    <value>Rotated</value>
+  </data>
 </root>

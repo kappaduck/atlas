@@ -1,12 +1,12 @@
 @using Web.App.Games.Components
 @using Web.App.Settings
 
-@page "/flags/random"
+@page "/countries/random"
 @inject AppLocalizer Localizer
 
 <CascadingValue Value="_gameState" IsFixed="false">
 	<main class="game">
-		<Scoreboard Score="_score" Icon="infinity" Title="@Localizer.UnlimitedFlag" Subtitle="@Localizer.Endless" Label="@Localizer.ChaseYourStreak" />
+		<Scoreboard Score="_score" Icon="flag-fill" Title="@Localizer.UnlimitedCountry" Subtitle="@Localizer.Endless" Label="@Localizer.ChaseYourStreak" />
 		<div class="quack-card">
 			@if (_isLoading)
 			{
@@ -31,35 +31,34 @@
 			}
 			else
 			{
-				@if (State.Flag != FlagDifficulty.None && !_gameState.GameFinished)
+				@if (State.Country != CountryDifficulty.None && !_gameState.GameFinished)
 				{
 					<div class="difficulty">
 						<span class="label">@Localizer.Difficulty</span>
-						<span class="quack-chip quack-chip-primary">
-							@if (State.Flag == FlagDifficulty.Blur)
-							{
+						@if ((State.Country & CountryDifficulty.Blur) != 0)
+						{
+							<span class="quack-chip quack-chip-primary">
 								<i class="bi bi-circle-half"></i>
 								@Localizer.Blur
-							}
-							@if (State.Flag == FlagDifficulty.Grayscale)
-							{
-								<i class="bi bi-droplet"></i>
-								@Localizer.Grayscale
-							}
-							@if (State.Flag == FlagDifficulty.Invert)
-							{
-								<i class="bi bi-magic"></i>
-								@Localizer.Invert
-							}
-							@if (State.Flag == FlagDifficulty.Shift)
-							{
-								<i class="bi bi-palette"></i>
-								@Localizer.HueShift
-							}
-						</span>
+							</span>
+						}
+						@if ((State.Country & CountryDifficulty.Rotated) != 0)
+						{
+							<span class="quack-chip quack-chip-primary">
+								<i class="bi bi-arrow-clockwise"></i>
+								@Localizer.Rotated
+							</span>
+						}
+						@if ((State.Country & CountryDifficulty.Mirrored) != 0)
+						{
+							<span class="quack-chip quack-chip-primary">
+								<i class="bi bi-symmetry-vertical"></i>
+								@Localizer.Mirror
+							</span>
+						}
 					</div>
 				}
-				<div class="flag">
+				<div class="country">
 					<div class="wrapper">
 						@if (_gameState.Country is null)
 						{
@@ -74,14 +73,33 @@
 						}
 						else
 						{
-							<img src="@_gameState.Country.Resources.Flag" class="flag @DifficultyCss" />
+							<div class="background">
+								<img src="@_gameState.Country.Resources.Country" style="@DifficultyCss" />
+							</div>
 						}
 					</div>
 				</div>
-				<span class="question">@Localizer.WhichCountryFliesFlag</span>
+				<span class="question">@Localizer.WhichCountryHasThisShape</span>
+				@if (!_gameState.GameFinished && State.FlagHint)
+				{
+					<div class="flag-hint">
+						@if (!_flagHint)
+						{
+							<button type="button" class="quack-btn quack-btn-secondary quack-btn-sm" @onclick="() => _flagHint = true">
+								<i class="bi bi-flag"></i>
+								@Localizer.ShowFlagHint
+							</button>
+						}
+						else
+						{
+							<span class="label">@Localizer.FlagHint</span>
+							<img src="@_gameState.Country!.Resources.Flag" />
+						}
+					</div>
+				}
 				@if (_gameState.GameFinished)
 				{
-					<GameOver Preview="State.Flag != FlagDifficulty.None" OnPreviewClick="(preview) => _preview = preview">
+					<GameOver Preview="State.Country != CountryDifficulty.None" OnPreviewClick="(preview) => _preview = preview">
 						<button type="button" class="quack-btn quack-btn-primary quack-btn-lg" @onclick="PlayAgainAsync">
 							@Localizer.PlayAgain
 							<i class="bi bi-arrow-right"></i>
@@ -95,6 +113,6 @@
 				}
 			}
 		</div>
-		<Guesses Flag="true" />
+		<Guesses />
 	</main>
 </CascadingValue>

@@ -15,7 +15,11 @@ internal class DailyLocalStorage(string key, ILocalStorage storage) : IDailyLoca
 
     public void Abandon() => storage.SetItem(_key, _daily with { Abandon = true });
 
-    public void Add(GuessedCountryResponse guess) => storage.SetItem(_key, _daily with { Guesses = [.. _daily.Guesses, guess] });
+    public void Add(GuessedCountryResponse guess)
+    {
+        _daily = _daily with { Guesses = [.. _daily.Guesses, guess] };
+        storage.SetItem(_key, _daily);
+    }
 
     public (IEnumerable<GuessedCountryResponse> Guesses, bool Abandon) Get()
     {

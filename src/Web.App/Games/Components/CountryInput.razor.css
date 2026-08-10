@@ -5,6 +5,7 @@
 
 .quack-combobox-list {
   display: none;
+  overscroll-behavior: contain;
 
   &:has(.quack-combobox-option) {
     display: unset;

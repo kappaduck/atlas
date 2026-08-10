@@ -47,7 +47,7 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string ComingSoon { get; } = localizer[nameof(ComingSoon)];
 
-    public string ConfirmClearData { get; } = localizer[nameof(ConfirmClearData)];
+    internal string ConfirmClearData { get; } = localizer[nameof(ConfirmClearData)];
 
     internal string ContinentHint { get; } = localizer[nameof(ContinentHint)];
 
@@ -223,6 +223,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
 
     internal string Rotate { get; } = localizer[nameof(Rotate)];
 
+    internal string Rotated { get; } = localizer[nameof(Rotated)];
+
     internal string RotationDescription { get; } = localizer[nameof(RotationDescription)];
 
     internal string RotationRandomisedDescription { get; } = localizer[nameof(RotationRandomisedDescription)];
@@ -234,6 +236,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
     internal string SendFeedback { get; } = localizer[nameof(SendFeedback)];
 
     internal string Settings { get; } = localizer[nameof(Settings)];
+
+    internal string ShowFlagHint { get; } = localizer[nameof(ShowFlagHint)];
 
     internal string SolvedIn(int count)
     {
@@ -264,6 +268,8 @@ public sealed class AppLocalizer(IStringLocalizer<AppLocalizer> localizer)
     internal string ViewOnGoogleMaps { get; } = localizer[nameof(ViewOnGoogleMaps)];
 
     internal string WhichCountryFliesFlag { get; } = localizer[nameof(WhichCountryFliesFlag)];
+
+    internal string WhichCountryHasThisShape { get; } = localizer[nameof(WhichCountryHasThisShape)];
 
     internal string YourGuesses { get; } = localizer[nameof(YourGuesses)];
 }
