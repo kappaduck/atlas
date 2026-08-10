@@ -6,12 +6,13 @@ using Atlas.Application.Countries.Services;
 using Microsoft.AspNetCore.Components;
 using System.Text;
 using Web.App.Games.Components;
+using Web.App.Options;
 using Web.App.Settings;
 using Web.App.Storage;
 
 namespace Web.App.Games.Countries;
 
-public sealed partial class Random(ICountryService service, ILocalStorage storage) : IDisposable
+public sealed partial class Random(ICountryService service, ILocalStorage storage, DevOptions options) : IDisposable
 {
     private const int MaxAttempts = 6;
 
@@ -29,6 +30,9 @@ public sealed partial class Random(ICountryService service, ILocalStorage storag
 
     [CascadingParameter]
     public required AppState State { get; init; }
+
+    [Parameter]
+    public string? Cca2 { get; init; }
 
     private string DifficultyCss
     {
@@ -95,7 +99,7 @@ public sealed partial class Random(ICountryService service, ILocalStorage storag
         try
         {
             _isLoading = true;
-            CountryResponse? country = await service.RandomizeAsync(_cts.Token);
+            CountryResponse? country = await GetAsync(_cts.Token);
 
             if (country is null)
                 return;
@@ -110,6 +114,14 @@ public sealed partial class Random(ICountryService service, ILocalStorage storag
         finally
         {
             _isLoading = false;
+        }
+
+        Task<CountryResponse?> GetAsync(CancellationToken cancellationToken)
+        {
+            if (options.Debug && !string.IsNullOrEmpty(Cca2))
+                return service.GetAsync(Cca2, cancellationToken);
+
+            return service.RandomizeAsync(cancellationToken);
         }
     }
 
