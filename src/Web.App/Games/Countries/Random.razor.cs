@@ -139,6 +139,7 @@ public sealed partial class Random(ICountryService service, ILocalStorage storag
 
             _gameState.Reset(country);
             _rotation = GetRandomRotation();
+            _flagHint = false;
         }
         catch (Exception)
         {

@@ -52,10 +52,14 @@
         font-size: var(--quack-text-xs);
       }
 
-      a {
+      .map {
         display: inline-flex;
         align-items: center;
         color: var(--quack-text-muted);
+
+        &:hover {
+          color: var(--quack-text-accent);
+        }
       }
     }
 
