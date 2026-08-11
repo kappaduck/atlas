@@ -31,7 +31,7 @@ jobs:
 
       - name: Bump version
         if: ${{ inputs.environment == 'production' }}
-        run: dotnet ./scripts/bump.cs
+        run: dotnet ./scripts/bump-version.cs
 
       - name: Restore dependencies
         run: dotnet restore ${{ env.webApp }}
