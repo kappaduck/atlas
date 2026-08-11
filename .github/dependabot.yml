@@ -6,7 +6,8 @@ updates:
     directory: /
     schedule:
       interval: weekly
-      day: wednesday
+      day: tuesday
+      time: '16:30'
     commit-message:
       prefix: NuGet packages
     labels: [dependencies]
@@ -21,7 +22,8 @@ updates:
     directory: /
     schedule:
       interval: weekly
-      day: wednesday
+      day: tuesday
+      time: '16:30'
     commit-message:
       prefix: .NET SDK
     labels: [dependencies]
