@@ -7,7 +7,7 @@ using Web.App.Settings;
 
 namespace Web.App.Games.Components;
 
-public sealed partial class Guesses
+public partial class Guesses
 {
     private readonly NumberFormatInfo _numberFormat = new()
     {
@@ -15,7 +15,7 @@ public sealed partial class Guesses
     };
 
     [Parameter]
-    public bool FlagHint { get; init; }
+    public bool Flag { get; init; }
 
     [CascadingParameter]
     public required GameState GameState { get; init; }
@@ -23,7 +23,7 @@ public sealed partial class Guesses
     [CascadingParameter]
     public required AppState State { get; init; }
 
-    private static string SuccessCss(bool success) => success ? "success" : "wrong";
+    private static string SuccessCss(bool success) => success ? "success" : string.Empty;
 
-    private static string SameContinentCss(bool same) => same ? "same" : string.Empty;
+    private static string SameContinentCss(bool same) => same ? "quack-badge-accent" : "quack-badge-danger";
 }

@@ -11,11 +11,15 @@ public sealed record General
 
     public DistanceUnit Unit { get; init; }
 
-    public bool ContinentHint { get; init; } = true;
-
     public bool DistanceHint { get; init; } = true;
 
     public bool ArrowHint { get; init; } = true;
 
+    public bool ContinentHint { get; init; } = true;
+
+    public bool ProximityBarHint { get; init; } = true;
+
     public bool FlagHint { get; init; } = true;
+
+    public bool GuessFlagHint { get; init; } = true;
 }

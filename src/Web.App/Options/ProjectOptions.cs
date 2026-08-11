@@ -23,6 +23,9 @@ public sealed partial class ProjectOptions
     public required string FeatureUrl { get; set; }
 
     [Required, Url]
+    public required string IssuesUrl { get; set; }
+
+    [Required, Url]
     public required string CompanyUrl { get; set; }
 
     [OptionsValidator]

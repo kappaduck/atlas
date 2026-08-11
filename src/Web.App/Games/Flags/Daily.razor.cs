@@ -9,24 +9,37 @@ using Web.App.Storage;
 
 namespace Web.App.Games.Flags;
 
-public sealed partial class Daily(ICountryService service, NavigationManager navigation, [FromKeyedServices(DailyFlagStorage.Key)] IDailyLocalStorage storage) : IDisposable
+public sealed partial class Daily(ICountryService service, [FromKeyedServices(DailyLocalStorage.Flag)] IDailyLocalStorage daily, ILocalStorage storage) : IDisposable
 {
     private const int MaxAttempts = 6;
 
     private readonly CancellationTokenSource _cts = new();
     private readonly GameState _gameState = new(MaxAttempts);
 
+    private Score _score = new("daily:flag:streak");
+
+    private bool _hasError;
+    private bool _isLoading;
+    private bool _preview;
+
     [CascadingParameter]
     public required AppState State { get; init; }
 
-    private string FoundCss
+    private string DifficultyCss
     {
         get
         {
-            if (!_gameState.GameFinished)
+            if (State.Flag == FlagDifficulty.None || (_gameState.GameFinished && !_preview))
                 return string.Empty;
 
-            return _gameState.Found ? "success" : "wrong";
+            return State.Flag switch
+            {
+                FlagDifficulty.Blur => "blur",
+                FlagDifficulty.Grayscale => "grayscale",
+                FlagDifficulty.Invert => "invert",
+                FlagDifficulty.Shift => "shift",
+                _ => string.Empty
+            };
         }
     }
 
@@ -36,21 +49,57 @@ public sealed partial class Daily(ICountryService service, NavigationManager nav
         _cts.Dispose();
     }
 
-    protected override async Task OnInitializedAsync()
-    {
-        CountryResponse? country = await service.GetDailyFlagAsync(_cts.Token) ?? throw new InvalidOperationException();
-        IEnumerable<GuessedCountryResponse> guesses = storage.Get();
-
-        _gameState.Start(country, guesses);
-    }
+    protected override Task OnInitializedAsync() => FetchGameAsync();
 
     private async Task GuessAsync(string cca2)
     {
-        GuessedCountryResponse? guessedCountry = await service.GuessAsync(cca2, _gameState.Country!.Cca2, _cts.Token) ?? throw new InvalidOperationException();
+        GuessedCountryResponse? guessedCountry = await service.GuessAsync(cca2, _gameState.Country!.Cca2, _cts.Token);
 
-        _gameState.Guesses.Add(guessedCountry);
-        storage.Set(_gameState.Guesses);
+        _gameState.Guesses.Add(guessedCountry!);
+        daily.Add(guessedCountry!);
+
+        if (_gameState.GameFinished)
+        {
+            if (_gameState.Found)
+                _score.Increment();
+            else
+                _score.Reset();
+
+            storage.SetItem(_score.Key, _score);
+        }
     }
 
-    private void NavigateToRandom() => navigation.NavigateTo("/flags/random");
+    private void GiveUp()
+    {
+        _gameState.GiveUp();
+        daily.Abandon();
+
+        _score.Reset();
+        storage.SetItem(_score.Key, _score);
+    }
+
+    private async Task FetchGameAsync()
+    {
+        try
+        {
+            _isLoading = true;
+            CountryResponse? country = await service.GetDailyFlagAsync(_cts.Token);
+
+            if (country is null)
+                return;
+
+            _score = storage.GetItem<Score>(_score.Key) ?? _score;
+
+            (IEnumerable<GuessedCountryResponse> guesses, bool abandon) = daily.Get();
+            _gameState.Start(country, guesses, abandon);
+        }
+        catch (Exception)
+        {
+            _hasError = true;
+        }
+        finally
+        {
+            _isLoading = false;
+        }
+    }
 }

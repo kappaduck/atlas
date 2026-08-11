@@ -5,5 +5,5 @@ namespace Atlas.Application.Changelog;
 
 public interface IChangelogRepository
 {
-    ValueTask<string?> GetAsync(CancellationToken cancellationToken);
+    ValueTask<string> GetAsync(CancellationToken cancellationToken);
 }

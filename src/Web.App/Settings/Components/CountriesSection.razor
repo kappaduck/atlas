@@ -1,22 +1,49 @@
 @using Atlas.Application.Countries.Responses
-
-@inject IStringLocalizer<Translations> Localizer
+@inject AppLocalizer Localizer
 
 @if (_isLoading)
 {
-	<span class="spinner"></span>
+	<div class="loading-state">
+		<span class="quack-spinner quack-spinner-lg"></span>
+		<span class="text">@Localizer.FetchingCountries</span>
+	</div>
 }
 else
 {
-	<span class="count">@Localizer.CountriesAvailable(_countries.Length)</span>
-	<input @bind="_search" @bind:event="oninput" type="search" placeholder="@Localizer.SearchCountries" />
-	<div class="countries">
-		@foreach (CountryResponse country in GetFilteredCountries())
-		{
-			<div class="country">
-				<img src="@country.Resources.Flag" />
-				<span>@country.Name</span>
+	if (_hasError)
+	{
+		<div class="error-state">
+			<div class="error">
+				<span class="icon"><i class="bi bi-cloud-slash"></i></span>
+				<span class="text">@Localizer.CouldNotLoadCountries</span>
+				<span class="subtitle">@Localizer.CountriesFailedToLoad</span>
+				<button type="button" class="quack-btn quack-btn-primary quack-btn-sm" @onclick="FetchCountriesAsync">
+					<i class="bi bi-arrow-clockwise"></i> @Localizer.Retry
+				</button>
 			</div>
-		}
-	</div>
+		</div>
+	}
+	else
+	{
+		<div class="countries">
+			<div class="search">
+				<div class="quack-input-group">
+					<span class="quack-input-group-addon"><i class="bi bi-search"></i></span>
+					<input class="quack-input" type="search" placeholder="@Localizer.SearchCountries" @bind:get="_search" @bind:set="Search" @bind:event="oninput" />
+				</div>
+				<span class="found">@Localizer.CountriesFound(_filteredCountries.Length, _countries.Length)</span>
+			</div>
+			<div class="list">
+				@foreach (CountryListItem country in _filteredCountries)
+				{
+					<div class="country">
+						<img src="@country.Flag" class="flag" />
+						<span class="name">@country.Name</span>
+						<span class="quack-badge">@country.Continent</span>
+						<a href="@country.Map" target="_blank" class="map" aria-label="@Localizer.OpenCountryOnMap(country.Name)"><i class="bi bi-geo-alt"></i></a>
+					</div>
+				}
+			</div>
+		</div>
+	}
 }

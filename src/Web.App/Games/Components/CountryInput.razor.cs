@@ -11,16 +11,16 @@ using Web.App.Extensions;
 
 namespace Web.App.Games.Components;
 
-public sealed partial class LookupInput(ICountryLookupService service, IJSInProcessRuntime jsRuntime) : IDisposable
+public sealed partial class CountryInput(ICountryLookupService service, IJSInProcessRuntime jsRuntime) : IDisposable
 {
     private readonly CancellationTokenSource _cts = new();
-    private string _input = string.Empty;
+    private string _search = string.Empty;
     private CountryLookupResponse[] _filteredCountries = [];
     private CountryLookupResponse[] _countries = [];
     private int _selectedIndex = -1;
 
     private IJSInProcessObjectReference? _module;
-    private DotNetObjectReference<LookupInput>? _reference;
+    private DotNetObjectReference<CountryInput>? _reference;
 
     [Parameter, EditorRequired]
     public EventCallback<string> OnLookup { get; init; }
@@ -53,7 +53,7 @@ public sealed partial class LookupInput(ICountryLookupService service, IJSInProc
 
     public void Reset()
     {
-        _input = string.Empty;
+        _search = string.Empty;
         _filteredCountries = [];
         _selectedIndex = -1;
     }
@@ -71,7 +71,7 @@ public sealed partial class LookupInput(ICountryLookupService service, IJSInProc
         _module?.InvokeVoid("init", _reference);
     }
 
-    private string IsActive(int index) => _selectedIndex == index ? "active" : string.Empty;
+    private bool IsActive(int index) => _selectedIndex == index;
 
     private Task SelectCountryAsync(string cca2)
     {
@@ -83,7 +83,7 @@ public sealed partial class LookupInput(ICountryLookupService service, IJSInProc
     {
         _selectedIndex = -1;
 
-        _input = e.Value?.ToString() ?? string.Empty;
+        _search = e.Value?.ToString() ?? string.Empty;
         _filteredCountries = LookupCountries();
     }
 
@@ -118,7 +118,6 @@ public sealed partial class LookupInput(ICountryLookupService service, IJSInProc
 
     private void Focus()
     {
-        _module?.InvokeVoid("scrollToLookup");
         _filteredCountries = LookupCountries();
 
         StateHasChanged();
@@ -142,7 +141,7 @@ public sealed partial class LookupInput(ICountryLookupService service, IJSInProc
 
         if (_filteredCountries.Length > 1)
         {
-            string input = string.RemoveDiacritics(_input.Trim());
+            string input = string.RemoveDiacritics(_search.Trim());
             CountryLookupResponse? country = Array.Find(_filteredCountries, c => Compare(c.Name, input));
 
             cca2 = country?.Cca2;
@@ -167,10 +166,100 @@ public sealed partial class LookupInput(ICountryLookupService service, IJSInProc
 
     private CountryLookupResponse[] LookupCountries()
     {
-        string input = string.RemoveDiacritics(_input.Trim());
+        string input = string.RemoveDiacritics(_search.Trim());
         CountryLookupResponse[] availableCountries = [.. _countries.ExceptBy(GameState.Guesses.Select(g => g.Cca2), c => c.Cca2)];
 
         return Array.FindAll(availableCountries, c => string.Lookup(c.Name, input));
+    }
+
+    private List<(string Text, bool Match)> Highlight(string name)
+    {
+        List<(string Text, bool Match)> segments = [];
+
+        string search = _search.Trim();
+        string needle = search.Length == 0 ? string.Empty : string.RemoveDiacritics(search);
+
+        if (needle.Length == 0)
+        {
+            segments.Add((name, false));
+            return segments;
+        }
+
+        string haystack = string.RemoveDiacritics(name);
+
+        if (haystack.Contains(needle, StringComparison.OrdinalIgnoreCase))
+        {
+            int cursor = 0;
+            while (cursor < name.Length)
+            {
+                int match = haystack.IndexOf(needle, cursor, StringComparison.OrdinalIgnoreCase);
+
+                if (match < 0)
+                {
+                    segments.Add((name[cursor..], false));
+                    break;
+                }
+
+                if (match > cursor)
+                    segments.Add((name[cursor..match], false));
+
+                int end = match + needle.Length;
+                segments.Add((name[match..end], true));
+
+                cursor = end;
+            }
+
+            return segments;
+        }
+
+        if (TryHighlightInitials(name, haystack, needle, segments))
+            return segments;
+
+        segments.Add((name, false));
+        return segments;
+    }
+
+    private static bool TryHighlightInitials(string name, string haystack, string needle, List<(string Text, bool Match)> segments)
+    {
+        Span<char> initials = stackalloc char[7];
+        Span<int> wordStart = stackalloc int[7];
+        int count = 0;
+
+        foreach (Range range in haystack.AsSpan().Split(' '))
+        {
+            ReadOnlySpan<char> word = haystack.AsSpan()[range];
+
+            if (word.IsEmpty || count == initials.Length)
+                continue;
+
+            initials[count] = word[0];
+            wordStart[count] = range.Start.Value;
+            count++;
+        }
+
+        int at = initials[..count].IndexOf(needle, StringComparison.OrdinalIgnoreCase);
+
+        if (at < 0)
+            return false;
+
+        int end = at + needle.Length;
+        int cursor = 0;
+
+        for (int i = at; i < end; i++)
+        {
+            int pos = wordStart[i];
+
+            if (pos > cursor)
+                segments.Add((name[cursor..pos], false));
+
+            segments.Add((name[pos..(pos + 1)], true));
+            cursor = pos + 1;
+        }
+
+        if (cursor < name.Length)
+            segments.Add((name[cursor..], false));
+
+        return true;
     }
 
     private static class Keyboard

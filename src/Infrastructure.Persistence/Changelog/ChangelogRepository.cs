@@ -10,15 +10,12 @@ internal sealed class ChangelogRepository(IChangelogClient client, ICache cache)
 {
     private const string Key = "changelog";
 
-    public async ValueTask<string?> GetAsync(CancellationToken cancellationToken)
+    public async ValueTask<string> GetAsync(CancellationToken cancellationToken)
     {
         if (cache.TryGet(Key, out string? cachedChangelog))
             return cachedChangelog;
 
-        string? changelog = await client.GetAsync(cancellationToken);
-
-        if (string.IsNullOrEmpty(changelog))
-            return null;
+        string changelog = await client.GetAsync(cancellationToken);
 
         cache.Save(Key, changelog);
         return changelog;

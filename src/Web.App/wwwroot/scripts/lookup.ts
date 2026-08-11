@@ -4,18 +4,6 @@ type DotNet = {
 
 let eventCallback: (this: Document, ev: MouseEvent) => any;
 
-export function scrollToLookup() {
-  const element: Element | null = document.querySelector('.lookup');
-
-  if (!element) {
-    return;
-  }
-
-  setTimeout(() => {
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }, 300);
-}
-
 export function scrollToCountry(id: string) {
   const element: HTMLElement | null = document.getElementById(id);
 
@@ -28,13 +16,13 @@ export function scrollToCountry(id: string) {
 
 export function init(dotnet: DotNet) {
   eventCallback = (event: MouseEvent) => {
-    const lookup: Element | null = document.querySelector('.lookup');
+    const lookup: Element | null = document.querySelector('.quack-combobox');
 
     if (!event || !event.target || !(event.target instanceof Element)) {
       return;
     }
 
-    if (event.target.classList.contains('item')) {
+    if (event.target.classList.contains('quack-combobox-option')) {
       return;
     }
 

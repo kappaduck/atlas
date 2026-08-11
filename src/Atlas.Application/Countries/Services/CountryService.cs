@@ -10,10 +10,13 @@ namespace Atlas.Application.Countries.Services;
 
 internal sealed class CountryService(ICountryRepository repository, IStringLocalizer<Translations> localizer) : ICountryService
 {
-    public async Task<IEnumerable<CountryResponse>> GetAllAsync(CancellationToken cancellationToken)
+    public async Task<IEnumerable<CountryListItem>> GetAllAsync(CancellationToken cancellationToken)
     {
         IEnumerable<Country> countries = await repository.GetAllAsync(cancellationToken);
-        return [.. countries.Select(c => c.ToResponse(localizer))];
+        return [.. countries.Select(ToItem)];
+
+        CountryListItem ToItem(Country country)
+            => new(localizer[country.Cca2], localizer[country.Continent.ToString()], country.Resources.Map, country.Resources.Flag);
     }
 
     public async Task<CountryResponse?> GetAsync(string code, CancellationToken cancellationToken)
@@ -65,12 +68,14 @@ internal sealed class CountryService(ICountryRepository repository, IStringLocal
             Cca2 = guessed.Cca2,
             Name = localizer[guessedCode],
             Direction = Direction.Calculate(guessed.Coordinate, country.Coordinate),
+            Proximity = Proximity.Calculate(guessed.Coordinate, country.Coordinate),
             Kilometers = (int)Math.Round(distance.Kilometers),
             Miles = (int)Math.Round(distance.Miles),
             Continent = localizer[guessed.Continent.ToString()],
             IsSameContinent = guessed.Continent == country.Continent,
             Success = guessedCode == code,
-            Flag = guessed.Resources.Flag
+            Flag = guessed.Resources.Flag,
+            Map = guessed.Resources.Map
         };
     }
 

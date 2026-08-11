@@ -3,10 +3,12 @@
 
 using Atlas.Application.Changelog;
 using Markdig;
+using Markdig.Helpers;
 using Markdig.Renderers.Html;
 using Markdig.Syntax;
 using Markdig.Syntax.Inlines;
 using Microsoft.AspNetCore.Components;
+using System.Globalization;
 
 namespace Web.App.Settings.Components;
 
@@ -14,25 +16,15 @@ public sealed partial class ChangelogSection(IChangelogService service)
 {
     private MarkupString _changelog;
     private bool _isLoading;
+    private bool _hasError;
 
     [Parameter, EditorRequired]
-    public required CancellationToken CancellationToken { get; set; }
+    public required CancellationToken CancellationToken { get; init; }
 
-    protected override async Task OnInitializedAsync()
+    protected override Task OnInitializedAsync() => FetchChangelogAsync();
+
+    private static MarkupString GenerateChangelog(string content)
     {
-        _isLoading = true;
-
-        string? content = await service.GetAsync(CancellationToken);
-        _changelog = GenerateChangelog(content);
-
-        _isLoading = false;
-    }
-
-    private static MarkupString GenerateChangelog(string? content)
-    {
-        if (string.IsNullOrEmpty(content))
-            return new MarkupString("No changelog available.");
-
         MarkdownDocument document = Markdown.Parse(content);
 
         HtmlAttributes versionAttributes = new();
@@ -46,15 +38,23 @@ public sealed partial class ChangelogSection(IChangelogService service)
 
         HtmlAttributes linkAttributes = new();
         linkAttributes.AddProperty("target", "_blank");
-        linkAttributes.AddClass("issue-link");
+        linkAttributes.AddClass("quack-link");
 
         foreach (MarkdownObject descendant in document.Descendants())
         {
             if (descendant is HeadingBlock { Level: 1 } or ParagraphBlock)
                 document.Remove((Block)descendant);
 
-            if (descendant is HeadingBlock { Level: 2 })
-                descendant.SetAttributes(versionAttributes);
+            if (descendant is HeadingBlock { Level: 2 } version)
+            {
+                version.SetAttributes(versionAttributes);
+
+                if (DateOnly.TryParseExact(version.Inline!.FirstChild!.ToString(), "yyyy.MM.dd", CultureInfo.CurrentCulture, DateTimeStyles.None, out DateOnly date))
+                {
+                    LiteralInline literal = (version.Inline.FirstChild as LiteralInline)!;
+                    literal.Content = new StringSlice(date.ToString("dd MMM yyyy", CultureInfo.CurrentCulture));
+                }
+            }
 
             if (descendant is HeadingBlock { Level: 3 } section)
             {
@@ -83,5 +83,25 @@ public sealed partial class ChangelogSection(IChangelogService service)
             "Fixed" => "fixed",
             _ => string.Empty
         };
+    }
+
+    private async Task FetchChangelogAsync()
+    {
+        _hasError = false;
+        _isLoading = true;
+
+        try
+        {
+            string content = await service.GetAsync(CancellationToken);
+            _changelog = GenerateChangelog(content);
+        }
+        catch (HttpRequestException)
+        {
+            _hasError = true;
+        }
+        finally
+        {
+            _isLoading = false;
+        }
     }
 }

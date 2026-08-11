@@ -32,12 +32,12 @@ public sealed class ChangelogClientTests
     }
 
     [Test]
-    public async Task GetAsyncShouldGiveNullWhenStatusCodeIsNotOK200()
+    public async Task GetAsyncShouldThrowWhenStatusCodeIsNotOK200()
     {
         _http.Handler.OnGet(_options.Url).Respond(HttpStatusCode.InternalServerError);
 
-        string? content = await _client.GetAsync(CancellationToken.None);
-        await Assert.That(content).IsNull();
+        await Assert.That(async () => await _client.GetAsync(CancellationToken.None))
+                    .ThrowsExactly<HttpRequestException>();
     }
 
     [Test]
@@ -48,14 +48,14 @@ public sealed class ChangelogClientTests
     }
 
     [Test]
-    public async Task GetAsyncShouldGiveNullWhenThereIsNoContent()
+    public async Task GetAsyncShouldGiveEmptyWhenThereIsNoContent()
     {
         _http.Handler.OnGet(_options.Url).RespondWith(new HttpResponseMessage(HttpStatusCode.OK)
         {
             Content = new StringContent(string.Empty)
         });
 
-        string? content = await _client.GetAsync(CancellationToken.None);
-        await Assert.That(content).IsNull();
+        string content = await _client.GetAsync(CancellationToken.None);
+        await Assert.That(content).IsNullOrEmpty();
     }
 }

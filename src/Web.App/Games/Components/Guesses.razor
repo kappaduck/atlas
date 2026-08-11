@@ -1,44 +1,60 @@
 @using Atlas.Application.Countries.Responses
 @using Web.App.Settings
 
-<ul class="guesses" role="list">
-	@foreach (GuessedCountryResponse guess in GameState.Guesses)
-	{
-		<li class="guess @SuccessCss(guess.Success)">
-			@if (State.FlagHint && FlagHint)
-			{
-				<img src="@guess.Flag" />
-			}
-			<div class="info">
-				<h4>@guess.Name</h4>
-				<div class="hints">
+@inject AppLocalizer Localizer
+
+@if (GameState.Guesses.Any())
+{
+	<div class="guesses">
+		<h4>@Localizer.YourGuesses</h4>
+		@foreach (GuessedCountryResponse guess in GameState.Guesses)
+		{
+			<div class="guess @SuccessCss(guess.Success)">
+				<div class="name">
+					@if (State.GuessFlagHint && Flag)
+					{
+						<img src="@guess.Flag" />
+					}
+					@if (guess.Success)
+					{
+						<i class="bi bi-check-circle-fill"></i>
+					}
+					@guess.Name
 					@if (State.ContinentHint)
 					{
-						<span class="hint @SameContinentCss(guess.IsSameContinent)">@guess.Continent</span>
+						<span class="quack-badge @SameContinentCss(guess.IsSameContinent)">@guess.Continent</span>
 					}
-					@if (State.DistanceHint)
+					<a href="@guess.Map" target="_blank" class="map" data-tooltip="@Localizer.ViewOnGoogleMaps" aria-label="@Localizer.ViewOnGoogleMaps"><i class="bi bi-geo-alt"></i></a>
+				</div>
+				@if (guess.Success)
+				{
+					<span class="here">@Localizer.Here</span>
+				}
+				else
+				{
+					if (State.DistanceHint)
 					{
 						if (State.Unit == DistanceUnit.Kilometers)
 						{
-							<span class="hint distance">@guess.Kilometers.ToString("N0", _numberFormat) km</span>
+							<span class="distance">@guess.Kilometers.ToString("N0", _numberFormat) Km</span>
 						}
 						else
 						{
-							<span class="hint distance">@guess.Miles.ToString("N0", _numberFormat) mi</span>
+							<span class="distance">@guess.Miles.ToString("N0", _numberFormat) mi</span>
 						}
 					}
 					@if (State.ArrowHint)
 					{
-						<span class="hint direction"><i style="transform: rotate(@(guess.Direction)deg);" class="@Icons.ArrowUp"></i></span>
+						<span class="direction"><i style="transform: rotate(@(guess.Direction)deg);" class="bi bi-arrow-up"></i></span>
 					}
-				</div>
+				}
+				@if (State.ProximityBarHint)
+				{
+					<div class="proximity">
+						<span style="width:@guess.Proximity%"></span>
+					</div>
+				}
 			</div>
-		</li>
-	}
-	@for (int attempts = GameState.Guesses.Count; attempts < GameState.MaxAttempts; attempts++)
-	{
-		<li class="guess empty">
-			<span>@(attempts + 1) / @GameState.MaxAttempts</span>
-		</li>
-	}
-</ul>
+		}
+	</div>
+}

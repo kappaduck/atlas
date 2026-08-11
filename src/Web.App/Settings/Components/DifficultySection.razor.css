@@ -1,134 +1,182 @@
-.section {
+.difficulty {
   display: flex;
   flex-direction: column;
-  gap: .375rem;
+  gap: var(--quack-space-6);
 
-  .game-title {
+  h3 {
     font-size: var(--quack-text-xs);
-    color: var(--quack-muted-text);
-    letter-spacing: 0.06em;
+    font-weight: 700;
+    letter-spacing: .08em;
     text-transform: uppercase;
-    margin-bottom: .125rem;
+    color: var(--quack-text-muted);
+    margin-bottom: 6px;
   }
-}
 
-.difficulty {
-  background: var(--quack-base-700);
-  border: 1px solid var(--quack-border-400);
-  border-radius: var(--quack-radius-md);
-  overflow: hidden;
+  .subtitle {
+    font-size: var(--quack-text-xs);
+    color: var(--quack-text-muted);
+    margin: 0 0 var(--quack-space-4);
+  }
 
-  .head {
+  .quack-divider {
+    margin: 0;
+  }
+
+  .flag {
     display: flex;
     flex-direction: column;
-    gap: 1px;
-    padding: .625rem .875rem;
-    border-bottom: 1px solid var(--quack-border-400);
 
-    .title {
-      font-size: var(--quack-text-sm);
-      font-weight: 500;
-      color: var(--quack-primary-text);
-    }
+    .difficulties {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: var(--quack-space-3);
 
-    .subtext {
-      font-size: var(--quack-text-xs);
-      color: var(--quack-muted-text);
+      .flag-card {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px;
+        text-align: left;
+        cursor: pointer;
+        background: var(--quack-surface);
+        border: 2px solid var(--quack-border-200);
+        border-radius: var(--quack-radius-md);
+        transition: border-color .15s, box-shadow .15s;
+
+        &:has(input:checked) {
+          border: 2px solid var(--quack-primary);
+          box-shadow: 0 0 0 3px var(--quack-focus-ring);
+        }
+
+        input {
+          appearance: none;
+        }
+
+        img {
+          display: grid;
+          place-items: center;
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 3 / 2;
+          border-radius: var(--quack-radius-sm);
+          object-fit: cover;
+
+          &.blur {
+            filter: blur(3px);
+          }
+
+          &.grayscale {
+            filter: grayscale(1);
+          }
+
+          &.invert {
+            filter: invert(1)
+          }
+
+          &.shift {
+            filter: hue-rotate(90deg)
+          }
+        }
+
+        .label {
+          font-weight: 600;
+          font-size: var(--quack-text-sm);
+          color: var(--quack-text-primary);
+        }
+
+        .description {
+          font-size: var(--quack-text-xs);
+          color: var(--quack-text-muted);
+          line-height: 1.4;
+        }
+      }
     }
   }
 
-  .default-row {
+  .country {
     display: flex;
-    padding: .5rem .875rem;
-    border-bottom: .5px solid var(--quack-border-400);
-
-    .default {
-      padding: .375rem .625rem;
-      font-size: var(--quack-text-xs);
-      flex: unset;
-    }
-  }
-}
-
-.modifier {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  flex: 1;
-  padding: .5rem .75rem;
-  border-radius: var(--quack-radius-md);
-  background: light-dark(white, var(--quack-base-800));
-  border: 1px solid var(--quack-border-200);
-  cursor: pointer;
-  font-size: var(--quack-text-sm);
-  color: var(--quack-muted-text);
-  transition: border-color .15s, color .15s, background .15s;
-
-  input[type=checkbox], input[type=radio] {
-    appearance: none;
-    display: none;
-  }
-
-  img {
-    width: 40px;
-    aspect-ratio: 3 / 2;
-
-    &.country {
-      width: 64px;
-      filter: invert(var(--country-color));
-    }
-  }
-
-  &:hover {
-    border-color: var(--quack-border-400);
-    background: var(--quack-elevated);
-  }
-
-  &:has(input:checked) {
-    border-color: #0F6E56;
-    color: #5DCaa5;
-    background: #04201a;
-  }
-}
-
-.modifiers {
-  display: flex;
-  gap: .375rem;
-  padding: .625rem .875rem;
-  border-bottom: 1px solid var(--quack-border-400);
-  container: modifier / inline-size;
-}
-
-.blur {
-  filter: blur(3px);
-
-  &.country {
-    filter: blur(3px) invert(var(--country-color)) !important;
-  }
-}
-
-.grayscale {
-  filter: grayscale(1);
-}
-
-.invert {
-  filter: invert(1);
-}
-
-.hue {
-  filter: hue-rotate(90deg);
-}
-
-.rotate {
-  transform: rotate(90deg)
-}
-
-.mirror {
-  transform: scaleX(-1)
-}
-
-@container modifier (width < 430px) {
-  .modifier {
     flex-direction: column;
+
+    .difficulties {
+      display: flex;
+      align-items: center;
+      gap: var(--quack-space-5);
+      flex-wrap: wrap;
+
+      .shape {
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        width: 150px;
+        height: 110px;
+        flex: none;
+        border: 1px solid var(--quack-border-200);
+        border-radius: var(--quack-radius-md);
+        background: var(--quack-elevated);
+
+        svg {
+          transition: filter .2s, transform .2s;
+        }
+      }
+
+      .modifiers {
+        display: flex;
+        flex-direction: column;
+        gap: var(--quack-space-3);
+        flex: 1;
+        min-width: 220px;
+
+        .modifier {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: var(--quack-space-3);
+          padding: 10px 12px;
+          border-radius: var(--quack-radius-md);
+          cursor: pointer;
+          text-align: left;
+          transition: border-color .15s, background .15s;
+          width: 100%;
+          border: 1px solid var(--quack-border-200);
+          background: var(--quack-surface);
+          color: var(--quack-text-muted);
+
+          &:has(input:checked) {
+            border: 1px solid var(--quack-primary);
+            background: hsl(from var(--quack-primary) h s l / 0.10);
+            color: var(--quack-primary);
+          }
+
+          .wrapper {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--quack-space-2);
+
+            .label {
+              font-weight: 600;
+              color: var(--quack-text-primary);
+
+              .description {
+                font-size: var(--quack-text-xs);
+                color: var(--quack-text-muted);
+              }
+            }
+          }
+
+          input {
+            appearance: none;
+          }
+        }
+
+        .rotation-description {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-size: var(--quack-text-xs);
+          color: var(--quack-text-muted);
+          margin: 0;
+        }
+      }
+    }
   }
 }

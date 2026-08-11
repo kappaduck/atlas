@@ -7,7 +7,7 @@ namespace Atlas.Application.Countries.Services;
 
 public interface ICountryService
 {
-    Task<IEnumerable<CountryResponse>> GetAllAsync(CancellationToken cancellationToken);
+    Task<IEnumerable<CountryListItem>> GetAllAsync(CancellationToken cancellationToken);
 
     Task<CountryResponse?> GetAsync(string code, CancellationToken cancellationToken);
 

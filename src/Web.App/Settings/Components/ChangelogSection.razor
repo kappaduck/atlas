@@ -1,10 +1,32 @@
+@inject AppLocalizer Localizer
+
 @if (_isLoading)
 {
-	<span class="spinner"></span>
+	<div class="loading-state">
+		<span class="quack-spinner quack-spinner-lg"></span>
+		<span class="text">@Localizer.FetchingChangelog</span>
+	</div>
 }
 else
 {
-	<div class="changelog">
-		@_changelog
-	</div>
+	if (_hasError)
+	{
+		<div class="error-state">
+			<div class="error">
+				<span class="icon"><i class="bi bi-cloud-slash"></i></span>
+				<span class="text">@Localizer.CouldNotLoadChangelog</span>
+				<span class="subtitle">@Localizer.ChangelogFailedToLoad</span>
+				<button type="button" class="quack-btn quack-btn-primary quack-btn-sm" @onclick="FetchChangelogAsync">
+					<i class="bi bi-arrow-clockwise"></i> @Localizer.Retry
+				</button>
+			</div>
+		</div>
+	}
+	else
+	{
+		<div class="changelog">
+			<h1>@Localizer.Changelog</h1>
+			@_changelog
+		</div>
+	}
 }

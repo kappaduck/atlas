@@ -7,17 +7,23 @@ using Microsoft.AspNetCore.Components;
 using Web.App.Games.Components;
 using Web.App.Options;
 using Web.App.Settings;
+using Web.App.Storage;
 
 namespace Web.App.Games.Flags;
 
-public sealed partial class Random(ICountryService service, DevOptions options) : IDisposable
+public sealed partial class Random(ICountryService service, ILocalStorage storage, DevOptions options) : IDisposable
 {
     private const int MaxAttempts = 6;
 
     private readonly CancellationTokenSource _cts = new();
     private readonly GameState _gameState = new(MaxAttempts);
 
-    private LookupInput _input = default!;
+    private Score _score = new("random:flag:streak");
+    private CountryInput _input = default!;
+
+    private bool _hasError;
+    private bool _isLoading;
+    private bool _preview;
 
     [CascadingParameter]
     public required AppState State { get; init; }
@@ -25,14 +31,21 @@ public sealed partial class Random(ICountryService service, DevOptions options) 
     [Parameter]
     public string? Cca2 { get; init; }
 
-    private string FoundCss
+    private string DifficultyCss
     {
         get
         {
-            if (!_gameState.GameFinished)
+            if (State.Flag == FlagDifficulty.None || (_gameState.GameFinished && !_preview))
                 return string.Empty;
 
-            return _gameState.Found ? "success" : "wrong";
+            return State.Flag switch
+            {
+                FlagDifficulty.Blur => "blur",
+                FlagDifficulty.Grayscale => "grayscale",
+                FlagDifficulty.Invert => "invert",
+                FlagDifficulty.Shift => "shift",
+                _ => string.Empty
+            };
         }
     }
 
@@ -42,10 +55,54 @@ public sealed partial class Random(ICountryService service, DevOptions options) 
         _cts.Dispose();
     }
 
-    protected override async Task OnInitializedAsync()
+    protected override Task OnInitializedAsync() => FetchGameAsync();
+
+    private async Task GuessAsync(string cca2)
     {
-        CountryResponse? country = await GetAsync(_cts.Token) ?? throw new InvalidOperationException();
-        _gameState.Start(country);
+        GuessedCountryResponse? guessedCountry = await service.GuessAsync(cca2, _gameState.Country!.Cca2, _cts.Token);
+
+        _gameState.Guesses.Add(guessedCountry!);
+
+        if (_gameState.GameFinished)
+        {
+            if (_gameState.Found)
+                _score.Increment();
+            else
+                _score.Reset();
+
+            storage.SetItem(_score.Key, _score);
+        }
+    }
+
+    private void GiveUp()
+    {
+        _gameState.GiveUp();
+
+        _score.Reset();
+        storage.SetItem(_score.Key, _score);
+    }
+
+    private async Task FetchGameAsync()
+    {
+        try
+        {
+            _isLoading = true;
+            CountryResponse? country = await GetAsync(_cts.Token);
+
+            if (country is null)
+                return;
+
+            _score = storage.GetItem<Score>(_score.Key) ?? _score;
+            _gameState.Start(country);
+        }
+        catch (Exception)
+        {
+            _hasError = true;
+        }
+        finally
+        {
+            _isLoading = false;
+        }
 
         Task<CountryResponse?> GetAsync(CancellationToken cancellationToken)
         {
@@ -56,17 +113,27 @@ public sealed partial class Random(ICountryService service, DevOptions options) 
         }
     }
 
-    private async Task GuessAsync(string cca2)
-    {
-        GuessedCountryResponse? guessedCountry = await service.GuessAsync(cca2, _gameState.Country!.Cca2, _cts.Token) ?? throw new InvalidOperationException();
-        _gameState.Guesses.Add(guessedCountry);
-    }
-
     private async Task PlayAgainAsync()
     {
         _input.Reset();
 
-        CountryResponse? country = await service.RandomizeAsync(_cts.Token) ?? throw new InvalidOperationException();
-        _gameState.Reset(country);
+        try
+        {
+            _isLoading = true;
+            CountryResponse? country = await service.RandomizeAsync(_cts.Token);
+
+            if (country is null)
+                return;
+
+            _gameState.Reset(country);
+        }
+        catch (Exception)
+        {
+            _hasError = true;
+        }
+        finally
+        {
+            _isLoading = false;
+        }
     }
 }

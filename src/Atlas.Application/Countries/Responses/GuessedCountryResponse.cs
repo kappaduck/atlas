@@ -19,7 +19,11 @@ public sealed record GuessedCountryResponse
 
     public required double Direction { get; init; }
 
+    public required int Proximity { get; init; }
+
     public required bool Success { get; init; }
 
     public required Uri Flag { get; init; }
+
+    public required Uri Map { get; init; }
 }

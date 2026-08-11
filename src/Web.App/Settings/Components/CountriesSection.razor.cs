@@ -11,25 +11,46 @@ namespace Web.App.Settings.Components;
 public sealed partial class CountriesSection(ICountryService service)
 {
     private bool _isLoading;
-    private CountryResponse[] _countries = [];
+    private bool _hasError;
     private string? _search;
+    private CountryListItem[] _countries = [];
+    private CountryListItem[] _filteredCountries = [];
 
     [Parameter, EditorRequired]
-    public required CancellationToken CancellationToken { get; set; }
+    public required CancellationToken CancellationToken { get; init; }
 
-    protected override async Task OnInitializedAsync()
+    protected override Task OnInitializedAsync() => FetchCountriesAsync();
+
+    private async Task FetchCountriesAsync()
     {
+        _hasError = false;
         _isLoading = true;
-        _countries = [.. (await service.GetAllAsync(CancellationToken)).OrderBy(c => c.Name)];
 
-        _isLoading = false;
+        try
+        {
+            _countries = [.. (await service.GetAllAsync(CancellationToken)).OrderBy(c => c.Name)];
+            _filteredCountries = _countries;
+        }
+        catch (HttpRequestException)
+        {
+            _hasError = true;
+        }
+        finally
+        {
+            _isLoading = false;
+        }
     }
 
-    private Span<CountryResponse> GetFilteredCountries()
+    private void Search(string? search)
     {
-        if (string.IsNullOrEmpty(_search))
-            return _countries;
+        _search = search;
 
-        return _countries.Where(c => string.Lookup(c.Name, _search)).ToArray();
+        if (string.IsNullOrEmpty(_search))
+        {
+            _filteredCountries = _countries;
+            return;
+        }
+
+        _filteredCountries = [.. _countries.Where(c => string.Lookup(c.Name, _search))];
     }
 }

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FlagQuiz" xml:space="preserve">
+    <value>Flag Quiz</value>
+  </data>
+  <data name="Atlas" xml:space="preserve">
+    <value>Atlas</value>
+  </data>
+  <data name="AtlasDescription" xml:space="preserve">
+    <value>A quick daily brain-teaser for you. One shape, one flag, a handful of guesses. How close can you get?</value>
+  </data>
+  <data name="AtlasGitHub" xml:space="preserve">
+    <value>Atlas on GitHub</value>
+  </data>
+  <data name="BrowseIssues" xml:space="preserve">
+    <value>Browse existing issues</value>
+  </data>
+  <data name="BrowseModes" xml:space="preserve">
+    <value>Browse modes</value>
+  </data>
+  <data name="ChooseGame" xml:space="preserve">
+    <value>Choose your game</value>
+  </data>
+  <data name="ComingSoon" xml:space="preserve">
+    <value>Coming soon</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="DailyCountry" xml:space="preserve">
+    <value>Daily Country</value>
+  </data>
+  <data name="DailyCountryDescription" xml:space="preserve">
+    <value>Guess the country shape. A fresh shape every day.</value>
+  </data>
+  <data name="DailyFlag" xml:space="preserve">
+    <value>Daily Flag</value>
+  </data>
+  <data name="DailyFlagDescription" xml:space="preserve">
+    <value>Guess the flag. A fresh flag every day.</value>
+  </data>
+  <data name="DailyGeographyGame" xml:space="preserve">
+    <value>Daily geography game</value>
+  </data>
+  <data name="Endless" xml:space="preserve">
+    <value>Endless</value>
+  </data>
+  <data name="FlagQuizDescription" xml:space="preserve">
+    <value>Spot the flag. Pick the right country from the four answers. Keep your streak alive as long as you can.</value>
+  </data>
+  <data name="GuessCountry" xml:space="preserve">
+    <value>Guess the country!</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>Logo</value>
+  </data>
+  <data name="ModeDescription" xml:space="preserve">
+    <value>Multiple ways to play. Adjust the difficulty any time from settings.</value>
+  </data>
+  <data name="OpenIssue" xml:space="preserve">
+    <value>Open an issue on GitHub and we'll take a look.</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="PlayTodayFlag" xml:space="preserve">
+    <value>Play today's flag</value>
+  </data>
+  <data name="ReportBug" xml:space="preserve">
+    <value>Report a bug</value>
+  </data>
+  <data name="RequestFeature" xml:space="preserve">
+    <value>Request a feature</value>
+  </data>
+  <data name="ReverseCountry" xml:space="preserve">
+    <value>Reverse Country</value>
+  </data>
+  <data name="ReverseCountryDescription" xml:space="preserve">
+    <value>We show the facts such as capital, region, population and more. You name the country.</value>
+  </data>
+  <data name="SendFeedback" xml:space="preserve">
+    <value>Send feedback</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="UnlimitedCountry" xml:space="preserve">
+    <value>Unlimited Country</value>
+  </data>
+  <data name="UnlimitedCountryDescription" xml:space="preserve">
+    <value>Endless country shapes until you finally slip up.</value>
+  </data>
+  <data name="UnlimitedFlag" xml:space="preserve">
+    <value>Unlimited Flag</value>
+  </data>
+  <data name="UnlimitedFlagDescription" xml:space="preserve">
+    <value>Endless flags until you finally slip up.</value>
+  </data>
+  <data name="ViewChangelog" xml:space="preserve">
+    <value>View changelog</value>
+  </data>
+  <data name="HideSeek" xml:space="preserve">
+    <value>Hide and seek</value>
+  </data>
+  <data name="HideSeekDescription" xml:space="preserve">
+    <value>A flag hides behind six tiles. Guess it in as few reveals as you can.</value>
+  </data>
+  <data name="PixelatedFlag" xml:space="preserve">
+    <value>Pixelated Flag</value>
+  </data>
+  <data name="PixelatedFlagDescription" xml:space="preserve">
+    <value>Start with a black screen. Each guess paints in the colors that match the hidden flag.</value>
+  </data>
+  <data name="LostAtSea" xml:space="preserve">
+    <value>Lost at sea</value>
+  </data>
+  <data name="PlaceNotOnMap" xml:space="preserve">
+    <value>This place isn't on the map.</value>
+  </data>
+  <data name="NotFoundMessage" xml:space="preserve">
+    <value>This page doesn't exist or was moved. The globe doesn't know where it went either.</value>
+  </data>
+  <data name="BackToHome" xml:space="preserve">
+    <value>Back to home</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Difficulty" xml:space="preserve">
+    <value>Difficulty</value>
+  </data>
+  <data name="Changelog" xml:space="preserve">
+    <value>Changelog</value>
+  </data>
+  <data name="Countries" xml:space="preserve">
+    <value>Countries</value>
+  </data>
+  <data name="Appearance" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="ThemeDescription" xml:space="preserve">
+    <value>Light, dark or match your system.</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LanguageDescription" xml:space="preserve">
+    <value>Interface language.</value>
+  </data>
+  <data name="DistanceUnit" xml:space="preserve">
+    <value>Distance unit</value>
+  </data>
+  <data name="DistanceUnitDescription" xml:space="preserve">
+    <value>How guess distances are shown.</value>
+  </data>
+  <data name="Kilometers" xml:space="preserve">
+    <value>Kilometers</value>
+  </data>
+  <data name="Miles" xml:space="preserve">
+    <value>Miles</value>
+  </data>
+  <data name="Hints" xml:space="preserve">
+    <value>Hints</value>
+  </data>
+  <data name="DistanceHint" xml:space="preserve">
+    <value>Distance to the answer</value>
+  </data>
+  <data name="DirectionHint" xml:space="preserve">
+    <value>Direction arrow</value>
+  </data>
+  <data name="ContinentHint" xml:space="preserve">
+    <value>Continent match</value>
+  </data>
+  <data name="ProximityBarHint" xml:space="preserve">
+    <value>Proximity bar</value>
+  </data>
+  <data name="GuessFlagHint" xml:space="preserve">
+    <value>Guess flag hint</value>
+  </data>
+  <data name="GuessFlagHintDescription" xml:space="preserve">
+    <value>flag on each guessed row (Flag games)</value>
+  </data>
+  <data name="FlagHint" xml:space="preserve">
+    <value>Flag hint</value>
+  </data>
+  <data name="FlagHintDescription" xml:space="preserve">
+    <value>reveal button to peek at the flag (Country games)</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="ResetAtlas" xml:space="preserve">
+    <value>Reset Atlas</value>
+  </data>
+  <data name="ClearPreferences" xml:space="preserve">
+    <value>Clear saved preferences and game progress from this browser.</value>
+  </data>
+  <data name="ClearData" xml:space="preserve">
+    <value>Clear data</value>
+  </data>
+  <data name="French" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="ConfirmClearData" xml:space="preserve">
+    <value>Are you sure you want to clear your preferences and game progress?</value>
+  </data>
+  <data name="FlagDifficulty" xml:space="preserve">
+    <value>Flag difficulty</value>
+  </data>
+  <data name="FlagDifficultyDescription" xml:space="preserve">
+    <value>Pick one effect applied to the flag you're guessing.</value>
+  </data>
+  <data name="CountryDifficulty" xml:space="preserve">
+    <value>Country difficulty</value>
+  </data>
+  <data name="CountryDifficultyDescription" xml:space="preserve">
+    <value>Combine any of these on the silhouette.</value>
+  </data>
+  <data name="Blur" xml:space="preserve">
+    <value>Blur</value>
+  </data>
+  <data name="CountryBlurDescription" xml:space="preserve">
+    <value>soften the outline</value>
+  </data>
+  <data name="Rotate" xml:space="preserve">
+    <value>Rotate</value>
+  </data>
+  <data name="RotationDescription" xml:space="preserve">
+    <value>turn it a random angle</value>
+  </data>
+  <data name="Mirror" xml:space="preserve">
+    <value>Mirror</value>
+  </data>
+  <data name="MirrorDescription" xml:space="preserve">
+    <value>flip horizontally</value>
+  </data>
+  <data name="RotationRandomisedDescription" xml:space="preserve">
+    <value>The rotation angle is randomised every round.</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Grayscale" xml:space="preserve">
+    <value>Grayscale</value>
+  </data>
+  <data name="Invert" xml:space="preserve">
+    <value>Invert</value>
+  </data>
+  <data name="HueShift" xml:space="preserve">
+    <value>Hue shift</value>
+  </data>
+  <data name="NoneDescription" xml:space="preserve">
+    <value>Plain flag.</value>
+  </data>
+  <data name="BlurDescription" xml:space="preserve">
+    <value>Softened edges.</value>
+  </data>
+  <data name="GrayscaleDescription" xml:space="preserve">
+    <value>No colour cues.</value>
+  </data>
+  <data name="InvertDescription" xml:space="preserve">
+    <value>Colours flipped.</value>
+  </data>
+  <data name="HueShiftDescription" xml:space="preserve">
+    <value>Colours rotated.</value>
+  </data>
+  <data name="FetchingChangelog" xml:space="preserve">
+    <value>Fetching changelog...</value>
+  </data>
+  <data name="CouldNotLoadChangelog" xml:space="preserve">
+    <value>Couldn't load the changelog</value>
+  </data>
+  <data name="ChangelogFailedToLoad" xml:space="preserve">
+    <value>The changelog failed to load. Give it another try.</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="CountriesFailedToLoad" xml:space="preserve">
+    <value>The country list failed to load. Give it another try.</value>
+  </data>
+  <data name="FetchingCountries" xml:space="preserve">
+    <value>Fetching countries...</value>
+  </data>
+  <data name="CouldNotLoadCountries" xml:space="preserve">
+    <value>Couldn't load the countries list</value>
+  </data>
+  <data name="SearchCountries" xml:space="preserve">
+    <value>Search countries...</value>
+  </data>
+  <data name="CountriesFound" xml:space="preserve">
+    <value>{0} of {1}</value>
+  </data>
+  <data name="OpenCountryOnMap" xml:space="preserve">
+    <value>Open {0} in Google Maps</value>
+  </data>
+  <data name="YourGuesses" xml:space="preserve">
+    <value>Your guesses</value>
+  </data>
+  <data name="GiveUp" xml:space="preserve">
+    <value>Give up</value>
+  </data>
+  <data name="GuessLeft" xml:space="preserve">
+    <value>{0} left</value>
+  </data>
+  <data name="WhichCountryFliesFlag" xml:space="preserve">
+    <value>Which country flies this flag?</value>
+  </data>
+  <data name="Best" xml:space="preserve">
+    <value>Best</value>
+  </data>
+  <data name="Streak" xml:space="preserve">
+    <value>Streak</value>
+  </data>
+  <data name="SameForEveryone" xml:space="preserve">
+    <value>Same for everyone</value>
+  </data>
+  <data name="OneDay" xml:space="preserve">
+    <value>One a day</value>
+  </data>
+  <data name="BackToModes" xml:space="preserve">
+    <value>Back to modes</value>
+  </data>
+  <data name="Navigate" xml:space="preserve">
+    <value>Navigate</value>
+  </data>
+  <data name="GuessCountryPlaceholder" xml:space="preserve">
+    <value>Guess the country...</value>
+  </data>
+  <data name="Here" xml:space="preserve">
+    <value>Here!</value>
+  </data>
+  <data name="ViewOnGoogleMaps" xml:space="preserve">
+    <value>View on Google Maps</value>
+  </data>
+  <data name="NailedIt" xml:space="preserve">
+    <value>Nailed it! It's {0}!</value>
+  </data>
+  <data name="SolvedInGuess" xml:space="preserve">
+    <value>Solved in 1 guess.</value>
+  </data>
+  <data name="SolvedInGuesses" xml:space="preserve">
+    <value>Solved in {0} guesses.</value>
+  </data>
+  <data name="OutOfGuesses" xml:space="preserve">
+    <value>Out of guesses. It was {0}.</value>
+  </data>
+  <data name="GiveNextTry" xml:space="preserve">
+    <value>Give the next one a try.</value>
+  </data>
+  <data name="PreviewWithDifficultyEffect" xml:space="preserve">
+    <value>Preview with difficulty effect</value>
+  </data>
+  <data name="KeepPlayingUnlimited" xml:space="preserve">
+    <value>Keep playing unlimited</value>
+  </data>
+  <data name="TodayFlag" xml:space="preserve">
+    <value>That's today's flag! A new one drops tomorrow.</value>
+  </data>
+  <data name="LoadingGame" xml:space="preserve">
+    <value>Loading the game...</value>
+  </data>
+  <data name="CouldNotLoadGame" xml:space="preserve">
+    <value>Couldn't load the game</value>
+  </data>
+  <data name="FailedFetchingGame" xml:space="preserve">
+    <value>We hit a snag fetching country data. Check your connection and try again.</value>
+  </data>
+  <data name="FlagFailed" xml:space="preserve">
+    <value>Flag failed to load</value>
+  </data>
+  <data name="PlayAgain" xml:space="preserve">
+    <value>Play again</value>
+  </data>
+  <data name="ChaseYourStreak" xml:space="preserve">
+    <value>Chase your streak</value>
+  </data>
+  <data name="WhichCountryHasThisShape" xml:space="preserve">
+    <value>Which country has this shape?</value>
+  </data>
+  <data name="ShowFlagHint" xml:space="preserve">
+    <value>Show flag hint</value>
+  </data>
+  <data name="Rotated" xml:space="preserve">
+    <value>Rotated</value>
+  </data>
+</root>

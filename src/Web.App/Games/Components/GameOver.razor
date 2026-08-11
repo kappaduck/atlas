@@ -1,21 +1,42 @@
-@inject IStringLocalizer<Translations> Localizer
+@inject AppLocalizer Localizer
 
 <div class="game-over">
-	@ChildContent
-	<div class="message">
-		@if (GameState.Found)
-		{
-			<span>@Localizer.Congratulations &#127881;</span>
-		}
-		else
-		{
-			<span>@Localizer.YouFailed &#128532;</span>
-		}
-		<span>@GameState.Country!.Name</span>
+	@if (GameState.Found)
+	{
+		<div class="quack-alert quack-alert-accent">
+			<i class="bi bi-check-circle-fill"></i>
+			<div class="content">
+				<strong>@Localizer.NailedIt(GameState.Country!.Name)</strong>
+				<span>@Localizer.SolvedIn(GameState.Guesses.Count)</span>
+			</div>
+		</div>
+	}
+	else
+	{
+		<div class="quack-alert quack-alert-danger">
+			<i class="bi bi-flag-fill"></i>
+			<div class="content">
+				<strong>@Localizer.OutOfGuesses(GameState.Country!.Name)</strong>
+				<span>@Localizer.GiveNextTry</span>
+			</div>
+		</div>
+	}
+	@if (Preview)
+	{
+		<label class="quack-switch">
+			<input type="checkbox" @onchange="PreviewClickAsync" checked="@(_previewEnabled)" />
+			@Localizer.PreviewWithDifficultyEffect
+		</label>
+	}
+	<div class="actions">
+		<a href="@GameState.Country!.Resources.Map" target="_blank" class="quack-btn quack-btn-secondary quack-btn-lg">
+			<i class="bi bi-geo-alt"></i>
+			@Localizer.ViewOnGoogleMaps
+		</a>
+		@ChildContent
 	</div>
+	@if (!string.IsNullOrEmpty(Message))
+	{
+		<p class="message">@Message</p>
+	}
 </div>
-<div class="actions">
-	<a class="btn btn-primary" href="/">@Localizer.BackToGames</a>
-	<button class="btn btn-secondary" @onclick="OnSecondaryActionClick">@SecondaryActionLabel</button>
-</div>
-<a href="@GameState.Country.Resources.Map" target="_blank" class="map"><i class="@Icons.GeoAlt"></i> @Localizer.SeeOnMap</a>

@@ -1,0 +1,42 @@
+@inject AppLocalizer Localizer
+
+<div class="quack-combobox">
+	<input class="quack-input"
+		   type="search"
+		   placeholder="@Localizer.GuessCountryPlaceholder"
+		   autocomplete="off"
+		   aria-label="@Localizer.GuessCountryPlaceholder"
+		   @bind="_search"
+		   @oninput="Lookup"
+		   @onfocus="Focus"
+		   @onkeydown="HandleKeyboardAsync" />
+	<ul class="quack-combobox-list">
+		<li class="hint">
+			<span>@Localizer.Navigate</span>
+			<span class="keyboard">
+				<kbd>&uarr;</kbd>
+				<kbd>&darr;</kbd>
+				<kbd>&crarr;</kbd>
+			</span>
+		</li>
+		@foreach ((int index, (string code, string name)) in _filteredCountries.Index())
+		{
+			<li id="country-@index" class="quack-combobox-option" aria-selected="@IsActive(index)" @onclick="async () => await SelectCountryAsync(code)">
+				<i class="bi bi-geo-alt"></i>
+				<span>
+					@foreach ((string text, bool match) in Highlight(name))
+					{
+						if (match)
+						{
+							<mark>@text</mark>
+						}
+						else
+						{
+							@text
+						}
+					}
+				</span>
+			</li>
+		}
+	</ul>
+</div>

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FlagQuiz" xml:space="preserve">
+    <value>Quiz du drapeau</value>
+  </data>
+  <data name="Atlas" xml:space="preserve">
+    <value>Atlas</value>
+  </data>
+  <data name="AtlasDescription" xml:space="preserve">
+    <value>Un petit casse-tête quotidien pour toi. Une forme, un drapeau, quelques suppositions. Jusqu'où peux-tu t'approcher?</value>
+  </data>
+  <data name="AtlasGitHub" xml:space="preserve">
+    <value>Atlas sur GitHub</value>
+  </data>
+  <data name="BrowseIssues" xml:space="preserve">
+    <value>Parcourez les tickets existants</value>
+  </data>
+  <data name="BrowseModes" xml:space="preserve">
+    <value>Parcourir les modes</value>
+  </data>
+  <data name="ChooseGame" xml:space="preserve">
+    <value>Choisi ton jeu</value>
+  </data>
+  <data name="ComingSoon" xml:space="preserve">
+    <value>À venir bientôt</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>Quotidien</value>
+  </data>
+  <data name="DailyCountry" xml:space="preserve">
+    <value>Pays quotidien</value>
+  </data>
+  <data name="DailyCountryDescription" xml:space="preserve">
+    <value>Devine la forme du pays. Une nouvelle forme chaque jour.</value>
+  </data>
+  <data name="DailyFlag" xml:space="preserve">
+    <value>Drapeau quotidien</value>
+  </data>
+  <data name="DailyFlagDescription" xml:space="preserve">
+    <value>Devine le drapeau. Un drapeau neuf chaque jour.</value>
+  </data>
+  <data name="DailyGeographyGame" xml:space="preserve">
+    <value>Jeu quotidien de géographie</value>
+  </data>
+  <data name="Endless" xml:space="preserve">
+    <value>Infini</value>
+  </data>
+  <data name="FlagQuizDescription" xml:space="preserve">
+    <value>Repérez le drapeau. Choisissez le bon pays parmi les quatre réponses. Gardez votre série vivante aussi longtemps que possible.</value>
+  </data>
+  <data name="GuessCountry" xml:space="preserve">
+    <value>Devine le pays!</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Accueil</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>Logo</value>
+  </data>
+  <data name="ModeDescription" xml:space="preserve">
+    <value>Plusieurs façons de jouer. Ajuste la difficulté à tout moment depuis les réglages.</value>
+  </data>
+  <data name="OpenIssue" xml:space="preserve">
+    <value>Ouvrez un ticket sur GitHub et nous allons y jeter un œil.</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Jouer</value>
+  </data>
+  <data name="PlayTodayFlag" xml:space="preserve">
+    <value>Jouez le drapeau d'aujourd'hui</value>
+  </data>
+  <data name="ReportBug" xml:space="preserve">
+    <value>Signaler un bogue</value>
+  </data>
+  <data name="RequestFeature" xml:space="preserve">
+    <value>Demandez une fonctionnalité</value>
+  </data>
+  <data name="ReverseCountry" xml:space="preserve">
+    <value>Pays inversé</value>
+  </data>
+  <data name="ReverseCountryDescription" xml:space="preserve">
+    <value>Nous montrons des faits comme la capitale, la région, la population et plus encore. Vous nommez le pays.</value>
+  </data>
+  <data name="SendFeedback" xml:space="preserve">
+    <value>Envoyer des commentaires</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="UnlimitedCountry" xml:space="preserve">
+    <value>Pays sans fin</value>
+  </data>
+  <data name="UnlimitedCountryDescription" xml:space="preserve">
+    <value>Des formes de pays sans fin jusqu'à ce que tu fasses une erreur.</value>
+  </data>
+  <data name="UnlimitedFlag" xml:space="preserve">
+    <value>Drapeau sans fin</value>
+  </data>
+  <data name="UnlimitedFlagDescription" xml:space="preserve">
+    <value>Des drapeaux sans fin jusqu'à ce que tu fasses enfin une erreur.</value>
+  </data>
+  <data name="ViewChangelog" xml:space="preserve">
+    <value>Voir les mises à jour</value>
+  </data>
+  <data name="HideSeek" xml:space="preserve">
+    <value>Cache-cache</value>
+  </data>
+  <data name="HideSeekDescription" xml:space="preserve">
+    <value>Un drapeau se cache derrière six tuiles. Devine-le en le moins de révélations possible.</value>
+  </data>
+  <data name="PixelatedFlag" xml:space="preserve">
+    <value>Drapeau pixelisé</value>
+  </data>
+  <data name="PixelatedFlagDescription" xml:space="preserve">
+    <value>Commencez avec un écran noir. Chaque tentative peint les couleurs qui correspondent au drapeau caché.</value>
+  </data>
+  <data name="LostAtSea" xml:space="preserve">
+    <value>Perdu dans l'océan</value>
+  </data>
+  <data name="PlaceNotOnMap" xml:space="preserve">
+    <value>Cet endroit n'est pas sur la carte.</value>
+  </data>
+  <data name="NotFoundMessage" xml:space="preserve">
+    <value>Cette page n'existe pas ou a été déplacée. Le globe ne sait pas non plus où elle est allée.</value>
+  </data>
+  <data name="BackToHome" xml:space="preserve">
+    <value>Retour vers la maison</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Général</value>
+  </data>
+  <data name="Difficulty" xml:space="preserve">
+    <value>Difficulté</value>
+  </data>
+  <data name="Changelog" xml:space="preserve">
+    <value>Mise à jour</value>
+  </data>
+  <data name="Countries" xml:space="preserve">
+    <value>Pays</value>
+  </data>
+  <data name="Appearance" xml:space="preserve">
+    <value>Apparence</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Thème</value>
+  </data>
+  <data name="ThemeDescription" xml:space="preserve">
+    <value>Clair, sombre ou correspond à ton système.</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="LanguageDescription" xml:space="preserve">
+    <value>Langage d'interface.</value>
+  </data>
+  <data name="DistanceUnit" xml:space="preserve">
+    <value>Unité de distance</value>
+  </data>
+  <data name="DistanceUnitDescription" xml:space="preserve">
+    <value>Comment les distances d'essaie sont montrées.</value>
+  </data>
+  <data name="Kilometers" xml:space="preserve">
+    <value>Kilomètres</value>
+  </data>
+  <data name="Miles" xml:space="preserve">
+    <value>Miles</value>
+  </data>
+  <data name="Hints" xml:space="preserve">
+    <value>Indices</value>
+  </data>
+  <data name="DistanceHint" xml:space="preserve">
+    <value>Distance jusqu'à la réponse</value>
+  </data>
+  <data name="DirectionHint" xml:space="preserve">
+    <value>Flèche de direction</value>
+  </data>
+  <data name="ContinentHint" xml:space="preserve">
+    <value>Match du continent</value>
+  </data>
+  <data name="ProximityBarHint" xml:space="preserve">
+    <value>Bar de proximité</value>
+  </data>
+  <data name="GuessFlagHint" xml:space="preserve">
+    <value>Indice d'essaie de drapeau</value>
+  </data>
+  <data name="GuessFlagHintDescription" xml:space="preserve">
+    <value>drapeau sur chaque ligne devinée (jeux de drapeau)</value>
+  </data>
+  <data name="FlagHint" xml:space="preserve">
+    <value>Indice de drapeau</value>
+  </data>
+  <data name="FlagHintDescription" xml:space="preserve">
+    <value>bouton de révélation pour jeter un coup d'œil au drapeau (Jeux du pays)</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Données</value>
+  </data>
+  <data name="ResetAtlas" xml:space="preserve">
+    <value>Réinitialiser Atlas</value>
+  </data>
+  <data name="ClearPreferences" xml:space="preserve">
+    <value>Supprimer les préférences sauvegardées et la progression du jeu depuis ce navigateur.</value>
+  </data>
+  <data name="ClearData" xml:space="preserve">
+    <value>Supprimer les données</value>
+  </data>
+  <data name="French" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="ConfirmClearData" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir effacer vos préférences et la progression du jeu?</value>
+  </data>
+  <data name="FlagDifficulty" xml:space="preserve">
+    <value>Difficulté du drapeau</value>
+  </data>
+  <data name="FlagDifficultyDescription" xml:space="preserve">
+    <value>Choisis un effet appliqué au drapeau que tu devines.</value>
+  </data>
+  <data name="CountryDifficulty" xml:space="preserve">
+    <value>Difficulté du pays</value>
+  </data>
+  <data name="CountryDifficultyDescription" xml:space="preserve">
+    <value>Combinez n'importe lequel de ces éléments sur la silhouette.</value>
+  </data>
+  <data name="Blur" xml:space="preserve">
+    <value>Flou</value>
+  </data>
+  <data name="CountryBlurDescription" xml:space="preserve">
+    <value>Adoucir le contour</value>
+  </data>
+  <data name="Rotate" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+  <data name="RotationDescription" xml:space="preserve">
+    <value>Tourne la sihoulette d'un angle aléatoire</value>
+  </data>
+  <data name="Mirror" xml:space="preserve">
+    <value>Miroir</value>
+  </data>
+  <data name="MirrorDescription" xml:space="preserve">
+    <value>Retourner horizontalement</value>
+  </data>
+  <data name="RotationRandomisedDescription" xml:space="preserve">
+    <value>L'angle de rotation est aléatoire à chaque manche.</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>Aucun</value>
+  </data>
+  <data name="Grayscale" xml:space="preserve">
+    <value>Niveaux de gris</value>
+  </data>
+  <data name="Invert" xml:space="preserve">
+    <value>Inverser</value>
+  </data>
+  <data name="HueShift" xml:space="preserve">
+    <value>Changement de teinte</value>
+  </data>
+  <data name="NoneDescription" xml:space="preserve">
+    <value>Drapeau simple.</value>
+  </data>
+  <data name="BlurDescription" xml:space="preserve">
+    <value>Des bords adoucis.</value>
+  </data>
+  <data name="GrayscaleDescription" xml:space="preserve">
+    <value>Aucun indice de couleur.</value>
+  </data>
+  <data name="InvertDescription" xml:space="preserve">
+    <value>Couleurs inversées</value>
+  </data>
+  <data name="HueShiftDescription" xml:space="preserve">
+    <value>Couleurs tournées</value>
+  </data>
+  <data name="FetchingChangelog" xml:space="preserve">
+    <value>Chargement des notes de mise à jour...</value>
+  </data>
+  <data name="CouldNotLoadChangelog" xml:space="preserve">
+    <value>Impossible de charger les notes de mise à jour</value>
+  </data>
+  <data name="ChangelogFailedToLoad" xml:space="preserve">
+    <value>Les notes de mise à jour ne s'est pas chargé. Réessayer à nouveau.</value>
+  </data>
+  <data name="Retry" xml:space="preserve">
+    <value>Réessayer</value>
+  </data>
+  <data name="CountriesFailedToLoad" xml:space="preserve">
+    <value>La liste des pays n'a pas chargé. Réessayer à nouveau.</value>
+  </data>
+  <data name="FetchingCountries" xml:space="preserve">
+    <value>Chargement de la liste de pays...</value>
+  </data>
+  <data name="CouldNotLoadCountries" xml:space="preserve">
+    <value>Impossible de charger la liste des pays</value>
+  </data>
+  <data name="SearchCountries" xml:space="preserve">
+    <value>Chercher des pays...</value>
+  </data>
+  <data name="CountriesFound" xml:space="preserve">
+    <value>{0} sur {1}</value>
+  </data>
+  <data name="OpenCountryOnMap" xml:space="preserve">
+    <value>Ouvrir {0} sur Google Maps</value>
+  </data>
+  <data name="YourGuesses" xml:space="preserve">
+    <value>Vos essaies</value>
+  </data>
+  <data name="GiveUp" xml:space="preserve">
+    <value>Abandonne</value>
+  </data>
+  <data name="GuessLeft" xml:space="preserve">
+    <value>{0} restants</value>
+  </data>
+  <data name="WhichCountryFliesFlag" xml:space="preserve">
+    <value>Quel pays arbore ce drapeau?</value>
+  </data>
+  <data name="Best" xml:space="preserve">
+    <value>Meilleur</value>
+  </data>
+  <data name="Streak" xml:space="preserve">
+    <value>Série</value>
+  </data>
+  <data name="SameForEveryone" xml:space="preserve">
+    <value>Pareil pour tout le monde</value>
+  </data>
+  <data name="OneDay" xml:space="preserve">
+    <value>Un par jour</value>
+  </data>
+  <data name="BackToModes" xml:space="preserve">
+    <value>Retour vers les modes</value>
+  </data>
+  <data name="Navigate" xml:space="preserve">
+    <value>Naviguer</value>
+  </data>
+  <data name="GuessCountryPlaceholder" xml:space="preserve">
+    <value>Devine le pays...</value>
+  </data>
+  <data name="Here" xml:space="preserve">
+    <value>Ici!</value>
+  </data>
+  <data name="ViewOnGoogleMaps" xml:space="preserve">
+    <value>Voir sur Google Maps</value>
+  </data>
+  <data name="NailedIt" xml:space="preserve">
+    <value>Parfait! C'est {0}!</value>
+  </data>
+  <data name="SolvedInGuess" xml:space="preserve">
+    <value>Résolu en une seule tentative.</value>
+  </data>
+  <data name="SolvedInGuesses" xml:space="preserve">
+    <value>Résolu en {0} tentatives.</value>
+  </data>
+  <data name="OutOfGuesses" xml:space="preserve">
+    <value>À court d'essais. C'était {0}.</value>
+  </data>
+  <data name="GiveNextTry" xml:space="preserve">
+    <value>Essaie le prochain.</value>
+  </data>
+  <data name="PreviewWithDifficultyEffect" xml:space="preserve">
+    <value>Aperçu avec effet de difficulté</value>
+  </data>
+  <data name="KeepPlayingUnlimited" xml:space="preserve">
+    <value>Continue à jouer en infini</value>
+  </data>
+  <data name="TodayFlag" xml:space="preserve">
+    <value>C'est le drapeau d'aujourd'hui! Un nouveau sort demain.</value>
+  </data>
+  <data name="LoadingGame" xml:space="preserve">
+    <value>Chargement du jeu...</value>
+  </data>
+  <data name="CouldNotLoadGame" xml:space="preserve">
+    <value>Impossible de charger le jeu</value>
+  </data>
+  <data name="FailedFetchingGame" xml:space="preserve">
+    <value>On a eu un problème en récupérant des données de pays. Vérifie ta connexion et réessaie.</value>
+  </data>
+  <data name="FlagFailed" xml:space="preserve">
+    <value>Le drapeau n'a pas réussi à se charger</value>
+  </data>
+  <data name="PlayAgain" xml:space="preserve">
+    <value>Jouer à nouveau</value>
+  </data>
+  <data name="ChaseYourStreak" xml:space="preserve">
+    <value>Poursuis ta série</value>
+  </data>
+  <data name="WhichCountryHasThisShape" xml:space="preserve">
+    <value>Quel pays a cette forme?</value>
+  </data>
+  <data name="ShowFlagHint" xml:space="preserve">
+    <value>Indice pour montrer le drapeau</value>
+  </data>
+  <data name="Rotated" xml:space="preserve">
+    <value>Rotation</value>
+  </data>
+</root>

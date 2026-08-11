@@ -2,36 +2,117 @@
 @using Web.App.Settings
 
 @page "/countries/daily"
-@inject IStringLocalizer<Translations> Localizer
+@inject AppLocalizer Localizer
 
 <CascadingValue Value="_gameState" IsFixed="false">
-	<div class="game">
-		<div class="challenge-card @FoundCss">
-			@if (_gameState.Country is null)
+	<main class="game">
+		<Scoreboard Score="_score" Icon="flag-fill" Title="@Localizer.DailyCountry" Subtitle="@Localizer.OneDay" Label="@Localizer.SameForEveryone" />
+		<div class="quack-card">
+			@if (_isLoading)
 			{
-				<span class="spinner"></span>
+				<div class="game-spinner">
+					<span class="quack-spinner quack-spinner-lg quack-spinner-accent"></span>
+					<span class="text">@Localizer.LoadingGame</span>
+				</div>
+			}
+			else if (_hasError)
+			{
+				<div class="error-state">
+					<span class="icon"><i class="bi bi-wifi-off"></i></span>
+					<span class="title">@Localizer.CouldNotLoadGame</span>
+					<span class="text">@Localizer.FailedFetchingGame</span>
+					<div class="actions">
+						<button type="button" class="quack-btn quack-btn-primary" @onclick="FetchGameAsync">
+							<i class="bi bi-arrow-clockwise"></i>
+							@Localizer.Retry
+						</button>
+					</div>
+				</div>
 			}
 			else
 			{
-				if (!_gameState.GameFinished)
+				@if (State.Country != CountryDifficulty.None && !_gameState.GameFinished)
 				{
-					<picture class="country">
-						<source srcset="@_gameState.Country.Resources.Country" />
-						<img src="@_gameState.Country.Resources.Country" alt="@Localizer.AlternateCountryImage" style="@State.Country.Css(_gameState.Guesses.Count, _rotation)" />
-					</picture>
+					<div class="difficulty">
+						<span class="label">@Localizer.Difficulty</span>
+						@if ((State.Country & CountryDifficulty.Blur) != 0)
+						{
+							<span class="quack-chip quack-chip-primary">
+								<i class="bi bi-circle-half"></i>
+								@Localizer.Blur
+							</span>
+						}
+						@if ((State.Country & CountryDifficulty.Rotated) != 0)
+						{
+							<span class="quack-chip quack-chip-primary">
+								<i class="bi bi-arrow-clockwise"></i>
+								@Localizer.Rotated
+							</span>
+						}
+						@if ((State.Country & CountryDifficulty.Mirrored) != 0)
+						{
+							<span class="quack-chip quack-chip-primary">
+								<i class="bi bi-symmetry-vertical"></i>
+								@Localizer.Mirror
+							</span>
+						}
+					</div>
+				}
+				<div class="flag">
+					<div class="wrapper">
+						@if (_gameState.Country is null)
+						{
+							<div class="country-not-found">
+								<i class="bi bi-image-alt"></i>
+								<span class="text">@Localizer.FlagFailed</span>
+								<button type="button" class="quack-btn quack-btn-secondary quack-btn-sm" @onclick="FetchGameAsync">
+									<i class="bi bi-arrow-clockwise"></i>
+									@Localizer.Retry
+								</button>
+							</div>
+						}
+						else
+						{
+							<div class="background">
+								<img src="@_gameState.Country.Resources.Country" style="@DifficultyCss" />
+							</div>
+						}
+					</div>
+				</div>
+				<span class="question">@Localizer.WhichCountryHasThisShape</span>
+				@if (!_gameState.GameFinished && State.FlagHint)
+				{
+					<div class="flag-hint">
+						@if (!_flagHint)
+						{
+							<button type="button" class="quack-btn quack-btn-secondary quack-btn-sm" @onclick="() => _flagHint = true">
+								<i class="bi bi-flag"></i>
+								@Localizer.ShowFlagHint
+							</button>
+						}
+						else
+						{
+							<span class="label">@Localizer.FlagHint</span>
+							<img src="@_gameState.Country!.Resources.Flag" />
+						}
+					</div>
+				}
+				@if (_gameState.GameFinished)
+				{
+					<GameOver Message="@Localizer.TodayFlag" Preview="State.Country != CountryDifficulty.None" OnPreviewClick="(preview) => _preview = preview">
+						<a href="/countries/random" class="quack-btn quack-btn-primary quack-btn-lg">
+							<i class="bi bi-infinity"></i>
+							@Localizer.KeepPlayingUnlimited
+						</a>
+					</GameOver>
 				}
 				else
 				{
-					<GameOver SecondaryActionLabel="@Localizer.PlayRandom" OnSecondaryActionClick="NavigateToRandom">
-						<picture class="country">
-							<source srcset="@_gameState.Country.Resources.Country" />
-							<img src="@_gameState.Country.Resources.Country" />
-						</picture>
-					</GameOver>
+					<CountryInput OnLookup="GuessAsync" />
+					<GameActions OnGiveUp="GiveUp" />
 				}
 			}
 		</div>
-		<LookupInput OnLookup="GuessAsync" />
 		<Guesses />
-	</div>
+	</main>
 </CascadingValue>

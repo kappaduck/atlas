@@ -3,11 +3,12 @@
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
+using System.Runtime.InteropServices.JavaScript;
 using Web.App.Storage;
 
 namespace Web.App.Settings;
 
-public sealed partial class AppState(IJSInProcessRuntime jsRuntime, ILocalStorage storage, NavigationManager navigation)
+public sealed partial class AppState(ILocalStorage storage, IJSInProcessRuntime jsRuntime, NavigationManager navigation)
 {
     private const string StorageKey = "settings";
     private Data _data = new();
@@ -26,7 +27,7 @@ public sealed partial class AppState(IJSInProcessRuntime jsRuntime, ILocalStorag
             _data = _data with { General = _data.General with { Theme = value } };
             storage.SetItem(StorageKey, _data);
 
-            jsRuntime.InvokeVoid("changeTheme", value.ToString());
+            ChangeTheme(value);
         }
     }
 
@@ -54,21 +55,6 @@ public sealed partial class AppState(IJSInProcessRuntime jsRuntime, ILocalStorag
                 return;
 
             _data = _data with { General = _data.General with { Unit = value } };
-            storage.SetItem(StorageKey, _data);
-
-            StateHasChanged();
-        }
-    }
-
-    public bool ContinentHint
-    {
-        get => _data.General.ContinentHint;
-        set
-        {
-            if (_data.General.ContinentHint == value)
-                return;
-
-            _data = _data with { General = _data.General with { ContinentHint = value } };
             storage.SetItem(StorageKey, _data);
 
             StateHasChanged();
@@ -105,6 +91,36 @@ public sealed partial class AppState(IJSInProcessRuntime jsRuntime, ILocalStorag
         }
     }
 
+    public bool ContinentHint
+    {
+        get => _data.General.ContinentHint;
+        set
+        {
+            if (_data.General.ContinentHint == value)
+                return;
+
+            _data = _data with { General = _data.General with { ContinentHint = value } };
+            storage.SetItem(StorageKey, _data);
+
+            StateHasChanged();
+        }
+    }
+
+    public bool ProximityBarHint
+    {
+        get => _data.General.ProximityBarHint;
+        set
+        {
+            if (_data.General.ProximityBarHint == value)
+                return;
+
+            _data = _data with { General = _data.General with { ProximityBarHint = value } };
+            storage.SetItem(StorageKey, _data);
+
+            StateHasChanged();
+        }
+    }
+
     public bool FlagHint
     {
         get => _data.General.FlagHint;
@@ -114,6 +130,21 @@ public sealed partial class AppState(IJSInProcessRuntime jsRuntime, ILocalStorag
                 return;
 
             _data = _data with { General = _data.General with { FlagHint = value } };
+            storage.SetItem(StorageKey, _data);
+
+            StateHasChanged();
+        }
+    }
+
+    public bool GuessFlagHint
+    {
+        get => _data.General.GuessFlagHint;
+        set
+        {
+            if (_data.General.GuessFlagHint == value)
+                return;
+
+            _data = _data with { General = _data.General with { GuessFlagHint = value } };
             storage.SetItem(StorageKey, _data);
 
             StateHasChanged();
@@ -150,6 +181,15 @@ public sealed partial class AppState(IJSInProcessRuntime jsRuntime, ILocalStorag
         }
     }
 
+    public void Reset()
+    {
+        Clear();
+        _data = new Data();
+
+        storage.SetItem(StorageKey, _data);
+        navigation.Refresh();
+    }
+
     protected override void OnInitialized()
     {
         try
@@ -171,6 +211,9 @@ public sealed partial class AppState(IJSInProcessRuntime jsRuntime, ILocalStorag
     }
 
     private void ChangeTheme(Theme theme) => jsRuntime.InvokeVoid("changeTheme", theme.ToString());
+
+    [JSImport("globalThis.localStorage.clear")]
+    private static partial void Clear();
 
     private sealed record Data
     {

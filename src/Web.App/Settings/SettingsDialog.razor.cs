@@ -7,22 +7,27 @@ using Microsoft.JSInterop;
 
 namespace Web.App.Settings;
 
-public sealed partial class SettingsDialog(IJSInProcessRuntime jsRuntime) : IDisposable
+public sealed partial class SettingsDialog(IJSInProcessRuntime jsRuntime, IStringLocalizer<AppLocalizer> localizer) : IDisposable
 {
     private ElementReference _dialog;
     private TabItem? _selectedTab;
     private CancellationTokenSource? _cts;
     private DotNetObjectReference<SettingsDialog>? _reference;
 
-    [Inject]
-    private IStringLocalizer<Translations> Localizer { get; set; } = default!;
-
-    private (TabItem Tab, string Label)[] Tabs
+    private (TabItem Tab, string Icon, string Label)[] Tabs
     {
         get
         {
             TabItem[] tabs = Enum.GetValues<TabItem>();
-            return [.. tabs.Select(t => (t, Localizer[t.ToString()]))];
+            return [.. tabs.Select(t => (t, IconCss(t), localizer[t.ToString()]))];
+
+            static string IconCss(TabItem tab) => tab switch
+            {
+                TabItem.General => "sliders",
+                TabItem.Difficulty => "lightning-charge",
+                TabItem.Changelog => "list",
+                TabItem.Countries => "globe"
+            };
         }
     }
 
@@ -57,13 +62,13 @@ public sealed partial class SettingsDialog(IJSInProcessRuntime jsRuntime) : IDis
 
     private void Show(TabItem tab)
     {
+        ResetToken();
+
         _cts = new CancellationTokenSource();
         SelectTab(tab);
     }
 
     private void SelectTab(TabItem tab) => _selectedTab = tab;
-
-    private string IsActive(TabItem tab) => _selectedTab == tab ? "active" : string.Empty;
 
     private void ResetToken()
     {

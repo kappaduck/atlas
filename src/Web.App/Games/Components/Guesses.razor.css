@@ -1,90 +1,95 @@
 .guesses {
   display: flex;
   flex-direction: column;
-  gap: .35rem;
+  gap: var(--quack-space-2);
+
+  h4 {
+    font-size: var(--quack-text-xs);
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--quack-text-muted);
+    margin-bottom: 2px;
+  }
 
   .guess {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
     align-items: center;
-    gap: .75rem;
-    padding: .625rem .875rem;
+    gap: var(--quack-space-3);
+    padding: var(--quack-space-3) var(--quack-space-4);
     background: var(--quack-surface);
-    border: 1px solid var(--quack-border-400);
+    border: 1px solid var(--quack-border-200);
     border-radius: var(--quack-radius-md);
-    min-height: 48px;
-
-    &.empty {
-      display: flex;
-      justify-content: center;
-      opacity: 0.3;
-      color: var(--quack-muted-text);
-      font-size: var(--quack-text-sm);
-      font-weight: 500;
-    }
-
-    &.wrong {
-      border-color: var(--danger-color);
-      background: var(--danger-background);
-    }
+    font-size: var(--quack-text-sm);
 
     &.success {
-      border-color: var(--success-color);
-      background: var(--success-background);
+      border-color: var(--quack-accent);
+      background: var(--quack-success-soft);
+
+      .name {
+        color: var(--quack-success) !important;
+      }
     }
 
-    img {
-      width: 64px;
-      aspect-ratio: 3 / 2;
-    }
-
-    .info {
+    .name {
       display: flex;
-      flex-direction: column;
-      gap: 8px;
-      flex: 1;
+      align-items: center;
+      gap: var(--quack-space-2);
+      font-weight: 600;
+      color: var(--quack-text-primary);
 
-      h4 {
-        font-weight: 500;
-        color: var(--quack-primary-text);
+      img {
+        width: 28px;
+        height: 19px;
+        object-fit: cover;
+        border-radius: 3px;
+        flex: none;
+        box-shadow: var(--quack-shadow-sm);
       }
 
-      .hints {
-        display: flex;
+      .quack-badge {
+        font-size: var(--quack-text-xs);
+      }
+
+      .map {
+        display: inline-flex;
         align-items: center;
-        gap: 8px;
+        color: var(--quack-text-muted);
 
-        &:empty {
-          display: none;
+        &:hover {
+          color: var(--quack-text-accent);
         }
+      }
+    }
 
-        .hint {
-          --border-color: var(--quack-border-400);
-          --color: var(--quack-primary-text);
-          --background: var(--quack-elevated);
-          padding: 4px 8px;
-          color: var(--color);
-          background: var(--background);
-          font-size: var(--quack-text-xs);
-          font-weight: 500;
-          border: 1px solid var(--border-color);
-          border-radius: var(--quack-radius-sm);
+    .distance {
+      font-variant-numeric: tabular-nums;
+      color: var(--quack-text-secondary);
+    }
 
-          &.same {
-            --border-color: light-dark(var(--quack-teal-100), var(--quack-teal-600));
-            --color: light-dark(var(--quack-teal-600), var(--quack-teal-200));
-            --background: light-dark(var(--quack-teal-50), var(--quack-teal-900));
-          }
+    .direction {
+      font-size: 1.2em;
+      line-height: 1;
+      color: var(--quack-text-muted);
 
-          &.distance {
-            --border-color: light-dark(var(--quack-blue-200), var(--quack-blue-600));
-            --color: light-dark(var(--quack-blue-800), var(--quack-blue-200));
-            --background: light-dark(var(--quack-blue-50), var(--quack-blue-900));
-          }
+      i {
+        display: inline-block;
+      }
+    }
 
-          &.direction i {
-            display: block;
-          }
-        }
+    .proximity {
+      grid-column: 1 / -1;
+      height: 6px;
+      border-radius: var(--quack-radius-pill);
+      background: var(--quack-elevated);
+      overflow: hidden;
+
+      > span {
+        display: block;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--quack-danger-solid), var(--quack-warning), var(--quack-accent));
       }
     }
   }

@@ -3,32 +3,21 @@
 
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
+using System.Runtime.InteropServices.JavaScript;
 
 namespace Web.App.Settings.Components;
 
-public sealed partial class GeneralSection
+public sealed partial class GeneralSection(IStringLocalizer<AppLocalizer> localizer)
 {
     [CascadingParameter]
     public required AppState State { get; init; }
-
-    [Inject]
-    private IStringLocalizer<Translations> Localizer { get; set; } = default!;
-
-    private (Theme Theme, string Label)[] Themes
-    {
-        get
-        {
-            Theme[] themes = Enum.GetValues<Theme>();
-            return [.. themes.Select(t => (t, Localizer[t.ToString()]))];
-        }
-    }
 
     private (Language Language, string Label)[] Languages
     {
         get
         {
             Language[] languages = Enum.GetValues<Language>();
-            return [.. languages.Select(t => (t, Localizer[t.ToString()]))];
+            return [.. languages.Select(t => (t, localizer[t.ToString()]))];
         }
     }
 
@@ -37,7 +26,16 @@ public sealed partial class GeneralSection
         get
         {
             DistanceUnit[] units = Enum.GetValues<DistanceUnit>();
-            return [.. units.Select(t => (t, Localizer[t.ToString()]))];
+            return [.. units.Select(t => (t, localizer[t.ToString()]))];
         }
     }
+
+    private void ClearStorage()
+    {
+        if (Confirm(Localizer.ConfirmClearData))
+            State.Reset();
+    }
+
+    [JSImport("globalThis.confirm")]
+    private static partial bool Confirm(string message);
 }
