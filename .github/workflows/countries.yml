@@ -25,7 +25,7 @@ jobs:
           global-json-file: ./global.json
 
       - name: Merge countries
-        run: dotnet ./merge.countries.cs
+        run: dotnet ./scripts/merge.countries.cs
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v8
