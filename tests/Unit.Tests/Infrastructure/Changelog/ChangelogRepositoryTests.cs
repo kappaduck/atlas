@@ -61,7 +61,7 @@ public sealed class ChangelogRepositoryTests
     [Test]
     public async Task GetAsyncShouldReturnNullWhenContentIsNull()
     {
-        _client.GetAsync(CancellationToken.None).Returns((string?)null);
+        _client.GetAsync(CancellationToken.None).Returns(string.Empty);
 
         string? content = await _repository.GetAsync(CancellationToken.None);
         await Assert.That(content).IsNull();
