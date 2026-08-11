@@ -1,9 +1,9 @@
 <Project>
   <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Packages.props', '$(MSBuildThisFileDirectory)../'))" />
   <ItemGroup Label="Test packages">
-    <PackageVersion Include="NSubstitute" Version="6.0.0" />
-    <PackageVersion Include="TUnit" Version="1.63.0" />
-    <PackageVersion Include="TUnit.Mocks" Version="1.63.0" />
-    <PackageVersion Include="TUnit.Mocks.Http" Version="1.63.0" />
+    <PackageVersion Include="NSubstitute" Version="6.2.0" />
+    <PackageVersion Include="TUnit" Version="1.64.6" />
+    <PackageVersion Include="TUnit.Mocks" Version="1.64.6" />
+    <PackageVersion Include="TUnit.Mocks.Http" Version="1.64.6" />
   </ItemGroup>
 </Project>
