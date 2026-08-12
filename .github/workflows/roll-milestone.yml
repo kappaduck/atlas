@@ -22,5 +22,6 @@ jobs:
 
       - name: Roll milestone
         env:
+          TZ: America/Toronto
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: dotnet run ./scripts/roll-milestone.cs
