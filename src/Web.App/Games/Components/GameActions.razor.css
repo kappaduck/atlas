@@ -11,8 +11,8 @@
     gap: 6px;
 
     .guess {
-      width: 9px;
-      height: 9px;
+      width: 16px;
+      height: 16px;
       border-radius: 50%;
       flex: none;
       background: transparent;
