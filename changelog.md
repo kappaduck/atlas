@@ -4,6 +4,30 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 2026.08.11
+
+### Changed
+
+- Improved the UI (#71, #162, #164, #166, #167, #171)
+
+### Fixed
+
+- Bahamas has now all missing islands (#144)
+- Netherlands Caribbean has now all missing islands (#145)
+- Fix Saint-Barthélémy coordinates (#154, #174)
+
+<!-- 2026.08.11 -->
+[#71]: https://github.com/kappaduck/atlas/issues/71
+[#144]: https://github.com/kappaduck/atlas/issues/144
+[#145]: https://github.com/kappaduck/atlas/issues/145
+[#154]: https://github.com/kappaduck/atlas/issues/154
+[#162]: https://github.com/kappaduck/atlas/issues/162
+[#164]: https://github.com/kappaduck/atlas/issues/164
+[#166]: https://github.com/kappaduck/atlas/issues/166
+[#167]: https://github.com/kappaduck/atlas/issues/167
+[#171]: https://github.com/kappaduck/atlas/issues/171
+[#174]: https://github.com/kappaduck/atlas/issues/174
+
 ## 2026.05.13
 
 ### Changed

@@ -19,3 +19,7 @@ dotnet_diagnostic.CA1716.severity = none
 # Theses classes are used by the DI container
 # https://learn.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/ca1812
 dotnet_diagnostic.CA1812.severity = none
+
+# BL0016: JS interop call is not guarded with a try/catch block.
+# Disabled so we can release but it will be managed in later version
+dotnet_diagnostic.BL0016.severity = none

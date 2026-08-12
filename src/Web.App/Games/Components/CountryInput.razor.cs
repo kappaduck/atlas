@@ -116,12 +116,7 @@ public sealed partial class CountryInput(ICountryLookupService service, IJSInPro
         _module?.InvokeVoid("scrollToCountry", $"country-{_selectedIndex}");
     }
 
-    private void Focus()
-    {
-        _filteredCountries = LookupCountries();
-
-        StateHasChanged();
-    }
+    private void Focus() => _filteredCountries = LookupCountries();
 
     private bool TrySelectCountry([NotNullWhen(true)] out string? cca2)
     {
