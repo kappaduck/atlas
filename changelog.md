@@ -8,13 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
-- Improved the UI (#71, #162, #164, #166, #167, #171)
+- Improved the UI ([#71], [#162], [#164], [#166], [#167], [#171])
 
 ### Fixed
 
-- Bahamas has now all missing islands (#144)
-- Netherlands Caribbean has now all missing islands (#145)
-- Fix Saint-Barthélémy coordinates (#154, #174)
+- Bahamas has now all missing islands ([#144])
+- Netherlands Caribbean has now all missing islands ([#145])
+- Fix Saint-Barthélémy coordinates ([#154], [#174])
 
 <!-- 2026.08.11 -->
 [#71]: https://github.com/kappaduck/atlas/issues/71
