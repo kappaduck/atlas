@@ -8,11 +8,11 @@
     "longitude": 0
   },
   "area": 14000000,
-  "population": 1000,
+  "population": 1300,
   "resources": {
     "map": "https://goo.gl/maps/kyBuJriu4itiXank7",
     "flag": "https://flagcdn.com/aq.svg",
     "coatOfArms": "https://mainfacts.com/media/images/coats_of_arms/aq.svg",
-    "country": "https://cdn.jsdelivr.net/gh/kappaduck/atlas/countries/aq/country.svg"
+    "country": "https://upload.wikimedia.org/wikipedia/commons/f/f8/True_South_Antarctic_Flag.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
   }
 }
