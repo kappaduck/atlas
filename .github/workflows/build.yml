@@ -31,8 +31,6 @@ jobs:
 
       - name: Bump version
         if: ${{ inputs.environment == 'production' }}
-        env:
-          TZ: America/Toronto
         run: dotnet ./scripts/bump-version.cs
 
       - name: Restore dependencies
