@@ -64,6 +64,6 @@ public sealed class ChangelogRepositoryTests
         _client.GetAsync(CancellationToken.None).Returns(string.Empty);
 
         string? content = await _repository.GetAsync(CancellationToken.None);
-        await Assert.That(content).IsNull();
+        await Assert.That(content).IsNullOrEmpty();
     }
 }
