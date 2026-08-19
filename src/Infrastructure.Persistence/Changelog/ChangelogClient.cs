@@ -8,7 +8,7 @@ internal sealed class ChangelogClient(HttpClient http, ChangelogEndpointOptions 
     public async Task<string> GetAsync(CancellationToken cancellationToken)
     {
         using HttpResponseMessage response = await http.GetAsync(options.Url, cancellationToken);
-        response.EnsureSuccessStatusCode();
+        response.ThrowIfFailed();
 
         return await response.Content.ReadAsStringAsync(cancellationToken);
     }
