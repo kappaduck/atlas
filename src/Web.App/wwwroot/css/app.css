@@ -1,9 +1,11 @@
 html:has(#quack-app[data-theme='dark' i]) {
   color-scheme: dark;
+  --country-color: 1;
 }
 
 html:has(#quack-app[data-theme='light' i]) {
   color-scheme: light;
+  --country-color: 0;
 }
 
 #quack-app {
@@ -269,11 +271,15 @@ html:has(#quack-app[data-theme='light' i]) {
           place-items: center;
           width: 100%;
           height: 100%;
-          background: #fff;
+          background: var(--quack-background);
           padding: 16px;
           border-radius: var(--quack-radius-lg);
           border: 1px solid var(--quack-border-400);
           box-shadow: var(--quack-shadow-sm);
+
+          .country {
+            filter: invert(var(--country-color));
+          }
 
           img {
             max-width: 100%;
