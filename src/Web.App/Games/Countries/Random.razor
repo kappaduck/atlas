@@ -74,7 +74,10 @@
 						else
 						{
 							<div class="background">
-								<img src="@_gameState.Country.Resources.Country" style="@DifficultyCss" />
+								<picture class="country">
+									<source srcset="@_gameState.Country.Resources.Country" />
+									<img src="@_gameState.Country.Resources.Country" style="@DifficultyCss" />
+								</picture>
 							</div>
 						}
 					</div>
