@@ -31,6 +31,7 @@ internal class DailyLocalStorage(string key, ILocalStorage storage) : IDailyLoca
             _daily = _daily with
             {
                 Today = today,
+                Abandon = false,
                 Guesses = []
             };
 
