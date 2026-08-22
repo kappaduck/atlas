@@ -4,7 +4,6 @@
 using Atlas.Application.Countries;
 using Atlas.Application.Countries.Responses;
 using Atlas.Application.Countries.Services;
-using Atlas.Domain.Countries;
 using Microsoft.Extensions.Localization;
 using Unit.Tests.Data;
 using Unit.Tests.Mocks;
@@ -60,8 +59,8 @@ public sealed class CountryServiceTests
     [Test]
     public async Task GetAsyncShouldReturnTheCountry()
     {
-        CountryResponse? country = await _service.GetAsync(_countries.Italy.Cca2, CancellationToken.None);
-        await Assert.That(country!.Cca2).IsEqualTo(_countries.Italy.Cca2);
+        CountryResponse country = await _service.GetAsync(_countries.Italy.Cca2, CancellationToken.None);
+        await Assert.That(country.Cca2).IsEqualTo(_countries.Italy.Cca2);
     }
 
     [Test]
@@ -74,17 +73,8 @@ public sealed class CountryServiceTests
     [Test]
     public async Task GetDailyCountryAsyncShouldReturnTheDailyCountry()
     {
-        CountryResponse? country = await _service.GetDailyCountryAsync(CancellationToken.None);
-        await Assert.That(country!.Cca2).IsEqualTo(_countries.Canada.Cca2);
-    }
-
-    [Test]
-    public async Task GetDailyCountryAsyncShouldReturnNullWhenThereIsNoCountries()
-    {
-        _repository.GetAllAsync(CancellationToken.None).Returns([]);
-
-        CountryResponse? country = await _service.GetDailyCountryAsync(CancellationToken.None);
-        await Assert.That(country).IsNull();
+        CountryResponse country = await _service.GetDailyCountryAsync(CancellationToken.None);
+        await Assert.That(country.Cca2).IsEqualTo(_countries.Canada.Cca2);
     }
 
     [Test]
@@ -104,17 +94,8 @@ public sealed class CountryServiceTests
     [Test]
     public async Task GetDailyFlagAsyncShouldReturnTheDailyCountry()
     {
-        CountryResponse? country = await _service.GetDailyFlagAsync(CancellationToken.None);
-        await Assert.That(country!.Cca2).IsEqualTo(_countries.Canada.Cca2);
-    }
-
-    [Test]
-    public async Task GetDailyFlagAsyncShouldReturnNullWhenThereIsNoCountries()
-    {
-        _repository.GetAllAsync(CancellationToken.None).Returns([]);
-
-        CountryResponse? country = await _service.GetDailyFlagAsync(CancellationToken.None);
-        await Assert.That(country).IsNull();
+        CountryResponse country = await _service.GetDailyFlagAsync(CancellationToken.None);
+        await Assert.That(country.Cca2).IsEqualTo(_countries.Canada.Cca2);
     }
 
     [Test]
@@ -127,6 +108,9 @@ public sealed class CountryServiceTests
     [Test]
     public async Task GuessAsyncShouldGetTheGuessedCountry()
     {
+        _repository.GetAsync(_countries.Italy.Cca2, CancellationToken.None).Returns(_countries.Italy);
+        _repository.GetAsync(_countries.Canada.Cca2, CancellationToken.None).Returns(_countries.Canada);
+
         await _service.GuessAsync(_countries.Italy.Cca2, _countries.Canada.Cca2, CancellationToken.None);
         _repository.GetAsync(_countries.Italy.Cca2, CancellationToken.None).WasCalled(Times.Once);
     }
@@ -134,26 +118,10 @@ public sealed class CountryServiceTests
     [Test]
     public async Task GuessAsyncShouldGetTheCountry()
     {
+        _repository.GetAsync(_countries.Canada.Cca2, CancellationToken.None).Returns(_countries.Canada);
+
         await _service.GuessAsync(_countries.Italy.Cca2, _countries.Canada.Cca2, CancellationToken.None);
         _repository.GetAsync(_countries.Canada.Cca2, CancellationToken.None).WasCalled(Times.Once);
-    }
-
-    [Test]
-    public async Task GuessAsyncShouldReturnNullWhenGuessedCountryDoesNotExist()
-    {
-        _repository.GetAsync(_countries.Italy.Cca2, CancellationToken.None).Returns((Country?)null);
-
-        GuessedCountryResponse? country = await _service.GuessAsync(_countries.Italy.Cca2, _countries.Canada.Cca2, CancellationToken.None);
-        await Assert.That(country).IsNull();
-    }
-
-    [Test]
-    public async Task GuessAsyncShouldReturnNullWhenCountryDoesNotExist()
-    {
-        _repository.GetAsync(_countries.Canada.Cca2, CancellationToken.None).Returns((Country?)null);
-
-        GuessedCountryResponse? country = await _service.GuessAsync(_countries.Italy.Cca2, _countries.Canada.Cca2, CancellationToken.None);
-        await Assert.That(country).IsNull();
     }
 
     [Test]
@@ -161,36 +129,33 @@ public sealed class CountryServiceTests
     {
         _repository.GetAsync(_countries.Canada.Cca2, CancellationToken.None).Returns(_countries.Canada);
 
-        GuessedCountryResponse? country = await _service.GuessAsync(_countries.Canada.Cca2, _countries.Italy.Cca2, CancellationToken.None);
+        GuessedResponse guess = await _service.GuessAsync(_countries.Canada.Cca2, _countries.Italy.Cca2, CancellationToken.None);
 
-        await Assert.That(country!.Cca2).IsEqualTo(_countries.Canada.Cca2);
-        await Assert.That(country.Name).IsEqualTo("Canada");
-        await Assert.That(country.Success).IsFalse();
-        await Assert.That(country.Continent).IsEqualTo("North America");
-        await Assert.That(country.IsSameContinent).IsFalse();
-        await Assert.That(country.Direction).IsEqualTo(104);
-        await Assert.That(country.Kilometers).IsEqualTo(6843);
-        await Assert.That(country.Miles).IsEqualTo(4252);
-        await Assert.That(country.Proximity).IsEqualTo(66);
-        await Assert.That(country.Flag).IsEqualTo(_countries.Canada.Resources.Flag);
+        WrongGuessResponse wrong = (WrongGuessResponse)guess.Value;
+
+        await Assert.That(wrong.Cca2).IsEqualTo(_countries.Canada.Cca2);
+        await Assert.That(wrong.Name).IsEqualTo("Canada");
+        await Assert.That(wrong.Continent).IsEqualTo("North America");
+        await Assert.That(wrong.IsSameContinent).IsFalse();
+        await Assert.That(wrong.Direction).IsEqualTo(104);
+        await Assert.That(wrong.Kilometers).IsEqualTo(6843);
+        await Assert.That(wrong.Miles).IsEqualTo(4252);
+        await Assert.That(wrong.Proximity).IsEqualTo(66);
+        await Assert.That(wrong.Flag).IsEqualTo(_countries.Canada.Resources.Flag);
     }
 
     [Test]
     public async Task GuessAsyncShouldReturnGoodGuessedCountryWhenIsNotSameCountry()
     {
-        GuessedCountryResponse? guessedCountry = await _service.GuessAsync(_countries.Italy.Cca2, _countries.Italy.Cca2, CancellationToken.None);
+        GuessedResponse guess = await _service.GuessAsync(_countries.Italy.Cca2, _countries.Italy.Cca2, CancellationToken.None);
 
-        await Assert.That(guessedCountry!.Cca2).IsEqualTo(_countries.Italy.Cca2);
-        await Assert.That(guessedCountry.Name).IsEqualTo("Italy");
-        await Assert.That(guessedCountry.Success).IsTrue();
-        await Assert.That(guessedCountry.Continent).IsEqualTo("Europe");
-        await Assert.That(guessedCountry.IsSameContinent).IsTrue();
-        await Assert.That(guessedCountry.Direction).IsEqualTo(0);
-        await Assert.That(guessedCountry.Kilometers).IsEqualTo(0);
-        await Assert.That(guessedCountry.Miles).IsEqualTo(0);
-        await Assert.That(guessedCountry.Proximity).IsEqualTo(100);
-        await Assert.That(guessedCountry.Flag).IsEqualTo(_countries.Italy.Resources.Flag);
-        await Assert.That(guessedCountry.Map).IsEqualTo(_countries.Italy.Resources.Map);
+        GoodGuessResponse good = (GoodGuessResponse)guess.Value;
+
+        await Assert.That(good.Cca2).IsEqualTo(_countries.Italy.Cca2);
+        await Assert.That(good.Name).IsEqualTo("Italy");
+        await Assert.That(good.Continent).IsEqualTo("Europe");
+        await Assert.That(good.Flag).IsEqualTo(_countries.Italy.Resources.Flag);
+        await Assert.That(good.Map).IsEqualTo(_countries.Italy.Resources.Map);
     }
 
     [Test]
@@ -203,17 +168,8 @@ public sealed class CountryServiceTests
     [Test]
     public async Task RandomizeAsyncShouldReturnTheRandomizedCountry()
     {
-        CountryResponse? country = await _service.RandomizeAsync(CancellationToken.None);
-        await Assert.That(country!.Cca2).IsEqualTo(_countries.Canada.Cca2);
-    }
-
-    [Test]
-    public async Task RandomizeAsyncShouldReturnNullWhenThereIsNoCountries()
-    {
-        _repository.GetAllAsync(CancellationToken.None).Returns([]);
-
-        CountryResponse? country = await _service.RandomizeAsync(CancellationToken.None);
-        await Assert.That(country).IsNull();
+        CountryResponse country = await _service.RandomizeAsync(CancellationToken.None);
+        await Assert.That(country.Cca2).IsEqualTo(_countries.Canada.Cca2);
     }
 
     [Test]

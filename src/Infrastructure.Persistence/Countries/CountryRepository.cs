@@ -23,7 +23,7 @@ internal sealed class CountryRepository(ICountryClient client, ICache cache) : I
         return countries;
     }
 
-    public async ValueTask<Country?> GetAsync(Cca2 cca2, CancellationToken cancellationToken)
+    public async ValueTask<Country> GetAsync(Cca2 cca2, CancellationToken cancellationToken)
     {
         string key = AsKey(cca2);
 
@@ -32,10 +32,7 @@ internal sealed class CountryRepository(ICountryClient client, ICache cache) : I
 
         Country[] countries = [.. await GetAllAsync(cancellationToken)];
 
-        Country? country = Array.Find(countries, c => c.Cca2 == cca2);
-
-        if (country is null)
-            return null;
+        Country country = Array.Find(countries, c => c.Cca2 == cca2)!;
 
         cache.Save(key, country);
         return country;

@@ -13,9 +13,9 @@ public sealed class GameState(int maxAttempts)
 
     public int MaxAttempts { get; } = maxAttempts;
 
-    public ICollection<GuessedCountryResponse> Guesses { get; private set; } = [with(maxAttempts)];
+    public ICollection<GuessedResponse> Guesses { get; private set; } = [with(maxAttempts)];
 
-    public bool GameFinished => Abandon || Guesses.Count == MaxAttempts || Guesses.Any(g => g.Success);
+    public bool GameFinished => Abandon || Guesses.Count == MaxAttempts || Found;
 
     public bool Found => Guesses.Any(g => g.Success);
 
@@ -31,7 +31,7 @@ public sealed class GameState(int maxAttempts)
 
     public void Start(CountryResponse country) => Country = country;
 
-    public void Start(CountryResponse country, IEnumerable<GuessedCountryResponse> guesses, bool abandon = false)
+    public void Start(CountryResponse country, IEnumerable<GuessedResponse> guesses, bool abandon = false)
     {
         Country = country;
         Guesses = [.. guesses];

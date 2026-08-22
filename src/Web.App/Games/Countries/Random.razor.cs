@@ -71,9 +71,9 @@ public sealed partial class Random(ICountryService service, ILocalStorage storag
 
     private async Task GuessAsync(string cca2)
     {
-        GuessedCountryResponse? guessedCountry = await service.GuessAsync(cca2, _gameState.Country!.Cca2, _cts.Token);
+        GuessedResponse guessedCountry = await service.GuessAsync(cca2, _gameState.Country!.Cca2, _cts.Token);
 
-        _gameState.Guesses.Add(guessedCountry!);
+        _gameState.Guesses.Add(guessedCountry);
 
         if (_gameState.GameFinished)
         {
@@ -116,7 +116,7 @@ public sealed partial class Random(ICountryService service, ILocalStorage storag
             _isLoading = false;
         }
 
-        Task<CountryResponse?> GetAsync(CancellationToken cancellationToken)
+        Task<CountryResponse> GetAsync(CancellationToken cancellationToken)
         {
             if (options.Debug && !string.IsNullOrEmpty(Cca2))
                 return service.GetAsync(Cca2, cancellationToken);

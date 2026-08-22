@@ -22,8 +22,4 @@ public partial class Guesses
 
     [CascadingParameter]
     public required AppState State { get; init; }
-
-    private static string SuccessCss(bool success) => success ? "success" : string.Empty;
-
-    private static string SameContinentCss(bool same) => same ? "quack-badge-accent" : "quack-badge-danger";
 }

@@ -65,10 +65,10 @@ public sealed partial class Daily(ICountryService service, [FromKeyedServices(Da
 
     private async Task GuessAsync(string cca2)
     {
-        GuessedCountryResponse? guessedCountry = await service.GuessAsync(cca2, _gameState.Country!.Cca2, _cts.Token);
+        GuessedResponse guessedCountry = await service.GuessAsync(cca2, _gameState.Country!.Cca2, _cts.Token);
 
-        _gameState.Guesses.Add(guessedCountry!);
-        daily.Add(guessedCountry!);
+        _gameState.Guesses.Add(guessedCountry);
+        daily.Add(guessedCountry);
 
         if (_gameState.GameFinished)
         {
@@ -102,7 +102,7 @@ public sealed partial class Daily(ICountryService service, [FromKeyedServices(Da
 
             _score = storage.GetItem<Score>(_score.Key) ?? _score;
 
-            (IEnumerable<GuessedCountryResponse> guesses, bool abandon) = daily.Get();
+            (IEnumerable<GuessedResponse> guesses, bool abandon) = daily.Get();
             _gameState.Start(country, guesses, abandon);
         }
         catch (Exception)

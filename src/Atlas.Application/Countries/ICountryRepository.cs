@@ -11,7 +11,7 @@ public interface ICountryRepository
 
     ValueTask<IEnumerable<Country>> GetAllAsync(CancellationToken cancellationToken);
 
-    ValueTask<Country?> GetAsync(Cca2 cca2, CancellationToken cancellationToken);
+    ValueTask<Country> GetAsync(Cca2 cca2, CancellationToken cancellationToken);
 
     ValueTask<IEnumerable<Cca2>> LookupAsync(CancellationToken cancellationToken);
 }

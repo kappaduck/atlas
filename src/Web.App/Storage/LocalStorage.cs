@@ -1,6 +1,7 @@
 // Copyright (c) KappaDuck. All rights reserved.
 // The source code is licensed under MIT License.
 
+using Atlas.Application.Countries.Responses;
 using System.Runtime.InteropServices.JavaScript;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -13,7 +14,8 @@ internal sealed partial class LocalStorage : ILocalStorage
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
         PropertyNameCaseInsensitive = true,
-        Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) }
+        Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) },
+        TypeClassifiers = { new GuessedResponseClassifier() }
     };
 
     public T? GetItem<T>(string key)
@@ -38,4 +40,35 @@ internal sealed partial class LocalStorage : ILocalStorage
 
     [JSImport("globalThis.localStorage.setItem")]
     private static partial void Set(string key, string value);
+}
+
+file sealed class GuessedResponseClassifier : JsonTypeClassifierFactory<GuessedResponse>
+{
+    public override JsonTypeClassifier CreateJsonClassifier(JsonTypeClassifierContext context, JsonSerializerOptions options)
+    {
+        return static (ref reader) =>
+        {
+            if (reader.TokenType is not JsonTokenType.StartObject)
+            {
+                return null;
+            }
+
+            while (reader.Read() && reader.TokenType is not JsonTokenType.EndObject)
+            {
+                if (reader.ValueTextEquals("kilometers"u8) ||
+                    reader.ValueTextEquals("isSameContinent"u8) ||
+                    reader.ValueTextEquals("proximity"u8) ||
+                    reader.ValueTextEquals("miles"u8) ||
+                    reader.ValueTextEquals("direction"u8))
+                {
+                    return typeof(WrongGuessResponse);
+                }
+
+                reader.Read();
+                reader.Skip();
+            }
+
+            return typeof(GoodGuessResponse);
+        };
+    }
 }
