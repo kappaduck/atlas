@@ -13,8 +13,7 @@ internal class CountryClient(HttpClient http, CountryEndpointOptions options) : 
         using HttpResponseMessage response = await http.GetAsync(options.All, cancellationToken);
         response.ThrowIfFailed();
 
-        Country[]? countries = await response.Content.ReadFromJsonAsync(CountryJsonContext.Default.CountryArray, cancellationToken);
-        return countries ?? [];
+        return (await response.Content.ReadFromJsonAsync(CountryJsonContext.Default.CountryArray, cancellationToken))!;
     }
 
     public async Task<IEnumerable<Cca2>> LookupAsync(CancellationToken cancellationToken)
@@ -22,7 +21,6 @@ internal class CountryClient(HttpClient http, CountryEndpointOptions options) : 
         using HttpResponseMessage response = await http.GetAsync(options.Lookup, cancellationToken);
         response.ThrowIfFailed();
 
-        Cca2[]? codes = await response.Content.ReadFromJsonAsync(CountryJsonContext.Default.Cca2Array, cancellationToken);
-        return codes ?? [];
+        return (await response.Content.ReadFromJsonAsync(CountryJsonContext.Default.Cca2Array, cancellationToken))!;
     }
 }

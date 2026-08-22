@@ -7,54 +7,71 @@
 {
 	<div class="guesses">
 		<h4>@Localizer.YourGuesses</h4>
-		@foreach (GuessedCountryResponse guess in GameState.Guesses)
+		@foreach (GuessedResponse guess in GameState.Guesses)
 		{
-			<div class="guess @SuccessCss(guess.Success)">
-				<div class="name">
-					@if (State.GuessFlagHint && Flag)
-					{
-						<img src="@guess.Flag" />
-					}
-					@if (guess.Success)
-					{
-						<i class="bi bi-check-circle-fill"></i>
-					}
-					@guess.Name
-					@if (State.ContinentHint)
-					{
-						<span class="quack-badge @SameContinentCss(guess.IsSameContinent)">@guess.Continent</span>
-					}
-					<a href="@guess.Map" target="_blank" class="map" data-tooltip="@Localizer.ViewOnGoogleMaps" aria-label="@Localizer.ViewOnGoogleMaps"><i class="bi bi-geo-alt"></i></a>
-				</div>
-				@if (guess.Success)
-				{
-					<span class="here">@Localizer.Here</span>
-				}
-				else
-				{
-					if (State.DistanceHint)
+			if (guess is WrongGuessResponse wrong)
+			{
+				<div class="guess">
+					<div class="name">
+						@if (State.GuessFlagHint && Flag)
+						{
+							<img src="@wrong.Flag" />
+						}
+						@wrong.Name
+						@if (State.ContinentHint)
+						{
+							<span class="quack-badge quack-badge-danger">@wrong.Continent</span>
+						}
+						<a href="@wrong.Map" target="_blank" class="map" data-tooltip="@Localizer.ViewOnGoogleMaps" aria-label="@Localizer.ViewOnGoogleMaps"><i class="bi bi-geo-alt"></i></a>
+					</div>
+					@if (State.DistanceHint)
 					{
 						if (State.Unit == DistanceUnit.Kilometers)
 						{
-							<span class="distance">@guess.Kilometers.ToString("N0", _numberFormat) Km</span>
+							<span class="distance">@wrong.Kilometers.ToString("N0", _numberFormat) Km</span>
 						}
 						else
 						{
-							<span class="distance">@guess.Miles.ToString("N0", _numberFormat) mi</span>
+							<span class="distance">@wrong.Miles.ToString("N0", _numberFormat) mi</span>
 						}
 					}
 					@if (State.ArrowHint)
 					{
-						<span class="direction"><i style="transform: rotate(@(guess.Direction)deg);" class="bi bi-arrow-up"></i></span>
+						<span class="direction"><i style="transform: rotate(@(wrong.Direction)deg);" class="bi bi-arrow-up"></i></span>
 					}
-				}
-				@if (State.ProximityBarHint)
-				{
-					<div class="proximity">
-						<span style="width:@guess.Proximity%"></span>
+					@if (State.ProximityBarHint)
+					{
+						<div class="proximity">
+							<span style="width:@wrong.Proximity%"></span>
+						</div>
+					}
+				</div>
+			}
+			else if (guess is GoodGuessResponse good)
+			{
+				<div class="guess success">
+					<div class="name">
+						@if (State.GuessFlagHint && Flag)
+						{
+							<img src="@good.Flag" />
+						}
+						<i class="bi bi-check-circle-fill"></i>
+						@good.Name
+						@if (State.ContinentHint)
+						{
+							<span class="quack-badge quack-badge-accent">@good.Continent</span>
+						}
+						<a href="@good.Map" target="_blank" class="map" data-tooltip="@Localizer.ViewOnGoogleMaps" aria-label="@Localizer.ViewOnGoogleMaps"><i class="bi bi-geo-alt"></i></a>
 					</div>
-				}
-			</div>
+					<span class="here">@Localizer.Here</span>
+					@if (State.ProximityBarHint)
+					{
+						<div class="proximity">
+							<span style="width:100%"></span>
+						</div>
+					}
+				</div>
+			}
 		}
 	</div>
 }

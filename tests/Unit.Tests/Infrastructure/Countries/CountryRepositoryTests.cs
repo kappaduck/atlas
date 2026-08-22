@@ -129,15 +129,6 @@ public class CountryRepositoryTests
     }
 
     [Test]
-    public async Task GetAsyncShouldNotCacheCountryWhenIsNull()
-    {
-        const string key = $"{ExpectedCountriesKey}:IT";
-
-        await _repository.GetAsync(new Cca2("IT"), CancellationToken.None);
-        _cache.DidNotReceive().Save(key, NSubstitute.Arg.Any<Country>());
-    }
-
-    [Test]
     public async Task GetAsyncShouldCacheTheCountry()
     {
         string expectedKey = $"{ExpectedCountriesKey}:{_countries.Canada.Cca2}";

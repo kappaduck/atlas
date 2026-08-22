@@ -9,13 +9,13 @@ public interface ICountryService
 {
     Task<IEnumerable<CountryListItem>> GetAllAsync(CancellationToken cancellationToken);
 
-    Task<CountryResponse?> GetAsync(string code, CancellationToken cancellationToken);
+    Task<CountryResponse> GetAsync(string code, CancellationToken cancellationToken);
 
-    Task<CountryResponse?> GetDailyCountryAsync(CancellationToken cancellationToken);
+    Task<CountryResponse> GetDailyCountryAsync(CancellationToken cancellationToken);
 
-    Task<CountryResponse?> GetDailyFlagAsync(CancellationToken cancellationToken);
+    Task<CountryResponse> GetDailyFlagAsync(CancellationToken cancellationToken);
 
-    Task<GuessedCountryResponse?> GuessAsync(string guessedCode, string code, CancellationToken cancellationToken);
+    Task<GuessedResponse> GuessAsync(string guessedCode, string code, CancellationToken cancellationToken);
 
-    Task<CountryResponse?> RandomizeAsync(CancellationToken cancellationToken);
+    Task<CountryResponse> RandomizeAsync(CancellationToken cancellationToken);
 }

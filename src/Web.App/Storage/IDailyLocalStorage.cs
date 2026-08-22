@@ -9,7 +9,7 @@ public interface IDailyLocalStorage
 {
     void Abandon();
 
-    void Add(GuessedCountryResponse guess);
+    void Add(GuessedResponse guess);
 
-    (IEnumerable<GuessedCountryResponse> Guesses, bool Abandon) Get();
+    (IEnumerable<GuessedResponse> Guesses, bool Abandon) Get();
 }

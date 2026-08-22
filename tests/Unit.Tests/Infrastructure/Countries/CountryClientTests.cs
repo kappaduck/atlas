@@ -52,18 +52,6 @@ public sealed class CountryClientTests
     }
 
     [Test]
-    public async Task GetAsyncShouldGiveEmptyWhenThereIsNoContent()
-    {
-        _http.Handler.OnGet(_options.All).RespondWith(new HttpResponseMessage(HttpStatusCode.OK)
-        {
-            Content = JsonContent.Create<Country[]?>(null)
-        });
-
-        IEnumerable<Country> countries = await _client.GetAsync(CancellationToken.None);
-        await Assert.That(countries).IsEmpty();
-    }
-
-    [Test]
     public async Task LookupAsyncShouldCallLookup()
     {
         await _client.LookupAsync(CancellationToken.None);
@@ -84,17 +72,5 @@ public sealed class CountryClientTests
     {
         IEnumerable<Cca2> codes = await _client.LookupAsync(CancellationToken.None);
         await Assert.That(codes).IsNotEmpty();
-    }
-
-    [Test]
-    public async Task LookupAsyncShouldGiveEmptyWhenThereIsNoContent()
-    {
-        _http.Handler.OnGet(_options.Lookup).RespondWith(new HttpResponseMessage(HttpStatusCode.OK)
-        {
-            Content = JsonContent.Create<Cca2[]?>(null)
-        });
-
-        IEnumerable<Cca2> codes = await _client.LookupAsync(CancellationToken.None);
-        await Assert.That(codes).IsEmpty();
     }
 }
