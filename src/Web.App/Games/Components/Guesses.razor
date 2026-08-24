@@ -20,7 +20,7 @@
 						@wrong.Name
 						@if (State.ContinentHint)
 						{
-							<span class="quack-badge quack-badge-danger">@wrong.Continent</span>
+							<span class="quack-badge @(wrong.IsSameContinent ? "quack-badge-accent" : "quack-badge-danger")">@wrong.Continent</span>
 						}
 						<a href="@wrong.Map" target="_blank" class="map" data-tooltip="@Localizer.ViewOnGoogleMaps" aria-label="@Localizer.ViewOnGoogleMaps"><i class="bi bi-geo-alt"></i></a>
 					</div>
