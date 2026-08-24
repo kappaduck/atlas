@@ -4,14 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 2026.xx.xx
+## 2026.08.24
 
 ### Changed
 
 - Make left guesses bigger ([#190])
+- Uses the True South flag for Antartica ([#194])
+- Make the country background fit the dark theme instead of white in country games ([#197])
 
-<!-- 2026.xx.xx -->
+### Fixed
+
+- The daily game would not be abandoned if you gave up yesterday. ([#206])
+
+<!-- 2026.08.24 -->
 [#190]: https://github.com/kappaduck/atlas/issues/190
+[#194]: https://github.com/kappaduck/atlas/issues/194
+[#197]: https://github.com/kappaduck/atlas/issues/197
+[#206]: https://github.com/kappaduck/atlas/issues/206
 
 ## 2026.08.12
 
